@@ -13,7 +13,13 @@
   <header class="wrap page-header"><h1>Seattle U Debate Rankings</h1><span>Nov 21, 2026 · Rounds 1–2</span></header>
   <main class="wrap">
     <section class="controls" aria-label="Find rankings">
-      <label class="sr-only" for="division">Division</label><div class="select-wrap"><select id="division"></select></div>
+      <div id="division-picker" class="division-picker">
+        <button id="division" type="button" aria-expanded="false" aria-controls="division-options"><span id="division-label">NoviceS MS 3-on-3</span></button>
+        <div id="division-options" class="division-options" hidden>
+          <label class="all-divisions"><input id="division-all" type="checkbox">All divisions</label>
+          <div id="division-choices" role="group" aria-label="Divisions"></div>
+        </div>
+      </div>
       <label class="sr-only" for="search">Find a speaker or team</label><div class="search-wrap"><input id="search" type="search" placeholder="Search speaker, school, or team" autocomplete="off"><button id="clear" type="button" aria-label="Clear search" hidden>×</button></div>
     </section>
     <section id="rankings" class="rankings">

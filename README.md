@@ -57,6 +57,8 @@ Check that the public extraction timestamp and downloaded `data/results.json` ma
 
 Speaker rank uses the average of available numeric scores. One-round averages are visibly provisional and participate in this ranking; each speaker's expanded details also shows rank among entries with two scores. Equal averages use competition ranks (1, 2, 2, 4). Search and table sorting preserve the original ranks.
 
+The division dropdown supports multiple selections and All divisions, with NoviceS selected by default. When several divisions are selected, both tables group entries by division and sort within each group. Ranks are never combined across divisions; search covers all selected groups.
+
 Stars compare all individual scores in the same debate, including both teams and ties. A missing score prevents verification of that room's highest score. One confirmed high with the other round unresolved is described as incomplete rather than receiving an unsupported star.
 
 Team standings group complete 2–0, 1–1, and 0–2 records, with a shared standing and alphabetical order within each group. A BYE is a win only when the rendered result styling and ballot both confirm it. `B` is never converted to a numeric score. Incomplete team records remain separate and unranked.

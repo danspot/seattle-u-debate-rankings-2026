@@ -8,6 +8,15 @@ const divisions=deriveAll(snapshot);
 const browser=await launchBrowser();
 const errors=[];
 await mkdir('.local',{recursive:true});
+async function selectDivisions(page, names) {
+  if (await page.locator('#division').getAttribute('aria-expanded') !== 'true') await page.locator('#division').click();
+  for (const d of divisions) await page.getByRole('checkbox',{name:d.division,exact:true}).setChecked(names.includes(d.division));
+  await page.keyboard.press('Escape');
+}
+async function checkCounts(page, selected) {
+  assert.equal(await page.locator('#speaker-rows tr[data-name]').count(),selected.reduce((n,d)=>n+d.speakers.length,0));
+  assert.equal(await page.locator('#team-rows tr[data-name]').count(),selected.reduce((n,d)=>n+d.teams.length,0));
+}
 try {
   const page=await browser.newPage({viewport:{width:1440,height:1100}});
   page.on('pageerror',error=>errors.push(error.message));
@@ -17,13 +26,39 @@ try {
   const publicData=await page.request.get(new URL('data/results.json',url).href);
   assert.equal(publicData.status(),200);assert.deepEqual(await publicData.json(),snapshot,'Download differs from committed data');
   assert.equal(await page.title(),'Seattle U Debate Rankings — November 21, 2026');
-  assert.equal(await page.locator('#division').inputValue(),'NoviceS MS 3-on-3');
+  assert.equal(await page.locator('#division-label').textContent(),'NoviceS MS 3-on-3');
   for(const d of divisions) {
-    await page.locator('#division').selectOption(d.division);
-    assert.equal(await page.locator('#speaker-rows tr').count(),d.speakers.length);
-    assert.equal(await page.locator('#team-rows tr').count(),d.teams.length);
+    await selectDivisions(page,[d.division]);
+    await checkCounts(page,[d]);
   }
-  await page.locator('#division').selectOption('NoviceS MS 3-on-3');
+  await page.locator('#division').focus();
+  await page.keyboard.press('ArrowDown');
+  assert.equal(await page.locator('#division-options').isVisible(),true);
+  await page.getByRole('checkbox',{name:'All divisions',exact:true}).check();
+  await checkCounts(page,divisions);
+  assert.equal(await page.locator('#speaker-rows .division-heading').count(),divisions.filter(d=>d.speakers.length).length);
+  assert.equal(await page.locator('#team-rows .division-heading').count(),divisions.filter(d=>d.teams.length).length);
+  assert.equal(await page.locator('#division-label').textContent(),'All divisions');
+  await page.getByRole('checkbox',{name:'NoviceS MS 3-on-3',exact:true}).uncheck();
+  await checkCounts(page,divisions.filter(d=>d.division!=='NoviceS MS 3-on-3'));
+  assert.equal(await page.locator('#division-all').evaluate(e=>e.indeterminate),true);
+  await page.getByRole('checkbox',{name:'All divisions',exact:true}).check();
+  await page.getByRole('checkbox',{name:'All divisions',exact:true}).uncheck();
+  await checkCounts(page,[]);
+  assert.equal(await page.locator('#empty').textContent(),'Select a division.');
+  const pair=divisions.filter(d=>d.division.startsWith('Novice'));
+  await selectDivisions(page,pair.map(d=>d.division));
+  await checkCounts(page,pair);
+  assert.equal(await page.locator('#division-options').isVisible(),false);
+  await page.locator('#division').click();
+  await page.screenshot({path:'.local/desktop-divisions.png',fullPage:false});
+  await page.locator('#search').click();
+  assert.equal(await page.locator('#division-options').isVisible(),false);
+  await page.locator('#search').fill('Bellevue');
+  assert.equal(await page.locator('#speaker-rows tr[data-name]').count(),pair.flatMap(d=>d.speakers).filter(s=>s.searchText.includes('bellevue')).length);
+  assert.equal(await page.locator('#team-rows tr[data-name]').count(),pair.flatMap(d=>d.teams).filter(t=>t.searchText.includes('bellevue')).length);
+  await page.locator('#search').fill('');
+  await selectDivisions(page,['NoviceS MS 3-on-3']);
   await page.screenshot({path:'.local/desktop.png',fullPage:false});
   await page.locator('#search').fill('Jia-Hao');
   const person=divisions.find(d=>d.division==='NoviceS MS 3-on-3').speakers.find(p=>p.name==='Jia-Hao Stevenson');
@@ -49,7 +84,7 @@ try {
   // A fresh iPhone-sized page verifies default state, touch controls, and document overflow.
   const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
   mobile.on('pageerror',e=>errors.push(e.message));await mobile.goto(url,{waitUntil:'networkidle'});
-  assert.equal(await mobile.locator('#division').inputValue(),'NoviceS MS 3-on-3');
+  assert.equal(await mobile.locator('#division-label').textContent(),'NoviceS MS 3-on-3');
   assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Mobile horizontal overflow');
   await mobile.screenshot({path:'.local/mobile.png',fullPage:false});
   const firstRow=await mobile.locator('#speaker-rows tr').first().boundingBox();
@@ -63,7 +98,16 @@ try {
   assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await mobile.locator('#rankings').scrollIntoViewIfNeeded();
   await mobile.screenshot({path:'.local/mobile-teams.png',fullPage:false});
+  await mobile.locator('#search').fill('');
+  await mobile.locator('#division').click();
+  await mobile.getByRole('checkbox',{name:'All divisions',exact:true}).check();
+  await checkCounts(mobile,divisions);
+  assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await mobile.screenshot({path:'.local/mobile-divisions.png',fullPage:false});
+  await mobile.keyboard.press('Escape');
+  await mobile.getByRole('tab',{name:/Speaker Rankings/}).click();
+  assert.equal(await mobile.locator('#speaker-rows .division-heading').count(),3);
   assert.deepEqual(errors,[]);
   assert.ok(requests.every(r=>new URL(r).origin===new URL(url).origin),'External runtime request');
-  console.log(`Browser QA passed at ${url}: default division, all counts, search in both tables, sorting, stars, desktop and iPhone layouts, no script errors or live source requests.`);
+  console.log(`Browser QA passed at ${url}: default, single/multiple/all/empty divisions, grouped ranks, search in both tables, sorting, stars, keyboard controls, desktop and iPhone layouts, no script errors or live source requests.`);
 }finally{await browser.close();}

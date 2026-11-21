@@ -4,14 +4,14 @@ const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const scoreText = value => value === null || value === undefined ? '—' : Number(value).toLocaleString('en-US', { maximumFractionDigits: 3 });
 const averageText = value => value === null ? '—' : Number(value).toFixed(2);
-let current = divisions.find(d => d.division === 'NoviceS MS 3-on-3') || divisions[0];
+const defaultDivision = divisions.find(d => d.division === 'NoviceS MS 3-on-3') || divisions[0];
+const selectedDivisions = new Set([defaultDivision.division]);
 let activeTab = 'speaker';
 const sort = { speaker: { key: 'rank', direction: 'asc' }, team: { key: 'rank', direction: 'asc' } };
 const stamp = new Intl.DateTimeFormat('en-US', { dateStyle:'medium', timeStyle:'short', timeZone:'America/Los_Angeles' }).format(new Date(snapshot.extractedAt));
 $('extracted').textContent = `Extracted ${stamp} Pacific`;
 $('extracted').title = snapshot.extractedAt;
-$('division').innerHTML = divisions.map(d => `<option value="${esc(d.division)}">${esc(d.division)}</option>`).join('');
-$('division').value = current.division;
+$('division-choices').innerHTML = divisions.map(d => `<label><input type="checkbox" value="${esc(d.division)}">${esc(d.division)}</label>`).join('');
 
 function sortRows(rows, kind) {
   const { key, direction } = sort[kind];
@@ -63,10 +63,11 @@ function renderTeam(team) {
 }
 function render() {
   const query = normalize($('search').value);
-  const speakers = current.speakers.filter(s => s.searchText.includes(query));
-  const teams = current.teams.filter(t => t.searchText.includes(query));
-  $('speaker-rows').innerHTML = sortRows(speakers,'speaker').map(renderSpeaker).join('');
-  $('team-rows').innerHTML = sortRows(teams,'team').map(renderTeam).join('');
+  const selected = divisions.filter(d => selectedDivisions.has(d.division));
+  const groups = selected.map(d => ({ division: d.division, speakers: d.speakers.filter(s => s.searchText.includes(query)), teams: d.teams.filter(t => t.searchText.includes(query)) }));
+  const groupHeading = division => selected.length > 1 ? `<tr class="division-heading"><td colspan="6">${esc(division)}</td></tr>` : '';
+  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
+  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
   $('clear').hidden = !query;
   const speakerActive = activeTab === 'speaker';
   $('speaker-panel').hidden = !speakerActive;
@@ -81,18 +82,52 @@ function render() {
       if(selected) th.setAttribute('aria-sort', sort[kind].direction === 'asc' ? 'ascending' : 'descending');
     });
   }
-  const visible = speakerActive ? speakers.length : teams.length;
-  const all = speakerActive ? current.speakers.length : current.teams.length;
+  const visible = groups.reduce((sum,d) => sum + (speakerActive ? d.speakers.length : d.teams.length),0);
+  const all = selected.reduce((sum,d) => sum + (speakerActive ? d.speakers.length : d.teams.length),0);
   $('showing').textContent = `Showing ${visible} of ${all} ${speakerActive ? 'entries' : 'teams'}`;
   $('empty').hidden = visible > 0;
-  $('empty').textContent = all === 0 ? 'No Round 1–2 results.' : 'No matches.';
+  $('empty').textContent = selected.length === 0 ? 'Select a division.' : all === 0 ? 'No Round 1–2 results.' : 'No matches.';
 }
 function changeDivision() {
-  current = divisions.find(d => d.division === $('division').value);
-  $('issues').innerHTML = current.issues.filter(i=>i.type!=='roster-labels').map(i=>`<li>${esc(i.text)}</li>`).join('');
+  const selected = divisions.filter(d => selectedDivisions.has(d.division));
+  const label = selected.length === divisions.length ? 'All divisions' : selected.length === 1 ? selected[0].division : selected.length ? selected.map(d=>d.division.replace(/ MS 3-on-3$/, '')).join(', ') : 'Select divisions';
+  $('division-label').textContent = label;
+  $('division').setAttribute('aria-label', `Divisions: ${label}`);
+  $('division').title = selected.map(d=>d.division).join(', ');
+  $('division-all').checked = selected.length === divisions.length;
+  $('division-all').indeterminate = selected.length > 0 && selected.length < divisions.length;
+  document.querySelectorAll('#division-choices input').forEach(input => { input.checked = selectedDivisions.has(input.value); });
+  $('issues').innerHTML = selected.flatMap(d=>d.issues.filter(i=>i.type!=='roster-labels').map(i=>`<li>${selected.length > 1 ? `${esc(d.division)}: ` : ''}${esc(i.text)}</li>`)).join('');
   render();
 }
-$('division').addEventListener('change',changeDivision);
+function setPickerOpen(open, restoreFocus = false) {
+  $('division-options').hidden = !open;
+  $('division').setAttribute('aria-expanded', String(open));
+  if (restoreFocus) $('division').focus();
+}
+$('division').addEventListener('click', () => setPickerOpen($('division-options').hidden));
+$('division').addEventListener('keydown', event => {
+  if (event.key === 'ArrowDown') { event.preventDefault(); setPickerOpen(true); $('division-all').focus(); }
+});
+$('division-all').addEventListener('change', event => {
+  selectedDivisions.clear();
+  if (event.target.checked) divisions.forEach(d => selectedDivisions.add(d.division));
+  changeDivision();
+});
+$('division-choices').addEventListener('change', event => {
+  if (event.target.checked) selectedDivisions.add(event.target.value);
+  else selectedDivisions.delete(event.target.value);
+  changeDivision();
+});
+$('division-picker').addEventListener('keydown', event => {
+  if (event.key === 'Escape') { event.preventDefault(); setPickerOpen(false, true); }
+});
+$('division-picker').addEventListener('focusout', event => {
+  if (event.relatedTarget && !$('division-picker').contains(event.relatedTarget)) setPickerOpen(false);
+});
+document.addEventListener('click', event => {
+  if (!$('division-picker').contains(event.target)) setPickerOpen(false);
+});
 $('search').addEventListener('input',render);
 $('clear').addEventListener('click',()=>{$('search').value='';render();$('search').focus();});
 for (const kind of ['speaker','team']) {
