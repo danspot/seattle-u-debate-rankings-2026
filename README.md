@@ -63,7 +63,7 @@ The division dropdown supports multiple selections and All divisions, with Novic
 
 Click a speaker's name to open their feedback popup. It combines the original notes from Rounds 1 and 2, labeled by round and judge, with source ballot links. Missing feedback is explicit. Notes are preserved as written, not summarized or inferred; they are safely rendered as plain text. Feedback refreshes with `npm run scrape` and remains part of the committed static snapshot.
 
-Stars compare all individual scores in the same debate, including both teams and ties. A missing score prevents verification of that room's highest score. One confirmed high with the other round unresolved is described as incomplete rather than receiving an unsupported star.
+Blue stars count rounds with the highest score on the speaker's own team; gold stars count rounds with the highest score across both teams in the room. Each set awards one star per qualifying round, including ties, and is sortable separately. BYEs earn no stars. Missing scores leave that comparison unverified (`?`); a team high can still be verified when only an opponent's score is missing. The speaker popup shows which honors were earned in each round.
 
 Team standings group complete 2–0, 1–1, and 0–2 records, with a shared standing and alphabetical order within each group. A BYE is a win only when the rendered result styling and ballot both confirm it. `B` is never converted to a numeric score. Incomplete team records remain separate and unranked.
 

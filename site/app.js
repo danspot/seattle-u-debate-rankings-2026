@@ -24,7 +24,8 @@ function sortRows(rows, kind) {
     }
     if (key === 'name' && kind === 'team') return row.displayName;
     if (key === 'members' && kind === 'team') return row.members.join(', ');
-    if (key === 'stars') return row.awardedStars;
+    if (key === 'stars') return row.starStatusKnown ? row.awardedStars : null;
+    if (key === 'teamStars') return row.teamStarStatusKnown ? row.awardedTeamStars : null;
     return row[key];
   };
   return [...rows].sort((a, b) => {
@@ -50,7 +51,8 @@ function openSpeakerFeedback(speaker) {
     const r = speaker.rounds[round];
     const score = r?.score == null ? r?.isBye ? 'BYE' : 'No score' : `${scoreText(r.score)} points`;
     const text = r?.feedback ? `<blockquote class="feedback-text">${esc(r.feedback)}</blockquote>` : `<p class="feedback-missing">${!r ? 'No ballot entry available.' : r.isBye ? 'BYE — no speaker feedback.' : 'No speaker feedback posted.'}</p>`;
-    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
+    const honors = [r?.teamHighest ? '<span class="stars team-stars" title="Highest score on own team, including ties">★ Team</span>' : '', r?.roomHighest ? '<span class="stars room-stars" title="Highest score across both teams, including ties">★ Room</span>' : ''].filter(Boolean).join(' · ');
+    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${honors ? `<p class="feedback-honors">${honors}</p>` : ''}${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
   }).join('') + (speaker.completeRank ? `<p class="feedback-rank">Two-score rank: ${speaker.completeRank}</p>` : '');
   $('speaker-dialog').showModal();
 }
@@ -63,9 +65,17 @@ $('speaker-dialog').addEventListener('click', event => {
   const box = $('speaker-dialog').getBoundingClientRect();
   if (event.target === $('speaker-dialog') && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) $('speaker-dialog').close();
 });
+function renderHonors(speaker, scope) {
+  const team = scope === 'team';
+  const count = team ? speaker.awardedTeamStars : speaker.awardedStars;
+  const known = team ? speaker.teamStarStatusKnown : speaker.starStatusKnown;
+  const label = team ? 'Team' : 'Room';
+  const title = `${label}-highest in ${count} ${count === 1 ? 'round' : 'rounds'} (ties count)`;
+  const content = count ? `<span class="stars ${scope}-stars" title="${title}" aria-label="${title}">${'★'.repeat(count)}</span>` : known ? `<span class="missing" aria-label="No ${scope}-highest rounds">—</span>` : `<span class="missing" title="${label} honors unverified: missing scores" aria-label="${label} honors unverified">?</span>`;
+  return `<td class="honors ${scope}-honors">${content}</td>`;
+}
 function renderSpeaker(speaker) {
-  const honors = speaker.awardedStars ? `<span class="stars" aria-label="Room-highest in ${speaker.awardedStars} ${speaker.awardedStars === 1 ? 'round' : 'rounds'}">${'★'.repeat(speaker.awardedStars)}</span>` : speaker.starStatusKnown ? '<span class="missing">—</span>' : '<span class="missing" title="Room honors unverified: missing scores" aria-label="Room honors unverified">?</span>';
-  return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${scoreCell(speaker,1)}${scoreCell(speaker,2)}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? '<span class="sub provisional" title="Provisional average from one round">1 round</span>' : ''}</td><td class="honors">${honors}</td></tr>`;
+  return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${scoreCell(speaker,1)}${scoreCell(speaker,2)}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? '<span class="sub provisional" title="Provisional average from one round">1 round</span>' : ''}</td>${renderHonors(speaker,'team')}${renderHonors(speaker,'room')}</tr>`;
 }
 function teamRound(team, round) {
   const r = team.rounds[round];
@@ -82,9 +92,9 @@ function render() {
   const query = normalize($('search').value);
   const selected = divisions.filter(d => selectedDivisions.has(d.division));
   const groups = selected.map(d => ({ division: d.division, speakers: d.speakers.filter(s => s.searchText.includes(query)), teams: d.teams.filter(t => t.searchText.includes(query)) }));
-  const groupHeading = division => selected.length > 1 ? `<tr class="division-heading"><td colspan="6">${esc(division)}</td></tr>` : '';
-  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
-  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
+  const groupHeading = (division, columns) => selected.length > 1 ? `<tr class="division-heading"><td colspan="${columns}">${esc(division)}</td></tr>` : '';
+  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division,7) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
+  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division,6) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
   $('clear').hidden = !query;
   const speakerActive = activeTab === 'speaker';
   $('speaker-panel').hidden = !speakerActive;

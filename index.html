@@ -21,6 +21,8 @@
 @media(max-width:650px){.feedback-header{padding:14px}.feedback-round{padding:14px}#feedback-close{flex-basis:40px;height:40px}.feedback-text{font-size:1rem}.feedback-rank{padding-inline:14px}}
 .results-link{margin-left:auto;font-size:.875rem;white-space:nowrap}
 @media(max-width:650px){.page-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 10px}.page-header h1{grid-column:1/-1}.page-header>span{margin-top:0}.results-link{font-size:.8125rem}}
+.team-stars{color:#1f65a6}.room-stars{color:var(--gold)}.stars.team-stars{color:#1f65a6}.stars.room-stars{color:var(--gold)}.feedback-honors{font-size:.8125rem;margin:6px 0}
+@media(max-width:650px){.speaker-table th:nth-child(6),.speaker-table th:nth-child(7){width:38px}}
 </style>
 </head>
 <body>
@@ -44,8 +46,8 @@
       </div>
       <p id="showing" class="sr-only" role="status" aria-live="polite"></p>
       <div id="speaker-panel" role="tabpanel" aria-labelledby="speaker-tab">
-        <p class="legend"><b class="stars">★ / ★★</b> Room-highest in 1 / 2 rounds, including ties.</p>
-        <div class="table-wrap"><table class="speaker-table"><caption class="sr-only">Speaker rankings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by rank"># <span>↑</span></button></th><th data-key="name"><button data-sort="name" aria-label="Sort by speaker name">Speaker <span>↕</span></button></th><th data-key="round1"><button data-sort="round1" aria-label="Sort by Round 1 score">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2" aria-label="Sort by Round 2 score">R2 <span>↕</span></button></th><th data-key="average"><button data-sort="average" aria-label="Sort by average">Avg <span>↕</span></button></th><th data-key="stars"><button data-sort="stars" aria-label="Sort by room honors">★ <span>↕</span></button></th></tr></thead><tbody id="speaker-rows"></tbody></table></div>
+        <p class="legend"><b class="stars team-stars">★ Team</b> · <b class="stars room-stars">★ Room (both teams)</b> · One per round; ties count.</p>
+        <div class="table-wrap"><table class="speaker-table"><caption class="sr-only">Speaker rankings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by rank"># <span>↑</span></button></th><th data-key="name"><button data-sort="name" aria-label="Sort by speaker name">Speaker <span>↕</span></button></th><th data-key="round1"><button data-sort="round1" aria-label="Sort by Round 1 score">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2" aria-label="Sort by Round 2 score">R2 <span>↕</span></button></th><th data-key="average"><button data-sort="average" aria-label="Sort by average">Avg <span>↕</span></button></th><th data-key="teamStars"><button class="team-stars" data-sort="teamStars" aria-label="Sort by team honors">Team <span>↕</span></button></th><th data-key="stars"><button class="room-stars" data-sort="stars" aria-label="Sort by room honors">Room <span>↕</span></button></th></tr></thead><tbody id="speaker-rows"></tbody></table></div>
       </div>
       <div id="team-panel" role="tabpanel" aria-labelledby="team-tab" hidden>
         <div class="table-wrap"><table class="team-table"><caption class="sr-only">Team standings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by standing"># <span>↑</span></button></th><th data-key="name"><button data-sort="name">School <span>↕</span></button></th><th data-key="members"><button data-sort="members">Members <span>↕</span></button></th><th data-key="wins"><button data-sort="wins">Record <span>↕</span></button></th><th data-key="round1"><button data-sort="round1">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2">R2 <span>↕</span></button></th></tr></thead><tbody id="team-rows"></tbody></table></div>
@@ -54,7 +56,7 @@
     </section>
     <details class="notes"><summary>Scoring & data</summary>
       <p>Averages use available numeric scores; one-round averages are marked provisional. Tied averages share ranks (1, 2, 2, 4). Teams with the same record share a standing and are listed alphabetically. These are independent two-round rankings.</p>
-      <p>BYE wins require a confirmed source decision; “B” is not a score. Missing scores leave room honors unverified. Source roster labels such as “ABC” are retained.</p>
+      <p>Blue stars mark the highest score on a speaker’s own team; gold stars mark the highest across both teams in the room. Each set counts qualifying rounds, including ties. Missing scores leave that comparison unverified; a team high can still be verified when only an opponent’s score is missing. BYEs earn no stars. “B” is not a score. Source roster labels such as “ABC” are retained.</p>
       <ul id="issues"></ul>
     </details>
   </main>
@@ -103,13 +105,15 @@ function deriveDivision(snapshot, division) {
       if (debate.isBye) team.byes++;
       if (ballotTeam) {
         team.school ||= ballotTeam.school;
+        const teamComplete = !debate.isBye && ballotTeam.speakers.length > 0 && ballotTeam.speakers.every(p => p.score !== null);
+        const teamHigh = teamComplete ? Math.max(...ballotTeam.speakers.map(p => p.score)) : null;
         for (const person of ballotTeam.speakers) {
           if (!team.members.some(n => normalize(n) === normalize(person.name))) team.members.push(person.name);
           const key = `${team.id}\u0000${normalize(person.name)}`;
           if (!speakerMap.has(key)) speakerMap.set(key, { id: key, name: person.name, division, teamId: team.id, team: team.name, school: ballotTeam.school, sourceRosterLabel: isRosterLabel(person.name), rounds: {} });
           const speaker = speakerMap.get(key);
           if (speaker.rounds[debate.round]) throw new Error(`Duplicate speaker in round: ${key}`);
-          speaker.rounds[debate.round] = { score: person.score, displayedScore: person.displayedScore, room: debate.room, opponent, team: team.name, division, round: debate.round, debateId: debate.id, isBye: debate.isBye, roomHighest: high === null ? null : person.score === high, roomMaximum: high, ballotUrl: debate.ballot.url, feedback: person.feedback?.text || null, judgeName: debate.ballot.judgeName || null };
+          speaker.rounds[debate.round] = { score: person.score, displayedScore: person.displayedScore, room: debate.room, opponent, team: team.name, division, round: debate.round, debateId: debate.id, isBye: debate.isBye, teamHighest: teamHigh === null ? null : person.score === teamHigh, teamMaximum: teamHigh, roomHighest: high === null ? null : person.score === high, roomMaximum: high, ballotUrl: debate.ballot.url, feedback: person.feedback?.text || null, judgeName: debate.ballot.judgeName || null };
         }
       }
     }
@@ -140,6 +144,9 @@ function deriveDivision(snapshot, division) {
     speaker.stars = rounds.filter(r => r.roomHighest === true).length;
     speaker.starStatusKnown = [1, 2].every(r => speaker.rounds[r]?.roomHighest !== null && speaker.rounds[r]?.roomHighest !== undefined || speaker.rounds[r]?.isBye);
     speaker.awardedStars = speaker.starStatusKnown ? speaker.stars : 0;
+    speaker.teamStars = rounds.filter(r => r.teamHighest === true).length;
+    speaker.teamStarStatusKnown = [1, 2].every(r => typeof speaker.rounds[r]?.teamHighest === 'boolean' || speaker.rounds[r]?.isBye);
+    speaker.awardedTeamStars = speaker.teamStarStatusKnown ? speaker.teamStars : 0;
     speaker.searchText = normalize(`${speaker.name} ${speaker.team} ${speaker.school} ${teamMap.get(speaker.teamId).members.join(' ')}`);
   }
   speakers.sort((a, b) => (b.average ?? -Infinity) - (a.average ?? -Infinity) || alphabetic(a.name, b.name) || alphabetic(a.team, b.team));
@@ -194,7 +201,8 @@ function sortRows(rows, kind) {
     }
     if (key === 'name' && kind === 'team') return row.displayName;
     if (key === 'members' && kind === 'team') return row.members.join(', ');
-    if (key === 'stars') return row.awardedStars;
+    if (key === 'stars') return row.starStatusKnown ? row.awardedStars : null;
+    if (key === 'teamStars') return row.teamStarStatusKnown ? row.awardedTeamStars : null;
     return row[key];
   };
   return [...rows].sort((a, b) => {
@@ -220,7 +228,8 @@ function openSpeakerFeedback(speaker) {
     const r = speaker.rounds[round];
     const score = r?.score == null ? r?.isBye ? 'BYE' : 'No score' : `${scoreText(r.score)} points`;
     const text = r?.feedback ? `<blockquote class="feedback-text">${esc(r.feedback)}</blockquote>` : `<p class="feedback-missing">${!r ? 'No ballot entry available.' : r.isBye ? 'BYE — no speaker feedback.' : 'No speaker feedback posted.'}</p>`;
-    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
+    const honors = [r?.teamHighest ? '<span class="stars team-stars" title="Highest score on own team, including ties">★ Team</span>' : '', r?.roomHighest ? '<span class="stars room-stars" title="Highest score across both teams, including ties">★ Room</span>' : ''].filter(Boolean).join(' · ');
+    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${honors ? `<p class="feedback-honors">${honors}</p>` : ''}${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
   }).join('') + (speaker.completeRank ? `<p class="feedback-rank">Two-score rank: ${speaker.completeRank}</p>` : '');
   $('speaker-dialog').showModal();
 }
@@ -233,9 +242,17 @@ $('speaker-dialog').addEventListener('click', event => {
   const box = $('speaker-dialog').getBoundingClientRect();
   if (event.target === $('speaker-dialog') && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) $('speaker-dialog').close();
 });
+function renderHonors(speaker, scope) {
+  const team = scope === 'team';
+  const count = team ? speaker.awardedTeamStars : speaker.awardedStars;
+  const known = team ? speaker.teamStarStatusKnown : speaker.starStatusKnown;
+  const label = team ? 'Team' : 'Room';
+  const title = `${label}-highest in ${count} ${count === 1 ? 'round' : 'rounds'} (ties count)`;
+  const content = count ? `<span class="stars ${scope}-stars" title="${title}" aria-label="${title}">${'★'.repeat(count)}</span>` : known ? `<span class="missing" aria-label="No ${scope}-highest rounds">—</span>` : `<span class="missing" title="${label} honors unverified: missing scores" aria-label="${label} honors unverified">?</span>`;
+  return `<td class="honors ${scope}-honors">${content}</td>`;
+}
 function renderSpeaker(speaker) {
-  const honors = speaker.awardedStars ? `<span class="stars" aria-label="Room-highest in ${speaker.awardedStars} ${speaker.awardedStars === 1 ? 'round' : 'rounds'}">${'★'.repeat(speaker.awardedStars)}</span>` : speaker.starStatusKnown ? '<span class="missing">—</span>' : '<span class="missing" title="Room honors unverified: missing scores" aria-label="Room honors unverified">?</span>';
-  return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${scoreCell(speaker,1)}${scoreCell(speaker,2)}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? '<span class="sub provisional" title="Provisional average from one round">1 round</span>' : ''}</td><td class="honors">${honors}</td></tr>`;
+  return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${scoreCell(speaker,1)}${scoreCell(speaker,2)}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? '<span class="sub provisional" title="Provisional average from one round">1 round</span>' : ''}</td>${renderHonors(speaker,'team')}${renderHonors(speaker,'room')}</tr>`;
 }
 function teamRound(team, round) {
   const r = team.rounds[round];
@@ -252,9 +269,9 @@ function render() {
   const query = normalize($('search').value);
   const selected = divisions.filter(d => selectedDivisions.has(d.division));
   const groups = selected.map(d => ({ division: d.division, speakers: d.speakers.filter(s => s.searchText.includes(query)), teams: d.teams.filter(t => t.searchText.includes(query)) }));
-  const groupHeading = division => selected.length > 1 ? `<tr class="division-heading"><td colspan="6">${esc(division)}</td></tr>` : '';
-  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
-  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
+  const groupHeading = (division, columns) => selected.length > 1 ? `<tr class="division-heading"><td colspan="${columns}">${esc(division)}</td></tr>` : '';
+  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division,7) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
+  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division,6) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
   $('clear').hidden = !query;
   const speakerActive = activeTab === 'speaker';
   $('speaker-panel').hidden = !speakerActive;

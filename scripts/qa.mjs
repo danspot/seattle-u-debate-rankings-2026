@@ -28,6 +28,8 @@ async function checkFeedback(page, speaker) {
     if(expected?.feedback)assert.equal(await section.locator('.feedback-text').textContent(),expected.feedback);
     else assert.equal(await section.locator('.feedback-missing').isVisible(),true);
     if(expected)assert.equal(await section.getByRole('link',{name:'Ballot',exact:true}).getAttribute('href'),expected.ballotUrl);
+    assert.equal(await section.locator('.team-stars').count(),Number(expected?.teamHighest===true));
+    assert.equal(await section.locator('.room-stars').count(),Number(expected?.roomHighest===true));
   }
   assert.equal(await page.locator('#speaker-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth),true,'Feedback popup overflows horizontally');
 }
@@ -79,7 +81,9 @@ try {
   const row=page.locator('#speaker-rows tr').filter({has:page.getByText('Jia-Hao Stevenson',{exact:true})});
   assert.equal(await row.count(),1);
   assert.equal(await row.locator('.average').textContent(),person.average.toFixed(2));
-  assert.equal(await row.locator('.stars').textContent(),'★'.repeat(person.awardedStars));
+  assert.equal(await row.locator('.team-honors .stars').textContent(),'★'.repeat(person.awardedTeamStars));
+  assert.equal(await row.locator('.room-honors .stars').textContent(),'★'.repeat(person.awardedStars));
+  assert.notEqual(await row.locator('.team-stars').evaluate(e=>getComputedStyle(e).color),await row.locator('.room-stars').evaluate(e=>getComputedStyle(e).color));
   assert.equal((await row.locator('.rank').innerText()).trim(),String(person.rank));
   await checkFeedback(page,person);
   await page.screenshot({path:'.local/desktop-feedback.png',fullPage:false});
@@ -100,6 +104,16 @@ try {
   const numeric=visible.filter(x=>x!=='—').map(Number);assert.deepEqual(numeric,[...numeric].sort((a,b)=>b-a));
   await page.locator('#speaker-panel [data-sort="average"]').click();
   const asc=(await page.locator('#speaker-rows .average').allTextContents()).filter(x=>x!=='—').map(Number);assert.deepEqual(asc,[...asc].sort((a,b)=>a-b));
+  for(const [key,scope] of [['teamStars','team'],['stars','room']]) {
+    for(const direction of ['desc','asc']) {
+      await page.locator(`#speaker-panel [data-sort="${key}"]`).click();
+      const texts=await page.locator(`#speaker-rows .${scope}-honors`).allTextContents();
+      const counts=texts.filter(t=>t!=='?').map(t=>(t.match(/★/g)||[]).length);
+      assert.deepEqual(counts,[...counts].sort((a,b)=>direction==='desc'?b-a:a-b));
+      const unknown=texts.indexOf('?');
+      if(unknown>=0)assert.ok(texts.slice(unknown).every(t=>t==='?'),'Unknown honors must sort last');
+    }
+  }
   // A fresh iPhone-sized page verifies default state, touch controls, and document overflow.
   const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
   mobile.on('pageerror',e=>errors.push(e.message));await mobile.goto(url,{waitUntil:'networkidle'});

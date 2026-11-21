@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-11-21T23:04:21.135Z",
+  "verifiedAt": "2026-11-21T23:10:10.088Z",
   "extractedAt": "2026-11-21T22:55:58.602Z",
   "checksPassed": true,
   "debateCount": 120,
@@ -108,6 +108,8 @@
         "round": 1,
         "debateId": "901",
         "isBye": false,
+        "teamHighest": true,
+        "teamMaximum": 84,
         "roomHighest": true,
         "roomMaximum": 84,
         "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/901",
@@ -124,6 +126,8 @@
         "round": 2,
         "debateId": "957",
         "isBye": false,
+        "teamHighest": true,
+        "teamMaximum": 89,
         "roomHighest": true,
         "roomMaximum": 89,
         "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/957",
@@ -135,6 +139,7 @@
     "rank": 10,
     "rankAmongComplete": 9,
     "stars": 2,
+    "teamStars": 2,
     "teamRecord": "1–1",
     "teamStanding": 11,
     "teamsSharingRecord": 22

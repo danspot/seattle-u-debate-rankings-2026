@@ -13,3 +13,5 @@
 @media(max-width:650px){.feedback-header{padding:14px}.feedback-round{padding:14px}#feedback-close{flex-basis:40px;height:40px}.feedback-text{font-size:1rem}.feedback-rank{padding-inline:14px}}
 .results-link{margin-left:auto;font-size:.875rem;white-space:nowrap}
 @media(max-width:650px){.page-header{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 10px}.page-header h1{grid-column:1/-1}.page-header>span{margin-top:0}.results-link{font-size:.8125rem}}
+.team-stars{color:#1f65a6}.room-stars{color:var(--gold)}.stars.team-stars{color:#1f65a6}.stars.room-stars{color:var(--gold)}.feedback-honors{font-size:.8125rem;margin:6px 0}
+@media(max-width:650px){.speaker-table th:nth-child(6),.speaker-table th:nth-child(7){width:38px}}

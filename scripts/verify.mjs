@@ -84,8 +84,24 @@ export function verifySnapshot(snapshot) {
         const sourceSide=['aff','neg'].find(side=>debate[side].name===s.team);
         const sourcePerson=debate.ballot.sides[sourceSide].speakers.find(p=>normalize(p.name)===normalize(s.name));
         assert.equal(round.feedback,sourcePerson.feedback?.text || null,`Feedback aggregation mismatch for ${s.name}`);
+        assert.equal(round.score,sourcePerson.score);
+        const ownScores=debate.ballot.sides[sourceSide].speakers.map(p=>p.score);
+        const bothSides=['aff','neg'].map(side=>debate.ballot.sides[side]?.speakers.map(p=>p.score) || []);
+        const maximum=groups=>!debate.isBye && groups.every(scores=>scores.length && scores.every(Number.isFinite)) ? Math.max(...groups.flat()) : null;
+        const teamMaximum=maximum([ownScores]),roomMaximum=maximum(bothSides);
+        assert.equal(round.teamMaximum,teamMaximum);
+        assert.equal(round.roomMaximum,roomMaximum);
+        assert.equal(round.teamHighest,teamMaximum===null?null:sourcePerson.score===teamMaximum);
+        assert.equal(round.roomHighest,roomMaximum===null?null:sourcePerson.score===roomMaximum);
+        if(round.roomHighest)assert.equal(round.teamHighest,true);
       }
-      assert.ok(s.awardedStars<=2);
+      for(const [scope,count,known,awarded] of [['team',s.teamStars,s.teamStarStatusKnown,s.awardedTeamStars],['room',s.stars,s.starStatusKnown,s.awardedStars]]) {
+        assert.equal(count,Object.values(s.rounds).filter(r=>r[`${scope}Highest`]===true).length);
+        assert.equal(known,[1,2].every(r=>Boolean(s.rounds[r]?.isBye) || typeof s.rounds[r]?.[`${scope}Highest`]==='boolean'));
+        assert.equal(awarded,known?count:0);
+        assert.ok(awarded>=0 && awarded<=2);
+      }
+      assert.ok(s.awardedStars<=s.awardedTeamStars);
     }
     const paired=snapshot.debates.filter(d=>d.division===div.division&&!d.isBye&&d.winnerSide);
     for(const d of paired) {
@@ -96,7 +112,7 @@ export function verifySnapshot(snapshot) {
   const novice=divisions.find(d=>d.division==='NoviceS MS 3-on-3');
   const person=novice?.speakers.find(s=>s.name==='Jia-Hao Stevenson' && s.school==='Bellevue Youth Debate');
   const team=novice?.teams.find(t=>t.id===person?.teamId);
-  return { verifiedAt:new Date().toISOString(), extractedAt:snapshot.extractedAt, checksPassed:true, debateCount:ids.size, numericScores, feedbackNotes, speakersWithFeedback:divisions.reduce((n,d)=>n+d.speakers.filter(s=>Object.values(s.rounds).some(r=>r.feedback)).length,0), divisions:divisions.map(d=>({division:d.division,...d.counts,issues:d.issues})), testCase:person?{name:person.name,rounds:person.rounds,average:person.average,rank:person.rank,rankAmongComplete:person.completeRank,stars:person.awardedStars,teamRecord:team.record,teamStanding:team.rank,teamsSharingRecord:team.recordGroupSize}:null };
+  return { verifiedAt:new Date().toISOString(), extractedAt:snapshot.extractedAt, checksPassed:true, debateCount:ids.size, numericScores, feedbackNotes, speakersWithFeedback:divisions.reduce((n,d)=>n+d.speakers.filter(s=>Object.values(s.rounds).some(r=>r.feedback)).length,0), divisions:divisions.map(d=>({division:d.division,...d.counts,issues:d.issues})), testCase:person?{name:person.name,rounds:person.rounds,average:person.average,rank:person.rank,rankAmongComplete:person.completeRank,stars:person.awardedStars,teamStars:person.awardedTeamStars,teamRecord:team.record,teamStanding:team.rank,teamsSharingRecord:team.recordGroupSize}:null };
 }
 
 if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {

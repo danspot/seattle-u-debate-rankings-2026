@@ -22,6 +22,22 @@ test('missing scores produce provisional means, never fabricated zeros or room h
   assert.equal(a.average,88);assert.equal(a.scoreCount,1);assert.equal(a.complete,false);assert.equal(a.rank,1);
   const b=d.speakers.find(s=>s.name==='B 1');
   assert.equal(b.stars,1);assert.equal(b.awardedStars,0);assert.equal(b.starStatusKnown,false);
+  assert.equal(b.awardedTeamStars,2);assert.equal(b.teamStarStatusKnown,true);
+  assert.equal(a.teamStars,1);assert.equal(a.awardedTeamStars,0);assert.equal(a.teamStarStatusKnown,false);
+});
+test('team highs and room highs count independently, including tied teammates',()=>{
+  const d=rank([debate('1',1,'A','B',[[88,88,80],[92,90,70]]),debate('2',2,'A','B',[[89,87,86],[91,91,80]])]);
+  const honors=name=>{const s=d.speakers.find(s=>s.name===name);return [s.awardedTeamStars,s.awardedStars];};
+  assert.deepEqual(honors('A 1'),[2,0]);
+  assert.deepEqual(honors('A 2'),[1,0]);
+  assert.deepEqual(honors('B 1'),[2,2]);
+  assert.deepEqual(honors('B 2'),[1,1]);
+});
+test('BYEs earn neither star type while a scored round still earns its highs',()=>{
+  const d=rank([debate('1',1,'A','BYE',[[null,null,null],[null,null,null]]),debate('2',2,'A','B',[[90,80,70],[85,80,75]])]);
+  const s=d.speakers.find(s=>s.name==='A 1');
+  assert.equal(s.awardedTeamStars,1);assert.equal(s.awardedStars,1);
+  assert.equal(s.rounds[1].teamHighest,null);assert.equal(s.rounds[1].roomHighest,null);
 });
 test('BYEs require explicit matching decisions, and B is not a speaker score',()=>{
   const confirmed=debate('1',1,'A','BYE',[[null,null,null],[null,null,null]]);
