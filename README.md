@@ -43,15 +43,17 @@ Check that the public extraction timestamp and downloaded `data/results.json` ma
 ## Files
 
 - `index.html`: generated, self-contained public site. Edit the files under `site/`, then build.
-- `data/results.json`: actual result rows, computed winner styles, score-only ballot records, URLs, and extraction timestamps. Context nests each score under its team, division, round, and room; opponents are the other side of the same debate.
+- `data/results.json`: actual result rows, computed winner styles, speaker scores and individual feedback, URLs, and extraction timestamps. Context nests each score and feedback note under its team, division, round, and room; opponents are the other side of the same debate.
 - `data/verification.json`: consistency report and the requested test case; not featured in the page.
 - `scripts/scrape.mjs`: Playwright browser extraction. Explicitly selects each division and Round 1/2, clicks every available ballot, verifies context, and restores filters after navigation.
+- `scripts/feedback.mjs`: extracts original individual speaker feedback and matches each note by side, speaking position, and speaker name. General decision explanations are not attributed to individual speakers.
 - `scripts/rankings.mjs`: shared ranking and standings calculation.
 - `scripts/verify.mjs`: checks duplicate debates/rooms/teams/speakers, roster consistency across rounds, ballot context, numeric scores and team totals, source-style/ballot decisions, paired win/loss results, and rank arithmetic.
-- `scripts/verify-source.mjs`: independently revisits the requested team's result rows and score cards in Chromium.
+- `scripts/verify-source.mjs`: independently revisits the requested team's ballots plus feedback samples from both rounds of each populated division in Chromium.
 - `scripts/build.mjs`: validates and generates the public HTML plus verification report.
 - `scripts/qa.mjs`: Chromium checks at desktop and iPhone sizes; screenshots remain local and ignored.
 - `tests/rankings.test.mjs`: edge cases for ties, missing scores, BYEs, duplicate identities, and unknown decisions.
+- `tests/feedback.test.mjs`: same-name speakers on opposite teams, speaker-position mismatches, duplicate notes, and absent or multiline feedback.
 
 ## Interpretation
 
@@ -59,10 +61,12 @@ Speaker rank uses the average of available numeric scores. One-round averages ar
 
 The division dropdown supports multiple selections and All divisions, with NoviceS selected by default. When several divisions are selected, both tables group entries by division and sort within each group. Ranks are never combined across divisions; search covers all selected groups.
 
+Click a speaker's name to open their feedback popup. It combines the original notes from Rounds 1 and 2, labeled by round and judge, with source ballot links. Missing feedback is explicit. Notes are preserved as written, not summarized or inferred; they are safely rendered as plain text. Feedback refreshes with `npm run scrape` and remains part of the committed static snapshot.
+
 Stars compare all individual scores in the same debate, including both teams and ties. A missing score prevents verification of that room's highest score. One confirmed high with the other round unresolved is described as incomplete rather than receiving an unsupported star.
 
 Team standings group complete 2–0, 1–1, and 0–2 records, with a shared standing and alphabetical order within each group. A BYE is a win only when the rendered result styling and ballot both confirm it. `B` is never converted to a numeric score. Incomplete team records remain separate and unranked.
 
-The source's `ABC`, `abc`, and `aa` roster labels are retained and flagged; they are scored source entries, not inferred identities. Counts include these labels, with separate named/label counts in the verification report. The `Test mars-almond-hershey` entry is likewise retained as displayed, without treating it as an ordinary BYE or inventing a missing Round 2 result. All source dropdown divisions, including empty `DONTUSETHIS MS 3-on-3`, are preserved. Judges' comments are not stored in the public data or HTML.
+The source's `ABC`, `abc`, and `aa` roster labels are retained and flagged; they are scored source entries, not inferred identities. Counts include these labels, with separate named/label counts in the verification report. The `Test mars-almond-hershey` entry is likewise retained as displayed, without treating it as an ordinary BYE or inventing a missing Round 2 result. All source dropdown divisions, including empty `DONTUSETHIS MS 3-on-3`, are preserved. Individual speaker comments are published at the user's request.
 
 The source's own “Last updated” label is retained verbatim but is not used as the extraction timestamp. `extractedAt` is captured by the scraper in UTC and displayed in Pacific time.

@@ -1,9 +1,11 @@
 {
-  "verifiedAt": "2026-11-21T22:49:55.923Z",
-  "extractedAt": "2026-11-21T22:30:00.709Z",
+  "verifiedAt": "2026-11-21T22:56:14.886Z",
+  "extractedAt": "2026-11-21T22:55:58.602Z",
   "checksPassed": true,
   "debateCount": 120,
   "numericScores": 684,
+  "feedbackNotes": 516,
+  "speakersWithFeedback": 339,
   "divisions": [
     {
       "division": "Experienced MS 3-on-3",
@@ -108,7 +110,9 @@
         "isBye": false,
         "roomHighest": true,
         "roomMaximum": 84,
-        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/901"
+        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/901",
+        "feedback": null,
+        "judgeName": "Zara Chobot"
       },
       "2": {
         "score": 89,
@@ -122,7 +126,9 @@
         "isBye": false,
         "roomHighest": true,
         "roomMaximum": 89,
-        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/957"
+        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/957",
+        "feedback": "Great job covering all of the points, but try to be more respectful and restrain from calling them \"untrue\". Also don't accept more than two POIs in your speech.",
+        "judgeName": "Ndiabou Wague"
       }
     },
     "average": 86.5,

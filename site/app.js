@@ -6,6 +6,8 @@ const scoreText = value => value === null || value === undefined ? '—' : Numbe
 const averageText = value => value === null ? '—' : Number(value).toFixed(2);
 const defaultDivision = divisions.find(d => d.division === 'NoviceS MS 3-on-3') || divisions[0];
 const selectedDivisions = new Set([defaultDivision.division]);
+const speakerKey = speaker => encodeURIComponent(`${speaker.division}\u0000${speaker.id}`);
+const speakerLookup = new Map(divisions.flatMap(d=>d.speakers.map(s=>[speakerKey(s),s])));
 let activeTab = 'speaker';
 const sort = { speaker: { key: 'rank', direction: 'asc' }, team: { key: 'rank', direction: 'asc' } };
 const stamp = new Intl.DateTimeFormat('en-US', { dateStyle:'medium', timeStyle:'short', timeZone:'America/Los_Angeles' }).format(new Date(snapshot.extractedAt));
@@ -39,13 +41,28 @@ function scoreCell(speaker, round) {
   return `<td class="score-cell"><span class="score${entry?.score == null ? ' missing' : ''}">${scoreText(entry?.score)}</span>${entry?.score == null ? `<span class="sub">${esc(missing)}</span>` : ''}</td>`;
 }
 function speakerDetails(speaker) {
-  return `<details class="row-detail"><summary><span class="speaker-name"${speaker.sourceRosterLabel ? ' title="Source roster label"' : ''}>${esc(speaker.name)}</span><span class="sub">${esc(speaker.school || speaker.team)}</span></summary><p>${esc(speaker.team)}</p>${[1,2].map(round => {
-    const r = speaker.rounds[round];
-    if (!r) return `<p>R${round}: missing.</p>`;
-    const high = r.roomHighest === true ? ' · Room-highest' : '';
-    return `<p><strong>R${round}</strong> · ${r.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">${esc(r.room)}</a>` : esc(r.room)}<br>vs. ${esc(r.opponent)}${high}</p>`;
-  }).join('')}${speaker.completeRank ? `<p>Two-score rank: ${speaker.completeRank}.</p>` : ''}</details>`;
+  return `<button class="speaker-open" type="button" data-speaker="${speakerKey(speaker)}" aria-haspopup="dialog" aria-label="Feedback and round details for ${esc(speaker.name)}"><span class="speaker-name"${speaker.sourceRosterLabel ? ' title="Source roster label"' : ''}>${esc(speaker.name)}</span><span class="sub">${esc(speaker.school || speaker.team)}</span></button>`;
 }
+function openSpeakerFeedback(speaker) {
+  $('feedback-title').textContent = speaker.name;
+  $('feedback-team').textContent = `${speaker.team} · ${speaker.division}`;
+  $('feedback-rounds').innerHTML = [1,2].map(round => {
+    const r = speaker.rounds[round];
+    const score = r?.score == null ? r?.isBye ? 'BYE' : 'No score' : `${scoreText(r.score)} points`;
+    const text = r?.feedback ? `<blockquote class="feedback-text">${esc(r.feedback)}</blockquote>` : `<p class="feedback-missing">${!r ? 'No ballot entry available.' : r.isBye ? 'BYE — no speaker feedback.' : 'No speaker feedback posted.'}</p>`;
+    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
+  }).join('') + (speaker.completeRank ? `<p class="feedback-rank">Two-score rank: ${speaker.completeRank}</p>` : '');
+  $('speaker-dialog').showModal();
+}
+$('speaker-rows').addEventListener('click', event => {
+  const button = event.target.closest('[data-speaker]');
+  if (button) openSpeakerFeedback(speakerLookup.get(button.dataset.speaker));
+});
+$('feedback-close').addEventListener('click', () => $('speaker-dialog').close());
+$('speaker-dialog').addEventListener('click', event => {
+  const box = $('speaker-dialog').getBoundingClientRect();
+  if (event.target === $('speaker-dialog') && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) $('speaker-dialog').close();
+});
 function renderSpeaker(speaker) {
   const honors = speaker.awardedStars ? `<span class="stars" aria-label="Room-highest in ${speaker.awardedStars} ${speaker.awardedStars === 1 ? 'round' : 'rounds'}">${'★'.repeat(speaker.awardedStars)}</span>` : speaker.starStatusKnown ? '<span class="missing">—</span>' : '<span class="missing" title="Room honors unverified: missing scores" aria-label="Room honors unverified">?</span>';
   return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${scoreCell(speaker,1)}${scoreCell(speaker,2)}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? '<span class="sub provisional" title="Provisional average from one round">1 round</span>' : ''}</td><td class="honors">${honors}</td></tr>`;

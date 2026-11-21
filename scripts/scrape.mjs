@@ -1,6 +1,7 @@
 import { mkdir, writeFile, rename } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { launchBrowser } from './browser.mjs';
+import { readSpeakerFeedback, attachSpeakerFeedback } from './feedback.mjs';
 
 const source = 'https://plustab.org/t/seattle-u-sat-nov-21-2026/results';
 const startedAt = new Date().toISOString();
@@ -59,7 +60,7 @@ try {
           await page.locator(`[id="${row.buttonId}"]`).click();
           await page.getByRole('button', { name: 'Back to Results', exact: true }).waitFor();
           await page.getByText(/^Ballot:/).waitFor();
-          // Extract score cards only; never serialize judges' comments.
+          // Read score cards, then match individual speaker feedback separately.
           debate.ballot = await page.evaluate(() => {
             const norm = el => el?.textContent.trim() || '';
             const headings = [...document.querySelectorAll('h6')];
@@ -93,6 +94,7 @@ try {
               sides
             };
           });
+          attachSpeakerFeedback(debate.ballot, await page.evaluate(readSpeakerFeedback));
           debate.ballot.url = page.url();
           assert.equal(debate.ballot.roundLabel, `Round ${round}`, `Wrong round on ballot ${debate.id}`);
           assert.equal(debate.ballot.division, division);
@@ -113,15 +115,15 @@ try {
         debates.push(debate);
         await mkdir('.local', { recursive: true });
         await writeFile('.local/scrape-progress.json', JSON.stringify({ startedAt, divisions, debates }, null, 2));
-        console.log(`  ${i + 1}/${rows.length} ${row.room}: ${debate.ballotStatus}${debate.isBye ? ' (BYE)' : ''}`);
+        console.log(`  ${i + 1}/${rows.length} ${row.room}: ${debate.ballotStatus}${debate.isBye ? ' (BYE)' : ''}; ${debate.ballot?.feedbackNoteCount || 0} feedback notes`);
       }
     }
   }
-  const snapshot = { schemaVersion: 1, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds: [1, 2], divisions, debates };
+  const snapshot = { schemaVersion: 2, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds: [1, 2], divisions, debates };
   await mkdir('data', { recursive: true });
   await writeFile('data/results.next.json', JSON.stringify(snapshot, null, 2) + '\n');
   await rename('data/results.next.json', 'data/results.json');
-  console.log(`Saved ${debates.length} debates; no judge comments collected.`);
+  console.log(`Saved ${debates.length} debates and ${debates.reduce((n,d)=>n+(d.ballot?.feedbackNoteCount || 0),0)} individual feedback notes.`);
 } finally {
   await browser.close();
 }

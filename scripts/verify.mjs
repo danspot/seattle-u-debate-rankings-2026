@@ -9,7 +9,7 @@ export function verifySnapshot(snapshot) {
   assert.ok(Number.isFinite(Date.parse(snapshot.extractedAt)));
   assert.equal(new Set(snapshot.divisions).size, snapshot.divisions.length);
   const ids = new Set(), rooms = new Set(), appearances = new Set(), rosters = new Map();
-  let numericScores = 0;
+  let numericScores = 0, feedbackNotes = 0;
   for (const d of snapshot.debates) {
     assert.ok([1,2].includes(d.round), `Unexpected round ${d.round}`);
     assert.ok(snapshot.divisions.includes(d.division));
@@ -27,6 +27,12 @@ export function verifySnapshot(snapshot) {
       assert.equal(d.ballot.room,d.room); assert.equal(d.ballot.division,d.division);
       assert.equal(d.ballot.url, `${snapshot.source}/ballot/${d.id}`);
       assert.equal(d.winnerSide,d.ballot.winnerSide, `Decision mismatch for ${d.id}`);
+      if (snapshot.schemaVersion >= 2) {
+        assert.equal(typeof d.ballot.feedbackSectionPresent,'boolean');
+        const notes = Object.values(d.ballot.sides).flatMap(t=>t.speakers).filter(s=>s.feedback);
+        assert.equal(d.ballot.feedbackNoteCount,notes.length,`Feedback count mismatch ${d.id}`);
+        if (notes.length) assert.equal(d.ballot.feedbackSectionPresent,true);
+      }
     }
     for (const side of ['aff','neg']) {
       const t = d.ballot?.sides[side];
@@ -43,8 +49,20 @@ export function verifySnapshot(snapshot) {
         }
       }
       if (t) {
-        for(const s of t.speakers) {
+        for(const [position,s] of t.speakers.entries()) {
           assert.ok(s.name.trim());
+          if (snapshot.schemaVersion >= 2) {
+            assert.ok(Object.hasOwn(s,'feedback'));
+            if (s.feedback !== null) {
+              const note=s.feedback;
+              assert.equal(note.side,side);
+              assert.equal(note.speakerPosition,position+1);
+              assert.equal(normalize(note.speakerName),normalize(s.name));
+              assert.equal(note.sourceHeading,`${side==='aff'?'Proposition':'Opposition'} Speaker ${position+1} — ${note.speakerName}`);
+              assert.equal(typeof note.text,'string'); assert.ok(note.text.trim());
+              feedbackNotes++;
+            }
+          }
           if(s.score !== null) {
             assert.ok(Number.isFinite(s.score));
             assert.match(s.displayedScore,/^\d+(?:\.\d+)?$/);
@@ -63,6 +81,9 @@ export function verifySnapshot(snapshot) {
         const debate=snapshot.debates.find(d=>d.id===round.debateId);
         assert.equal(round.room,debate.room);assert.equal(round.division,debate.division);
         assert.ok([debate.aff.name,debate.neg.name].includes(s.team));
+        const sourceSide=['aff','neg'].find(side=>debate[side].name===s.team);
+        const sourcePerson=debate.ballot.sides[sourceSide].speakers.find(p=>normalize(p.name)===normalize(s.name));
+        assert.equal(round.feedback,sourcePerson.feedback?.text || null,`Feedback aggregation mismatch for ${s.name}`);
       }
       assert.ok(s.awardedStars<=2);
     }
@@ -75,7 +96,7 @@ export function verifySnapshot(snapshot) {
   const novice=divisions.find(d=>d.division==='NoviceS MS 3-on-3');
   const person=novice?.speakers.find(s=>s.name==='Jia-Hao Stevenson' && s.school==='Bellevue Youth Debate');
   const team=novice?.teams.find(t=>t.id===person?.teamId);
-  return { verifiedAt:new Date().toISOString(), extractedAt:snapshot.extractedAt, checksPassed:true, debateCount:ids.size, numericScores, divisions:divisions.map(d=>({division:d.division,...d.counts,issues:d.issues})), testCase:person?{name:person.name,rounds:person.rounds,average:person.average,rank:person.rank,rankAmongComplete:person.completeRank,stars:person.awardedStars,teamRecord:team.record,teamStanding:team.rank,teamsSharingRecord:team.recordGroupSize}:null };
+  return { verifiedAt:new Date().toISOString(), extractedAt:snapshot.extractedAt, checksPassed:true, debateCount:ids.size, numericScores, feedbackNotes, speakersWithFeedback:divisions.reduce((n,d)=>n+d.speakers.filter(s=>Object.values(s.rounds).some(r=>r.feedback)).length,0), divisions:divisions.map(d=>({division:d.division,...d.counts,issues:d.issues})), testCase:person?{name:person.name,rounds:person.rounds,average:person.average,rank:person.rank,rankAmongComplete:person.completeRank,stars:person.awardedStars,teamRecord:team.record,teamStanding:team.rank,teamsSharingRecord:team.recordGroupSize}:null };
 }
 
 if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {

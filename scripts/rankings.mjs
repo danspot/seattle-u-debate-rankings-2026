@@ -39,10 +39,10 @@ export function deriveDivision(snapshot, division) {
         for (const person of ballotTeam.speakers) {
           if (!team.members.some(n => normalize(n) === normalize(person.name))) team.members.push(person.name);
           const key = `${team.id}\u0000${normalize(person.name)}`;
-          if (!speakerMap.has(key)) speakerMap.set(key, { id: key, name: person.name, teamId: team.id, team: team.name, school: ballotTeam.school, sourceRosterLabel: isRosterLabel(person.name), rounds: {} });
+          if (!speakerMap.has(key)) speakerMap.set(key, { id: key, name: person.name, division, teamId: team.id, team: team.name, school: ballotTeam.school, sourceRosterLabel: isRosterLabel(person.name), rounds: {} });
           const speaker = speakerMap.get(key);
           if (speaker.rounds[debate.round]) throw new Error(`Duplicate speaker in round: ${key}`);
-          speaker.rounds[debate.round] = { score: person.score, displayedScore: person.displayedScore, room: debate.room, opponent, team: team.name, division, round: debate.round, debateId: debate.id, isBye: debate.isBye, roomHighest: high === null ? null : person.score === high, roomMaximum: high, ballotUrl: debate.ballot.url };
+          speaker.rounds[debate.round] = { score: person.score, displayedScore: person.displayedScore, room: debate.room, opponent, team: team.name, division, round: debate.round, debateId: debate.id, isBye: debate.isBye, roomHighest: high === null ? null : person.score === high, roomMaximum: high, ballotUrl: debate.ballot.url, feedback: person.feedback?.text || null, judgeName: debate.ballot.judgeName || null };
         }
       }
     }

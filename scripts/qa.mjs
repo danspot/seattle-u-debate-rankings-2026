@@ -17,6 +17,20 @@ async function checkCounts(page, selected) {
   assert.equal(await page.locator('#speaker-rows tr[data-name]').count(),selected.reduce((n,d)=>n+d.speakers.length,0));
   assert.equal(await page.locator('#team-rows tr[data-name]').count(),selected.reduce((n,d)=>n+d.teams.length,0));
 }
+async function checkFeedback(page, speaker) {
+  const key=encodeURIComponent(`${speaker.division}\u0000${speaker.id}`);
+  await page.locator(`[data-speaker="${key}"]`).click();
+  assert.equal(await page.getByRole('dialog').isVisible(),true);
+  assert.equal(await page.locator('#feedback-title').textContent(),speaker.name);
+  for (const round of [1,2]) {
+    const section=page.locator(`.feedback-round[data-round="${round}"]`);
+    const expected=speaker.rounds[round];
+    if(expected?.feedback)assert.equal(await section.locator('.feedback-text').textContent(),expected.feedback);
+    else assert.equal(await section.locator('.feedback-missing').isVisible(),true);
+    if(expected)assert.equal(await section.getByRole('link',{name:'Ballot',exact:true}).getAttribute('href'),expected.ballotUrl);
+  }
+  assert.equal(await page.locator('#speaker-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth),true,'Feedback popup overflows horizontally');
+}
 try {
   const page=await browser.newPage({viewport:{width:1440,height:1100}});
   page.on('pageerror',error=>errors.push(error.message));
@@ -67,6 +81,11 @@ try {
   assert.equal(await row.locator('.average').textContent(),person.average.toFixed(2));
   assert.equal(await row.locator('.stars').textContent(),'★'.repeat(person.awardedStars));
   assert.equal((await row.locator('.rank').innerText()).trim(),String(person.rank));
+  await checkFeedback(page,person);
+  await page.screenshot({path:'.local/desktop-feedback.png',fullPage:false});
+  await page.keyboard.press('Escape');
+  assert.equal(await page.getByRole('dialog').isVisible(),false);
+  assert.equal(await row.locator('.speaker-open').evaluate(e=>document.activeElement===e),true);
   await page.getByRole('tab',{name:/Team Standings/}).click();
   assert.equal(await page.locator('#team-rows tr').count(),1);
   const team=divisions.find(d=>d.division===person.rounds[1].division).teams.find(t=>t.id===person.teamId);
@@ -107,7 +126,17 @@ try {
   await mobile.keyboard.press('Escape');
   await mobile.getByRole('tab',{name:/Speaker Rankings/}).click();
   assert.equal(await mobile.locator('#speaker-rows .division-heading').count(),3);
+  await mobile.locator('#search').fill(person.name);
+  await checkFeedback(mobile,person);
+  await mobile.screenshot({path:'.local/mobile-feedback.png',fullPage:false});
+  await mobile.getByRole('button',{name:'Close speaker feedback',exact:true}).click();
+  assert.equal(await mobile.getByRole('dialog').isVisible(),false);
+  await mobile.locator('#search').fill('');
+  const withBoth=divisions.flatMap(d=>d.speakers).find(s=>s.rounds[1]?.feedback&&s.rounds[2]?.feedback);
+  assert.ok(withBoth,'Expected at least one speaker with feedback in both rounds');
+  await checkFeedback(mobile,withBoth);
+  await mobile.getByRole('button',{name:'Close speaker feedback',exact:true}).click();
   assert.deepEqual(errors,[]);
   assert.ok(requests.every(r=>new URL(r).origin===new URL(url).origin),'External runtime request');
-  console.log(`Browser QA passed at ${url}: default, single/multiple/all/empty divisions, grouped ranks, search in both tables, sorting, stars, keyboard controls, desktop and iPhone layouts, no script errors or live source requests.`);
+  console.log(`Browser QA passed at ${url}: division multi-select, search, sorting, scores, speaker feedback and missing states, popup keyboard/focus behavior, desktop and iPhone layouts, no script errors or live source requests.`);
 }finally{await browser.close();}
