@@ -36,6 +36,8 @@ try {
   assert.equal(await page.locator('#team-rows tr').count(),1);
   const team=divisions.find(d=>d.division===person.rounds[1].division).teams.find(t=>t.id===person.teamId);
   assert.ok((await page.locator('#team-rows').innerText()).includes(team.record));
+  await page.getByRole('button',{name:'Clear search',exact:true}).click();
+  await page.screenshot({path:'.local/desktop-teams.png',fullPage:false});
   await page.locator('#search').fill('no-such-speaker-zzzz');assert.equal(await page.locator('#empty').isVisible(),true);
   await page.getByRole('button',{name:'Clear search',exact:true}).click();
   await page.getByRole('tab',{name:/Speaker Rankings/}).click();

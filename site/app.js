@@ -21,6 +21,7 @@ function sortRows(rows, kind) {
       return kind === 'speaker' ? r?.score : r?.result === 'W' ? 1 : r?.result === 'L' ? 0 : null;
     }
     if (key === 'name' && kind === 'team') return row.displayName;
+    if (key === 'members' && kind === 'team') return row.members.join(', ');
     if (key === 'stars') return row.awardedStars;
     return row[key];
   };
@@ -52,11 +53,13 @@ function renderSpeaker(speaker) {
 function teamRound(team, round) {
   const r = team.rounds[round];
   if (!r) return `<td><span class="mobile-label">R${round}</span><span class="missing">Not listed</span></td>`;
-  return `<td><span class="mobile-label">R${round}</span>${r.result ? `<span class="outcome${r.result === 'L' ? ' loss' : ''}" title="${r.result === 'W' ? 'Win' : 'Loss'}">${r.result}</span>` : '<span class="missing">Unknown</span>'}<span class="opponent">${r.isBye ? 'BYE' : esc(r.opponent)}</span><span class="round-meta">${r.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener" title="Source ballot">${esc(r.room)}</a>` : `${esc(r.room)} · Ballot unavailable`}</span></td>`;
+  const result = r.result || 'Unknown';
+  const outcome = r.ballotUrl ? `<a class="outcome${r.result === 'L' ? ' loss' : ''}" href="${esc(r.ballotUrl)}" target="_blank" rel="noopener" aria-label="Round ${round} ballot: ${r.result === 'W' ? 'win' : r.result === 'L' ? 'loss' : 'unknown result'}">${result}</a>` : `<span class="outcome${r.result === 'L' ? ' loss' : ''}" title="Ballot unavailable">${result}</span>`;
+  return `<td><span class="mobile-label">R${round}</span>${outcome}<span class="opponent">${r.isBye ? 'BYE' : esc(r.opponent)}</span></td>`;
 }
 function renderTeam(team) {
   const alias = team.members.length && !team.members.some(name => team.name.includes(name)) ? ` <span class="team-alias">(${esc(team.name)})</span>` : '';
-  return `<tr data-name="${esc(team.name)}"><td class="rank">${team.rank ?? '—'}</td><td title="${esc(team.name)}"><span class="team-name">${esc(team.school || team.name)}</span>${alias}${team.members.length ? `<span class="team-members">${team.members.map(esc).join(', ')}</span>` : '<span class="sub">Roster unavailable</span>'}</td><td class="record">${team.record}${!team.complete ? '<span class="sub provisional">Incomplete</span>' : ''}</td>${teamRound(team,1)}${teamRound(team,2)}</tr>`;
+  return `<tr data-name="${esc(team.name)}"><td class="rank">${team.rank ?? '—'}</td><td class="team-school" title="${esc(team.name)}"><span class="team-name">${esc(team.school || team.name)}</span>${alias}</td><td class="members-cell">${team.members.length ? `<span class="team-members">${team.members.map(esc).join(', ')}</span>` : '<span class="sub">Roster unavailable</span>'}</td><td class="record">${team.record}${!team.complete ? '<span class="sub provisional">Incomplete</span>' : ''}</td>${teamRound(team,1)}${teamRound(team,2)}</tr>`;
 }
 function render() {
   const query = normalize($('search').value);
@@ -100,7 +103,7 @@ for (const kind of ['speaker','team']) {
     }
   });
   document.querySelectorAll(`#${kind}-panel [data-sort]`).forEach(button=>button.addEventListener('click',()=>{
-    const key=button.dataset.sort;sort[kind]={key,direction:sort[kind].key===key?(sort[kind].direction==='asc'?'desc':'asc'):['name','school','rank'].includes(key)?'asc':'desc'};render();
+    const key=button.dataset.sort;sort[kind]={key,direction:sort[kind].key===key?(sort[kind].direction==='asc'?'desc':'asc'):['name','school','members','rank'].includes(key)?'asc':'desc'};render();
   }));
 }
 changeDivision();
