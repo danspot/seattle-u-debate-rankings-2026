@@ -1,11 +1,11 @@
 {
-  "verifiedAt": "2026-11-21T23:30:34.608Z",
-  "extractedAt": "2026-11-21T23:19:32.751Z",
+  "verifiedAt": "2026-11-21T23:45:52.702Z",
+  "extractedAt": "2026-11-21T23:44:47.940Z",
   "checksPassed": true,
   "debateCount": 180,
-  "numericScores": 954,
-  "feedbackNotes": 606,
-  "speakersWithFeedback": 342,
+  "numericScores": 1026,
+  "feedbackNotes": 732,
+  "speakersWithFeedback": 348,
   "divisions": [
     {
       "division": "Experienced MS 3-on-3",
@@ -14,49 +14,13 @@
       "namedSpeakers": 69,
       "rosterLabels": 6,
       "scoredSpeakers": 75,
-      "completeSpeakers": 48,
+      "completeSpeakers": 66,
       "debates": 39,
-      "scoredBallots": 33,
-      "unavailableBallots": 3,
+      "scoredBallots": 36,
+      "unavailableBallots": 0,
       "byes": 3,
-      "completeTeams": 19,
+      "completeTeams": 25,
       "issues": [
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "ADMINISTRATION 220",
-          "text": "Round 3, ADMINISTRATION 220: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "ADMINISTRATION 220",
-          "text": "Round 3, ADMINISTRATION 220: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "ADMINISTRATION 306",
-          "text": "Round 3, ADMINISTRATION 306: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "ADMINISTRATION 306",
-          "text": "Round 3, ADMINISTRATION 306: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "ADMINISTRATION 305A",
-          "text": "Round 3, ADMINISTRATION 305A: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "ADMINISTRATION 305A",
-          "text": "Round 3, ADMINISTRATION 305A: winner not established by source styling."
-        },
         {
           "type": "roster-labels",
           "text": "6 speaker entries use source roster labels such as ABC or aa; identities are not inferred."
@@ -70,97 +34,13 @@
       "namedSpeakers": 147,
       "rosterLabels": 6,
       "scoredSpeakers": 153,
-      "completeSpeakers": 102,
+      "completeSpeakers": 144,
       "debates": 78,
-      "scoredBallots": 68,
-      "unavailableBallots": 7,
+      "scoredBallots": 75,
+      "unavailableBallots": 0,
       "byes": 3,
-      "completeTeams": 37,
+      "completeTeams": 51,
       "issues": [
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "PIGOTT 102",
-          "text": "Round 3, PIGOTT 102: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "PIGOTT 102",
-          "text": "Round 3, PIGOTT 102: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "ADMINISTRATION 320",
-          "text": "Round 3, ADMINISTRATION 320: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "ADMINISTRATION 320",
-          "text": "Round 3, ADMINISTRATION 320: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "BANNAN 244 - Wyckoff Auditorium",
-          "text": "Round 3, BANNAN 244 - Wyckoff Auditorium: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "BANNAN 244 - Wyckoff Auditorium",
-          "text": "Round 3, BANNAN 244 - Wyckoff Auditorium: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "BANNAN 441",
-          "text": "Round 3, BANNAN 441: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "BANNAN 441",
-          "text": "Round 3, BANNAN 441: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "ADMINISTRATION 324",
-          "text": "Round 3, ADMINISTRATION 324: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "ADMINISTRATION 324",
-          "text": "Round 3, ADMINISTRATION 324: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "BANNAN 107 - Bannan Auditorium",
-          "text": "Round 3, BANNAN 107 - Bannan Auditorium: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "BANNAN 107 - Bannan Auditorium",
-          "text": "Round 3, BANNAN 107 - Bannan Auditorium: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "BANNAN 401",
-          "text": "Round 3, BANNAN 401: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "BANNAN 401",
-          "text": "Round 3, BANNAN 401: winner not established by source styling."
-        },
         {
           "type": "roster-labels",
           "text": "6 speaker entries use source roster labels such as ABC or aa; identities are not inferred."
@@ -174,42 +54,18 @@
       "namedSpeakers": 120,
       "rosterLabels": 6,
       "scoredSpeakers": 123,
-      "completeSpeakers": 102,
+      "completeSpeakers": 114,
       "debates": 63,
-      "scoredBallots": 58,
-      "unavailableBallots": 2,
+      "scoredBallots": 60,
+      "unavailableBallots": 0,
       "byes": 2,
-      "completeTeams": 37,
+      "completeTeams": 41,
       "issues": [
         {
           "type": "unscored-ballot",
           "round": 1,
           "room": "PIGOTT 108",
           "text": "Round 1, PIGOTT 108: Test mars-almond-hershey vs. Aurorae Young Academy Emmy Magerramov-Aiden Yue-Alex Chen; ballot contains no numeric speaker scores."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "BANNAN 220",
-          "text": "Round 3, BANNAN 220: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "BANNAN 220",
-          "text": "Round 3, BANNAN 220: winner not established by source styling."
-        },
-        {
-          "type": "missing-ballot",
-          "round": 3,
-          "room": "BANNAN past 476",
-          "text": "Round 3, BANNAN past 476: ballot unavailable."
-        },
-        {
-          "type": "missing-result",
-          "round": 3,
-          "room": "BANNAN past 476",
-          "text": "Round 3, BANNAN past 476: winner not established by source styling."
         },
         {
           "type": "missing-pairing",
@@ -309,7 +165,7 @@
     "stars": 2,
     "teamStars": 3,
     "teamRecord": "1–2",
-    "teamStanding": 20,
-    "teamsSharingRecord": 14
+    "teamStanding": 22,
+    "teamsSharingRecord": 16
   }
 }

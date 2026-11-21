@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-21T23:19:32.751Z",
-  "extractionStartedAt": "2026-11-21T23:15:15.912Z",
-  "sourceUpdatedLabel": "Last updated 11/21/26, 10:23 PM PST",
+  "extractedAt": "2026-11-21T23:44:47.940Z",
+  "extractionStartedAt": "2026-11-21T23:38:35.886Z",
+  "sourceUpdatedLabel": "Last updated 11/21/26, 2:23 PM PST",
   "rounds": [
     1,
     2,
@@ -7100,19 +7100,37 @@
                 "name": "Ivy Kanter",
                 "score": 70,
                 "displayedScore": "70",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Ivy Kanter",
+                  "sourceHeading": "Proposition Speaker 1 — Ivy Kanter",
+                  "text": "Great assertion on the mental impact of a wrong incarceration due to ALPR and on religious freedom and misuse by police. Could have done better by going slower and not reading it all from paper and repsonding to opposition's queries."
+                }
               },
               {
                 "name": "Charlotte In",
                 "score": 70,
                 "displayedScore": "70",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Charlotte In",
+                  "sourceHeading": "Proposition Speaker 2 — Charlotte In",
+                  "text": "Charlotte went deeper into the stalking aspects of her assertion when ALPRs can be misused and the utilitarism of banning ALPRs. She did great but would do better on answering the POIs more and."
+                }
               },
               {
                 "name": "Anya Rajvanshy",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Anya Rajvanshy",
+                  "sourceHeading": "Proposition Speaker 3 — Anya Rajvanshy",
+                  "text": "Anya was really good in her closing arguments as well as her rebuttal to the 4th amendement argument. She was a great summarizer as well as contested their arguments."
+                }
               }
             ],
             "total": 230
@@ -7125,27 +7143,45 @@
                 "name": "Avira Jagadeesa",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Avira Jagadeesa",
+                  "sourceHeading": "Opposition Speaker 1 — Avira Jagadeesa",
+                  "text": "Avira made great points around inefficent alternatives such as in Austin and how regulation is better than banning. She could improve on the more regulation point providing evidence and suggestions."
+                }
               },
               {
                 "name": "Corinne Song",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Corinne Song",
+                  "sourceHeading": "Opposition Speaker 2 — Corinne Song",
+                  "text": "Corrine did a great job rebutting and summarizing her team's position especially on the applicability of the universal benefits of lesser crime and hence economic stability for all. She could have spent a little  less time combating the proposition."
+                }
               },
               {
                 "name": "Emma Lu",
                 "score": 91,
                 "displayedScore": "91",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Emma Lu",
+                  "sourceHeading": "Opposition Speaker 3 — Emma Lu",
+                  "text": "Emma did an amazing job- she not only summarized well, she clearly addressed the 4th ammendment issue with clarity. One area of improvement is not just use personal evidience. when talking about religious freedom"
+                }
               }
             ],
             "total": 271
           }
         },
         "judgeName": "Aarthi Saravanakumar",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/910"
       }
     },
@@ -8460,19 +8496,37 @@
                 "name": "Anishka Mohapatra",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Anishka Mohapatra",
+                  "sourceHeading": "Proposition Speaker 1 — Anishka Mohapatra",
+                  "text": "I thought your speech was strong. I liked your definition of the US as a democratic federal republic; although I think you could really dive into how, because of this, privacy is one of the building blocks of our nation and thus why it is the utmost important; it's not violated through ALPRs. I think one of your most compelling arguments was about civil rights: how these cameras are disproportionately harming minorities and are furthering systemic injustices. You did a good job with your POIs; responding to them and stating them really helped aid your case and poke holes in your opponent's case."
+                }
               },
               {
                 "name": "Sanaa Jetly",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Sanaa Jetly",
+                  "sourceHeading": "Proposition Speaker 2 — Sanaa Jetly",
+                  "text": "I really liked the extensions you provided and found them very strong. I would have liked to hear more refutations of your opponent's case and to see better timing between extensions and refutations. Filling your time to the whole limit would also have been beneficial. Overall, I think you were a strong speaker, and your points were very compelling."
+                }
               },
               {
                 "name": "Aanya Talati",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Aanya Talati",
+                  "sourceHeading": "Proposition Speaker 3 — Aanya Talati",
+                  "text": "Your speech was well formatted, and your signposting was very helpful. You spoke with confidence, but I would encourage you to look up more during your speech; it will help make your points stronger. This will aid you in not going over time as well. I loved your passion throughout the round, and you made strong POIs; one thing I would work on is making sure you wait for the 30-second cool-down time before asking another POI."
+                }
               }
             ],
             "total": 254
@@ -8485,27 +8539,45 @@
                 "name": "Hailey Xu",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Hailey Xu",
+                  "sourceHeading": "Opposition Speaker 1 — Hailey Xu",
+                  "text": "You articulated your points very effectively and thoroughly. I really enjoyed your beginning with a question, as it immediately drew my attention. I liked the order of your case, as you began with all the good things ALPRs do and then went into how they're not perfect, and that regulations are needed because, when I'm looking at my notes to choose a winner, looking at your side, the benefits are clearly laid out, and your second point is a built-in rebuttal. One thing I would encourage is speaking with more confidence; at times, I found it slightly hard to hear you, which mildly undercut your strong assertions, not anything that was consequential, but something to look out."
+                }
               },
               {
                 "name": "Anaisha Gupta",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Anaisha Gupta",
+                  "sourceHeading": "Opposition Speaker 2 — Anaisha Gupta",
+                  "text": "You spoke with confidence, clarity, and projection and were very persuasive with your points. I particularly liked your reply about taxes, and it provided a basis for why the Opp's argument on economic impacts does not stand. One thing that I would encourage you to implement is using your time effectively; your additional pauses for emphasis were very effective; however, it sometimes meant you had less time to advance your points. I would say it's really a balance, as I enjoyed it and it made it much more compelling to hear, but it does take up critical time. I really enjoyed you beginning with the walking home claim and finishing by citing your partner; it really appealed to pathos and immediately brought the human connection into the debate."
+                }
               },
               {
                 "name": "Isha Rajmohan",
                 "score": 89,
                 "displayedScore": "89",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Isha Rajmohan",
+                  "sourceHeading": "Opposition Speaker 3 — Isha Rajmohan",
+                  "text": "I really liked your refutation talking about AI and guns because it really crystallizes that our society doesn't ban helpful things, even if they can be destructive. Especially since, after you make this point, you follow up with that ALPRs haven't killed anyone, which really mitigates the Prop's ability to weigh in regarding lives.   One of the most compelling points I found in your speech that led into your weighing was that the premise of license plates and how they are inherently designed to keep people accountable to the police, and these cameras are just furthering this. Overall, you are a strong speaker; one thing that you could do is elaborate a little on your points. At the beginning of the speech, you restate your points, which is good, but I want to hear how they still stand as well before you move into offense against the Opp."
+                }
               }
             ],
             "total": 266
           }
         },
         "judgeName": "Emma Knobbs",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/923"
       }
     },
@@ -9132,19 +9204,37 @@
                 "name": "Riyaan Raja",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Riyaan Raja",
+                  "sourceHeading": "Proposition Speaker 1 — Riyaan Raja",
+                  "text": "You were PROP 2: You spoke well and quickly. I loved that you emphasized and focused on the numbers as key evidence. I think one important part is that if you filled your time, you could've done significantly better and refuted even more info."
+                }
               },
               {
                 "name": "Reza Firoozabadi",
                 "score": 88,
                 "displayedScore": "88",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Reza Firoozabadi",
+                  "sourceHeading": "Proposition Speaker 2 — Reza Firoozabadi",
+                  "text": "You were PROP 1: Beautiful speech. I was very impressed with this speech, especially its introduction. I think you could spend more time talking about the extra contentions your second speaker brought up earlier."
+                }
               },
               {
                 "name": "ABC",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Proposition Speaker 3 — ABC",
+                  "text": "You were PROP 3: I loved the way you affirmed and weighed the debate. The comparison was crucial to your winning the debate. I think that if you went farther on your impact by saying what the world would look like for AFF and NEG then it would be even more convincing."
+                }
               }
             ],
             "total": 264
@@ -9157,27 +9247,45 @@
                 "name": "Camden P",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Camden P",
+                  "sourceHeading": "Opposition Speaker 1 — Camden P",
+                  "text": "You were OPP 1: You spoke well and were precise with your speech. I would love it if you could be a little more organized and take up your entire speech (you could've spent more time refuting!)."
+                }
               },
               {
                 "name": "Vyan G",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Vyan G",
+                  "sourceHeading": "Opposition Speaker 2 — Vyan G",
+                  "text": "You were OPP 3: I liked the fundamentals of your speech; I think it was planned. But during your speech I think you weren't the most organized, causing you to have to waste some time that you could've saved. I loved the impact at the end, though."
+                }
               },
               {
                 "name": "Wolfie H",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Wolfie H",
+                  "sourceHeading": "Opposition Speaker 3 — Wolfie H",
+                  "text": "You were OPP 2: Good speech overall, but like your teammates, you weren't the best organized, which caused you to trip over your words and keep backtracking on what you said. I think the content of the speech was good, and you used your time well, but it could've been better."
+                }
               }
             ],
             "total": 256
           }
         },
         "judgeName": "dhruv hooda",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/929"
       }
     },
@@ -13748,19 +13856,37 @@
                 "name": "Avira Jagadeesa",
                 "score": 95,
                 "displayedScore": "95",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Avira Jagadeesa",
+                  "sourceHeading": "Proposition Speaker 1 — Avira Jagadeesa",
+                  "text": "You started off really strong with your framework and point on how you can gain more respect by being respected, which was not refuted by the opponent. I wish you gave a definition here, because a lot came down to the true definition of what being respected or well-liked means. You have a good speed, and I appreciated how you elaborated on both of your contentions and subpoints a lot.  You had 10 seconds left, so I wish you had added some anecdotes on your first subpoint about goals, however I liked how you brought up how presidential elections are all about who you respect more under your second subpoint."
+                }
               },
               {
                 "name": "Corinne Song",
                 "score": 94,
                 "displayedScore": "94",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Corinne Song",
+                  "sourceHeading": "Proposition Speaker 2 — Corinne Song",
+                  "text": "Good job on refuting the other team's contentions as well as defending your own. Make sure to get your arguments straight, because towards the end it got really confusing about what you meant by being respected or well-liked, since the reasons kept changing and sounded really similar, which was proving your opponent's point. The other team refuted your anecdote on Martin Luther King, so I wish you had gone back and proved why it was still valid instead of just restating what was already said. You had 1 minute left so please use that time wisely by going back to your own contentions once more to add even more or just restate them."
+                }
               },
               {
                 "name": "Emma Lu",
                 "score": 96,
                 "displayedScore": "96",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Emma Lu",
+                  "sourceHeading": "Proposition Speaker 3 — Emma Lu",
+                  "text": "I noticed that you were having difficulty starting off at that speed, so make sure to pace yourself carefully and value quality of speech over quantity. I liked how you pointed out that they dropped your framework as well as your second contention. You went over and explained how your contentions meet their burden of proof; however, you didn't show how it was unique, which is what the other team was calling for. While restating your own contentions, you brought up the anecdote of your two friends running for a school election, and how the more thoughtful yet less popular friend won. However, just earlier in your speech, you had said that being well liked is what would cause you to win a school election, so that seemed rather contradictory. I liked how you refuted against their community contention of how you don't necessarily have to be liked by your community to be a part of one. I wish you saved time to go through each contention and why you won during your weigh. But I liked how you brought in scope at the end."
+                }
               }
             ],
             "total": 285
@@ -13773,27 +13899,45 @@
                 "name": "Raina Susarla",
                 "score": 95,
                 "displayedScore": "95",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Raina Susarla",
+                  "sourceHeading": "Opposition Speaker 1 — Raina Susarla",
+                  "text": "You had a really good start. I really liked the burden of proof; it was very original and that is why it was so difficult to refute or prove. Good job on bringing up that Martin Luther King was actually not respected by a lot of the white people, since that disproved their point, and I did not buy it again. I also liked how you talked about respect really being objectifying, which the PROP didn't respond to. Since the PROP didn't introduce a definition, you mildly defined it during a POI response that being well-liked doesn't have to be everyone, but a small group. In the end, please make sure to refute all of the opponent's contentions."
+                }
               },
               {
                 "name": "Keane Miller",
                 "score": 96,
                 "displayedScore": "96",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Keane Miller",
+                  "sourceHeading": "Opposition Speaker 2 — Keane Miller",
+                  "text": "In your first speech, you brought up your team's third contention. Unfortunately, I did not buy this point only because your previous speaker did not say that you would be introducing a final contention. I did however, really like how you constantly presented a choice for the judge. I also bought how you said that your contentions also fit under societal benefits, since that was the preferred framework from the PROP."
+                }
               },
               {
                 "name": "ABC",
                 "score": 97,
                 "displayedScore": "97",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "In your second speech, I appreciate how you went over all of your previous contentions again, and explaining how they fit under the opponent's framework as well as how their response to your BOP did not suffice. You talked a lot about feelings, and the opponent POI'd saying that feelings are irrelevant to the societal benefit. Though I really liked your response that feelings are what makes people do well in society."
+                }
               }
             ],
             "total": 288
           }
         },
         "judgeName": "Aya Glass",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/970"
       }
     },
@@ -13922,15 +14066,15 @@
       }
     },
     {
-      "id": "Experienced MS 3-on-3-r3-3",
+      "id": "972",
       "division": "Experienced MS 3-on-3",
       "round": 3,
       "room": "ADMINISTRATION 220",
       "aff": {
         "name": "Evergreen School Willa Cox-Hultquist-Cevia Luk-ABC",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
       "neg": {
@@ -13940,11 +14084,74 @@
           "textDecorationLine": "none"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3BL59A162",
+        "roundLabel": "Round 3",
+        "match": "Evergreen School Willa Cox-Hultquist-Cevia Luk-ABC vs. University Prep Darsh Srinivas-Aditya Haritsa-Layla Krishnan",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 220",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Willa Cox-Hultquist-Cevia Luk-ABC",
+            "speakers": [
+              {
+                "name": "Willa Cox-Hultquist",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Cevia Luk",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              }
+            ],
+            "total": 243
+          },
+          "neg": {
+            "school": "University Prep",
+            "teamName": "University Prep Darsh Srinivas-Aditya Haritsa-Layla Krishnan",
+            "speakers": [
+              {
+                "name": "Darsh Srinivas",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": null
+              },
+              {
+                "name": "Aditya Haritsa",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Layla Krishnan",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              }
+            ],
+            "total": 225
+          }
+        },
+        "judgeName": "Basiru Lowe",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/972"
+      }
     },
     {
       "id": "973",
@@ -14035,7 +14242,7 @@
       }
     },
     {
-      "id": "Experienced MS 3-on-3-r3-5",
+      "id": "974",
       "division": "Experienced MS 3-on-3",
       "round": 3,
       "room": "ADMINISTRATION 306",
@@ -14049,18 +14256,81 @@
       "neg": {
         "name": "Open Window Tazmin Sohal-An Jei Wang-Rishab Mitra",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3TK59A164",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Eugene Hwang-Sabir Thapar-Martin Zhang vs. Open Window Tazmin Sohal-An Jei Wang-Rishab Mitra",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 306",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Eugene Hwang-Sabir Thapar-Martin Zhang",
+            "speakers": [
+              {
+                "name": "Eugene Hwang",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Sabir Thapar",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Martin Zhang",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              }
+            ],
+            "total": 253
+          },
+          "neg": {
+            "school": "Open Window",
+            "teamName": "Open Window Tazmin Sohal-An Jei Wang-Rishab Mitra",
+            "speakers": [
+              {
+                "name": "Tazmin Sohal",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "An Jei Wang",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Rishab Mitra",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              }
+            ],
+            "total": 263
+          }
+        },
+        "judgeName": "Tayshu Konde",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/974"
+      }
     },
     {
-      "id": "Experienced MS 3-on-3-r3-6",
+      "id": "975",
       "division": "Experienced MS 3-on-3",
       "round": 3,
       "room": "ADMINISTRATION 305A",
@@ -14074,15 +14344,114 @@
       "neg": {
         "name": "Bellevue Youth Debate Ishaan Bala-Eva Chen-Francis Chen",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3EK59A165",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Ryan Wang-Kate Wong-Nathan Xu vs. Bellevue Youth Debate Ishaan Bala-Eva Chen-Francis Chen",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 305A",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Ryan Wang-Kate Wong-Nathan Xu",
+            "speakers": [
+              {
+                "name": "Ryan Wang",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Ryan Wang",
+                  "sourceHeading": "Proposition Speaker 1 — Ryan Wang",
+                  "text": "Comments given in person"
+                }
+              },
+              {
+                "name": "Kate Wong",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Kate Wong",
+                  "sourceHeading": "Proposition Speaker 2 — Kate Wong",
+                  "text": "Comments given in person"
+                }
+              },
+              {
+                "name": "Nathan Xu",
+                "score": 94,
+                "displayedScore": "94",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Nathan Xu",
+                  "sourceHeading": "Proposition Speaker 3 — Nathan Xu",
+                  "text": "Comments given in person"
+                }
+              }
+            ],
+            "total": 253
+          },
+          "neg": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Ishaan Bala-Eva Chen-Francis Chen",
+            "speakers": [
+              {
+                "name": "Ishaan Bala",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ishaan Bala",
+                  "sourceHeading": "Opposition Speaker 1 — Ishaan Bala",
+                  "text": "Comments given in person"
+                }
+              },
+              {
+                "name": "Eva Chen",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Eva Chen",
+                  "sourceHeading": "Opposition Speaker 2 — Eva Chen",
+                  "text": "Comments given in person"
+                }
+              },
+              {
+                "name": "Francis Chen",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Francis Chen",
+                  "sourceHeading": "Opposition Speaker 3 — Francis Chen",
+                  "text": "Comments given in person"
+                }
+              }
+            ],
+            "total": 259
+          }
+        },
+        "judgeName": "Ellie Klesert",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/975"
+      }
     },
     {
       "id": "976",
@@ -14299,19 +14668,37 @@
                 "name": "Alan Cheng",
                 "score": 88,
                 "displayedScore": "88",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Alan Cheng",
+                  "sourceHeading": "Proposition Speaker 1 — Alan Cheng",
+                  "text": "Great opening statement and overall structuring of speech along with keeping the same rhythm throughout the speech. Could've potentially spent time on a counterclaim before the opposition even starts"
+                }
               },
               {
                 "name": "Michael Jose",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Michael Jose",
+                  "sourceHeading": "Proposition Speaker 2 — Michael Jose",
+                  "text": "Great use of poi's against opposition while providing fair point and also restated and refuted contentions very well. Didn't answer poi due to misunderstanding and probably should have asked for it again to properly answer it"
+                }
               },
               {
                 "name": "Will Downer",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Will Downer",
+                  "sourceHeading": "Proposition Speaker 3 — Will Downer",
+                  "text": "Wrapped up the speech very well while providing a good closing statement and structured it very well. Mainly focused on refuting one contention instead of their entire argument"
+                }
               }
             ],
             "total": 264
@@ -14324,27 +14711,45 @@
                 "name": "Lydia Diamantopoulos",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Lydia Diamantopoulos",
+                  "sourceHeading": "Opposition Speaker 1 — Lydia Diamantopoulos",
+                  "text": "Good hook and provided a great structure while also staying composed throughout the whole speech. Spends a lot of time focusing on one point instead of keeping all their contentions equal in power"
+                }
               },
               {
                 "name": "Shannon Wang",
                 "score": 91,
                 "displayedScore": "91",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Shannon Wang",
+                  "sourceHeading": "Opposition Speaker 2 — Shannon Wang",
+                  "text": "Very good points of refuting while making sure old contentions are still relevant. Spoke very fast to where some points may have been lost"
+                }
               },
               {
                 "name": "ABC",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "Lydia second speech.      Good structuring along with good rebuttals while also making sure their contentions stay strong. Could've stretched the speech a little longer to solidify how their contentions are stronger fundamentally"
+                }
               }
             ],
             "total": 271
           }
         },
         "judgeName": "Asher Nord",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/978"
       }
     },
@@ -14387,19 +14792,37 @@
                 "name": "Alyson Yang",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Alyson Yang",
+                  "sourceHeading": "Proposition Speaker 1 — Alyson Yang",
+                  "text": "Excellent job stating your definitions and clearly differentiating the difference between respect and likeability. One thing to improve on is slowing down on key claims for more emphasis to make your claim stronger."
+                }
               },
               {
                 "name": "Natalie Ng",
                 "score": 93,
                 "displayedScore": "93",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Natalie Ng",
+                  "sourceHeading": "Proposition Speaker 2 — Natalie Ng",
+                  "text": "I really liked the analogy you mentioned about how all squares are rectangles but not all rectangles are squares, as you relate this to how all respected people are likeable but how not all likeable people are respected. One thing to work on is give yourself more time to weigh the debate because there was stronger arguments that could have been made when weighing the debate and explaining how opponent contentions do not stand."
+                }
               },
               {
                 "name": "Ethan Qiao",
                 "score": 88,
                 "displayedScore": "88",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Ethan Qiao",
+                  "sourceHeading": "Proposition Speaker 3 — Ethan Qiao",
+                  "text": "I really liked your example about the flood and how if you were in a flood you would want to be with someone who is more respected rather then likeable. One thing to improve on is mentioning how the OPP does not have a definition and how your definition stands."
+                }
               }
             ],
             "total": 261
@@ -14412,27 +14835,45 @@
                 "name": "Chuan Li",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Chuan Li",
+                  "sourceHeading": "Opposition Speaker 1 — Chuan Li",
+                  "text": "I love how you challenged Props definition on likeability and explained how likeability does not just mean being funny or looking pretty rather its about your personality and you applied this argument by refuting the Props speech about floods and how you can be with a likeable person who is brave. One thing to work on is responding faster and more concise to POI's so it does not disrupt the flow of your argument."
+                }
               },
               {
                 "name": "Ethan Lay",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Ethan Lay",
+                  "sourceHeading": "Opposition Speaker 2 — Ethan Lay",
+                  "text": "I liked your strong argument on how people act more like themselves around those who they like compared to those who they respect. One thing to improve on is attempting to utilize more of your time as you had 1 minute left and in that minute if you have nothing else to say it is better to restate contentions to emphasize your argument or refute Prop claims."
+                }
               },
               {
                 "name": "ABC",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "Good strong rebuttal about how likeliness is related to being well respected and specifically mentioning how your contentions were stronger then the Prop contentions. One thing to work on is not challenging the Prop definition in last speech as this is something that should be done in first speech."
+                }
               }
             ],
             "total": 246
           }
         },
         "judgeName": "Aaryan Gupta",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/979"
       }
     },
@@ -14775,19 +15216,37 @@
                 "name": "Nahom Fentahun",
                 "score": 77,
                 "displayedScore": "77",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Nahom Fentahun",
+                  "sourceHeading": "Proposition Speaker 1 — Nahom Fentahun",
+                  "text": "Good speech, and nice job laying out clear points. In the future, I would talk more about evidence/reasoning so that you can try and fill up more of your time."
+                }
               },
               {
                 "name": "Omar Haddad",
                 "score": 78,
                 "displayedScore": "78",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Omar Haddad",
+                  "sourceHeading": "Proposition Speaker 2 — Omar Haddad",
+                  "text": "You had some great POIs, but next time try and think of what your going to say, so you don't run out of time. As for your speech, you did exactly what a 3rd speaker should do, but I did not hear a clear weigh at the end and that is an essential part of the 3rd speech."
+                }
               },
               {
                 "name": "Advait Ramanan",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Advait Ramanan",
+                  "sourceHeading": "Proposition Speaker 3 — Advait Ramanan",
+                  "text": "You again provided exactly the refutations that you should have, but did not give me any reasoning for them. You had really good POIs, and always knew exactly what you were going to say before you started."
+                }
               }
             ],
             "total": 234
@@ -14800,27 +15259,45 @@
                 "name": "Hailey Xu",
                 "score": 89,
                 "displayedScore": "89",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Hailey Xu",
+                  "sourceHeading": "Opposition Speaker 1 — Hailey Xu",
+                  "text": "You did a great job laying out your points, and clearly expanding on them with anecdotes as well as providing POI responses. One thing to work on is having a more clear impact at the end of each speech."
+                }
               },
               {
                 "name": "Anaisha Gupta",
                 "score": 91,
                 "displayedScore": "91",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Anaisha Gupta",
+                  "sourceHeading": "Opposition Speaker 2 — Anaisha Gupta",
+                  "text": "You perfectly laid out your refutations, and front-lined as well without rushing either of them. You balanced your time very well, which is a good skill to have in debate. One thing to work on is structuring your speech more effectively. You started by restating your points, but then went on to refuting and then addressing your points again. Try to group your points and refutations together in your speech to make it easier for the judge to flow."
+                }
               },
               {
                 "name": "Isha Rajmohan",
                 "score": 95,
                 "displayedScore": "95",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Isha Rajmohan",
+                  "sourceHeading": "Opposition Speaker 3 — Isha Rajmohan",
+                  "text": "Phenomenal speech. You made great eye contact and only glanced down at your paper once or twice. On top of that, you didn't even stutter, and used very little filler words. Your weigh was very persuasive and you spoke like you really really cared about this. If i had to give you one thing to work on, it would be connecting all of your weigh back to your actual points. You gave several examples and anecdotes related to your points, but it wasn't super clear which evidence fell under which point. Overall, this was an amazing speech."
+                }
               }
             ],
             "total": 275
           }
         },
         "judgeName": "Armaan Grover",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/983"
       }
     },
@@ -15461,15 +15938,15 @@
       }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-8",
+      "id": "990",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "PIGOTT 102",
       "aff": {
         "name": "Lakeside Debate Mason Jiang-Grant Schreiber-Jai Wahi",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
       "neg": {
@@ -15479,14 +15956,77 @@
           "textDecorationLine": "none"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3EH59A185",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Mason Jiang-Grant Schreiber-Jai Wahi vs. Kenmore-Sanuthi-Kaitlyn-Emmery",
+        "division": "NoviceE MS 3-on-3",
+        "room": "PIGOTT 102",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Mason Jiang-Grant Schreiber-Jai Wahi",
+            "speakers": [
+              {
+                "name": "Mason Jiang",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Grant Schreiber",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Jai Wahi",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 252
+          },
+          "neg": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Sanuthi-Kaitlyn-Emmery",
+            "speakers": [
+              {
+                "name": "Sanuthi",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Kaitlyn",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Emmery",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              }
+            ],
+            "total": 250
+          }
+        },
+        "judgeName": "Eunsoo Han",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/990"
+      }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-9",
+      "id": "991",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "ADMINISTRATION 320",
@@ -15500,15 +16040,78 @@
       "neg": {
         "name": "Lakeside Debate Anishka Mohapatra-Sanaa Jetly-Aanya Talati",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SS59A186",
+        "roundLabel": "Round 3",
+        "match": "Kenmore-Rory-Emma-Layla vs. Lakeside Debate Anishka Mohapatra-Sanaa Jetly-Aanya Talati",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 320",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Rory-Emma-Layla",
+            "speakers": [
+              {
+                "name": "Rory",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              },
+              {
+                "name": "Emma",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Layla",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": null
+              }
+            ],
+            "total": 229
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Anishka Mohapatra-Sanaa Jetly-Aanya Talati",
+            "speakers": [
+              {
+                "name": "Anishka Mohapatra",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Sanaa Jetly",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Aanya Talati",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              }
+            ],
+            "total": 252
+          }
+        },
+        "judgeName": "Sayanti Saha",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/991"
+      }
     },
     {
       "id": "992",
@@ -15811,15 +16414,15 @@
       }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-13",
+      "id": "995",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "BANNAN 244 - Wyckoff Auditorium",
       "aff": {
         "name": "Harbor School Karina King-Alexia Ruiz Amezcua-Ada Buettner",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
       "neg": {
@@ -15829,22 +16432,121 @@
           "textDecorationLine": "none"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3OK59A190",
+        "roundLabel": "Round 3",
+        "match": "Harbor School Karina King-Alexia Ruiz Amezcua-Ada Buettner vs. St Thomas School Elina A-Rachel L-Sylena H",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 244 - Wyckoff Auditorium",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Harbor School",
+            "teamName": "Harbor School Karina King-Alexia Ruiz Amezcua-Ada Buettner",
+            "speakers": [
+              {
+                "name": "Karina King",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Karina King",
+                  "sourceHeading": "Proposition Speaker 1 — Karina King",
+                  "text": "Good job overviewing the case clearly and frontlining, You could’ve done with adding some more refutations, and you should've led with the definition rebuttal, so that I could flow your speech more accurately."
+                }
+              },
+              {
+                "name": "Alexia Ruiz Amezcua",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Alexia Ruiz Amezcua",
+                  "sourceHeading": "Proposition Speaker 2 — Alexia Ruiz Amezcua",
+                  "text": "Good job with the story, and your points were clearly delivered and made sense. You probably should have expanded on them though, because you barely used half of your time."
+                }
+              },
+              {
+                "name": "Ada Buettner",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Ada Buettner",
+                  "sourceHeading": "Proposition Speaker 3 — Ada Buettner",
+                  "text": "I like your hypothetical, and it did a good job of illustrating your point. You could have done with more frontlining and rebuttals. You should have used more time to weigh the debate."
+                }
+              }
+            ],
+            "total": 225
+          },
+          "neg": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Elina A-Rachel L-Sylena H",
+            "speakers": [
+              {
+                "name": "Elina A",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Elina A",
+                  "sourceHeading": "Opposition Speaker 1 — Elina A",
+                  "text": "Good job using all your time, you stretched out the speech well. You could have spent a little more time doing frontlining, but it was generally a good speech."
+                }
+              },
+              {
+                "name": "Rachel L",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Rachel L",
+                  "sourceHeading": "Opposition Speaker 2 — Rachel L",
+                  "text": "I liked that you used a story, and I liked that you rebutted well. I feel like you could have done a little more frontlining, and you probably should have used weighing mechanisms while you weighed the debate, but it was generally a good speech."
+                }
+              },
+              {
+                "name": "Sylena H",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Sylena H",
+                  "sourceHeading": "Opposition Speaker 3 — Sylena H",
+                  "text": "Good job pointing out that you can be respected AND well liked. Your BOP was a bit iffy, since it was basically just saying “To win this debate, they must overwhelmingly and completely win” which doesn’t really function as a BOP."
+                }
+              }
+            ],
+            "total": 225
+          }
+        },
+        "judgeName": "Odin Kassover",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/995"
+      }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-14",
+      "id": "996",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "BANNAN 441",
       "aff": {
         "name": "St Thomas School Camden P-Vyan G-Wolfie H",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
       "neg": {
@@ -15854,14 +16556,77 @@
           "textDecorationLine": "none"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SN59A191",
+        "roundLabel": "Round 3",
+        "match": "St Thomas School Camden P-Vyan G-Wolfie H vs. Lakeside Debate Rachel Zhu-Clara Rose-Naisha Gupta",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 441",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Camden P-Vyan G-Wolfie H",
+            "speakers": [
+              {
+                "name": "Camden P",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Vyan G",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Wolfie H",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              }
+            ],
+            "total": 237
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Rachel Zhu-Clara Rose-Naisha Gupta",
+            "speakers": [
+              {
+                "name": "Rachel Zhu",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Clara Rose",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Naisha Gupta",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              }
+            ],
+            "total": 235
+          }
+        },
+        "judgeName": "Sarayu Nukala",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/996"
+      }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-15",
+      "id": "997",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "ADMINISTRATION 324",
@@ -15875,15 +16640,78 @@
       "neg": {
         "name": "EPS1",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3TH59A192",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Jaylia Wu-William Ma-Eric Yu vs. EPS1",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 324",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Jaylia Wu-William Ma-Eric Yu",
+            "speakers": [
+              {
+                "name": "Jaylia Wu",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "William Ma",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Eric Yu",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 260
+          },
+          "neg": {
+            "school": "Eastside Prep",
+            "teamName": "EPS1",
+            "speakers": [
+              {
+                "name": "Mohit Ghosh",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Taya Bilenko",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Tony Wu",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              }
+            ],
+            "total": 260
+          }
+        },
+        "judgeName": "Ting Hua",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/997"
+      }
     },
     {
       "id": "998",
@@ -15924,19 +16752,37 @@
                 "name": "Alex",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Alex",
+                  "sourceHeading": "Proposition Speaker 1 — Alex",
+                  "text": "Prop speaker: 3.  Alex, great job bringing in military as part of your argument. I wish you had it as one of your main points because it is a very strong argument."
+                }
               },
               {
                 "name": "Srikar",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Srikar",
+                  "sourceHeading": "Proposition Speaker 2 — Srikar",
+                  "text": "Prop speaker 1: Srikar, great job on setting the tone and establishing a good rapport.  I liked your point about being respected for knowing math.  I was not convinced that being feared is the same as being respected as in example about Hitler."
+                }
               },
               {
                 "name": "Jason",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Jason",
+                  "sourceHeading": "Proposition Speaker 3 — Jason",
+                  "text": "Prop speaker 2: Jason, I liked that you brought up that respect gives you courage, it was very well said.  I did not know that Einstein was not well liked."
+                }
               }
             ],
             "total": 255
@@ -15949,27 +16795,45 @@
                 "name": "Anna Deng",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Anna Deng",
+                  "sourceHeading": "Opposition Speaker 1 — Anna Deng",
+                  "text": "Opp speaker 3: Anna, I liked your point that being respected can be lonely and having power and being feared is not the same as being respected.  In the future, please practice on answering POIs more effectively."
+                }
               },
               {
                 "name": "Beckett Locher",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Beckett Locher",
+                  "sourceHeading": "Opposition Speaker 2 — Beckett Locher",
+                  "text": "Becket, great example about FDR and interesting point about bringing up NVIDIA.  Speak a little more clearly and have a little more confidence in your speech."
+                }
               },
               {
                 "name": "Amy Chang",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Amy Chang",
+                  "sourceHeading": "Opposition Speaker 3 — Amy Chang",
+                  "text": "Opp speaker 1: Amy, great rebuttals to the first speaker, I liked your example about your ballet teacher.  I liked how you brought up that fear and power are not exactly respect.  I wish you had elaborated more on it."
+                }
               }
             ],
             "total": 255
           }
         },
         "judgeName": "Anna Zaster",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/998"
       }
     },
@@ -16136,19 +17000,37 @@
                 "name": "Hazel",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Hazel",
+                  "sourceHeading": "Proposition Speaker 1 — Hazel",
+                  "text": "i liked your opening statement, however stating 3-5th contentions and then not addressing them at all afterwards threw me off. otherwise, great job! signposting made it easy for me to flow"
+                }
               },
               {
                 "name": "Srisahiti",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Srisahiti",
+                  "sourceHeading": "Proposition Speaker 2 — Srisahiti",
+                  "text": "you need to extend earlier contentions, or else the judge may not flow it through. i liked the response to the social hierachy argument, and your response to POIs were good, as well as signposting"
+                }
               },
               {
                 "name": "Surabhi",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Surabhi",
+                  "sourceHeading": "Proposition Speaker 3 — Surabhi",
+                  "text": "i liked the response of respect not being a disposable feeling, however i didnt understand the respect being a birthright point and i feel like i should have been explained earlier on. please do more signposting / stating where you are in your speech, like extending each contention!"
+                }
               }
             ],
             "total": 248
@@ -16161,32 +17043,50 @@
                 "name": "Amelia Hong",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Amelia Hong",
+                  "sourceHeading": "Opposition Speaker 1 — Amelia Hong",
+                  "text": "the pressure argument could have easily been said for both sides, so i dont think there was a clear winner on that. the dictatorship argument and wasnt thoroughly explained, extend beyond obviously we dont want this. you also could have talked about the benefits of being well liked. everything else was great, and the organization was also easy to follow!"
+                }
               },
               {
                 "name": "Hanmo Lin",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Hanmo Lin",
+                  "sourceHeading": "Opposition Speaker 2 — Hanmo Lin",
+                  "text": "you spent a lot of time on rebuttals, but you also need to save time for your own contentions. i thought the hitler example didnt really connect, and wasnt explained, so i ultimately didnt buy that argument. also please signpost, for ex. saying “onto our contention 1 of this…” itll make it a lot easier for judges to flow your arguments! thanks for giving a roadmap however, it was helpful. your rebuttal was also well thought out!"
+                }
               },
               {
                 "name": "Marissa Ye",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Marissa Ye",
+                  "sourceHeading": "Opposition Speaker 3 — Marissa Ye",
+                  "text": "i didnt understand the link between scope, i also didnt really understand the reversibility weighing argument. you could have explained these deeper, which might have made me vote for opp instead. weighing is important, so make sure you give the judge good reasons why your side should win! also on poi, you should never agree with opponent because they will use it against you. everything else was great though!"
+                }
               }
             ],
             "total": 243
           }
         },
         "judgeName": "Claire Ye",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1000"
       }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-19",
+      "id": "1001",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "BANNAN 107 - Bannan Auditorium",
@@ -16200,15 +17100,78 @@
       "neg": {
         "name": "Bellevue Youth Debate Bella Qu-Lilly Koss-Leena Jafry",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3PK59A196",
+        "roundLabel": "Round 3",
+        "match": "Climb Bellevue Kai Li-Sahil Motwani-Abhyuday Jain vs. Bellevue Youth Debate Bella Qu-Lilly Koss-Leena Jafry",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 107 - Bannan Auditorium",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Climb Bellevue",
+            "teamName": "Climb Bellevue Kai Li-Sahil Motwani-Abhyuday Jain",
+            "speakers": [
+              {
+                "name": "Kai Li",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Sahil Motwani",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              },
+              {
+                "name": "Abhyuday Jain",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 239
+          },
+          "neg": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Bella Qu-Lilly Koss-Leena Jafry",
+            "speakers": [
+              {
+                "name": "Bella Qu",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Lilly Koss",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "Leena Jafry",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 244
+          }
+        },
+        "judgeName": "Parsa Kazemini",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1001"
+      }
     },
     {
       "id": "1002",
@@ -16423,7 +17386,7 @@
       }
     },
     {
-      "id": "NoviceE MS 3-on-3-r3-22",
+      "id": "1004",
       "division": "NoviceE MS 3-on-3",
       "round": 3,
       "room": "BANNAN 401",
@@ -16437,15 +17400,78 @@
       "neg": {
         "name": "EPS4",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AG59A199",
+        "roundLabel": "Round 3",
+        "match": "Climb Bellevue Rhea Khera-Vaneesha Kaushal-Rei Kuramoto vs. EPS4",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 401",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Climb Bellevue",
+            "teamName": "Climb Bellevue Rhea Khera-Vaneesha Kaushal-Rei Kuramoto",
+            "speakers": [
+              {
+                "name": "Rhea Khera",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": null
+              },
+              {
+                "name": "Vaneesha Kaushal",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "Rei Kuramoto",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 243
+          },
+          "neg": {
+            "school": "Eastside Prep",
+            "teamName": "EPS4",
+            "speakers": [
+              {
+                "name": "Luna Hagen",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Mia Deng",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 255
+          }
+        },
+        "judgeName": "Ananya Gupta",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1004"
+      }
     },
     {
       "id": "1005",
@@ -16998,19 +18024,37 @@
                 "name": "Evan Qi",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Evan Qi",
+                  "sourceHeading": "Proposition Speaker 1 — Evan Qi",
+                  "text": "- Good job restating points\n- Speaks clearly\n- Good analogy\n- Needs to maintain eye-contact\n- Didn’t give any definitions"
+                }
               },
               {
                 "name": "Logan Fong",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Logan Fong",
+                  "sourceHeading": "Proposition Speaker 2 — Logan Fong",
+                  "text": "- Used full time which is good\n- Good at projecting voice \n- You should still pass off the POI if you're a bit confused because your teammates will have more time to properly answer it\n- Try to maintain eye contact"
+                }
               },
               {
                 "name": "JJ Nguyen",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "JJ Nguyen",
+                  "sourceHeading": "Proposition Speaker 3 — JJ Nguyen",
+                  "text": "- Did a lot POIs\n- Used full time\n- Make sure to not add examples next time\n- You should look into the normal weighing standards (this will help you a lot in the future if you continue debate)"
+                }
               }
             ],
             "total": 246
@@ -17023,27 +18067,45 @@
                 "name": "Annabelle Wang",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Annabelle Wang",
+                  "sourceHeading": "Opposition Speaker 1 — Annabelle Wang",
+                  "text": "- Good response time when taking POIs\n- Good amount of times for refutations\n- Should've made the BOP more specific\n- Left about 1 min left --> could've restarted or added more to your contentions"
+                }
               },
               {
                 "name": "Suhani Pathania",
                 "score": 78,
                 "displayedScore": "78",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Suhani Pathania",
+                  "sourceHeading": "Opposition Speaker 2 — Suhani Pathania",
+                  "text": "- Spoke clearly\n- You should work on your organization since you had a long pause in the middle of your speech\n- had about ~2 minutes left --> could've been used for restating and/or more refutations\n- Try to maintain eye contact"
+                }
               },
               {
                 "name": "Edgar Li",
                 "score": 78,
                 "displayedScore": "78",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Edgar Li",
+                  "sourceHeading": "Opposition Speaker 3 — Edgar Li",
+                  "text": "- Stuttered a decent bit --> try to stay calm\n- Used full time\n- Maintain eye contact\n- You should look into the normal weighing standards (this will help you a lot in the future if you continue debate)"
+                }
               }
             ],
             "total": 236
           }
         },
         "judgeName": "Jennifer Dinh",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1010"
       }
     },
@@ -17174,19 +18236,37 @@
                 "name": "Elise Delhez",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Elise Delhez",
+                  "sourceHeading": "Proposition Speaker 1 — Elise Delhez",
+                  "text": "Great signposting, smart use of definitions, good pacing, and a strong argument that respect lasts for years. You waited until the last 30 seconds to weigh the debate, and I expected you to weigh a little earlier."
+                }
               },
               {
                 "name": "Ari Kasprowicz",
                 "score": 89,
                 "displayedScore": "89",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Ari Kasprowicz",
+                  "sourceHeading": "Proposition Speaker 2 — Ari Kasprowicz",
+                  "text": "You built a solid framework, used clear signposting and definitions, and recovered well from a POI. You also brought up strong reasons to value respect over being liked, focusing on time and meaning, which I thought was good. Work on your timing (2:25!)."
+                }
               },
               {
                 "name": "Ciara Luk",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Ciara Luk",
+                  "sourceHeading": "Proposition Speaker 3 — Ciara Luk",
+                  "text": "Great signposting, pushed for genuine respect, successfully improvised, and handled the Burden of Proof response well! Got caught up and tangled when you were POId by opp."
+                }
               }
             ],
             "total": 261
@@ -17199,27 +18279,45 @@
                 "name": "Daphne Morris",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Daphne Morris",
+                  "sourceHeading": "Opposition Speaker 1 — Daphne Morris",
+                  "text": "You did great on the Burden of Proof on the first two contentions and used a great example (fear/scared) to prove that being respected doesn't automatically make someone a good person. Delivered strong refutations. Don't be nervous! I think you did good overall"
+                }
               },
               {
                 "name": "Zoe Collings",
                 "score": 91,
                 "displayedScore": "91",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Zoe Collings",
+                  "sourceHeading": "Opposition Speaker 2 — Zoe Collings",
+                  "text": "You delivered fantastic POIs, argued the 3rd assertion very very well (using a great job interview example), and correctly called out that the other team had the wrong burden of proof. Recovered well from POIs. Rushed a bit while delivering ur points, which may have dampened the impact of your arguments."
+                }
               },
               {
                 "name": "Kandice Chen",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Kandice Chen",
+                  "sourceHeading": "Opposition Speaker 3 — Kandice Chen",
+                  "text": "Excellent signposting, strong real-life examples (like celebrities being liked rather than genuinely respected)! I think you focused too much on tearing down Prop's points rather than proving why your own points had more weight/impact."
+                }
               }
             ],
             "total": 264
           }
         },
         "judgeName": "Joanna Huang",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1012"
       }
     },
@@ -17262,19 +18360,37 @@
                 "name": "Joanna Y",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Joanna Y",
+                  "sourceHeading": "Proposition Speaker 1 — Joanna Y",
+                  "text": "You made a lot of good responses to your opponent's case, but there should be more high level analysis of the round. For instance you should explain what arguments you think are winning, and why you think that should win you the round"
+                }
               },
               {
                 "name": "Lennon H-M",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Lennon H-M",
+                  "sourceHeading": "Proposition Speaker 2 — Lennon H-M",
+                  "text": "I thought your responses were good, especially the arguments about people respecting you out of fear, but they need to be reasoned out more, for example explain why that is bad."
+                }
               },
               {
                 "name": "Wren K",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Wren K",
+                  "sourceHeading": "Proposition Speaker 3 — Wren K",
+                  "text": "Your argument about mental health was good but there needed to be more explanation. You could use anecdotes and also explain why more respect leads to mental health on top of giving me reasons why the opp leads to less happiness"
+                }
               }
             ],
             "total": 258
@@ -17287,27 +18403,45 @@
                 "name": "Sebastian Vong",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Sebastian Vong",
+                  "sourceHeading": "Opposition Speaker 1 — Sebastian Vong",
+                  "text": "Your case was good, but you need to spend more time responding to you opponents case. The argument about guilt has a lot of implications that you could talk about, but you should also explain why this only applies to being respected and dosent apply to being well liked."
+                }
               },
               {
                 "name": "Viraj Gattamneni",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Viraj Gattamneni",
+                  "sourceHeading": "Opposition Speaker 2 — Viraj Gattamneni",
+                  "text": "I thought that your speech was very good and you had good tone. One thing you could improve on is to make sure you organize your speech, because it was a little hard to flow since you were jumping around on. You should also tell me when your moving to a new argument so i know where to write your responses on my flow."
+                }
               },
               {
                 "name": "Pranav Swagath",
                 "score": 88,
                 "displayedScore": "88",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Pranav Swagath",
+                  "sourceHeading": "Opposition Speaker 3 — Pranav Swagath",
+                  "text": "I think your argument about them confusing the definition of respect and being well liked was really smart, but i think you could've articulated it by explaining what your definition is and why they dont meet that definition rather than ask them for a definition because they can simply come up with a abusive definition and since you dont have a 4th speech to respond to that definition it would make winning a lot harder."
+                }
               }
             ],
             "total": 258
           }
         },
         "judgeName": "Justin Zhou",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1013"
       }
     },
@@ -17350,19 +18484,37 @@
                 "name": "Arjun Balaji",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Arjun Balaji",
+                  "sourceHeading": "Proposition Speaker 1 — Arjun Balaji",
+                  "text": "Your speech was the strongest I saw during the speech. Your format for your argument was very persuasive. I like how you used one specific person for each of your points. I also liked how you wrapped up the debate by going back to the value's points. Great job!"
+                }
               },
               {
                 "name": "Pranav Shashwat Iyer",
                 "score": 73,
                 "displayedScore": "73",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Pranav Shashwat Iyer",
+                  "sourceHeading": "Proposition Speaker 2 — Pranav Shashwat Iyer",
+                  "text": "Shashwat, I thought you did a great job setting up the debate. I liked your reasoning particularly. You could have expanded on impact. Why are your points good in the long run (Why does it matter to be trusted, etc.?)"
+                }
               },
               {
                 "name": "Krishav Sapru",
                 "score": 75,
                 "displayedScore": "75",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Krishav Sapru",
+                  "sourceHeading": "Proposition Speaker 3 — Krishav Sapru",
+                  "text": "Krishav, I thought you had great thinking for your points. You seemed to have a great understanding on the topic. In your speech, it got a little confusing about what exactly you were trying to say. The wording for the debate was pretty hard, but focusing on clarity would have helped."
+                }
               }
             ],
             "total": 230
@@ -17375,40 +18527,58 @@
                 "name": "Miranda Li",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Miranda Li",
+                  "sourceHeading": "Opposition Speaker 1 — Miranda Li",
+                  "text": "Miranda, I thought you introduced your teams points very effectively. I loved how you set everything up. You did have 30 seconds left, so you could have refuted the other teams points."
+                }
               },
               {
                 "name": "Jaylene Chor",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Jaylene Chor",
+                  "sourceHeading": "Opposition Speaker 2 — Jaylene Chor",
+                  "text": "Jaylene, I thought you had great organization in your speech. You did a great job doing what you needed to do for speaker 2. The only thing I noticed was that you had over a minuete left; don't be afraid to use your whole time!"
+                }
               },
               {
                 "name": "Jerry Zhu",
                 "score": 77,
                 "displayedScore": "77",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Jerry Zhu",
+                  "sourceHeading": "Opposition Speaker 3 — Jerry Zhu",
+                  "text": "Jerry, I thought you did a great job weighing. I also liked your Poi response. I liked how you went into extreme, and talked about a monarchy. Great job!"
+                }
               }
             ],
             "total": 232
           }
         },
         "judgeName": "Maeli Gamez",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1014"
       }
     },
     {
-      "id": "NoviceS MS 3-on-3-r3-7",
+      "id": "1015",
       "division": "NoviceS MS 3-on-3",
       "round": 3,
       "room": "BANNAN 220",
       "aff": {
         "name": "Lakeside Debate Emma Sierra-Maylin Halasz-Anvika Vemula",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
       "neg": {
@@ -17418,11 +18588,74 @@
           "textDecorationLine": "none"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SS59A215",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Emma Sierra-Maylin Halasz-Anvika Vemula vs. St Thomas School Amelia I-Crystal J-Declan K-Y",
+        "division": "NoviceS MS 3-on-3",
+        "room": "BANNAN 220",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Emma Sierra-Maylin Halasz-Anvika Vemula",
+            "speakers": [
+              {
+                "name": "Emma Sierra",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              },
+              {
+                "name": "Maylin Halasz",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              },
+              {
+                "name": "Anvika Vemula",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              }
+            ],
+            "total": 228
+          },
+          "neg": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Amelia I-Crystal J-Declan K-Y",
+            "speakers": [
+              {
+                "name": "Amelia I",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              },
+              {
+                "name": "Crystal J",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Declan K-Y",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              }
+            ],
+            "total": 221
+          }
+        },
+        "judgeName": "Sanskriti Shukla",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1015"
+      }
     },
     {
       "id": "1016",
@@ -17463,19 +18696,37 @@
                 "name": "Alex Qu",
                 "score": 93,
                 "displayedScore": "93",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Alex Qu",
+                  "sourceHeading": "Proposition Speaker 1 — Alex Qu",
+                  "text": "Amazing job speaking, I thought you articulated everything very well and had good examples. I recomend make your contention names more concise."
+                }
               },
               {
                 "name": "Ben Fonseca",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Ben Fonseca",
+                  "sourceHeading": "Proposition Speaker 2 — Ben Fonseca",
+                  "text": "You had great POIs and did a good job restating the definition. I recomend talking in a more forcefull and attention seeking way. I also recomend taking more time to weigh the debate"
+                }
               },
               {
                 "name": "Ian Ruud",
                 "score": 65,
                 "displayedScore": "65",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Ian Ruud",
+                  "sourceHeading": "Proposition Speaker 3 — Ian Ruud",
+                  "text": "You seemed pretty nervous. I could tell you had a lot of notes, so I recomend ordering them in a way that helps you speak more."
+                }
               }
             ],
             "total": 245
@@ -17488,27 +18739,45 @@
                 "name": "Oliver Chen",
                 "score": 89,
                 "displayedScore": "89",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Oliver Chen",
+                  "sourceHeading": "Opposition Speaker 1 — Oliver Chen",
+                  "text": "You did a good job finding each thing to refute on the other team. I feel like your refutations could have shut down their points stronger. You also used the time fully, which is very good during impromptu."
+                }
               },
               {
                 "name": "Annabel Johnson",
                 "score": 92,
                 "displayedScore": "92",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Annabel Johnson",
+                  "sourceHeading": "Opposition Speaker 2 — Annabel Johnson",
+                  "text": "Great job on the rebuttals! I recomend adding new contentions as a second speaker rather than repeating the first speakers points as it will give the other team more to rebut."
+                }
               },
               {
                 "name": "Luna Samayoa Robles",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Luna Samayoa Robles",
+                  "sourceHeading": "Opposition Speaker 3 — Luna Samayoa Robles",
+                  "text": "You had good examples and I thought it was good that you restated the burden of proof. I recomend weighing the debate stronger and using less filler words."
+                }
               }
             ],
             "total": 267
           }
         },
         "judgeName": "Sonia Witt",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1016"
       }
     },
@@ -17761,15 +19030,15 @@
       }
     },
     {
-      "id": "NoviceS MS 3-on-3-r3-11",
+      "id": "1019",
       "division": "NoviceS MS 3-on-3",
       "round": 3,
       "room": "BANNAN past 476",
       "aff": {
         "name": "University Prep Eliza Saltman-Alicia Urion-Felix Zhang",
         "style": {
-          "fontWeight": "400",
-          "textDecorationLine": "none"
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
         }
       },
       "neg": {
@@ -17779,11 +19048,110 @@
           "textDecorationLine": "none"
         }
       },
-      "winnerSide": null,
-      "winnerEvidence": "not determined",
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
       "isBye": false,
-      "ballotStatus": "unavailable",
-      "ballot": null
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AS59A219",
+        "roundLabel": "Round 3",
+        "match": "University Prep Eliza Saltman-Alicia Urion-Felix Zhang vs. Lakeside Debate Simran Gupta-Olivia Gong-ABC",
+        "division": "NoviceS MS 3-on-3",
+        "room": "BANNAN past 476",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "University Prep",
+            "teamName": "University Prep Eliza Saltman-Alicia Urion-Felix Zhang",
+            "speakers": [
+              {
+                "name": "Eliza Saltman",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Eliza Saltman",
+                  "sourceHeading": "Proposition Speaker 1 — Eliza Saltman",
+                  "text": "Way to set the agenda/structure for your speech makes it easy to follow and understand. Work on introducing perhaps new contentions as your the 2nd prop speaker"
+                }
+              },
+              {
+                "name": "Alicia Urion",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Alicia Urion",
+                  "sourceHeading": "Proposition Speaker 2 — Alicia Urion",
+                  "text": "Great job projecting your voice, and bringing up the contention of how being well respected can lead to better job opportunities in life. Work on using all your time as you had a whole minute left."
+                }
+              },
+              {
+                "name": "Felix Zhang",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Felix Zhang",
+                  "sourceHeading": "Proposition Speaker 3 — Felix Zhang",
+                  "text": "Great examples by using Taylor swift to refute their point and good work on your overall refutations. Work on improving the flow of your speech by talking at a consistent speed especially when poi’s come up."
+                }
+              }
+            ],
+            "total": 251
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Simran Gupta-Olivia Gong-ABC",
+            "speakers": [
+              {
+                "name": "Simran Gupta",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Simran Gupta",
+                  "sourceHeading": "Opposition Speaker 1 — Simran Gupta",
+                  "text": "Great job setting up solid contentions like how being well liked can improve collaboration while being well respected can stem from fear. You have to introduce BOP! Don’t forget that :)"
+                }
+              },
+              {
+                "name": "Olivia Gong",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Olivia Gong",
+                  "sourceHeading": "Opposition Speaker 2 — Olivia Gong",
+                  "text": "Good example of refuting the props points by using a teacher and good job effectively responding to poi’s; work on introducing a bop since your partner forgot."
+                }
+              },
+              {
+                "name": "ABC",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "Great flow throughout your speech. Also great example with police. Work on saying “I will now with the debate” and try to not introduce new contentions."
+                }
+              }
+            ],
+            "total": 250
+          }
+        },
+        "judgeName": "Ayush Srivastava",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1019"
+      }
     },
     {
       "id": "1020",
@@ -18000,19 +19368,37 @@
                 "name": "Roger Zhang",
                 "score": 71,
                 "displayedScore": "71",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Roger Zhang",
+                  "sourceHeading": "Proposition Speaker 1 — Roger Zhang",
+                  "text": "You were PROP 3: You spoke well, talking about definitions, but completely avoided weighing or impacts. I would love it if you added impacts."
+                }
               },
               {
                 "name": "Dhruv Boyed",
                 "score": 73,
                 "displayedScore": "73",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Dhruv Boyed",
+                  "sourceHeading": "Proposition Speaker 2 — Dhruv Boyed",
+                  "text": "You were PROP 1: You were going well about your contentions, but then you got too bogged down on the POI that was given. You could've continued with more examples if you had used your prep time better as well."
+                }
               },
               {
                 "name": "Rohin Panwan",
                 "score": 74,
                 "displayedScore": "74",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Rohin Panwan",
+                  "sourceHeading": "Proposition Speaker 3 — Rohin Panwan",
+                  "text": "You were PROP 2: You spoke well, but I think if you were more organized and spoke more slowly, you would be way better."
+                }
               }
             ],
             "total": 218
@@ -18025,27 +19411,45 @@
                 "name": "Oliver Clark",
                 "score": 75,
                 "displayedScore": "75",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Oliver Clark",
+                  "sourceHeading": "Opposition Speaker 1 — Oliver Clark",
+                  "text": "You were OPP 3: You started off well with your judging, but then you immediately got off topic and got too distracted by the Wings of Fire POI."
+                }
               },
               {
                 "name": "Elliot Hollander",
                 "score": 73,
                 "displayedScore": "73",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Elliot Hollander",
+                  "sourceHeading": "Opposition Speaker 2 — Elliot Hollander",
+                  "text": "You were OPP 1: I think you started well and were really good at the beginning. But later in the speech, you weren't sure about what exactly to say. I think if you used your prep time more effectively, you would've been better prepared."
+                }
               },
               {
                 "name": "Ben Armstrong",
                 "score": 74,
                 "displayedScore": "74",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Ben Armstrong",
+                  "sourceHeading": "Opposition Speaker 3 — Ben Armstrong",
+                  "text": "You were OPP 2: I think your overall speech was good, but the delivery could be improved by spending your prep time more effectively and preparing your speech ahead of time."
+                }
               }
             ],
             "total": 222
           }
         },
         "judgeName": "dhruv hooda",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1022"
       }
     },
@@ -18212,19 +19616,37 @@
                 "name": "Emmy Magerramov",
                 "score": 61,
                 "displayedScore": "61",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Emmy Magerramov",
+                  "sourceHeading": "Proposition Speaker 1 — Emmy Magerramov",
+                  "text": "Not at tournament."
+                }
               },
               {
                 "name": "Aiden Yue",
                 "score": 62,
                 "displayedScore": "62",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Aiden Yue",
+                  "sourceHeading": "Proposition Speaker 2 — Aiden Yue",
+                  "text": "Decorum is a really big issue that you need to address when you're debating. When your teammate is speaking you CANNOT speak to them. You had good anecdotes and examples to help support your reasoning, but I found it really hard to flow what you reasoning was along with your contentions. You also need to signpost and roadmap more to make it easier to understand where you are in your speech. Also make sure to have impacts for your contentions. Overall, I didn't appreciate your argument about hobos, it felt like a disrespectful way to address people that struggle with housing and finances, and is not the correct term to use when addressing people that apply to these problems."
+                }
               },
               {
                 "name": "Alex Chen",
                 "score": 68,
                 "displayedScore": "68",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Alex Chen",
+                  "sourceHeading": "Proposition Speaker 3 — Alex Chen",
+                  "text": "I thought your refutations were pretty good and helped combat the opponent's contentions. Going forward, I would work on making sure to face the judge when speaking and not your opponent. Try not to refer to them as \"you\" or \"he\" and instead refer to the opposing side as \"opponent\" or \"they\" to have more decorum during your speech. Your speech was hard to follow, so signposting and road mapping will really help better your debate skills."
+                }
               }
             ],
             "total": 191
@@ -18237,27 +19659,45 @@
                 "name": "Ethan Shraer",
                 "score": 69,
                 "displayedScore": "69",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ethan Shraer",
+                  "sourceHeading": "Opposition Speaker 1 — Ethan Shraer",
+                  "text": "You had good organization at the start with your road map. However, you didn't signpost while going through your speech, so it was very hard to flow what you were responding to. Additionally, your decorum needs to be heavily improved, and try to fill up your time more even if it's just restating the same arguments over and over again."
+                }
               },
               {
                 "name": "Shay Parikh",
                 "score": 71,
                 "displayedScore": "71",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Shay Parikh",
+                  "sourceHeading": "Opposition Speaker 2 — Shay Parikh",
+                  "text": "You had a really great speaking speed that made it easy to understand what you were saying. However, you often faced solely towards the opposing side rather than the judge. You did a great job by continuously bringing up the BOP, but it was pretty hard to follow your speech because of your absence of a road map and signposting."
+                }
               },
               {
                 "name": "ABC",
                 "score": 61,
                 "displayedScore": "61",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "N/A(two speaker team)"
+                }
               }
             ],
             "total": 201
           }
         },
         "judgeName": "Julia Shibata",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1024"
       }
     },
@@ -18388,19 +19828,37 @@
                 "name": "Gloria Maeng",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Gloria Maeng",
+                  "sourceHeading": "Proposition Speaker 1 — Gloria Maeng",
+                  "text": "Aadhvik was the 1st, I will write his comments in the second speaker box. Your speeches were really goood, Gloria. It felt like you ran out of time however, because you had to bring out stuff your 1st speaker missed. This led to you missing their strongest refutations against you. My suggestion, as I struggled with time too is this, in the last speech, assume you won, fight only their strongest arguments and spend most of the time with your narrative."
+                }
               },
               {
                 "name": "Aadhvik Vikram",
                 "score": 73,
                 "displayedScore": "73",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Aadhvik Vikram",
+                  "sourceHeading": "Proposition Speaker 2 — Aadhvik Vikram",
+                  "text": "Really good points! However, it is really hard to consider what you say when your speech is 40 seconds long. You have 5 minutes to lay out your case, and it felt like your second speaker had to use her time to bring up stuff you had not brought up. Aim to improve communication so you know exactly what both of you want to have laid out and at least 3 minute speeches (please)"
+                }
               },
               {
                 "name": "abc",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "abc",
+                  "sourceHeading": "Proposition Speaker 3 — abc",
+                  "text": "N/A, wrote the comments in Gloria's first box"
+                }
               }
             ],
             "total": 246
@@ -18413,27 +19871,45 @@
                 "name": "Gloria Li",
                 "score": 86,
                 "displayedScore": "86",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Gloria Li",
+                  "sourceHeading": "Opposition Speaker 1 — Gloria Li",
+                  "text": "Gloria, really convincing speech! The points you brought up, about Hitler and \"why can't you have both\" were incredibly strong. Try to increase your speaking time to the full 5 minutes. If you have to, repeat your arguments again to remind the judge, also try to be a bit louder so everything you said the judges understand. I understood you, but there will be times you will come across judges who can't understand quite speakers."
+                }
               },
               {
                 "name": "Emmeline Chin",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Emmeline Chin",
+                  "sourceHeading": "Opposition Speaker 2 — Emmeline Chin",
+                  "text": "Your refutations were incredibly strong, I really liked how you pointed out, that since the positives are a result of both, that is the best option. This helped you win the debate! Try to increase your speaking time to the full 5 minutes. If you have to, repeat your arguments again to remind the judge, also try to be a bit louder so everything you said the judges understand. I understood you, but there will be times you will come across judges who can't understand quite speakers."
+                }
               },
               {
                 "name": "ABC",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "N/A, wrote the comments in Gloria's first box"
+                }
               }
             ],
             "total": 255
           }
         },
         "judgeName": "Seth Sharma",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1026"
       }
     },
@@ -18476,19 +19952,37 @@
                 "name": "Niam Sridhar",
                 "score": 70,
                 "displayedScore": "70",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Niam Sridhar",
+                  "sourceHeading": "Proposition Speaker 1 — Niam Sridhar",
+                  "text": "Niam did introduce how respect is differnt than being liked but did not add more assertions."
+                }
               },
               {
                 "name": "Siddharth Chagarlamudi",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Siddharth Chagarlamudi",
+                  "sourceHeading": "Proposition Speaker 2 — Siddharth Chagarlamudi",
+                  "text": "Siddharth did really well in illustrating the differences between respect and being liked. He also illustrated how respect can lead to being liked and how it can be easy to fake like but not respect.He can work on adding more evidence."
+                }
               },
               {
                 "name": "Aarav Kumar",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Aarav Kumar",
+                  "sourceHeading": "Proposition Speaker 3 — Aarav Kumar",
+                  "text": "Aarav did a great summary as the 3rd speaker and used his time well to reiterate how liking can be faked and how stronger relationships can lead to respect."
+                }
               }
             ],
             "total": 238
@@ -18501,27 +19995,45 @@
                 "name": "Persa Katibeh",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Persa Katibeh",
+                  "sourceHeading": "Opposition Speaker 1 — Persa Katibeh",
+                  "text": "Persa did reall well on how respect is worse than like on a more amicable society and how liking cannot be forced. I also loved her on how dictators are respected but not liked. She could have done better by adding one more strong assertion."
+                }
               },
               {
                 "name": "Alisha Singh",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Alisha Singh",
+                  "sourceHeading": "Opposition Speaker 2 — Alisha Singh",
+                  "text": "Alisha did well asserting how being respected leads to being well liked anyway. She could have done better doing more opposition."
+                }
               },
               {
                 "name": "Arya Varma",
                 "score": 75,
                 "displayedScore": "75",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Arya Varma",
+                  "sourceHeading": "Opposition Speaker 3 — Arya Varma",
+                  "text": "Arya had a really strong 3rd opp and emphasized how strong relationliships lead to like and not respect. She can improve by using up her whole time and asking better POIs."
+                }
               }
             ],
             "total": 237
           }
         },
         "judgeName": "Aarthi Saravanakumar",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1027"
       }
     },
