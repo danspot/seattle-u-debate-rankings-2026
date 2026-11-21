@@ -3,6 +3,7 @@ const alphabetic = (a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' });
 export const isRosterLabel = name => /^(abc|aa|speaker\s*\d+)$/i.test(name.trim());
 
 export function deriveDivision(snapshot, division) {
+  const includedRounds = snapshot.rounds;
   const debates = snapshot.debates.filter(d => d.division === division);
   const teamMap = new Map();
   const speakerMap = new Map();
@@ -51,11 +52,11 @@ export function deriveDivision(snapshot, division) {
   }
   const teams = [...teamMap.values()];
   for (const team of teams) {
-    team.complete = [1, 2].every(r => team.rounds[r]?.result);
+    team.complete = includedRounds.every(r => team.rounds[r]?.result);
     team.record = `${team.wins}–${team.losses}`;
     team.displayName = team.school && team.members.length ? `${team.school} — ${team.members.join(', ')}` : team.name;
     team.searchText = normalize([team.name, team.school, ...team.members].join(' '));
-    for (const round of [1, 2]) if (!team.rounds[round]) issues.push({ type: 'missing-pairing', round, team: team.name, text: `${team.name}: not listed in Round ${round}.` });
+    for (const round of includedRounds) if (!team.rounds[round]) issues.push({ type: 'missing-pairing', round, team: team.name, text: `${team.name}: not listed in Round ${round}.` });
   }
   teams.sort((a, b) => Number(b.complete) - Number(a.complete) || b.wins - a.wins || a.losses - b.losses || alphabetic(a.displayName, b.displayName));
   let lastRecord, lastRank;
@@ -71,12 +72,12 @@ export function deriveDivision(snapshot, division) {
     const scores = rounds.filter(r => r.score !== null);
     speaker.scoreCount = scores.length;
     speaker.average = scores.length ? scores.reduce((sum, r) => sum + r.score, 0) / scores.length : null;
-    speaker.complete = scores.length === 2;
+    speaker.complete = scores.length === includedRounds.length;
     speaker.stars = rounds.filter(r => r.roomHighest === true).length;
-    speaker.starStatusKnown = [1, 2].every(r => speaker.rounds[r]?.roomHighest !== null && speaker.rounds[r]?.roomHighest !== undefined || speaker.rounds[r]?.isBye);
+    speaker.starStatusKnown = includedRounds.every(r => typeof speaker.rounds[r]?.roomHighest === 'boolean' || speaker.rounds[r]?.isBye);
     speaker.awardedStars = speaker.starStatusKnown ? speaker.stars : 0;
     speaker.teamStars = rounds.filter(r => r.teamHighest === true).length;
-    speaker.teamStarStatusKnown = [1, 2].every(r => typeof speaker.rounds[r]?.teamHighest === 'boolean' || speaker.rounds[r]?.isBye);
+    speaker.teamStarStatusKnown = includedRounds.every(r => typeof speaker.rounds[r]?.teamHighest === 'boolean' || speaker.rounds[r]?.isBye);
     speaker.awardedTeamStars = speaker.teamStarStatusKnown ? speaker.teamStars : 0;
     speaker.searchText = normalize(`${speaker.name} ${speaker.team} ${speaker.school} ${teamMap.get(speaker.teamId).members.join(' ')}`);
   }

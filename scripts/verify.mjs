@@ -4,14 +4,15 @@ import { pathToFileURL } from 'node:url';
 import { deriveAll, normalize } from './rankings.mjs';
 
 export function verifySnapshot(snapshot) {
-  assert.deepEqual(snapshot.rounds, [1,2]);
+  assert.ok(snapshot.rounds.length>=2 && snapshot.rounds.length<=3);
+  assert.deepEqual(snapshot.rounds, [1,2,3].slice(0,snapshot.rounds.length));
   assert.equal(snapshot.source, 'https://plustab.org/t/seattle-u-sat-nov-21-2026/results');
   assert.ok(Number.isFinite(Date.parse(snapshot.extractedAt)));
   assert.equal(new Set(snapshot.divisions).size, snapshot.divisions.length);
   const ids = new Set(), rooms = new Set(), appearances = new Set(), rosters = new Map();
   let numericScores = 0, feedbackNotes = 0;
   for (const d of snapshot.debates) {
-    assert.ok([1,2].includes(d.round), `Unexpected round ${d.round}`);
+    assert.ok(snapshot.rounds.includes(d.round), `Unexpected round ${d.round}`);
     assert.ok(snapshot.divisions.includes(d.division));
     assert.ok(!ids.has(d.id), `Duplicate ballot ID ${d.id}`); ids.add(d.id);
     const room = `${d.division}|${d.round}|${d.room}`;
@@ -76,6 +77,10 @@ export function verifySnapshot(snapshot) {
   const divisions=deriveAll(snapshot);
   for(const div of divisions) {
     for(const s of div.speakers) {
+      const scores=snapshot.rounds.map(r=>s.rounds[r]?.score).filter(Number.isFinite);
+      assert.equal(s.scoreCount,scores.length);
+      assert.equal(s.complete,scores.length===snapshot.rounds.length);
+      assert.equal(s.average,scores.length?scores.reduce((sum,score)=>sum+score,0)/scores.length:null);
       if(s.average !== null)assert.equal(s.rank,1+div.speakers.filter(x=>x.average !== null && x.average>s.average).length);
       for(const round of Object.values(s.rounds)) {
         const debate=snapshot.debates.find(d=>d.id===round.debateId);
@@ -97,11 +102,17 @@ export function verifySnapshot(snapshot) {
       }
       for(const [scope,count,known,awarded] of [['team',s.teamStars,s.teamStarStatusKnown,s.awardedTeamStars],['room',s.stars,s.starStatusKnown,s.awardedStars]]) {
         assert.equal(count,Object.values(s.rounds).filter(r=>r[`${scope}Highest`]===true).length);
-        assert.equal(known,[1,2].every(r=>Boolean(s.rounds[r]?.isBye) || typeof s.rounds[r]?.[`${scope}Highest`]==='boolean'));
+        assert.equal(known,snapshot.rounds.every(r=>Boolean(s.rounds[r]?.isBye) || typeof s.rounds[r]?.[`${scope}Highest`]==='boolean'));
         assert.equal(awarded,known?count:0);
-        assert.ok(awarded>=0 && awarded<=2);
+        assert.ok(awarded>=0 && awarded<=snapshot.rounds.length);
       }
       assert.ok(s.awardedStars<=s.awardedTeamStars);
+    }
+    for(const t of div.teams) {
+      assert.equal(t.complete,snapshot.rounds.every(r=>Boolean(t.rounds[r]?.result)));
+      assert.equal(t.wins,snapshot.rounds.filter(r=>t.rounds[r]?.result==='W').length);
+      assert.equal(t.losses,snapshot.rounds.filter(r=>t.rounds[r]?.result==='L').length);
+      if(!t.complete)assert.equal(t.rank,null);
     }
     const paired=snapshot.debates.filter(d=>d.division===div.division&&!d.isBye&&d.winnerSide);
     for(const d of paired) {

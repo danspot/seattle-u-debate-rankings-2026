@@ -2,12 +2,13 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-21T22:55:58.602Z",
-  "extractionStartedAt": "2026-11-21T22:52:47.103Z",
+  "extractedAt": "2026-11-21T23:19:32.751Z",
+  "extractionStartedAt": "2026-11-21T23:15:15.912Z",
   "sourceUpdatedLabel": "Last updated 11/21/26, 10:23 PM PST",
   "rounds": [
     1,
-    2
+    2,
+    3
   ],
   "divisions": [
     "Experienced MS 3-on-3",
@@ -10563,19 +10564,37 @@
                 "name": "Amelia Hong",
                 "score": 72,
                 "displayedScore": "72",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Amelia Hong",
+                  "sourceHeading": "Proposition Speaker 1 — Amelia Hong",
+                  "text": "Good response to POI's and definition of the camera. However you read off the paper a lot and didn't really maintain eye contact with the audience."
+                }
               },
               {
                 "name": "Hanmo Lin",
                 "score": 75,
                 "displayedScore": "75",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Hanmo Lin",
+                  "sourceHeading": "Proposition Speaker 2 — Hanmo Lin",
+                  "text": "You provided good evidence with numbers which supported your claims very well. You could've spoke and projected your voice a little louder though."
+                }
               },
               {
                 "name": "Marissa Ye",
                 "score": 73,
                 "displayedScore": "73",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Marissa Ye",
+                  "sourceHeading": "Proposition Speaker 3 — Marissa Ye",
+                  "text": "You projected your voice the loudest, which shows confidence. However, I do think you could have organized the papers a bit better as some of the confusion related to that did mess up the flow of your delivery."
+                }
               }
             ],
             "total": 220
@@ -10588,27 +10607,45 @@
                 "name": "Ashwin Collazos",
                 "score": 71,
                 "displayedScore": "71",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ashwin Collazos",
+                  "sourceHeading": "Opposition Speaker 1 — Ashwin Collazos",
+                  "text": "You provided a good definition that added to the definition that the proposition provided. However, I do think you could have elaborated more on your claims with supporting evidence as that could've added on to your time too."
+                }
               },
               {
                 "name": "Ben Wastman",
                 "score": 74,
                 "displayedScore": "74",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Ben Wastman",
+                  "sourceHeading": "Opposition Speaker 2 — Ben Wastman",
+                  "text": "You provided good points and responses to the POI's; however, I do think you could have projected your voice a little more."
+                }
               },
               {
                 "name": "Nathan",
                 "score": 70,
                 "displayedScore": "70",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Nathan",
+                  "sourceHeading": "Opposition Speaker 3 — Nathan",
+                  "text": "Responded well against POIs, although you could have provided more insight when referencing back to your teammates' claims to really enhance your argument."
+                }
               }
             ],
             "total": 215
           }
         },
         "judgeName": "Lucian Fong",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/942"
       }
     },
@@ -13670,6 +13707,5034 @@
         "feedbackSectionPresent": false,
         "feedbackNoteCount": 0,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/969"
+      }
+    },
+    {
+      "id": "970",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 203",
+      "aff": {
+        "name": "Bellevue Youth Debate Avira Jagadeesa-Corinne Song-Emma Lu",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Evergreen School Raina Susarla-Keane Miller-ABC",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AG59A160",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Avira Jagadeesa-Corinne Song-Emma Lu vs. Evergreen School Raina Susarla-Keane Miller-ABC",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 203",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Avira Jagadeesa-Corinne Song-Emma Lu",
+            "speakers": [
+              {
+                "name": "Avira Jagadeesa",
+                "score": 95,
+                "displayedScore": "95",
+                "feedback": null
+              },
+              {
+                "name": "Corinne Song",
+                "score": 94,
+                "displayedScore": "94",
+                "feedback": null
+              },
+              {
+                "name": "Emma Lu",
+                "score": 96,
+                "displayedScore": "96",
+                "feedback": null
+              }
+            ],
+            "total": 285
+          },
+          "neg": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Raina Susarla-Keane Miller-ABC",
+            "speakers": [
+              {
+                "name": "Raina Susarla",
+                "score": 95,
+                "displayedScore": "95",
+                "feedback": null
+              },
+              {
+                "name": "Keane Miller",
+                "score": 96,
+                "displayedScore": "96",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 97,
+                "displayedScore": "97",
+                "feedback": null
+              }
+            ],
+            "total": 288
+          }
+        },
+        "judgeName": "Aya Glass",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/970"
+      }
+    },
+    {
+      "id": "971",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 223",
+      "aff": {
+        "name": "University Prep Ethan Hsiao-Eddie Qi-Sanay Jain",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Open Window Ricky Rui-Kyren Metzmaker-William Pan",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AT59A161",
+        "roundLabel": "Round 3",
+        "match": "University Prep Ethan Hsiao-Eddie Qi-Sanay Jain vs. Open Window Ricky Rui-Kyren Metzmaker-William Pan",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 223",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "University Prep",
+            "teamName": "University Prep Ethan Hsiao-Eddie Qi-Sanay Jain",
+            "speakers": [
+              {
+                "name": "Ethan Hsiao",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Ethan Hsiao",
+                  "sourceHeading": "Proposition Speaker 1 — Ethan Hsiao",
+                  "text": "Great speech! You seemed to kind of ramble on about some things, especially your points about your friend and your teacher. I wish that instead of giving me some background information on who your friend or teacher is, that you would connect it a bit better to the topic. However, I really liked your points about trust and leadership, they were incredibly compelling arguments and especially leadership had a strong impact. At around 1 minute 15 seconds you didn't have enough to say and so you restated your points. This is fine, but I truly think that you could've expanded more on some of your points, especially your first two contentions. I appreciated that you brought up examples, those are essential in impromptu debates!"
+                }
+              },
+              {
+                "name": "Eddie Qi",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Eddie Qi",
+                  "sourceHeading": "Proposition Speaker 2 — Eddie Qi",
+                  "text": "This was a very good speech. It was very calm and collected while simultaneously refuting the negative with confidence. I particularly liked your point about how the negative's contention could fall under your side instead. You also responded to POIs easily. However, some parts of your speech felt confusing for my to understand, and I wish there was a bit more signposting and clarity throughout your speech. I do also feel that you could've brought up even more contentions, because you ended up just restating points again."
+                }
+              },
+              {
+                "name": "Sanay Jain",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Sanay Jain",
+                  "sourceHeading": "Proposition Speaker 3 — Sanay Jain",
+                  "text": "This was a wonderful speech! I was surprised to hear you start with refutations, but since you signposted it wasn't an issue at all. I believe you could've been a bit more confident, as I believe that could've sold your point even more. Additionally, please remember not to bring up new examples in the last speech 😅. I liked how you brought up the point on leadership, but I wish it was something that was expanded more on earlier, since the affirmative already brought it up in their last speech as well. However, your point about respect being the final goal was incredibly compelling, and throughout the prop's speeches it was a very good point that I wish was touched on with more passion. Remember to weigh as well!"
+                }
+              }
+            ],
+            "total": 252
+          },
+          "neg": {
+            "school": "Open Window",
+            "teamName": "Open Window Ricky Rui-Kyren Metzmaker-William Pan",
+            "speakers": [
+              {
+                "name": "Ricky Rui",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ricky Rui",
+                  "sourceHeading": "Opposition Speaker 1 — Ricky Rui",
+                  "text": "You were a VERY strong speaker. I really liked the retorical question you asked during the beginning, and appreciated the signposting. Your first contention was a very good point. I could tell you were able to bring up multiple examples, and make the contentions easier to understand and more relatable. I wish the examples you brought up were more personal instead of just hypothetical examples. Great job at cross applying your first contention to their second contention! Try to stay within the time next time, but you were in the grace period so it isn't too big of a deal."
+                }
+              },
+              {
+                "name": "Kyren Metzmaker",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Kyren Metzmaker",
+                  "sourceHeading": "Opposition Speaker 2 — Kyren Metzmaker",
+                  "text": "You were also a very strong speaker. Again, the retorical question was really interesting and I really liked it. I liked that you distinguished the differences between the sides in the beginning, it made it easier for me to understand your side as well. I also appreciated how you brought up real world examples (even if they were hypotetical) in order to respond to the affirmative's case. I also liked how you spoke about choices and decisions, because that is honestly very much related to being liked and respected as well. I liked how you were given the opportunity to bring up a third point as well, as it helped you use more time. Although you had many examples, they all felt related to the same thing of friends and families, so it would be nice if you spoke about more broad examples (You brought up presidency in the end, but I wish it was brought up sooner so you had more time to talk about it)"
+                }
+              },
+              {
+                "name": "William Pan",
+                "score": 95,
+                "displayedScore": "95",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "William Pan",
+                  "sourceHeading": "Opposition Speaker 3 — William Pan",
+                  "text": "I liked your introduction, and I was already able to tell from the beginning that you are a very strong speaker. I really appreciated your signposting. I was very glad to hear you mention the BOP since I was worried it was going to go unrefuted. I liked how you explained the reasonings for why you won, and pointing out to me what was left unrefuted and what was still left standing. I LOVED how you weighed. I was truly waiting to hear weighing, and your impact was incredibly strong. You are a very good speaker, and I hope you continue with debate in high school as well."
+                }
+              }
+            ],
+            "total": 274
+          }
+        },
+        "judgeName": "Aalya Tandon",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/971"
+      }
+    },
+    {
+      "id": "Experienced MS 3-on-3-r3-3",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 220",
+      "aff": {
+        "name": "Evergreen School Willa Cox-Hultquist-Cevia Luk-ABC",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "University Prep Darsh Srinivas-Aditya Haritsa-Layla Krishnan",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "973",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 202",
+      "aff": {
+        "name": "Bellevue Youth Debate Alia Motwani-Arohi Bindlish-Nuha Siddiqui",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Open Window Deniz Aslan-Abraham Alasas-Leyla Demirkan",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3NK59A163",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Alia Motwani-Arohi Bindlish-Nuha Siddiqui vs. Open Window Deniz Aslan-Abraham Alasas-Leyla Demirkan",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 202",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Alia Motwani-Arohi Bindlish-Nuha Siddiqui",
+            "speakers": [
+              {
+                "name": "Alia Motwani",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Arohi Bindlish",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Nuha Siddiqui",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              }
+            ],
+            "total": 238
+          },
+          "neg": {
+            "school": "Open Window",
+            "teamName": "Open Window Deniz Aslan-Abraham Alasas-Leyla Demirkan",
+            "speakers": [
+              {
+                "name": "Deniz Aslan",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Abraham Alasas",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "Leyla Demirkan",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 247
+          }
+        },
+        "judgeName": "Nandini Komma",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/973"
+      }
+    },
+    {
+      "id": "Experienced MS 3-on-3-r3-5",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 306",
+      "aff": {
+        "name": "Bellevue Youth Debate Eugene Hwang-Sabir Thapar-Martin Zhang",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Open Window Tazmin Sohal-An Jei Wang-Rishab Mitra",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "Experienced MS 3-on-3-r3-6",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 305A",
+      "aff": {
+        "name": "Lakeside Debate Ryan Wang-Kate Wong-Nathan Xu",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Bellevue Youth Debate Ishaan Bala-Eva Chen-Francis Chen",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "976",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 224",
+      "aff": {
+        "name": "Open Window Henry Zhang-Nitya Gonpati-Teesta Buragohain",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Ivy Kanter-Charlotte In-Anya Rajvanshy",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3WM59A166",
+        "roundLabel": "Round 3",
+        "match": "Open Window Henry Zhang-Nitya Gonpati-Teesta Buragohain vs. Lakeside Debate Ivy Kanter-Charlotte In-Anya Rajvanshy",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 224",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Open Window",
+            "teamName": "Open Window Henry Zhang-Nitya Gonpati-Teesta Buragohain",
+            "speakers": [
+              {
+                "name": "Henry Zhang",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              },
+              {
+                "name": "Nitya Gonpati",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Teesta Buragohain",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              }
+            ],
+            "total": 263
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Ivy Kanter-Charlotte In-Anya Rajvanshy",
+            "speakers": [
+              {
+                "name": "Ivy Kanter",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Charlotte In",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Anya Rajvanshy",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 262
+          }
+        },
+        "judgeName": "William Ma",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/976"
+      }
+    },
+    {
+      "id": "977",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 222",
+      "aff": {
+        "name": "Lakeside Debate Bella Tan-Meher Dubey-Isabel Jose",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Climb Redmond Raunaq Baweja-Saathvik Harish-abc",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3ZC59A167",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Bella Tan-Meher Dubey-Isabel Jose vs. Climb Redmond Raunaq Baweja-Saathvik Harish-abc",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 222",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Bella Tan-Meher Dubey-Isabel Jose",
+            "speakers": [
+              {
+                "name": "Bella Tan",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Meher Dubey",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              },
+              {
+                "name": "Isabel Jose",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              }
+            ],
+            "total": 265
+          },
+          "neg": {
+            "school": "Climb Redmond",
+            "teamName": "Climb Redmond Raunaq Baweja-Saathvik Harish-abc",
+            "speakers": [
+              {
+                "name": "Raunaq Baweja",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Saathvik Harish",
+                "score": 92,
+                "displayedScore": "92",
+                "feedback": null
+              },
+              {
+                "name": "abc",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              }
+            ],
+            "total": 268
+          }
+        },
+        "judgeName": "Zara Chobot",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/977"
+      }
+    },
+    {
+      "id": "978",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 204",
+      "aff": {
+        "name": "Lakeside Debate Alan Cheng-Michael Jose-Will Downer",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Open Window Lydia Diamantopoulos-Shannon Wang-ABC",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AN59A168",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Alan Cheng-Michael Jose-Will Downer vs. Open Window Lydia Diamantopoulos-Shannon Wang-ABC",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 204",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Alan Cheng-Michael Jose-Will Downer",
+            "speakers": [
+              {
+                "name": "Alan Cheng",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              },
+              {
+                "name": "Michael Jose",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              },
+              {
+                "name": "Will Downer",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 264
+          },
+          "neg": {
+            "school": "Open Window",
+            "teamName": "Open Window Lydia Diamantopoulos-Shannon Wang-ABC",
+            "speakers": [
+              {
+                "name": "Lydia Diamantopoulos",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              },
+              {
+                "name": "Shannon Wang",
+                "score": 91,
+                "displayedScore": "91",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              }
+            ],
+            "total": 271
+          }
+        },
+        "judgeName": "Asher Nord",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/978"
+      }
+    },
+    {
+      "id": "979",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 207",
+      "aff": {
+        "name": "Aurorae Young Academy Alyson Yang-Natalie Ng-Ethan Qiao",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Chuan Li-Ethan Lay-ABC",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AG59A169",
+        "roundLabel": "Round 3",
+        "match": "Aurorae Young Academy Alyson Yang-Natalie Ng-Ethan Qiao vs. Lakeside Debate Chuan Li-Ethan Lay-ABC",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 207",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Alyson Yang-Natalie Ng-Ethan Qiao",
+            "speakers": [
+              {
+                "name": "Alyson Yang",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Natalie Ng",
+                "score": 93,
+                "displayedScore": "93",
+                "feedback": null
+              },
+              {
+                "name": "Ethan Qiao",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              }
+            ],
+            "total": 261
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Chuan Li-Ethan Lay-ABC",
+            "speakers": [
+              {
+                "name": "Chuan Li",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Ethan Lay",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              }
+            ],
+            "total": 246
+          }
+        },
+        "judgeName": "Aaryan Gupta",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/979"
+      }
+    },
+    {
+      "id": "980",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 206",
+      "aff": {
+        "name": "Aurorae Young Academy Grace Li-Krishna Duhon-Haasini Bharath",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Kenmore-Mokshith-Arjun-Vignesh",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3NZ59A170",
+        "roundLabel": "Round 3",
+        "match": "Aurorae Young Academy Grace Li-Krishna Duhon-Haasini Bharath vs. Kenmore-Mokshith-Arjun-Vignesh",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 206",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Grace Li-Krishna Duhon-Haasini Bharath",
+            "speakers": [
+              {
+                "name": "Grace Li",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Grace Li",
+                  "sourceHeading": "Proposition Speaker 1 — Grace Li",
+                  "text": "Nice work setting the framework, your second contention about integrity and success was well done. I think the argument about relationships could have used more work. Also could have used another contention"
+                }
+              },
+              {
+                "name": "Krishna Duhon",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Krishna Duhon",
+                  "sourceHeading": "Proposition Speaker 2 — Krishna Duhon",
+                  "text": "Great summary, and rebuttal to the opponents arguments.  Good reminder of points the opponents did not refute."
+                }
+              },
+              {
+                "name": "Haasini Bharath",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Haasini Bharath",
+                  "sourceHeading": "Proposition Speaker 3 — Haasini Bharath",
+                  "text": "Very eloquent speech, good sign posting. Also, loved the argument that Rosa parks, MLK were focused on doing the right thing means they’re well liked."
+                }
+              }
+            ],
+            "total": 236
+          },
+          "neg": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Mokshith-Arjun-Vignesh",
+            "speakers": [
+              {
+                "name": "Mokshith",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Mokshith",
+                  "sourceHeading": "Opposition Speaker 1 — Mokshith",
+                  "text": "Good start, and rebuttal, but the speech was a bit short and could have been more convincing. It did not refute some of the opponents points. Also there was a bit of rambling at the end."
+                }
+              },
+              {
+                "name": "Arjun",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Arjun",
+                  "sourceHeading": "Opposition Speaker 2 — Arjun",
+                  "text": "Great strong start, and good argument. It was convincing until the POI after which it felt like you lost steam a little."
+                }
+              },
+              {
+                "name": "Vignesh",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Vignesh",
+                  "sourceHeading": "Opposition Speaker 3 — Vignesh",
+                  "text": "Really great attempt at carrying the team,  very passionate speech. Could have weighed in on their weaker arguments a bit more."
+                }
+              }
+            ],
+            "total": 231
+          }
+        },
+        "judgeName": "Nazia Zaman",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/980"
+      }
+    },
+    {
+      "id": "981",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 221",
+      "aff": {
+        "name": "Climb Online Eadgar Uuganbayar-Kostiantyn Semianov-abc",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Evergreen School Aiden Wu-Ian Li-Andrew Sun-Zhuang",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SV59A171",
+        "roundLabel": "Round 3",
+        "match": "Climb Online Eadgar Uuganbayar-Kostiantyn Semianov-abc vs. Evergreen School Aiden Wu-Ian Li-Andrew Sun-Zhuang",
+        "division": "Experienced MS 3-on-3",
+        "room": "ADMINISTRATION 221",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Climb Online",
+            "teamName": "Climb Online Eadgar Uuganbayar-Kostiantyn Semianov-abc",
+            "speakers": [
+              {
+                "name": "Eadgar Uuganbayar",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              },
+              {
+                "name": "Kostiantyn Semianov",
+                "score": 61,
+                "displayedScore": "61",
+                "feedback": null
+              },
+              {
+                "name": "abc",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 233
+          },
+          "neg": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Aiden Wu-Ian Li-Andrew Sun-Zhuang",
+            "speakers": [
+              {
+                "name": "Aiden Wu",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Ian Li",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Andrew Sun-Zhuang",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              }
+            ],
+            "total": 266
+          }
+        },
+        "judgeName": "Samuel Vuong",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/981"
+      }
+    },
+    {
+      "id": "982",
+      "division": "Experienced MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 106",
+      "aff": {
+        "name": "Evergreen School Maddie Andrews-Sean Cai-Varsha Subramanian",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "BYE",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": true,
+      "ballotStatus": "no-scores",
+      "ballot": {
+        "code": "3JT59A172",
+        "roundLabel": "Round 3",
+        "match": "Evergreen School Maddie Andrews-Sean Cai-Varsha Subramanian vs. BYE No Debate Be on Standby",
+        "division": "Experienced MS 3-on-3",
+        "room": "PIGOTT 106",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Maddie Andrews-Sean Cai-Varsha Subramanian",
+            "speakers": [
+              {
+                "name": "Maddie Andrews",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Sean Cai",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Varsha Subramanian",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              }
+            ],
+            "total": null
+          },
+          "neg": {
+            "school": "",
+            "teamName": "BYE No Debate Be on Standby",
+            "speakers": [
+              {
+                "name": "Speaker 1",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Speaker 2",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Speaker 3",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              }
+            ],
+            "total": null
+          }
+        },
+        "judgeName": "JUDGE TBA",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/982"
+      }
+    },
+    {
+      "id": "983",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 363",
+      "aff": {
+        "name": "Lakeside Debate Nahom Fentahun-Omar Haddad-Advait Ramanan",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Open Window Hailey Xu-Anaisha Gupta-Isha Rajmohan",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AG59A178",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Nahom Fentahun-Omar Haddad-Advait Ramanan vs. Open Window Hailey Xu-Anaisha Gupta-Isha Rajmohan",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 363",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Nahom Fentahun-Omar Haddad-Advait Ramanan",
+            "speakers": [
+              {
+                "name": "Nahom Fentahun",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              },
+              {
+                "name": "Omar Haddad",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              },
+              {
+                "name": "Advait Ramanan",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              }
+            ],
+            "total": 234
+          },
+          "neg": {
+            "school": "Open Window",
+            "teamName": "Open Window Hailey Xu-Anaisha Gupta-Isha Rajmohan",
+            "speakers": [
+              {
+                "name": "Hailey Xu",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Anaisha Gupta",
+                "score": 91,
+                "displayedScore": "91",
+                "feedback": null
+              },
+              {
+                "name": "Isha Rajmohan",
+                "score": 95,
+                "displayedScore": "95",
+                "feedback": null
+              }
+            ],
+            "total": 275
+          }
+        },
+        "judgeName": "Armaan Grover",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/983"
+      }
+    },
+    {
+      "id": "984",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 326",
+      "aff": {
+        "name": "Evergreen School Harper Curtis-Theo Bowermaster-Adric Le",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Riyaan Raja-Reza Firoozabadi-ABC",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3ZF59A179",
+        "roundLabel": "Round 3",
+        "match": "Evergreen School Harper Curtis-Theo Bowermaster-Adric Le vs. Lakeside Debate Riyaan Raja-Reza Firoozabadi-ABC",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 326",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Harper Curtis-Theo Bowermaster-Adric Le",
+            "speakers": [
+              {
+                "name": "Harper Curtis",
+                "score": 92,
+                "displayedScore": "92",
+                "feedback": null
+              },
+              {
+                "name": "Theo Bowermaster",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              },
+              {
+                "name": "Adric Le",
+                "score": 93,
+                "displayedScore": "93",
+                "feedback": null
+              }
+            ],
+            "total": 275
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Riyaan Raja-Reza Firoozabadi-ABC",
+            "speakers": [
+              {
+                "name": "Riyaan Raja",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              },
+              {
+                "name": "Reza Firoozabadi",
+                "score": 93,
+                "displayedScore": "93",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              }
+            ],
+            "total": 273
+          }
+        },
+        "judgeName": "Zoe Fulay",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/984"
+      }
+    },
+    {
+      "id": "985",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 413",
+      "aff": {
+        "name": "Bellevue Youth Debate Isoo Han-Alyza Tandon-Angela He",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Open Window Annabelle Zhang-Aathmika Manikandan-Jacqueline Xu",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AK59A180",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Isoo Han-Alyza Tandon-Angela He vs. Open Window Annabelle Zhang-Aathmika Manikandan-Jacqueline Xu",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 413",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Isoo Han-Alyza Tandon-Angela He",
+            "speakers": [
+              {
+                "name": "Isoo Han",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Isoo Han",
+                  "sourceHeading": "Proposition Speaker 1 — Isoo Han",
+                  "text": "I liked your contentions and your Martin Luther King reference. I think you could have spoken more clearly, not saying “like” as much. Obviously I didn’t judge you on that and content but other judges could."
+                }
+              },
+              {
+                "name": "Alyza Tandon",
+                "score": 72,
+                "displayedScore": "72",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Alyza Tandon",
+                  "sourceHeading": "Proposition Speaker 2 — Alyza Tandon",
+                  "text": "I liked your reference of Gandhi, and I think your voice is powerful and you should lean into that \nmore. Also they did have a burden of proof, and I liked how you spoke for the entire time."
+                }
+              },
+              {
+                "name": "Angela He",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Angela He",
+                  "sourceHeading": "Proposition Speaker 3 — Angela He",
+                  "text": "You are loud and confident, and it really helped your team. I think you should’ve stopped with the Martin Luther King thing because he was both respected and liked. You worked well against their arguments, and good work weighing the debate."
+                }
+              }
+            ],
+            "total": 227
+          },
+          "neg": {
+            "school": "Open Window",
+            "teamName": "Open Window Annabelle Zhang-Aathmika Manikandan-Jacqueline Xu",
+            "speakers": [
+              {
+                "name": "Annabelle Zhang",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Annabelle Zhang",
+                  "sourceHeading": "Opposition Speaker 1 — Annabelle Zhang",
+                  "text": "I think her refutation against Martin Luther King was good. I think that her argument about the president was also good because it showed that being well liked mattered. I think you struggled to respond to the POI."
+                }
+              },
+              {
+                "name": "Aathmika Manikandan",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Aathmika Manikandan",
+                  "sourceHeading": "Opposition Speaker 2 — Aathmika Manikandan",
+                  "text": "You were confident, but you should slow down when you speak. I like how you rebutted their arguments."
+                }
+              },
+              {
+                "name": "Jacqueline Xu",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Jacqueline Xu",
+                  "sourceHeading": "Opposition Speaker 3 — Jacqueline Xu",
+                  "text": "I liked the opening, and it set the tone for your argument. Slow down a little when you speak, it was hard to understand you at times."
+                }
+              }
+            ],
+            "total": 227
+          }
+        },
+        "judgeName": "Atlas K",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/985"
+      }
+    },
+    {
+      "id": "986",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 103",
+      "aff": {
+        "name": "University Prep Meher Sonkhya-Crow Gerea-Ryder Green",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Aurorae Young Academy Katherine Du-Miranda Meng-Sophia Zhao",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3PM59A181",
+        "roundLabel": "Round 3",
+        "match": "University Prep Meher Sonkhya-Crow Gerea-Ryder Green vs. Aurorae Young Academy Katherine Du-Miranda Meng-Sophia Zhao",
+        "division": "NoviceE MS 3-on-3",
+        "room": "PIGOTT 103",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "University Prep",
+            "teamName": "University Prep Meher Sonkhya-Crow Gerea-Ryder Green",
+            "speakers": [
+              {
+                "name": "Meher Sonkhya",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Crow Gerea",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Ryder Green",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": null
+              }
+            ],
+            "total": 246
+          },
+          "neg": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Katherine Du-Miranda Meng-Sophia Zhao",
+            "speakers": [
+              {
+                "name": "Sophia Zhao",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": null
+              },
+              {
+                "name": "Miranda Meng",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "abc-ay1",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 243
+          }
+        },
+        "judgeName": "Patricia Morse",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/986"
+      }
+    },
+    {
+      "id": "987",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 307",
+      "aff": {
+        "name": "Bellevue Youth Debate Viktoriia Pyvovarova-Ada Xu-Anwita Karasala",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Aurorae Young Academy Ian Lu-Nathan Shi-Aiden Yu",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3JS59A182",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Viktoriia Pyvovarova-Ada Xu-Anwita Karasala vs. Aurorae Young Academy Ian Lu-Nathan Shi-Aiden Yu",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 307",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Viktoriia Pyvovarova-Ada Xu-Anwita Karasala",
+            "speakers": [
+              {
+                "name": "Viktoriia Pyvovarova",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Viktoriia Pyvovarova",
+                  "sourceHeading": "Proposition Speaker 1 — Viktoriia Pyvovarova",
+                  "text": "I enjoyed the speed of your speech, an also how you laid out the debate for me, it was quite clear. I think you could have projected a bit more. Another thing you could work on could be making your reasoning strong and comprehensive. Some of your reasoning included \"people who are respected always are smart and have good ideas\" (paraphrased) which is a little bit abusive and not always true, as well as \"if i say I like pasta people who don't like pasta won't like me\" again, not true. I did enjoy how many POIs you made but they were all overtime or nearly overtime."
+                }
+              },
+              {
+                "name": "Ada Xu",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Ada Xu",
+                  "sourceHeading": "Proposition Speaker 2 — Ada Xu",
+                  "text": "You were a very loud, and well-spoken debater. I could tell that you were confident in your speech. However, you did say that they didn't respond to your first point, but they were first speaker so that didn't really matter. You also could work on using your entire time."
+                }
+              },
+              {
+                "name": "Anwita Karasala",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Anwita Karasala",
+                  "sourceHeading": "Proposition Speaker 3 — Anwita Karasala",
+                  "text": "I thought you were very clear about what you were doing. I also really enjoyed your response to their Martin Luther King point, I do feel like you could have projected a lot more. Your weigh was also a little bit unclear, and I feel like you could have done more heavy impact weighing, although I did like how you went point by point. You could also work on using your entire time."
+                }
+              }
+            ],
+            "total": 228
+          },
+          "neg": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Ian Lu-Nathan Shi-Aiden Yu",
+            "speakers": [
+              {
+                "name": "Ian Lu",
+                "score": 72,
+                "displayedScore": "72",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ian Lu",
+                  "sourceHeading": "Opposition Speaker 1 — Ian Lu",
+                  "text": "I really enjoyed the examples you used in your points, such as the example of Kim Jong Un. One thing to work on could be that you did not outline your debate, you could also work on your projection and your confidence, since you often looked down and mumbled into your paper."
+                }
+              },
+              {
+                "name": "Nathan Shi",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Nathan Shi",
+                  "sourceHeading": "Opposition Speaker 2 — Nathan Shi",
+                  "text": "You were a very even-keeled and calm speaker, which I enjoyed. However, you said that they did not respond to your BOP, but they did respond to it, so maybe working on flowing and tracking what they said could be something to work on in the future. You could also work on using up your time."
+                }
+              },
+              {
+                "name": "Aiden Yu",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Aiden Yu",
+                  "sourceHeading": "Opposition Speaker 3 — Aiden Yu",
+                  "text": "I enjoyed your projection. I also felt that your POI responses were strong and used common sense and what you knew to counter their POI. However, your weighing was a little bit unclear. I felt like it was hard to follow what you were saying when you were weighing, and I couldn't exactly follow what you were saying about impacts and points. You could also use up more of your time."
+                }
+              }
+            ],
+            "total": 220
+          }
+        },
+        "judgeName": "Jade Slobin",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/987"
+      }
+    },
+    {
+      "id": "988",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 501",
+      "aff": {
+        "name": "Aurorae Young Academy Charlotte Zhang-Sophie Magerramov-aa",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Uday Iyer-Nick Zhang-Blake Zhang",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3TG59A183",
+        "roundLabel": "Round 3",
+        "match": "Aurorae Young Academy Charlotte Zhang-Sophie Magerramov-aa vs. Lakeside Debate Uday Iyer-Nick Zhang-Blake Zhang",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 501",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Charlotte Zhang-Sophie Magerramov-aa",
+            "speakers": [
+              {
+                "name": "Charlotte Zhang",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Charlotte Zhang",
+                  "sourceHeading": "Proposition Speaker 1 — Charlotte Zhang",
+                  "text": "You speak clearly and eloquently and your passion to the arguments you're making shows through. I appreciated specifically several logical derivations that you made to argue for your teams' side. Your argument of separating respect from authority was very strong logically and very persuasive. One suggestion that can make you sound even more convincing is to pace your speech - if you speak slower it will allow the listeners to follow you better and make you more convincing."
+                }
+              },
+              {
+                "name": "Sophie Magerramov",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Sophie Magerramov",
+                  "sourceHeading": "Proposition Speaker 2 — Sophie Magerramov",
+                  "text": "You speak very precisely and coherently which i really appreciated. Your examples from history were great and provided a strong evidence for your argument. I especially liked your scientists examples which provided one of the strongest points in this debate in my opinion - the fact that sometimes people who go against the mainstream make the most important discoveries. That argument was the winning argument and you built on top of it."
+                }
+              },
+              {
+                "name": "aa",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "aa",
+                  "sourceHeading": "Proposition Speaker 3 — aa",
+                  "text": "same as 1st speaker"
+                }
+              }
+            ],
+            "total": 245
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Uday Iyer-Nick Zhang-Blake Zhang",
+            "speakers": [
+              {
+                "name": "Uday Iyer",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Uday Iyer",
+                  "sourceHeading": "Opposition Speaker 1 — Uday Iyer",
+                  "text": "You spoke clearly and you had some great POIs to offer. Your arguments were well structured and you provided good examples. In your definition of respect you compounded respect with authority which was not clear and confused your arguments."
+                }
+              },
+              {
+                "name": "Nick Zhang",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Nick Zhang",
+                  "sourceHeading": "Opposition Speaker 2 — Nick Zhang",
+                  "text": "You speak clearly and structuring your arguments well. Several of the arguments you made were following the respect=authority definition which was absent in the initial topic. I believe that made some of your arguments weaker than they could be."
+                }
+              },
+              {
+                "name": "Blake Zhang",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Blake Zhang",
+                  "sourceHeading": "Opposition Speaker 3 — Blake Zhang",
+                  "text": "I like that you started your speech with the structure and provided great arguments for your side. I thought your rebuttal about lack of recent examples was a good one and made the debate follow more recent examples.\nA few examples you brought up (ICE, Malcolm X) were not developed enough to provide a good argument for your side."
+                }
+              }
+            ],
+            "total": 237
+          }
+        },
+        "judgeName": "Tanya Glozman",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/988"
+      }
+    },
+    {
+      "id": "989",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 629",
+      "aff": {
+        "name": "Open Window Sanjana Nidyanandh-Leanne Alasas-ABC",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Kenmore-Reona-Ethan-Nathan",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AW59A184",
+        "roundLabel": "Round 3",
+        "match": "Open Window Sanjana Nidyanandh-Leanne Alasas-ABC vs. Kenmore-Reona-Ethan-Nathan",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 629",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Open Window",
+            "teamName": "Open Window Sanjana Nidyanandh-Leanne Alasas-ABC",
+            "speakers": [
+              {
+                "name": "Sanjana Nidyanandh",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              },
+              {
+                "name": "Leanne Alasas",
+                "score": 91,
+                "displayedScore": "91",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 61,
+                "displayedScore": "61",
+                "feedback": null
+              }
+            ],
+            "total": 240
+          },
+          "neg": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Reona-Ethan-Nathan",
+            "speakers": [
+              {
+                "name": "Reona",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Ethan",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              },
+              {
+                "name": "Nathan",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              }
+            ],
+            "total": 265
+          }
+        },
+        "judgeName": "Aiden Wu",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/989"
+      }
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-8",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 102",
+      "aff": {
+        "name": "Lakeside Debate Mason Jiang-Grant Schreiber-Jai Wahi",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Kenmore-Sanuthi-Kaitlyn-Emmery",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-9",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 320",
+      "aff": {
+        "name": "Kenmore-Rory-Emma-Layla",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Anishka Mohapatra-Sanaa Jetly-Aanya Talati",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "992",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 308",
+      "aff": {
+        "name": "Evergreen School Tensaye Tesfaye-Maya Patel-Eli Berch",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Moyi Liu-Aleph Solomon-Walaba Kedu",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AS59A187",
+        "roundLabel": "Round 3",
+        "match": "Evergreen School Tensaye Tesfaye-Maya Patel-Eli Berch vs. Lakeside Debate Moyi Liu-Aleph Solomon-Walaba Kedu",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 308",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Tensaye Tesfaye-Maya Patel-Eli Berch",
+            "speakers": [
+              {
+                "name": "Tensaye Tesfaye",
+                "score": 72,
+                "displayedScore": "72",
+                "feedback": null
+              },
+              {
+                "name": "Maya Patel",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Eli Berch",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              }
+            ],
+            "total": 221
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Moyi Liu-Aleph Solomon-Walaba Kedu",
+            "speakers": [
+              {
+                "name": "Moyi Liu",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Aleph Solomon",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              },
+              {
+                "name": "Walaba Kedu",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              }
+            ],
+            "total": 231
+          }
+        },
+        "judgeName": "Aram Shiva",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/992"
+      }
+    },
+    {
+      "id": "993",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 507",
+      "aff": {
+        "name": "University Prep Austin Guan-Elsa Hulce-Prisha Singh",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Climb Redmond Julia Moon-Aarya Atwal-Rohin Devatha",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3DT59A188",
+        "roundLabel": "Round 3",
+        "match": "University Prep Austin Guan-Elsa Hulce-Prisha Singh vs. Climb Redmond Julia Moon-Aarya Atwal-Rohin Devatha",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 507",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "University Prep",
+            "teamName": "University Prep Austin Guan-Elsa Hulce-Prisha Singh",
+            "speakers": [
+              {
+                "name": "Austin Guan",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": null
+              },
+              {
+                "name": "Elsa Hulce",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Prisha Singh",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              }
+            ],
+            "total": 240
+          },
+          "neg": {
+            "school": "Climb Redmond",
+            "teamName": "Climb Redmond Julia Moon-Aarya Atwal-Rohin Devatha",
+            "speakers": [
+              {
+                "name": "Julia Moon",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              },
+              {
+                "name": "Aarya Atwal",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              },
+              {
+                "name": "Rohin Devatha",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              }
+            ],
+            "total": 232
+          }
+        },
+        "judgeName": "Darren Tse",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/993"
+      }
+    },
+    {
+      "id": "994",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 353",
+      "aff": {
+        "name": "Rainier Scholars Tasneem Kedir-Lulyana Efrem-abc",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Evergreen School Cate Dragos-Tessa Steinberg-Aadhya Ganta",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3NW59A189",
+        "roundLabel": "Round 3",
+        "match": "Rainier Scholars Tasneem Kedir-Lulyana Efrem-abc vs. Evergreen School Cate Dragos-Tessa Steinberg-Aadhya Ganta",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 353",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Rainier Scholars",
+            "teamName": "Rainier Scholars Tasneem Kedir-Lulyana Efrem-abc",
+            "speakers": [
+              {
+                "name": "Tasneem Kedir",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Tasneem Kedir",
+                  "sourceHeading": "Proposition Speaker 1 — Tasneem Kedir",
+                  "text": "Great job, your speech was well organized. Some advice is to use up more of your time, even if you are repeating your points. Also, great POIs."
+                }
+              },
+              {
+                "name": "Lulyana Efrem",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Lulyana Efrem",
+                  "sourceHeading": "Proposition Speaker 2 — Lulyana Efrem",
+                  "text": "Good job pointing out the lack of rebuttals in their first speech. Make sure to stay on track and avoid saying things unrelated to the debate."
+                }
+              },
+              {
+                "name": "abc",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "abc",
+                  "sourceHeading": "Proposition Speaker 3 — abc",
+                  "text": "Again, good job circling back to the opponents rebuttals. Don't let POIs take up too much of your speaking time."
+                }
+              }
+            ],
+            "total": 254
+          },
+          "neg": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Cate Dragos-Tessa Steinberg-Aadhya Ganta",
+            "speakers": [
+              {
+                "name": "Cate Dragos",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Cate Dragos",
+                  "sourceHeading": "Opposition Speaker 1 — Cate Dragos",
+                  "text": "Good response to the POIs, but next time try to rebut during your speech as the first opposition speaker."
+                }
+              },
+              {
+                "name": "Tessa Steinberg",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Tessa Steinberg",
+                  "sourceHeading": "Opposition Speaker 2 — Tessa Steinberg",
+                  "text": "Try to use up all of your time even if it means you are repeating your points. Great job weighing and using the burden of proof."
+                }
+              },
+              {
+                "name": "Aadhya Ganta",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Aadhya Ganta",
+                  "sourceHeading": "Opposition Speaker 3 — Aadhya Ganta",
+                  "text": "Good job extending your argument while also making time to rebut the other team, your speech was very organized."
+                }
+              }
+            ],
+            "total": 255
+          }
+        },
+        "judgeName": "Ndiabou Wague",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/994"
+      }
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-13",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 244 - Wyckoff Auditorium",
+      "aff": {
+        "name": "Harbor School Karina King-Alexia Ruiz Amezcua-Ada Buettner",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "St Thomas School Elina A-Rachel L-Sylena H",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-14",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 441",
+      "aff": {
+        "name": "St Thomas School Camden P-Vyan G-Wolfie H",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Rachel Zhu-Clara Rose-Naisha Gupta",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-15",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 324",
+      "aff": {
+        "name": "Bellevue Youth Debate Jaylia Wu-William Ma-Eric Yu",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "EPS1",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "998",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 321",
+      "aff": {
+        "name": "Kenmore-Alex-Srikar-Jason",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Evergreen School Anna Deng-Beckett Locher-Amy Chang",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AZ59A193",
+        "roundLabel": "Round 3",
+        "match": "Kenmore-Alex-Srikar-Jason vs. Evergreen School Anna Deng-Beckett Locher-Amy Chang",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 321",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Alex-Srikar-Jason",
+            "speakers": [
+              {
+                "name": "Alex",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Srikar",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Jason",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 255
+          },
+          "neg": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Anna Deng-Beckett Locher-Amy Chang",
+            "speakers": [
+              {
+                "name": "Anna Deng",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Beckett Locher",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Amy Chang",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 255
+          }
+        },
+        "judgeName": "Anna Zaster",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/998"
+      }
+    },
+    {
+      "id": "999",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 105",
+      "aff": {
+        "name": "Lakeside Debate Patrick Cosma-Eleanor Williams-Sarah Shabar",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Kenmore-Seth-Haris-Sam",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AF59A194",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Patrick Cosma-Eleanor Williams-Sarah Shabar vs. Kenmore-Seth-Haris-Sam",
+        "division": "NoviceE MS 3-on-3",
+        "room": "PIGOTT 105",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Patrick Cosma-Eleanor Williams-Sarah Shabar",
+            "speakers": [
+              {
+                "name": "Patrick Cosma",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Patrick Cosma",
+                  "sourceHeading": "Proposition Speaker 1 — Patrick Cosma",
+                  "text": "great speech! you provided great information and gave examples to back up your evidence, which is always important. you did provide a burden of proof, which is not something that the proposition should do, and instead you should give definitions for the debate. great personal examples to support your claims. make sure you manage your time better, because you had about a minute and a half remaining. otherwise, fantastic job!"
+                }
+              },
+              {
+                "name": "Eleanor Williams",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Eleanor Williams",
+                  "sourceHeading": "Proposition Speaker 2 — Eleanor Williams",
+                  "text": "what an amazing speech! you made many important points and provided personal evidence to support them. you also did a great job supporting your first speakers arguments and backing them up. make sure you respond the oppositions burden of proof and address it and also make sure you use up as much time as you can. you had over a minute and a half of time remaining, so try to do more frontlining and refutations to reach that 5 minutes. incredible work!"
+                }
+              },
+              {
+                "name": "Sarah Shabar",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Sarah Shabar",
+                  "sourceHeading": "Proposition Speaker 3 — Sarah Shabar",
+                  "text": "absolutely incredible job. great work pointing out their lack of a weigh and then providing your own, proving why your arguments are better than the oppositions arguments. very good job as well with the fast poi responses and getting right back to your speech. you managed your time very well. you also brought up how they did not address a poi to the best extent and you quickly shut down their answer. incredible speech!"
+                }
+              }
+            ],
+            "total": 233
+          },
+          "neg": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Seth-Haris-Sam",
+            "speakers": [
+              {
+                "name": "Seth",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Seth",
+                  "sourceHeading": "Opposition Speaker 1 — Seth",
+                  "text": "great job setting up a burden of proof that the prop did not even address. you also did great providing definitions when the prop did not. a bit dramatic when you mentioned suicide and being respected, not really sure how they relate, but good job emphasizing the importance of being well liked. talked a little about depression but did not really expand on it. great job with your timing. all in all, great speech!"
+                }
+              },
+              {
+                "name": "Haris",
+                "score": 69,
+                "displayedScore": "69",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Haris",
+                  "sourceHeading": "Opposition Speaker 2 — Haris",
+                  "text": "you did a great job and brought up some important points. i would have liked to see some evidence or examples from where you got your evidence, so we know that your claims can be backed up. you didnt respond to either POIs, except when you mentioned trump, but i dont know if that is the best example in light of the recent elections. otherwise, great speech and amazing job supporting your first speaker!"
+                }
+              },
+              {
+                "name": "Sam",
+                "score": 72,
+                "displayedScore": "72",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Sam",
+                  "sourceHeading": "Opposition Speaker 3 — Sam",
+                  "text": "great job with both of your speeches. it is really hard to write two of them in such a short amount of time, and you did that incredibly well. you backed up your teams arguments well and explained why you should have won. i would have liked to have seen a weigh where you discuss each point and you also brought up a couple pieces of evidence, which 3rd speakers are not allowed to do. other than that, great job!"
+                }
+              }
+            ],
+            "total": 215
+          }
+        },
+        "judgeName": "Amar Fifadra",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/999"
+      }
+    },
+    {
+      "id": "1000",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 371",
+      "aff": {
+        "name": "Kenmore-Hazel-Srisahiti-Surabhi",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Amelia Hong-Hanmo Lin-Marissa Ye",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3CY59A195",
+        "roundLabel": "Round 3",
+        "match": "Kenmore-Hazel-Srisahiti-Surabhi vs. Lakeside Debate Amelia Hong-Hanmo Lin-Marissa Ye",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 371",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Hazel-Srisahiti-Surabhi",
+            "speakers": [
+              {
+                "name": "Hazel",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Srisahiti",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Surabhi",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 248
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Amelia Hong-Hanmo Lin-Marissa Ye",
+            "speakers": [
+              {
+                "name": "Amelia Hong",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Hanmo Lin",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "Marissa Ye",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              }
+            ],
+            "total": 243
+          }
+        },
+        "judgeName": "Claire Ye",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1000"
+      }
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-19",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 107 - Bannan Auditorium",
+      "aff": {
+        "name": "Climb Bellevue Kai Li-Sahil Motwani-Abhyuday Jain",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Bellevue Youth Debate Bella Qu-Lilly Koss-Leena Jafry",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "1002",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 322",
+      "aff": {
+        "name": "Eckstein Conrad Gussin-Wilder Musgrove-abc",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Aurorae Young Academy Olivia Liu-Yvonne Wang-Tiffany Qin",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SV59A197",
+        "roundLabel": "Round 3",
+        "match": "Eckstein Conrad Gussin-Wilder Musgrove-abc vs. Aurorae Young Academy Olivia Liu-Yvonne Wang-Tiffany Qin",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 322",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Eckstein",
+            "teamName": "Eckstein Conrad Gussin-Wilder Musgrove-abc",
+            "speakers": [
+              {
+                "name": "Conrad Gussin",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Wilder Musgrove",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "abc",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              }
+            ],
+            "total": 260
+          },
+          "neg": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Olivia Liu-Yvonne Wang-Tiffany Qin",
+            "speakers": [
+              {
+                "name": "Olivia Liu",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              },
+              {
+                "name": "Yvonne Wang",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Tiffany Qin",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              }
+            ],
+            "total": 245
+          }
+        },
+        "judgeName": "Sid Venkatesh",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1002"
+      }
+    },
+    {
+      "id": "1003",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "ADMINISTRATION 323",
+      "aff": {
+        "name": "Lakeside Debate Isabel Paik-Brayden Reis-Adelina Khudyev",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Kenmore-Maya-Phoenix-Ollie",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SM59A198",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Isabel Paik-Brayden Reis-Adelina Khudyev vs. Kenmore-Maya-Phoenix-Ollie",
+        "division": "NoviceE MS 3-on-3",
+        "room": "ADMINISTRATION 323",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Isabel Paik-Brayden Reis-Adelina Khudyev",
+            "speakers": [
+              {
+                "name": "Isabel Paik",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Isabel Paik",
+                  "sourceHeading": "Proposition Speaker 1 — Isabel Paik",
+                  "text": "Great job asking insightful questions during the debate, but do try to speak up a little bit more during the debate because you were very quiet."
+                }
+              },
+              {
+                "name": "Brayden Reis",
+                "score": 65,
+                "displayedScore": "65",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Brayden Reis",
+                  "sourceHeading": "Proposition Speaker 2 — Brayden Reis",
+                  "text": "I appreciated that you noted that the first negation speaker didn't really refute any of the affirmations points, but it seemed a bit like you were struggling to make a cohesive point when given the opportunity to back up your own argument."
+                }
+              },
+              {
+                "name": "Adelina Khudyev",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Adelina Khudyev",
+                  "sourceHeading": "Proposition Speaker 3 — Adelina Khudyev",
+                  "text": "I think you had a difficult job, given that the arguments on both sides got so muddled towards the end, but I think you did your best at trying to urge the judge to vote in favor of the affirmation. I appreciated some of the rhetoric you used, so good job trying to create some clarity at the end there."
+                }
+              }
+            ],
+            "total": 226
+          },
+          "neg": {
+            "school": "Kenmore",
+            "teamName": "Kenmore-Maya-Phoenix-Ollie",
+            "speakers": [
+              {
+                "name": "Maya",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Maya",
+                  "sourceHeading": "Opposition Speaker 1 — Maya",
+                  "text": "I appreciate that you were trying to refute the affirmative's argument that being well-respected is important by saying that respect is earned, but it didn't seem to connect to the overall point about respect being more or less valuable than being well-liked. I appreciated the perspective you gave on how being well-respected doesn't make you more likely to succeed, whereas being well-liked does. That seemed to be one of the more cogent arguments in this debate."
+                }
+              },
+              {
+                "name": "Phoenix",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Phoenix",
+                  "sourceHeading": "Opposition Speaker 2 — Phoenix",
+                  "text": "Good projection. I could hear you clearly, which some students struggle with. I think your argumentation, however, relied a bit too much on personal anecdotes that didn't seem as related to the topic. I also appreciated your clarity on the affirmation's burden of proof."
+                }
+              },
+              {
+                "name": "Ollie",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Ollie",
+                  "sourceHeading": "Opposition Speaker 3 — Ollie",
+                  "text": "I appreciated your synthesis on how being well-liked contributes to overall better mental health, and how if that's the metric the affirmation is trying to win the argument on, they shouldn't win. I think this made your usage of personal anecdotes make a lot more sense than some of the ones the other students used."
+                }
+              }
+            ],
+            "total": 233
+          }
+        },
+        "judgeName": "Swasti Mishra",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1003"
+      }
+    },
+    {
+      "id": "NoviceE MS 3-on-3-r3-22",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 401",
+      "aff": {
+        "name": "Climb Bellevue Rhea Khera-Vaneesha Kaushal-Rei Kuramoto",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "EPS4",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "1005",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 407",
+      "aff": {
+        "name": "Climb Redmond Terrance Jiang-Andrew Zhang-Raghav Sharma",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "EPS2",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AI59A200",
+        "roundLabel": "Round 3",
+        "match": "Climb Redmond Terrance Jiang-Andrew Zhang-Raghav Sharma vs. EPS2",
+        "division": "NoviceE MS 3-on-3",
+        "room": "BANNAN 407",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Climb Redmond",
+            "teamName": "Climb Redmond Terrance Jiang-Andrew Zhang-Raghav Sharma",
+            "speakers": [
+              {
+                "name": "Terrance Jiang",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Terrance Jiang",
+                  "sourceHeading": "Proposition Speaker 1 — Terrance Jiang",
+                  "text": "You provided good arguments, provided some evidence to support your claim. You could expand on reasoning."
+                }
+              },
+              {
+                "name": "Andrew Zhang",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Andrew Zhang",
+                  "sourceHeading": "Proposition Speaker 2 — Andrew Zhang",
+                  "text": "You were able to discern the two sides, being respected vs being well-liked and explain clearly with good logic and examples."
+                }
+              },
+              {
+                "name": "Raghav Sharma",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Raghav Sharma",
+                  "sourceHeading": "Proposition Speaker 3 — Raghav Sharma",
+                  "text": "Andrew Zhang filled in for absent debater here. You were able to list all the opposing team's points and argue them."
+                }
+              }
+            ],
+            "total": 246
+          },
+          "neg": {
+            "school": "Eastside Prep",
+            "teamName": "EPS2",
+            "speakers": [
+              {
+                "name": "Aiden Wu",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Aiden Wu",
+                  "sourceHeading": "Opposition Speaker 1 — Aiden Wu",
+                  "text": "You were able to weigh in on your side's arguments well with reasoning."
+                }
+              },
+              {
+                "name": "Nathan Jiao",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Nathan Jiao",
+                  "sourceHeading": "Opposition Speaker 2 — Nathan Jiao",
+                  "text": "You were able to provide good arguments and reasonings to support your claim."
+                }
+              },
+              {
+                "name": "Anouch Torossian",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Anouch Torossian",
+                  "sourceHeading": "Opposition Speaker 3 — Anouch Torossian",
+                  "text": "Aiden filled in for absent debater here and these comments are for Aiden. I liked your final comparison between the two sides and summary."
+                }
+              }
+            ],
+            "total": 254
+          }
+        },
+        "judgeName": "Anusha Iyer",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1005"
+      }
+    },
+    {
+      "id": "1006",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 100",
+      "aff": {
+        "name": "St Thomas School Amanda H-Audrey S-Emily L",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Evergreen Redmond Climb Veronika Poleshchuk-Avi Gupta-Raima Krishnamurthy",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AS59A201",
+        "roundLabel": "Round 3",
+        "match": "St Thomas School Amanda H-Audrey S-Emily L vs. Evergreen Redmond Climb Veronika Poleshchuk-Avi Gupta-Raima Krishnamurthy",
+        "division": "NoviceE MS 3-on-3",
+        "room": "PIGOTT 100",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Amanda H-Audrey S-Emily L",
+            "speakers": [
+              {
+                "name": "Amanda H",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Audrey S",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Emily L",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 258
+          },
+          "neg": {
+            "school": "Evergreen Redmond Climb",
+            "teamName": "Evergreen Redmond Climb Veronika Poleshchuk-Avi Gupta-Raima Krishnamurthy",
+            "speakers": [
+              {
+                "name": "Veronika Poleshchuk",
+                "score": 90,
+                "displayedScore": "90",
+                "feedback": null
+              },
+              {
+                "name": "Avi Gupta",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Raima Krishnamurthy",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              }
+            ],
+            "total": 258
+          }
+        },
+        "judgeName": "Arjun S Saravanan",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1006"
+      }
+    },
+    {
+      "id": "1007",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT near 205 hallway",
+      "aff": {
+        "name": "Rainier Scholars Tèa Timmons-Juliette-Joyce Cabanilla-abc",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Climb Bellevue Shaurya Khosla-Eric Zhu-Ronit Menezes",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AS59A202",
+        "roundLabel": "Round 3",
+        "match": "Rainier Scholars Tèa Timmons-Juliette-Joyce Cabanilla-abc vs. Climb Bellevue Shaurya Khosla-Eric Zhu-Ronit Menezes",
+        "division": "NoviceE MS 3-on-3",
+        "room": "PIGOTT near 205 hallway",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Rainier Scholars",
+            "teamName": "Rainier Scholars Tèa Timmons-Juliette-Joyce Cabanilla-abc",
+            "speakers": [
+              {
+                "name": "Tèa Timmons",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": null
+              },
+              {
+                "name": "Juliette-Joyce Cabanilla",
+                "score": 67,
+                "displayedScore": "67",
+                "feedback": null
+              },
+              {
+                "name": "Tyvon",
+                "score": 69,
+                "displayedScore": "69",
+                "feedback": null
+              }
+            ],
+            "total": 207
+          },
+          "neg": {
+            "school": "Climb Bellevue",
+            "teamName": "Climb Bellevue Shaurya Khosla-Eric Zhu-Ronit Menezes",
+            "speakers": [
+              {
+                "name": "Shaurya Khosla",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              },
+              {
+                "name": "Eric Zhu",
+                "score": 67,
+                "displayedScore": "67",
+                "feedback": null
+              },
+              {
+                "name": "Ronit Menezes",
+                "score": 70,
+                "displayedScore": "70",
+                "feedback": null
+              }
+            ],
+            "total": 214
+          }
+        },
+        "judgeName": "Arnav Shah",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1007"
+      }
+    },
+    {
+      "id": "1008",
+      "division": "NoviceE MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 200",
+      "aff": {
+        "name": "Rainier Scholars Ashwin Collazos-Ben Wastman-Nathan",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "BYE",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": true,
+      "ballotStatus": "no-scores",
+      "ballot": {
+        "code": "3JT59A203",
+        "roundLabel": "Round 3",
+        "match": "Rainier Scholars Ashwin Collazos-Ben Wastman-Nathan vs. BYE No Debate Be on Standby",
+        "division": "NoviceE MS 3-on-3",
+        "room": "PIGOTT 200",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Rainier Scholars",
+            "teamName": "Rainier Scholars Ashwin Collazos-Ben Wastman-Nathan",
+            "speakers": [
+              {
+                "name": "Ashwin Collazos",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Ben Wastman",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Nathan",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              }
+            ],
+            "total": null
+          },
+          "neg": {
+            "school": "",
+            "teamName": "BYE No Debate Be on Standby",
+            "speakers": [
+              {
+                "name": "Speaker 1",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Speaker 2",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Speaker 3",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              }
+            ],
+            "total": null
+          }
+        },
+        "judgeName": "JUDGE TBA",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1008"
+      }
+    },
+    {
+      "id": "1009",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 306",
+      "aff": {
+        "name": "Bellevue Youth Debate Aaroosh Das-Amrita Iyer-Kyle Kim",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Endao Han-Henry In-Dennis Wu",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AB59A209",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Aaroosh Das-Amrita Iyer-Kyle Kim vs. Lakeside Debate Endao Han-Henry In-Dennis Wu",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 306",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Aaroosh Das-Amrita Iyer-Kyle Kim",
+            "speakers": [
+              {
+                "name": "Aaroosh Das",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Aaroosh Das",
+                  "sourceHeading": "Proposition Speaker 1 — Aaroosh Das",
+                  "text": "debate was well structured and had good points."
+                }
+              },
+              {
+                "name": "Amrita Iyer",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Amrita Iyer",
+                  "sourceHeading": "Proposition Speaker 2 — Amrita Iyer",
+                  "text": "her debate was well structured and she emphasis well, and refuted the argument , but could have used more time debate got over in 3.31 sec"
+                }
+              },
+              {
+                "name": "Kyle Kim",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Kyle Kim",
+                  "sourceHeading": "Proposition Speaker 3 — Kyle Kim",
+                  "text": "had a good reasoning and rebuttal his opponents point but again his debate lasted only 3mins 20 sec"
+                }
+              }
+            ],
+            "total": 257
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Endao Han-Henry In-Dennis Wu",
+            "speakers": [
+              {
+                "name": "Endao Han",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Endao Han",
+                  "sourceHeading": "Opposition Speaker 1 — Endao Han",
+                  "text": "started the debate well, had good point but did not rebuttal and debate only for2mins40 sec."
+                }
+              },
+              {
+                "name": "Henry In",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Henry In",
+                  "sourceHeading": "Opposition Speaker 2 — Henry In",
+                  "text": "good debate but didn't have better response for poi"
+                }
+              },
+              {
+                "name": "Dennis Wu",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Dennis Wu",
+                  "sourceHeading": "Opposition Speaker 3 — Dennis Wu",
+                  "text": "had good impact"
+                }
+              }
+            ],
+            "total": 234
+          }
+        },
+        "judgeName": "Asha Boyed",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1009"
+      }
+    },
+    {
+      "id": "1010",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 307",
+      "aff": {
+        "name": "University Prep Evan Qi-Logan Fong-JJ Nguyen",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Aurorae Young Academy Annabelle Wang-Suhani Pathania-Edgar Li",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3JD59A210",
+        "roundLabel": "Round 3",
+        "match": "University Prep Evan Qi-Logan Fong-JJ Nguyen vs. Aurorae Young Academy Annabelle Wang-Suhani Pathania-Edgar Li",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 307",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "University Prep",
+            "teamName": "University Prep Evan Qi-Logan Fong-JJ Nguyen",
+            "speakers": [
+              {
+                "name": "Evan Qi",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Logan Fong",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "JJ Nguyen",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              }
+            ],
+            "total": 246
+          },
+          "neg": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Annabelle Wang-Suhani Pathania-Edgar Li",
+            "speakers": [
+              {
+                "name": "Annabelle Wang",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Suhani Pathania",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              },
+              {
+                "name": "Edgar Li",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": null
+              }
+            ],
+            "total": 236
+          }
+        },
+        "judgeName": "Jennifer Dinh",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1010"
+      }
+    },
+    {
+      "id": "1011",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 107",
+      "aff": {
+        "name": "St Thomas School Alexis A-Sanvi B-Shreya B",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Bellevue Youth Debate Audrey Xu-Sarah Shang-Aavi Fulay",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3EK59A211",
+        "roundLabel": "Round 3",
+        "match": "St Thomas School Alexis A-Sanvi B-Shreya B vs. Bellevue Youth Debate Audrey Xu-Sarah Shang-Aavi Fulay",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 107",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Alexis A-Sanvi B-Shreya B",
+            "speakers": [
+              {
+                "name": "Alexis A",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Sanvi B",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              },
+              {
+                "name": "Shreya B",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              }
+            ],
+            "total": 251
+          },
+          "neg": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Audrey Xu-Sarah Shang-Aavi Fulay",
+            "speakers": [
+              {
+                "name": "Audrey Xu",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Sarah Shang",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              },
+              {
+                "name": "Aavi Fulay",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 248
+          }
+        },
+        "judgeName": "Emma Knobbs",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1011"
+      }
+    },
+    {
+      "id": "1012",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 202",
+      "aff": {
+        "name": "Evergreen School Elise Delhez-Ari Kasprowicz-Ciara Luk",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "University Prep Daphne Morris-Zoe Collings-Kandice Chen",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3JH59A212",
+        "roundLabel": "Round 3",
+        "match": "Evergreen School Elise Delhez-Ari Kasprowicz-Ciara Luk vs. University Prep Daphne Morris-Zoe Collings-Kandice Chen",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 202",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Elise Delhez-Ari Kasprowicz-Ciara Luk",
+            "speakers": [
+              {
+                "name": "Elise Delhez",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Ari Kasprowicz",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Ciara Luk",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 261
+          },
+          "neg": {
+            "school": "University Prep",
+            "teamName": "University Prep Daphne Morris-Zoe Collings-Kandice Chen",
+            "speakers": [
+              {
+                "name": "Daphne Morris",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Zoe Collings",
+                "score": 91,
+                "displayedScore": "91",
+                "feedback": null
+              },
+              {
+                "name": "Kandice Chen",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 264
+          }
+        },
+        "judgeName": "Joanna Huang",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1012"
+      }
+    },
+    {
+      "id": "1013",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 304",
+      "aff": {
+        "name": "St Thomas School Joanna Y-Lennon H-M-Wren K",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Sebastian Vong-Viraj Gattamneni-Pranav Swagath",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3JZ59A213",
+        "roundLabel": "Round 3",
+        "match": "St Thomas School Joanna Y-Lennon H-M-Wren K vs. Lakeside Debate Sebastian Vong-Viraj Gattamneni-Pranav Swagath",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 304",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Joanna Y-Lennon H-M-Wren K",
+            "speakers": [
+              {
+                "name": "Joanna Y",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Lennon H-M",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              },
+              {
+                "name": "Wren K",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              }
+            ],
+            "total": 258
+          },
+          "neg": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Sebastian Vong-Viraj Gattamneni-Pranav Swagath",
+            "speakers": [
+              {
+                "name": "Sebastian Vong",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Viraj Gattamneni",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Pranav Swagath",
+                "score": 88,
+                "displayedScore": "88",
+                "feedback": null
+              }
+            ],
+            "total": 258
+          }
+        },
+        "judgeName": "Justin Zhou",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1013"
+      }
+    },
+    {
+      "id": "1014",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 308",
+      "aff": {
+        "name": "Evergreen Redmond Climb Arjun Balaji-Pranav Shashwat Iyer-Krishav Sapru",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Bellevue Youth Debate Miranda Li-Jaylene Chor-Jerry Zhu",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3MG59A214",
+        "roundLabel": "Round 3",
+        "match": "Evergreen Redmond Climb Arjun Balaji-Pranav Shashwat Iyer-Krishav Sapru vs. Bellevue Youth Debate Miranda Li-Jaylene Chor-Jerry Zhu",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 308",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Evergreen Redmond Climb",
+            "teamName": "Evergreen Redmond Climb Arjun Balaji-Pranav Shashwat Iyer-Krishav Sapru",
+            "speakers": [
+              {
+                "name": "Arjun Balaji",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Pranav Shashwat Iyer",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              },
+              {
+                "name": "Krishav Sapru",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              }
+            ],
+            "total": 230
+          },
+          "neg": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Miranda Li-Jaylene Chor-Jerry Zhu",
+            "speakers": [
+              {
+                "name": "Miranda Li",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              },
+              {
+                "name": "Jaylene Chor",
+                "score": 79,
+                "displayedScore": "79",
+                "feedback": null
+              },
+              {
+                "name": "Jerry Zhu",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              }
+            ],
+            "total": 232
+          }
+        },
+        "judgeName": "Maeli Gamez",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1014"
+      }
+    },
+    {
+      "id": "NoviceS MS 3-on-3-r3-7",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 220",
+      "aff": {
+        "name": "Lakeside Debate Emma Sierra-Maylin Halasz-Anvika Vemula",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "St Thomas School Amelia I-Crystal J-Declan K-Y",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "1016",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 204",
+      "aff": {
+        "name": "EPS5",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "University Prep Oliver Chen-Annabel Johnson-Luna Samayoa Robles",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SW59A216",
+        "roundLabel": "Round 3",
+        "match": "EPS5 vs. University Prep Oliver Chen-Annabel Johnson-Luna Samayoa Robles",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 204",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Eastside Prep",
+            "teamName": "EPS5",
+            "speakers": [
+              {
+                "name": "Alex Qu",
+                "score": 93,
+                "displayedScore": "93",
+                "feedback": null
+              },
+              {
+                "name": "Ben Fonseca",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Ian Ruud",
+                "score": 65,
+                "displayedScore": "65",
+                "feedback": null
+              }
+            ],
+            "total": 245
+          },
+          "neg": {
+            "school": "University Prep",
+            "teamName": "University Prep Oliver Chen-Annabel Johnson-Luna Samayoa Robles",
+            "speakers": [
+              {
+                "name": "Oliver Chen",
+                "score": 89,
+                "displayedScore": "89",
+                "feedback": null
+              },
+              {
+                "name": "Annabel Johnson",
+                "score": 92,
+                "displayedScore": "92",
+                "feedback": null
+              },
+              {
+                "name": "Luna Samayoa Robles",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 267
+          }
+        },
+        "judgeName": "Sonia Witt",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1016"
+      }
+    },
+    {
+      "id": "1017",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 101",
+      "aff": {
+        "name": "Bellevue Youth Debate Christina Sun-Ben Grant-Jia-Hao Stevenson",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "University Prep Carter Pounds-Elias Bezanson-Arjun Ghotge",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3XX59A217",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Christina Sun-Ben Grant-Jia-Hao Stevenson vs. University Prep Carter Pounds-Elias Bezanson-Arjun Ghotge",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 101",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Christina Sun-Ben Grant-Jia-Hao Stevenson",
+            "speakers": [
+              {
+                "name": "Christina Sun",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Christina Sun",
+                  "sourceHeading": "Proposition Speaker 1 — Christina Sun",
+                  "text": "- You did a great job but you still had 2 minutes and 30 seconds left so just make sure you wrap up your speech and make up your mind before sitting down.\n- Good job asking POIs. \n- I think your a good speaker but you definitely had a lot of gaps so just try and work on that."
+                }
+              },
+              {
+                "name": "Ben Grant",
+                "score": 64,
+                "displayedScore": "64",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Ben Grant",
+                  "sourceHeading": "Proposition Speaker 2 — Ben Grant",
+                  "text": "Try and speak up, I know that impromptu topics are really stressful sometimes since you have so little time to prepare, just try to use up more of your time going over your contentions.\n You had some good points that I wish you expanded more on"
+                }
+              },
+              {
+                "name": "Jia-Hao Stevenson",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Jia-Hao Stevenson",
+                  "sourceHeading": "Proposition Speaker 3 — Jia-Hao Stevenson",
+                  "text": "-You are a very strong and confident speaker and your voice was projected very well which I think is fantastic.\n- good job saying what the other team did that was against the rules. \n- you asked 2 POI which is really good. \nGood responses and rebuttals\n- You didn’t weigh the debate or answer the BOP. you had a minute remaining which you could’ve used to weigh."
+                }
+              }
+            ],
+            "total": 226
+          },
+          "neg": {
+            "school": "University Prep",
+            "teamName": "University Prep Carter Pounds-Elias Bezanson-Arjun Ghotge",
+            "speakers": [
+              {
+                "name": "Carter Pounds",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Carter Pounds",
+                  "sourceHeading": "Opposition Speaker 1 — Carter Pounds",
+                  "text": "- I really like the point with the bullies and you expanded really well on that.\n- You spoke very smoothly and it was easy to follow.  \n-Recover faster from POI and use up all of your time you had one minute remaining which you should’ve used to either go over contentions again or just rebuttal more."
+                }
+              },
+              {
+                "name": "Elias Bezanson",
+                "score": 91,
+                "displayedScore": "91",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Elias Bezanson",
+                  "sourceHeading": "Opposition Speaker 2 — Elias Bezanson",
+                  "text": "-You are a very confident and strong speaker which is fantastic\n-good job saying what the other team did that went against the rules\n-Nice responding to POIs \n-You refuted the points very well \n-you used up all of your time which is really good."
+                }
+              },
+              {
+                "name": "Arjun Ghotge",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Arjun Ghotge",
+                  "sourceHeading": "Opposition Speaker 3 — Arjun Ghotge",
+                  "text": "-great job asking 3 POIs. \n-Nice job refuting the contentions.\n-Good response to POI and weighing the debate. \n- By bringing up the BOP, you allowed your team to win the debate\n- good job using up all of your time\n- try to not have so many gaps in your speech"
+                }
+              }
+            ],
+            "total": 261
+          }
+        },
+        "judgeName": "Xiya Xu",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1017"
+      }
+    },
+    {
+      "id": "1018",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 208",
+      "aff": {
+        "name": "Lakeside Debate Agata Beliaeva-Angie Lee-Arjun Vengalil",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "University Prep Annie Li-Julianna Chen-Shanna Wu",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AB59A218",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Agata Beliaeva-Angie Lee-Arjun Vengalil vs. University Prep Annie Li-Julianna Chen-Shanna Wu",
+        "division": "NoviceS MS 3-on-3",
+        "room": "BANNAN 208",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Agata Beliaeva-Angie Lee-Arjun Vengalil",
+            "speakers": [
+              {
+                "name": "Agata Beliaeva",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Agata Beliaeva",
+                  "sourceHeading": "Proposition Speaker 1 — Agata Beliaeva",
+                  "text": "You have good points on how respect gives more opportunities.\n\nWork on having clearer voice and try not to use filler words like, like and um."
+                }
+              },
+              {
+                "name": "Angie Lee",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Angie Lee",
+                  "sourceHeading": "Proposition Speaker 2 — Angie Lee",
+                  "text": "You have a strong projected voice and gives good real life examples in their argument for example her example but her fifth grade teacher. \n\nNext time look more at the audience."
+                }
+              },
+              {
+                "name": "Arjun Vengalil",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Arjun Vengalil",
+                  "sourceHeading": "Proposition Speaker 3 — Arjun Vengalil",
+                  "text": "I really liked that you explained how being respected is what you do and what they've done.\n\nNext time don't use filler words like, like and um."
+                }
+              }
+            ],
+            "total": 246
+          },
+          "neg": {
+            "school": "University Prep",
+            "teamName": "University Prep Annie Li-Julianna Chen-Shanna Wu",
+            "speakers": [
+              {
+                "name": "Annie Li",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Annie Li",
+                  "sourceHeading": "Opposition Speaker 1 — Annie Li",
+                  "text": "Your argument on how being liked is beneficial to someone's job and life. \n\nWork on looking at the crowd and engaging the audience."
+                }
+              },
+              {
+                "name": "Julianna Chen",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Julianna Chen",
+                  "sourceHeading": "Opposition Speaker 2 — Julianna Chen",
+                  "text": "I really liked that you asked a question to the audience and judge to make them think.\n\nNext time speak clearer and more slower to be able to communicate what you want to say."
+                }
+              },
+              {
+                "name": "Shanna Wu",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Shanna Wu",
+                  "sourceHeading": "Opposition Speaker 3 — Shanna Wu",
+                  "text": "I really liked how you included a real life example about how a famous person is famous because they're liked in your argument.\n\nWork on not using filler words like, like or um."
+                }
+              }
+            ],
+            "total": 244
+          }
+        },
+        "judgeName": "Andrea Berdeja",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1018"
+      }
+    },
+    {
+      "id": "NoviceS MS 3-on-3-r3-11",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN past 476",
+      "aff": {
+        "name": "University Prep Eliza Saltman-Alicia Urion-Felix Zhang",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Lakeside Debate Simran Gupta-Olivia Gong-ABC",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": null,
+      "winnerEvidence": "not determined",
+      "isBye": false,
+      "ballotStatus": "unavailable",
+      "ballot": null
+    },
+    {
+      "id": "1020",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 109",
+      "aff": {
+        "name": "St Thomas School Hamza N-John T-Ahrian S",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Evergreen Redmond Climb Aashvi Chugh-Poorvika Singal-Parnika Singal",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3ET59A220",
+        "roundLabel": "Round 3",
+        "match": "St Thomas School Hamza N-John T-Ahrian S vs. Evergreen Redmond Climb Aashvi Chugh-Poorvika Singal-Parnika Singal",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 109",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Hamza N-John T-Ahrian S",
+            "speakers": [
+              {
+                "name": "Hamza N",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "John T",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              },
+              {
+                "name": "Ahrian S",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              }
+            ],
+            "total": 225
+          },
+          "neg": {
+            "school": "Evergreen Redmond Climb",
+            "teamName": "Evergreen Redmond Climb Aashvi Chugh-Poorvika Singal-Parnika Singal",
+            "speakers": [
+              {
+                "name": "Aashvi Chugh",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              },
+              {
+                "name": "Poorvika Singal",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Parnika Singal",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": null
+              }
+            ],
+            "total": 238
+          }
+        },
+        "judgeName": "Etta Thompson",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1020"
+      }
+    },
+    {
+      "id": "1021",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 508",
+      "aff": {
+        "name": "Eckstein Cian Farragher-Pranav Vijesh-Vidur Jariwala",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "Bellevue Youth Debate Ayaan Naik-James Ashcraft-abc",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3BD59A221",
+        "roundLabel": "Round 3",
+        "match": "Eckstein Cian Farragher-Pranav Vijesh-Vidur Jariwala vs. Bellevue Youth Debate Ayaan Naik-James Ashcraft-abc",
+        "division": "NoviceS MS 3-on-3",
+        "room": "BANNAN 508",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Eckstein",
+            "teamName": "Eckstein Cian Farragher-Pranav Vijesh-Vidur Jariwala",
+            "speakers": [
+              {
+                "name": "Cian Farragher",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              },
+              {
+                "name": "Pranav Vijesh",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Vidur Jariwala",
+                "score": 72,
+                "displayedScore": "72",
+                "feedback": null
+              }
+            ],
+            "total": 220
+          },
+          "neg": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Ayaan Naik-James Ashcraft-abc",
+            "speakers": [
+              {
+                "name": "Ayaan Naik",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              },
+              {
+                "name": "James Ashcraft",
+                "score": 70,
+                "displayedScore": "70",
+                "feedback": null
+              },
+              {
+                "name": "abc",
+                "score": 70,
+                "displayedScore": "70",
+                "feedback": null
+              }
+            ],
+            "total": 214
+          }
+        },
+        "judgeName": "Brianna Dang",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1021"
+      }
+    },
+    {
+      "id": "1022",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN near 371",
+      "aff": {
+        "name": "EPS7",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Evergreen School Oliver Clark-Elliot Hollander-Ben Armstrong",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3DH59A222",
+        "roundLabel": "Round 3",
+        "match": "EPS7 vs. Evergreen School Oliver Clark-Elliot Hollander-Ben Armstrong",
+        "division": "NoviceS MS 3-on-3",
+        "room": "BANNAN near 371",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Eastside Prep",
+            "teamName": "EPS7",
+            "speakers": [
+              {
+                "name": "Roger Zhang",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": null
+              },
+              {
+                "name": "Dhruv Boyed",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              },
+              {
+                "name": "Rohin Panwan",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              }
+            ],
+            "total": 218
+          },
+          "neg": {
+            "school": "Evergreen School",
+            "teamName": "Evergreen School Oliver Clark-Elliot Hollander-Ben Armstrong",
+            "speakers": [
+              {
+                "name": "Oliver Clark",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              },
+              {
+                "name": "Elliot Hollander",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              },
+              {
+                "name": "Ben Armstrong",
+                "score": 74,
+                "displayedScore": "74",
+                "feedback": null
+              }
+            ],
+            "total": 222
+          }
+        },
+        "judgeName": "dhruv hooda",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1022"
+      }
+    },
+    {
+      "id": "1023",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 203",
+      "aff": {
+        "name": "University Prep Noemie Yen-Victoria Yang-Maisie Hrdlicka",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Eckstein Ruiyun He-Joe Kirsch-abc",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3JH59A223",
+        "roundLabel": "Round 3",
+        "match": "University Prep Noemie Yen-Victoria Yang-Maisie Hrdlicka vs. Eckstein Ruiyun He-Joe Kirsch-abc",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 203",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "University Prep",
+            "teamName": "University Prep Noemie Yen-Victoria Yang-Maisie Hrdlicka",
+            "speakers": [
+              {
+                "name": "Noemie Yen",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Noemie Yen",
+                  "sourceHeading": "Proposition Speaker 1 — Noemie Yen",
+                  "text": "composed speaker. organized speech. good use of personal examples. well done! \n\nyou had a little over a minute left when you finished your points and started reviewing them... next time, try to develop your points a bit more so you don't"
+                }
+              },
+              {
+                "name": "Victoria Yang",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Victoria Yang",
+                  "sourceHeading": "Proposition Speaker 2 — Victoria Yang",
+                  "text": "Well organized. You effectively explained your team's points -- make sure to also respond to the other teams responses to your points."
+                }
+              },
+              {
+                "name": "Maisie Hrdlicka",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Maisie Hrdlicka",
+                  "sourceHeading": "Proposition Speaker 3 — Maisie Hrdlicka",
+                  "text": "I liked your presentation style -- you seemed to take your teams points and really make them seem \"common sense.\""
+                }
+              }
+            ],
+            "total": 240
+          },
+          "neg": {
+            "school": "Eckstein",
+            "teamName": "Eckstein Ruiyun He-Joe Kirsch-abc",
+            "speakers": [
+              {
+                "name": "Ruiyun He",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ruiyun He",
+                  "sourceHeading": "Opposition Speaker 1 — Ruiyun He",
+                  "text": "good job in this speech. I thought you kept things well organized and did a good job using the arguments your partner had established."
+                }
+              },
+              {
+                "name": "Joe Kirsch",
+                "score": 81,
+                "displayedScore": "81",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Joe Kirsch",
+                  "sourceHeading": "Opposition Speaker 2 — Joe Kirsch",
+                  "text": "This first speech you gave was soooo nice! You were really cooking -- great points and the organization of your speech was perfect... then with like 1:40 left you just sort of wrapped it up. Without answering their last 2 contentions! Nooooo! Use all your time even if you need to take a minute and figure out what's going on."
+                }
+              },
+              {
+                "name": "abc",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "abc",
+                  "sourceHeading": "Opposition Speaker 3 — abc",
+                  "text": "3rd speech (back to Joe) was solid... but again ended a bit pre-maturely... after discussing the issues you should weigh them out / help the judge prioritize. which is the most important point? why? if you win that point do you win the whole round? why?"
+                }
+              }
+            ],
+            "total": 241
+          }
+        },
+        "judgeName": "jon howland",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1023"
+      }
+    },
+    {
+      "id": "1024",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 108",
+      "aff": {
+        "name": "Aurorae Young Academy Emmy Magerramov-Aiden Yue-Alex Chen",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "EPS10",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3JS59A224",
+        "roundLabel": "Round 3",
+        "match": "Aurorae Young Academy Emmy Magerramov-Aiden Yue-Alex Chen vs. EPS10",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 108",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Aurorae Young Academy",
+            "teamName": "Aurorae Young Academy Emmy Magerramov-Aiden Yue-Alex Chen",
+            "speakers": [
+              {
+                "name": "Emmy Magerramov",
+                "score": 61,
+                "displayedScore": "61",
+                "feedback": null
+              },
+              {
+                "name": "Aiden Yue",
+                "score": 62,
+                "displayedScore": "62",
+                "feedback": null
+              },
+              {
+                "name": "Alex Chen",
+                "score": 68,
+                "displayedScore": "68",
+                "feedback": null
+              }
+            ],
+            "total": 191
+          },
+          "neg": {
+            "school": "Eastside Prep",
+            "teamName": "EPS10",
+            "speakers": [
+              {
+                "name": "Ethan Shraer",
+                "score": 69,
+                "displayedScore": "69",
+                "feedback": null
+              },
+              {
+                "name": "Shay Parikh",
+                "score": 71,
+                "displayedScore": "71",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 61,
+                "displayedScore": "61",
+                "feedback": null
+              }
+            ],
+            "total": 201
+          }
+        },
+        "judgeName": "Julia Shibata",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1024"
+      }
+    },
+    {
+      "id": "1025",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "BANNAN 418",
+      "aff": {
+        "name": "EPS8",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "Climb Online Sophia Shah-Shreya Segu-Henry Liu",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3NK59A225",
+        "roundLabel": "Round 3",
+        "match": "EPS8 vs. Climb Online Sophia Shah-Shreya Segu-Henry Liu",
+        "division": "NoviceS MS 3-on-3",
+        "room": "BANNAN 418",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Eastside Prep",
+            "teamName": "EPS8",
+            "speakers": [
+              {
+                "name": "Elena Guo",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              },
+              {
+                "name": "Katelyn Lee",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              },
+              {
+                "name": "Sua Chang",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              }
+            ],
+            "total": 228
+          },
+          "neg": {
+            "school": "Climb Online",
+            "teamName": "Climb Online Sophia Shah-Shreya Segu-Henry Liu",
+            "speakers": [
+              {
+                "name": "Sophia Shah",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Shreya Segu",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              },
+              {
+                "name": "Henry Liu",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": null
+              }
+            ],
+            "total": 232
+          }
+        },
+        "judgeName": "Nethul Kankanamge",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1025"
+      }
+    },
+    {
+      "id": "1026",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 305",
+      "aff": {
+        "name": "Bellevue Youth Debate Gloria Maeng-Aadhvik Vikram-abc",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "neg": {
+        "name": "EPS9",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "winnerSide": "neg",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3SS59A226",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Gloria Maeng-Aadhvik Vikram-abc vs. EPS9",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 305",
+        "winnerSide": "neg",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Gloria Maeng-Aadhvik Vikram-abc",
+            "speakers": [
+              {
+                "name": "Gloria Maeng",
+                "score": 87,
+                "displayedScore": "87",
+                "feedback": null
+              },
+              {
+                "name": "Aadhvik Vikram",
+                "score": 73,
+                "displayedScore": "73",
+                "feedback": null
+              },
+              {
+                "name": "abc",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              }
+            ],
+            "total": 246
+          },
+          "neg": {
+            "school": "Eastside Prep",
+            "teamName": "EPS9",
+            "speakers": [
+              {
+                "name": "Gloria Li",
+                "score": 86,
+                "displayedScore": "86",
+                "feedback": null
+              },
+              {
+                "name": "Emmeline Chin",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "ABC",
+                "score": 84,
+                "displayedScore": "84",
+                "feedback": null
+              }
+            ],
+            "total": 255
+          }
+        },
+        "judgeName": "Seth Sharma",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1026"
+      }
+    },
+    {
+      "id": "1027",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 309",
+      "aff": {
+        "name": "Evergreen Redmond Climb Niam Sridhar-Siddharth Chagarlamudi-Aarav Kumar",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "EPS6",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AS59A227",
+        "roundLabel": "Round 3",
+        "match": "Evergreen Redmond Climb Niam Sridhar-Siddharth Chagarlamudi-Aarav Kumar vs. EPS6",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 309",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Evergreen Redmond Climb",
+            "teamName": "Evergreen Redmond Climb Niam Sridhar-Siddharth Chagarlamudi-Aarav Kumar",
+            "speakers": [
+              {
+                "name": "Niam Sridhar",
+                "score": 70,
+                "displayedScore": "70",
+                "feedback": null
+              },
+              {
+                "name": "Siddharth Chagarlamudi",
+                "score": 85,
+                "displayedScore": "85",
+                "feedback": null
+              },
+              {
+                "name": "Aarav Kumar",
+                "score": 83,
+                "displayedScore": "83",
+                "feedback": null
+              }
+            ],
+            "total": 238
+          },
+          "neg": {
+            "school": "Eastside Prep",
+            "teamName": "EPS6",
+            "speakers": [
+              {
+                "name": "Persa Katibeh",
+                "score": 82,
+                "displayedScore": "82",
+                "feedback": null
+              },
+              {
+                "name": "Alisha Singh",
+                "score": 80,
+                "displayedScore": "80",
+                "feedback": null
+              },
+              {
+                "name": "Arya Varma",
+                "score": 75,
+                "displayedScore": "75",
+                "feedback": null
+              }
+            ],
+            "total": 237
+          }
+        },
+        "judgeName": "Aarthi Saravanakumar",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1027"
+      }
+    },
+    {
+      "id": "1028",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT 201",
+      "aff": {
+        "name": "Lakeside Debate Ollie Shaw-Naisha Sahay-Vaughn Brantley",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "St Thomas School Mia T-Isabella S-Sunny H",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": false,
+      "ballotStatus": "scored",
+      "ballot": {
+        "code": "3AS59A228",
+        "roundLabel": "Round 3",
+        "match": "Lakeside Debate Ollie Shaw-Naisha Sahay-Vaughn Brantley vs. St Thomas School Mia T-Isabella S-Sunny H",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT 201",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Lakeside Debate",
+            "teamName": "Lakeside Debate Ollie Shaw-Naisha Sahay-Vaughn Brantley",
+            "speakers": [
+              {
+                "name": "Ollie Shaw",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Ollie Shaw",
+                  "sourceHeading": "Proposition Speaker 1 — Ollie Shaw",
+                  "text": "Your example at the start of your speech was very good, and it immersing the judge in an example is a solid way to start off your speech. For future debates, try to use a bit more time during your speech to fill out the time of 5 minutes"
+                }
+              },
+              {
+                "name": "Naisha Sahay",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Naisha Sahay",
+                  "sourceHeading": "Proposition Speaker 2 — Naisha Sahay",
+                  "text": "(Actually 3rd Speaker) The conclusion in this debate is what ultimately made me vote for the proposition. Your speech was very strong and your final weighing of the debate is what the deciding factor was. Since you had over 3 minutes left, maybe spend some more time trying to fill it out."
+                }
+              },
+              {
+                "name": "Vaughn Brantley",
+                "score": 78,
+                "displayedScore": "78",
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Vaughn Brantley",
+                  "sourceHeading": "Proposition Speaker 3 — Vaughn Brantley",
+                  "text": "(Actually 2nd Speaker) I liked the arguments that you made throughout the round and your refutations were also very strong. I especially liked the example that you gave about the person trying to quiet a group of people down. For next time, try to use the last 2 minutes of the debates to just restate your points from earlier."
+                }
+              }
+            ],
+            "total": 231
+          },
+          "neg": {
+            "school": "St Thomas School",
+            "teamName": "St Thomas School Mia T-Isabella S-Sunny H",
+            "speakers": [
+              {
+                "name": "Mia T",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Mia T",
+                  "sourceHeading": "Opposition Speaker 1 — Mia T",
+                  "text": "(Actually speaker 2) I like that way that you refuted the points of the proposition, although I wish you spent more time improving upon your contentions, since you had a lot of leftover time."
+                }
+              },
+              {
+                "name": "Isabella S",
+                "score": 77,
+                "displayedScore": "77",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Isabella S",
+                  "sourceHeading": "Opposition Speaker 2 — Isabella S",
+                  "text": "(Actually Speaker 1) I liked the way you started off your speech, bringing in the social implications of being well-liked compared to just the argument of just being respected. For future reference, you might want to have a longer BOP, although I know you said you had more written down, but it seems like you only said part of it before moving on. Also, good job on defining the terms since the proposition failed to do so for part of it."
+                }
+              },
+              {
+                "name": "Sunny H",
+                "score": 76,
+                "displayedScore": "76",
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Sunny H",
+                  "sourceHeading": "Opposition Speaker 3 — Sunny H",
+                  "text": "Your overall weighing over the debate was strong, but one thing to improve upon for next time would be to spend more time restating your contentions, since you had a lot of time left but only said them in 1 sentence each."
+                }
+              }
+            ],
+            "total": 229
+          }
+        },
+        "judgeName": "Atharva Singh",
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1028"
+      }
+    },
+    {
+      "id": "1029",
+      "division": "NoviceS MS 3-on-3",
+      "round": 3,
+      "room": "PIGOTT near 309",
+      "aff": {
+        "name": "Bellevue Youth Debate Rishaan Ranjith-Hans Zhang-Jeffrey Gao",
+        "style": {
+          "fontWeight": "500",
+          "textDecorationLine": "underline"
+        }
+      },
+      "neg": {
+        "name": "BYE",
+        "style": {
+          "fontWeight": "400",
+          "textDecorationLine": "none"
+        }
+      },
+      "winnerSide": "aff",
+      "winnerEvidence": "computed underline",
+      "isBye": true,
+      "ballotStatus": "no-scores",
+      "ballot": {
+        "code": "3JT59A229",
+        "roundLabel": "Round 3",
+        "match": "Bellevue Youth Debate Rishaan Ranjith-Hans Zhang-Jeffrey Gao vs. BYE No Debate Be on Standby",
+        "division": "NoviceS MS 3-on-3",
+        "room": "PIGOTT near 309",
+        "winnerSide": "aff",
+        "sides": {
+          "aff": {
+            "school": "Bellevue Youth Debate",
+            "teamName": "Bellevue Youth Debate Rishaan Ranjith-Hans Zhang-Jeffrey Gao",
+            "speakers": [
+              {
+                "name": "Rishaan Ranjith",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Hans Zhang",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Jeffrey Gao",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              }
+            ],
+            "total": null
+          },
+          "neg": {
+            "school": "",
+            "teamName": "BYE No Debate Be on Standby",
+            "speakers": [
+              {
+                "name": "Speaker 1",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Speaker 2",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              },
+              {
+                "name": "Speaker 3",
+                "score": null,
+                "displayedScore": "B",
+                "feedback": null
+              }
+            ],
+            "total": null
+          }
+        },
+        "judgeName": "JUDGE TBA",
+        "feedbackSectionPresent": false,
+        "feedbackNoteCount": 0,
+        "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1029"
       }
     }
   ]

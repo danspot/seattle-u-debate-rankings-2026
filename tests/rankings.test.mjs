@@ -6,7 +6,7 @@ function debate(id,round,aff,neg,points,winnerSide='aff') {
   const team=(name,scores)=>({teamName:name,school:name,speakers:scores.map((score,i)=>({name:`${name} ${i+1}`,score,displayedScore:score===null?'B':String(score)})),total:null});
   return {id,round,division,room:`Room ${id}`,aff:{name:aff},neg:{name:neg},isBye:neg==='BYE',winnerSide,ballotStatus:points.flat().some(x=>x!==null)?'scored':'no-scores',ballot:{winnerSide,url:'https://plustab.org/fixture',sides:{aff:team(aff,points[0]),neg:team(neg,points[1])}}};
 }
-const rank=debates=>deriveDivision({divisions:[division],debates},division);
+const rank=(debates,rounds=[1,2])=>deriveDivision({divisions:[division],rounds,debates},division);
 test('tied room highs credit every tied speaker; average ties share competition ranks',()=>{
   const d=rank([debate('1',1,'A','B',[[90,90,80],[90,80,70]]),debate('2',2,'A','B',[[80,90,80],[90,70,70]],'neg')]);
   const person=name=>d.speakers.find(s=>s.name===name);
@@ -55,4 +55,24 @@ test('speaker identity is scoped to team; repeated team appearances fail',()=>{
 test('unknown decisions remain incomplete despite numeric scores',()=>{
   const d=rank([debate('1',1,'A','B',[[80,80,80],[70,70,70]],null)]);
   assert.ok(d.teams.every(t=>t.wins===0&&t.losses===0&&t.rank===null&&!t.complete));
+});
+test('Round 3 updates averages, records, ranks, and both star sets',()=>{
+  const d=rank([debate('1',1,'A','B',[[90,80,70],[85,80,75]]),debate('2',2,'A','B',[[91,80,70],[85,80,75]]),debate('3',3,'A','B',[[92,80,70],[85,80,75]],'neg')],[1,2,3]);
+  const a=d.speakers.find(s=>s.name==='A 1'),b=d.speakers.find(s=>s.name==='B 1');
+  assert.equal(a.average,91);assert.equal(a.scoreCount,3);assert.equal(a.complete,true);assert.equal(a.rank,1);
+  assert.equal(a.awardedStars,3);assert.equal(a.awardedTeamStars,3);
+  assert.equal(b.awardedStars,0);assert.equal(b.awardedTeamStars,3);
+  assert.deepEqual(d.teams.map(t=>t.record),['2–1','1–2']);
+  assert.deepEqual(d.teams.map(t=>t.rank),[1,2]);
+  assert.ok(d.teams.every(t=>t.complete));
+});
+test('pending Round 3 keeps previous scores and records provisional without inventing a decision',()=>{
+  const pending=debate('3',3,'A','B',[[null,null,null],[null,null,null]],null);
+  pending.ballot=null;pending.ballotStatus='unavailable';
+  const d=rank([debate('1',1,'A','B',[[90,80,70],[85,80,75]]),debate('2',2,'A','B',[[91,80,70],[85,80,75]]),pending],[1,2,3]);
+  const a=d.speakers.find(s=>s.name==='A 1');
+  assert.equal(a.average,90.5);assert.equal(a.scoreCount,2);assert.equal(a.complete,false);assert.equal(a.completeRank,null);
+  assert.equal(a.stars,2);assert.equal(a.starStatusKnown,false);assert.equal(a.teamStarStatusKnown,false);
+  assert.ok(d.teams.every(t=>!t.complete && t.rank===null && t.rounds[3].result===null));
+  assert.equal(d.teams.find(t=>t.name==='A').record,'2–0');
 });

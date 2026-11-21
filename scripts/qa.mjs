@@ -22,7 +22,8 @@ async function checkFeedback(page, speaker) {
   await page.locator(`[data-speaker="${key}"]`).click();
   assert.equal(await page.getByRole('dialog').isVisible(),true);
   assert.equal(await page.locator('#feedback-title').textContent(),speaker.name);
-  for (const round of [1,2]) {
+  assert.equal(await page.locator('.feedback-round').count(),snapshot.rounds.length);
+  for (const round of snapshot.rounds) {
     const section=page.locator(`.feedback-round[data-round="${round}"]`);
     const expected=speaker.rounds[round];
     if(expected?.feedback)assert.equal(await section.locator('.feedback-text').textContent(),expected.feedback);
@@ -42,6 +43,10 @@ try {
   const publicData=await page.request.get(new URL('data/results.json',url).href);
   assert.equal(publicData.status(),200);assert.deepEqual(await publicData.json(),snapshot,'Download differs from committed data');
   assert.equal(await page.title(),'Seattle U Debate Rankings — November 21, 2026');
+  for(const kind of ['speaker','team']) {
+    assert.equal(await page.locator(`#${kind}-panel th.round-column`).count(),snapshot.rounds.length);
+    for(const round of snapshot.rounds)assert.equal(await page.locator(`#${kind}-panel [data-sort="round${round}"]`).count(),1);
+  }
   assert.equal(await page.locator('#division-label').textContent(),'NoviceS MS 3-on-3');
   for(const d of divisions) {
     await selectDivisions(page,[d.division]);
@@ -85,6 +90,7 @@ try {
   assert.equal(await row.locator('.room-honors .stars').textContent(),'★'.repeat(person.awardedStars));
   assert.notEqual(await row.locator('.team-stars').evaluate(e=>getComputedStyle(e).color),await row.locator('.room-stars').evaluate(e=>getComputedStyle(e).color));
   assert.equal((await row.locator('.rank').innerText()).trim(),String(person.rank));
+  assert.deepEqual(await row.locator('.score').allTextContents(),snapshot.rounds.map(r=>person.rounds[r]?.score==null?'—':String(person.rounds[r].score)));
   await checkFeedback(page,person);
   await page.screenshot({path:'.local/desktop-feedback.png',fullPage:false});
   await page.keyboard.press('Escape');
@@ -94,6 +100,7 @@ try {
   assert.equal(await page.locator('#team-rows tr').count(),1);
   const team=divisions.find(d=>d.division===person.rounds[1].division).teams.find(t=>t.id===person.teamId);
   assert.ok((await page.locator('#team-rows').innerText()).includes(team.record));
+  assert.equal(await page.locator('#team-rows .round-result').count(),snapshot.rounds.length);
   await page.getByRole('button',{name:'Clear search',exact:true}).click();
   await page.screenshot({path:'.local/desktop-teams.png',fullPage:false});
   await page.locator('#search').fill('no-such-speaker-zzzz');assert.equal(await page.locator('#empty').isVisible(),true);
@@ -104,6 +111,17 @@ try {
   const numeric=visible.filter(x=>x!=='—').map(Number);assert.deepEqual(numeric,[...numeric].sort((a,b)=>b-a));
   await page.locator('#speaker-panel [data-sort="average"]').click();
   const asc=(await page.locator('#speaker-rows .average').allTextContents()).filter(x=>x!=='—').map(Number);assert.deepEqual(asc,[...asc].sort((a,b)=>a-b));
+  if(snapshot.rounds.includes(3)) {
+    await page.locator('#speaker-panel [data-sort="round3"]').click();
+    const values=(await page.locator('#speaker-rows tr[data-name] td:nth-child(5) .score').allTextContents()).filter(t=>t!=='—').map(Number);
+    assert.deepEqual(values,[...values].sort((a,b)=>b-a));
+    const provisional=divisions.find(d=>d.division==='NoviceS MS 3-on-3').speakers.find(s=>s.scoreCount>0&&!s.complete);
+    if(provisional) {
+      const key=encodeURIComponent(`${provisional.division}\u0000${provisional.id}`);
+      const partial=page.locator(`[data-speaker="${key}"]`).locator('xpath=ancestor::tr');
+      assert.equal(await partial.locator('.provisional').textContent(),`${provisional.scoreCount}/${snapshot.rounds.length}`);
+    }
+  }
   for(const [key,scope] of [['teamStars','team'],['stars','room']]) {
     for(const direction of ['desc','asc']) {
       await page.locator(`#speaker-panel [data-sort="${key}"]`).click();

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#122b3b">
-  <meta name="description" content="Seattle U debate speaker rankings and team standings for November 21, 2026. Rounds 1 and 2.">
+  <meta name="description" content="Seattle U debate speaker rankings and team standings for November 21, 2026. ROUNDS_LABEL.">
   <title>Seattle U Debate Rankings — November 21, 2026</title>
   <style>/* SITE_CSS */</style>
 </head>
 <body>
   <a class="skip-link" href="#rankings">Skip to rankings</a>
-  <header class="wrap page-header"><h1>Seattle U Debate Rankings</h1><span>Nov 21, 2026 · Rounds 1–2</span><a class="results-link" href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Round results</a></header>
+  <header class="wrap page-header"><h1>Seattle U Debate Rankings</h1><span>Nov 21, 2026 · ROUNDS_LABEL</span><a class="results-link" href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Round results</a></header>
   <main class="wrap">
     <section class="controls" aria-label="Find rankings">
       <div id="division-picker" class="division-picker">
@@ -30,15 +30,15 @@
       <p id="showing" class="sr-only" role="status" aria-live="polite"></p>
       <div id="speaker-panel" role="tabpanel" aria-labelledby="speaker-tab">
         <p class="legend"><b class="stars team-stars">★ Team</b> · <b class="stars room-stars">★ Room (both teams)</b> · One per round; ties count.</p>
-        <div class="table-wrap"><table class="speaker-table"><caption class="sr-only">Speaker rankings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by rank"># <span>↑</span></button></th><th data-key="name"><button data-sort="name" aria-label="Sort by speaker name">Speaker <span>↕</span></button></th><th data-key="round1"><button data-sort="round1" aria-label="Sort by Round 1 score">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2" aria-label="Sort by Round 2 score">R2 <span>↕</span></button></th><th data-key="average"><button data-sort="average" aria-label="Sort by average">Avg <span>↕</span></button></th><th data-key="teamStars"><button class="team-stars" data-sort="teamStars" aria-label="Sort by team honors">Team <span>↕</span></button></th><th data-key="stars"><button class="room-stars" data-sort="stars" aria-label="Sort by room honors">Room <span>↕</span></button></th></tr></thead><tbody id="speaker-rows"></tbody></table></div>
+        <div class="table-wrap"><table class="speaker-table"><caption class="sr-only">Speaker rankings for the selected division, using ROUNDS_LABEL</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by rank"># <span>↑</span></button></th><th data-key="name"><button data-sort="name" aria-label="Sort by speaker name">Speaker <span>↕</span></button></th><!-- SPEAKER_ROUNDS --><th class="average-column" data-key="average"><button data-sort="average" aria-label="Sort by average">Avg <span>↕</span></button></th><th class="honors-column" data-key="teamStars"><button class="team-stars" data-sort="teamStars" aria-label="Sort by team honors">Team <span>↕</span></button></th><th class="honors-column" data-key="stars"><button class="room-stars" data-sort="stars" aria-label="Sort by room honors">Room <span>↕</span></button></th></tr></thead><tbody id="speaker-rows"></tbody></table></div>
       </div>
       <div id="team-panel" role="tabpanel" aria-labelledby="team-tab" hidden>
-        <div class="table-wrap"><table class="team-table"><caption class="sr-only">Team standings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by standing"># <span>↑</span></button></th><th data-key="name"><button data-sort="name">School <span>↕</span></button></th><th data-key="members"><button data-sort="members">Members <span>↕</span></button></th><th data-key="wins"><button data-sort="wins">Record <span>↕</span></button></th><th data-key="round1"><button data-sort="round1">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2">R2 <span>↕</span></button></th></tr></thead><tbody id="team-rows"></tbody></table></div>
+        <div class="table-wrap"><table class="team-table"><caption class="sr-only">Team standings for the selected division, using ROUNDS_LABEL</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by standing"># <span>↑</span></button></th><th data-key="name"><button data-sort="name">School <span>↕</span></button></th><th data-key="members"><button data-sort="members">Members <span>↕</span></button></th><th data-key="wins"><button data-sort="wins">Record <span>↕</span></button></th><!-- TEAM_ROUNDS --></tr></thead><tbody id="team-rows"></tbody></table></div>
       </div>
       <p id="empty" class="empty" hidden>No matches.</p>
     </section>
     <details class="notes"><summary>Scoring & data</summary>
-      <p>Averages use available numeric scores; one-round averages are marked provisional. Tied averages share ranks (1, 2, 2, 4). Teams with the same record share a standing and are listed alphabetically. These are independent two-round rankings.</p>
+      <p>Averages use available numeric scores. Incomplete averages and records show the number of available rounds (for example, 2/3). Tied averages share ranks (1, 2, 2, 4). Teams with the same record share a standing and are listed alphabetically. These are independent rankings for ROUNDS_LABEL.</p>
       <p>Blue stars mark the highest score on a speaker’s own team; gold stars mark the highest across both teams in the room. Each set counts qualifying rounds, including ties. Missing scores leave that comparison unverified; a team high can still be verified when only an opponent’s score is missing. BYEs earn no stars. “B” is not a score. Source roster labels such as “ABC” are retained.</p>
       <ul id="issues"></ul>
     </details>

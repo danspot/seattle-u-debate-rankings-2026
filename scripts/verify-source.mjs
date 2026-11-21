@@ -5,9 +5,9 @@ const data=JSON.parse(await readFile('data/results.json','utf8'));
 const browser=await launchBrowser();const page=await browser.newPage();
 const audit=[];
 try {
-  const selected=data.debates.filter(d=>[d.aff.name,d.neg.name].some(t=>t.includes('Jia-Hao Stevenson')));
+  const selected=data.debates.filter(d=>d.ballot && [d.aff.name,d.neg.name].some(t=>t.includes('Jia-Hao Stevenson')));
   for (const division of data.divisions) {
-    for (const round of [1,2]) {
+    for (const round of data.rounds) {
       const sample=data.debates.find(d=>d.division===division&&d.round===round&&d.ballot?.feedbackNoteCount>0);
       if(sample)selected.push(sample);
     }

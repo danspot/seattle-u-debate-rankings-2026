@@ -1,5 +1,6 @@
 const snapshot = JSON.parse(document.querySelector('#results-data').textContent);
 const divisions = deriveAll(snapshot);
+const rounds = snapshot.rounds;
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const scoreText = value => value === null || value === undefined ? '—' : Number(value).toLocaleString('en-US', { maximumFractionDigits: 3 });
@@ -38,8 +39,8 @@ function sortRows(rows, kind) {
 }
 function scoreCell(speaker, round) {
   const entry = speaker.rounds[round];
-  const missing = entry?.isBye ? 'BYE' : entry?.displayedScore && entry.displayedScore !== '—' ? entry.displayedScore : 'Missing';
-  return `<td class="score-cell"><span class="score${entry?.score == null ? ' missing' : ''}">${scoreText(entry?.score)}</span>${entry?.score == null ? `<span class="sub">${esc(missing)}</span>` : ''}</td>`;
+  const missing = entry?.isBye ? 'BYE' : entry?.displayedScore && entry.displayedScore !== '—' ? entry.displayedScore : '';
+  return `<td class="score-cell"><span class="score${entry?.score == null ? ' missing' : ''}"${entry?.score == null ? ` title="${esc(missing || 'Score unavailable')}" aria-label="${esc(missing || 'Score unavailable')}"` : ''}>${scoreText(entry?.score)}</span>${entry?.score == null && missing ? `<span class="sub">${esc(missing)}</span>` : ''}</td>`;
 }
 function speakerDetails(speaker) {
   return `<button class="speaker-open" type="button" data-speaker="${speakerKey(speaker)}" aria-haspopup="dialog" aria-label="Feedback and round details for ${esc(speaker.name)}"><span class="speaker-name"${speaker.sourceRosterLabel ? ' title="Source roster label"' : ''}>${esc(speaker.name)}</span><span class="sub">${esc(speaker.school || speaker.team)}</span></button>`;
@@ -47,13 +48,13 @@ function speakerDetails(speaker) {
 function openSpeakerFeedback(speaker) {
   $('feedback-title').textContent = speaker.name;
   $('feedback-team').textContent = `${speaker.team} · ${speaker.division}`;
-  $('feedback-rounds').innerHTML = [1,2].map(round => {
+  $('feedback-rounds').innerHTML = rounds.map(round => {
     const r = speaker.rounds[round];
     const score = r?.score == null ? r?.isBye ? 'BYE' : 'No score' : `${scoreText(r.score)} points`;
     const text = r?.feedback ? `<blockquote class="feedback-text">${esc(r.feedback)}</blockquote>` : `<p class="feedback-missing">${!r ? 'No ballot entry available.' : r.isBye ? 'BYE — no speaker feedback.' : 'No speaker feedback posted.'}</p>`;
     const honors = [r?.teamHighest ? '<span class="stars team-stars" title="Highest score on own team, including ties">★ Team</span>' : '', r?.roomHighest ? '<span class="stars room-stars" title="Highest score across both teams, including ties">★ Room</span>' : ''].filter(Boolean).join(' · ');
     return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${honors ? `<p class="feedback-honors">${honors}</p>` : ''}${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
-  }).join('') + (speaker.completeRank ? `<p class="feedback-rank">Two-score rank: ${speaker.completeRank}</p>` : '');
+  }).join('') + (speaker.completeRank ? `<p class="feedback-rank">${rounds.length}-score rank: ${speaker.completeRank}</p>` : '');
   $('speaker-dialog').showModal();
 }
 $('speaker-rows').addEventListener('click', event => {
@@ -75,26 +76,26 @@ function renderHonors(speaker, scope) {
   return `<td class="honors ${scope}-honors">${content}</td>`;
 }
 function renderSpeaker(speaker) {
-  return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${scoreCell(speaker,1)}${scoreCell(speaker,2)}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? '<span class="sub provisional" title="Provisional average from one round">1 round</span>' : ''}</td>${renderHonors(speaker,'team')}${renderHonors(speaker,'room')}</tr>`;
+  return `<tr data-name="${esc(speaker.name)}"><td class="rank">${speaker.rank ?? '—'}</td><td class="person">${speakerDetails(speaker)}</td>${rounds.map(round=>scoreCell(speaker,round)).join('')}<td class="score-cell"><span class="average">${averageText(speaker.average)}</span>${!speaker.complete && speaker.scoreCount ? `<span class="sub provisional" title="Provisional average from ${speaker.scoreCount} of ${rounds.length} rounds">${speaker.scoreCount}/${rounds.length}</span>` : ''}</td>${renderHonors(speaker,'team')}${renderHonors(speaker,'room')}</tr>`;
 }
 function teamRound(team, round) {
   const r = team.rounds[round];
-  if (!r) return `<td><span class="mobile-label">R${round}</span><span class="missing">Not listed</span></td>`;
+  if (!r) return `<td class="round-result"><span class="mobile-label">R${round}</span><span class="missing">Not listed</span></td>`;
   const result = r.result || 'Unknown';
   const outcome = r.ballotUrl ? `<a class="outcome${r.result === 'L' ? ' loss' : ''}" href="${esc(r.ballotUrl)}" target="_blank" rel="noopener" aria-label="Round ${round} ballot: ${r.result === 'W' ? 'win' : r.result === 'L' ? 'loss' : 'unknown result'}">${result}</a>` : `<span class="outcome${r.result === 'L' ? ' loss' : ''}" title="Ballot unavailable">${result}</span>`;
-  return `<td><span class="mobile-label">R${round}</span>${outcome}<span class="opponent">${r.isBye ? 'BYE' : esc(r.opponent)}</span></td>`;
+  return `<td class="round-result"><span class="mobile-label">R${round}</span>${outcome}<span class="opponent">${r.isBye ? 'BYE' : esc(r.opponent)}</span></td>`;
 }
 function renderTeam(team) {
   const alias = team.members.length && !team.members.some(name => team.name.includes(name)) ? ` <span class="team-alias">(${esc(team.name)})</span>` : '';
-  return `<tr data-name="${esc(team.name)}"><td class="rank">${team.rank ?? '—'}</td><td class="team-school" title="${esc(team.name)}"><span class="team-name">${esc(team.school || team.name)}</span>${alias}</td><td class="members-cell">${team.members.length ? `<span class="team-members">${team.members.map(esc).join(', ')}</span>` : '<span class="sub">Roster unavailable</span>'}</td><td class="record">${team.record}${!team.complete ? '<span class="sub provisional">Incomplete</span>' : ''}</td>${teamRound(team,1)}${teamRound(team,2)}</tr>`;
+  return `<tr data-name="${esc(team.name)}"><td class="rank">${team.rank ?? '—'}</td><td class="team-school" title="${esc(team.name)}"><span class="team-name">${esc(team.school || team.name)}</span>${alias}</td><td class="members-cell">${team.members.length ? `<span class="team-members">${team.members.map(esc).join(', ')}</span>` : '<span class="sub">Roster unavailable</span>'}</td><td class="record">${team.record}${!team.complete ? `<span class="sub provisional" title="Incomplete record">${Object.values(team.rounds).filter(r=>r.result).length}/${rounds.length}</span>` : ''}</td>${rounds.map(round=>teamRound(team,round)).join('')}</tr>`;
 }
 function render() {
   const query = normalize($('search').value);
   const selected = divisions.filter(d => selectedDivisions.has(d.division));
   const groups = selected.map(d => ({ division: d.division, speakers: d.speakers.filter(s => s.searchText.includes(query)), teams: d.teams.filter(t => t.searchText.includes(query)) }));
   const groupHeading = (division, columns) => selected.length > 1 ? `<tr class="division-heading"><td colspan="${columns}">${esc(division)}</td></tr>` : '';
-  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division,7) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
-  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division,6) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
+  $('speaker-rows').innerHTML = groups.filter(d => d.speakers.length).map(d => groupHeading(d.division,rounds.length+5) + sortRows(d.speakers,'speaker').map(renderSpeaker).join('')).join('');
+  $('team-rows').innerHTML = groups.filter(d => d.teams.length).map(d => groupHeading(d.division,rounds.length+4) + sortRows(d.teams,'team').map(renderTeam).join('')).join('');
   $('clear').hidden = !query;
   const speakerActive = activeTab === 'speaker';
   $('speaker-panel').hidden = !speakerActive;
@@ -113,7 +114,7 @@ function render() {
   const all = selected.reduce((sum,d) => sum + (speakerActive ? d.speakers.length : d.teams.length),0);
   $('showing').textContent = `Showing ${visible} of ${all} ${speakerActive ? 'entries' : 'teams'}`;
   $('empty').hidden = visible > 0;
-  $('empty').textContent = selected.length === 0 ? 'Select a division.' : all === 0 ? 'No Round 1–2 results.' : 'No matches.';
+  $('empty').textContent = selected.length === 0 ? 'Select a division.' : all === 0 ? 'No results for these rounds.' : 'No matches.';
 }
 function changeDivision() {
   const selected = divisions.filter(d => selectedDivisions.has(d.division));

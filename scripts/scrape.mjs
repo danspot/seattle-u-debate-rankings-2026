@@ -23,8 +23,13 @@ try {
   const divisions = (await page.getByRole('option').allTextContents()).map(x => x.trim()).filter(x => x !== 'All Divisions');
   await page.keyboard.press('Escape');
   console.log('Divisions:', divisions.join(', '));
+  await page.locator('#round-select').click();
+  const availableRounds = await page.getByRole('option').allTextContents();
+  await page.keyboard.press('Escape');
+  const rounds = [1, 2, 3].filter(round => availableRounds.some(label => label.trim() === `Round ${round}`));
+  assert.ok(rounds.includes(1) && rounds.includes(2), 'Required rounds unavailable');
   let sourceUpdatedLabel = null;
-  for (const round of [1, 2]) {
+  for (const round of rounds) {
     await select('#round-select', `Round ${round}`);
     for (const division of divisions) {
       await select('#division-select', division);
@@ -119,7 +124,7 @@ try {
       }
     }
   }
-  const snapshot = { schemaVersion: 2, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds: [1, 2], divisions, debates };
+  const snapshot = { schemaVersion: 2, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds, divisions, debates };
   await mkdir('data', { recursive: true });
   await writeFile('data/results.next.json', JSON.stringify(snapshot, null, 2) + '\n');
   await rename('data/results.next.json', 'data/results.json');
