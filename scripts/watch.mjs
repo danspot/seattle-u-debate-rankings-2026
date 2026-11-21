@@ -22,10 +22,14 @@ let issueNumber,checkId,needsDeployment=false;
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 
 async function api(path,method='GET',body) {
-  const response=await fetch(`https://api.github.com/repos/${repo}/${path}`,{method,signal:AbortSignal.timeout(30000),headers:{Authorization:`Bearer ${process.env.GH_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});
-  const text=await response.text();
-  if(!response.ok)throw Error(`GitHub ${method} ${path}: ${response.status} ${text.slice(0,500)}`);
-  return text?JSON.parse(text):null;
+  for(let attempt=0;attempt<4;attempt++) {
+    const response=await fetch(`https://api.github.com/repos/${repo}/${path}`,{method,signal:AbortSignal.timeout(30000),headers:{Authorization:`Bearer ${process.env.GH_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});
+    const text=await response.text();
+    // A newly created check can briefly be absent from the update endpoint.
+    if(response.status===404 && method==='PATCH' && path.startsWith('check-runs/') && attempt<3){await pause(1000*(attempt+1));continue;}
+    if(!response.ok)throw Error(`GitHub ${method} ${path}: ${response.status} ${text.slice(0,500)}`);
+    return text?JSON.parse(text):null;
+  }
 }
 async function run(command,args,timeout=120000,env={}) {
   console.log(`> ${command} ${args.join(' ')}`);
@@ -46,7 +50,7 @@ async function status(message,nextCheck=null) {
   await writeFile('.local/watch-status.json',JSON.stringify(state,null,2));
   await appendFile('.local/watch.jsonl',JSON.stringify(entry)+'\n');
   if(process.env.GITHUB_STEP_SUMMARY)await appendFile(process.env.GITHUB_STEP_SUMMARY,`- ${entry.at}: ${message}\n`);
-  if(checkId)await api(`check-runs/${checkId}`,'PATCH',{output:{title:message,summary:`Checks: ${state.checks}; publications: ${state.published}; alerts: ${state.alerts}.\n\nStops: ${state.end}. ${nextCheck?`Next check: ${nextCheck}.`:''}\n\n${state.history.slice(-24).map(h=>`- ${h.at}: ${h.message}`).join('\n')}`}});
+  if(checkId)await api(`check-runs/${checkId}`,'PATCH',{output:{title:message,summary:`Checks: ${state.checks}; publications: ${state.published}; alerts: ${state.alerts}.\n\nStops: ${state.end}. ${nextCheck?`Next check: ${nextCheck}.`:''}\n\n${state.history.slice(-24).map(h=>`- ${h.at}: ${h.message}`).join('\n')}`}}).catch(error=>console.warn(`Progress display update failed; monitoring continues: ${error.message}`));
 }
 async function alert(items) {
   const fresh=items.filter(item=>{
