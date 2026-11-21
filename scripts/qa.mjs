@@ -1,0 +1,59 @@
+import assert from 'node:assert/strict';
+import { mkdir, readFile } from 'node:fs/promises';
+import { launchBrowser } from './browser.mjs';
+import { deriveAll } from './rankings.mjs';
+const url=process.argv[2]||'http://127.0.0.1:4173/';
+const snapshot=JSON.parse(await readFile('data/results.json','utf8'));
+const divisions=deriveAll(snapshot);
+const browser=await launchBrowser();
+const errors=[];
+await mkdir('.local',{recursive:true});
+try {
+  const page=await browser.newPage({viewport:{width:1440,height:1100}});
+  page.on('pageerror',error=>errors.push(error.message));
+  const requests=[];page.on('request',req=>requests.push(req.url()));
+  const response=await page.goto(url,{waitUntil:'networkidle'});assert.equal(response.status(),200);
+  assert.equal(await page.title(),'Seattle U Debate Rankings — November 21, 2026');
+  assert.equal(await page.locator('#division').inputValue(),'NoviceS MS 3-on-3');
+  for(const d of divisions) {
+    await page.locator('#division').selectOption(d.division);
+    assert.equal(await page.locator('#speaker-rows tr').count(),d.speakers.length);
+    assert.equal(await page.locator('#team-rows tr').count(),d.teams.length);
+    assert.equal(await page.locator('#team-count').textContent(),String(d.counts.teams));
+  }
+  await page.locator('#division').selectOption('NoviceS MS 3-on-3');
+  await page.screenshot({path:'.local/desktop.png',fullPage:false});
+  await page.locator('#search').fill('Jia-Hao');
+  const person=divisions.find(d=>d.division==='NoviceS MS 3-on-3').speakers.find(p=>p.name==='Jia-Hao Stevenson');
+  const row=page.locator('#speaker-rows tr').filter({has:page.getByText('Jia-Hao Stevenson',{exact:true})});
+  assert.equal(await row.count(),1);
+  assert.match(await row.innerText(),/86\.50/);assert.match(await row.innerText(),/★★/);
+  assert.equal((await row.locator('.rank').innerText()).trim(),String(person.rank));
+  await page.getByRole('tab',{name:/Team Standings/}).click();
+  assert.equal(await page.locator('#team-rows tr').count(),1);
+  assert.match(await page.locator('#team-rows').innerText(),/1–1/);
+  await page.locator('#search').fill('no-such-speaker-zzzz');assert.equal(await page.locator('#empty').isVisible(),true);
+  await page.getByRole('button',{name:'Clear search',exact:true}).click();
+  await page.getByRole('tab',{name:/Speaker Rankings/}).click();
+  await page.locator('#speaker-panel [data-sort="average"]').click();
+  const visible=await page.locator('#speaker-rows .average').allTextContents();
+  const numeric=visible.filter(x=>x!=='—').map(Number);assert.deepEqual(numeric,[...numeric].sort((a,b)=>b-a));
+  await page.locator('#speaker-panel [data-sort="average"]').click();
+  const asc=(await page.locator('#speaker-rows .average').allTextContents()).filter(x=>x!=='—').map(Number);assert.deepEqual(asc,[...asc].sort((a,b)=>a-b));
+  // A fresh iPhone-sized page verifies default state, touch controls, and document overflow.
+  const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+  mobile.on('pageerror',e=>errors.push(e.message));await mobile.goto(url,{waitUntil:'networkidle'});
+  assert.equal(await mobile.locator('#division').inputValue(),'NoviceS MS 3-on-3');
+  assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Mobile horizontal overflow');
+  await mobile.screenshot({path:'.local/mobile.png',fullPage:false});
+  await mobile.locator('#speaker-sort').selectOption('round1:desc');
+  await mobile.locator('#search').fill('Bellevue');
+  await mobile.getByRole('tab',{name:/Team Standings/}).click();
+  assert.ok(await mobile.locator('#team-rows tr').count()>0);
+  assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await mobile.locator('#rankings').scrollIntoViewIfNeeded();
+  await mobile.screenshot({path:'.local/mobile-teams.png',fullPage:false});
+  assert.deepEqual(errors,[]);
+  assert.ok(requests.every(r=>new URL(r).origin===new URL(url).origin),'External runtime request');
+  console.log(`Browser QA passed at ${url}: default division, all counts, search in both tables, sorting, stars, desktop and iPhone layouts, no script errors or live source requests.`);
+}finally{await browser.close();}

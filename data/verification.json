@@ -1,0 +1,136 @@
+{
+  "verifiedAt": "2026-11-21T22:31:21.601Z",
+  "extractedAt": "2026-11-21T22:30:00.709Z",
+  "checksPassed": true,
+  "debateCount": 120,
+  "numericScores": 684,
+  "divisions": [
+    {
+      "division": "Experienced MS 3-on-3",
+      "teams": 25,
+      "speakers": 75,
+      "namedSpeakers": 69,
+      "rosterLabels": 6,
+      "scoredSpeakers": 75,
+      "completeSpeakers": 69,
+      "debates": 26,
+      "scoredBallots": 24,
+      "unavailableBallots": 0,
+      "byes": 2,
+      "completeTeams": 25,
+      "issues": [
+        {
+          "type": "roster-labels",
+          "text": "6 speaker entries use source roster labels such as ABC or aa; identities are not inferred."
+        }
+      ]
+    },
+    {
+      "division": "NoviceE MS 3-on-3",
+      "teams": 51,
+      "speakers": 153,
+      "namedSpeakers": 147,
+      "rosterLabels": 6,
+      "scoredSpeakers": 153,
+      "completeSpeakers": 147,
+      "debates": 52,
+      "scoredBallots": 50,
+      "unavailableBallots": 0,
+      "byes": 2,
+      "completeTeams": 51,
+      "issues": [
+        {
+          "type": "roster-labels",
+          "text": "6 speaker entries use source roster labels such as ABC or aa; identities are not inferred."
+        }
+      ]
+    },
+    {
+      "division": "NoviceS MS 3-on-3",
+      "teams": 42,
+      "speakers": 126,
+      "namedSpeakers": 120,
+      "rosterLabels": 6,
+      "scoredSpeakers": 123,
+      "completeSpeakers": 117,
+      "debates": 42,
+      "scoredBallots": 40,
+      "unavailableBallots": 0,
+      "byes": 1,
+      "completeTeams": 41,
+      "issues": [
+        {
+          "type": "unscored-ballot",
+          "round": 1,
+          "room": "PIGOTT 108",
+          "text": "Round 1, PIGOTT 108: Test mars-almond-hershey vs. Aurorae Young Academy Emmy Magerramov-Aiden Yue-Alex Chen; ballot contains no numeric speaker scores."
+        },
+        {
+          "type": "missing-pairing",
+          "round": 2,
+          "team": "Test mars-almond-hershey",
+          "text": "Test mars-almond-hershey: not listed in Round 2."
+        },
+        {
+          "type": "roster-labels",
+          "text": "6 speaker entries use source roster labels such as ABC or aa; identities are not inferred."
+        }
+      ]
+    },
+    {
+      "division": "DONTUSETHIS MS 3-on-3",
+      "teams": 0,
+      "speakers": 0,
+      "namedSpeakers": 0,
+      "rosterLabels": 0,
+      "scoredSpeakers": 0,
+      "completeSpeakers": 0,
+      "debates": 0,
+      "scoredBallots": 0,
+      "unavailableBallots": 0,
+      "byes": 0,
+      "completeTeams": 0,
+      "issues": []
+    }
+  ],
+  "testCase": {
+    "name": "Jia-Hao Stevenson",
+    "rounds": {
+      "1": {
+        "score": 84,
+        "displayedScore": "84",
+        "room": "PIGOTT 307",
+        "opponent": "EPS9",
+        "team": "Bellevue Youth Debate Christina Sun-Ben Grant-Jia-Hao Stevenson",
+        "division": "NoviceS MS 3-on-3",
+        "round": 1,
+        "debateId": "901",
+        "isBye": false,
+        "roomHighest": true,
+        "roomMaximum": 84,
+        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/901"
+      },
+      "2": {
+        "score": 89,
+        "displayedScore": "89",
+        "room": "PIGOTT 308",
+        "opponent": "Evergreen Redmond Climb Arjun Balaji-Pranav Shashwat Iyer-Krishav Sapru",
+        "team": "Bellevue Youth Debate Christina Sun-Ben Grant-Jia-Hao Stevenson",
+        "division": "NoviceS MS 3-on-3",
+        "round": 2,
+        "debateId": "957",
+        "isBye": false,
+        "roomHighest": true,
+        "roomMaximum": 89,
+        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/957"
+      }
+    },
+    "average": 86.5,
+    "rank": 10,
+    "rankAmongComplete": 9,
+    "stars": 2,
+    "teamRecord": "1–1",
+    "teamStanding": 11,
+    "teamsSharingRecord": 22
+  }
+}
