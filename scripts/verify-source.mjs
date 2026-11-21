@@ -18,7 +18,6 @@ try {
     await row.getByRole('button',{name:'View Ballot & Comments'}).click();
     await page.getByRole('button',{name:'Back to Results',exact:true}).waitFor();
     // Independently inspect the text of the score-card container, excluding the comments sibling.
-    const card=page.locator('h6').filter({has:page.locator('span').getByText('Proposition',{exact:true})});
     const scoreCardText=await page.getByText('Proposition',{exact:true}).locator('xpath=../../../../..').innerText();
     const safeText=scoreCardText.split(/JUDGE COMMENTS|Judge Comments/)[0];
     for(const side of Object.values(d.ballot.sides)) {

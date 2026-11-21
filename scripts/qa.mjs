@@ -13,6 +13,9 @@ try {
   page.on('pageerror',error=>errors.push(error.message));
   const requests=[];page.on('request',req=>requests.push(req.url()));
   const response=await page.goto(url,{waitUntil:'networkidle'});assert.equal(response.status(),200);
+  assert.deepEqual(JSON.parse(await page.locator('#results-data').textContent()),snapshot,'Rendered snapshot differs from committed data');
+  const publicData=await page.request.get(new URL('data/results.json',url).href);
+  assert.equal(publicData.status(),200);assert.deepEqual(await publicData.json(),snapshot,'Download differs from committed data');
   assert.equal(await page.title(),'Seattle U Debate Rankings — November 21, 2026');
   assert.equal(await page.locator('#division').inputValue(),'NoviceS MS 3-on-3');
   for(const d of divisions) {
@@ -27,11 +30,13 @@ try {
   const person=divisions.find(d=>d.division==='NoviceS MS 3-on-3').speakers.find(p=>p.name==='Jia-Hao Stevenson');
   const row=page.locator('#speaker-rows tr').filter({has:page.getByText('Jia-Hao Stevenson',{exact:true})});
   assert.equal(await row.count(),1);
-  assert.match(await row.innerText(),/86\.50/);assert.match(await row.innerText(),/★★/);
+  assert.equal(await row.locator('.average').textContent(),person.average.toFixed(2));
+  assert.equal(await row.locator('.stars').textContent(),'★'.repeat(person.awardedStars));
   assert.equal((await row.locator('.rank').innerText()).trim(),String(person.rank));
   await page.getByRole('tab',{name:/Team Standings/}).click();
   assert.equal(await page.locator('#team-rows tr').count(),1);
-  assert.match(await page.locator('#team-rows').innerText(),/1–1/);
+  const team=divisions.find(d=>d.division===person.rounds[1].division).teams.find(t=>t.id===person.teamId);
+  assert.ok((await page.locator('#team-rows').innerText()).includes(team.record));
   await page.locator('#search').fill('no-such-speaker-zzzz');assert.equal(await page.locator('#empty').isVisible(),true);
   await page.getByRole('button',{name:'Clear search',exact:true}).click();
   await page.getByRole('tab',{name:/Speaker Rankings/}).click();
@@ -46,6 +51,8 @@ try {
   assert.equal(await mobile.locator('#division').inputValue(),'NoviceS MS 3-on-3');
   assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Mobile horizontal overflow');
   await mobile.screenshot({path:'.local/mobile.png',fullPage:false});
+  await mobile.locator('#rankings').scrollIntoViewIfNeeded();
+  await mobile.screenshot({path:'.local/mobile-speakers.png',fullPage:false});
   await mobile.locator('#speaker-sort').selectOption('round1:desc');
   await mobile.locator('#search').fill('Bellevue');
   await mobile.getByRole('tab',{name:/Team Standings/}).click();
