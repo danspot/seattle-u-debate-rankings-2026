@@ -65,8 +65,6 @@ function render() {
   $('speaker-rows').innerHTML = sortRows(speakers,'speaker').map(renderSpeaker).join('');
   $('team-rows').innerHTML = sortRows(teams,'team').map(renderTeam).join('');
   $('clear').hidden = !query;
-  $('speaker-tab-count').textContent = speakers.length;
-  $('team-tab-count').textContent = teams.length;
   const speakerActive = activeTab === 'speaker';
   $('speaker-panel').hidden = !speakerActive;
   $('team-panel').hidden = speakerActive;

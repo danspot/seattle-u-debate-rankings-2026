@@ -26,8 +26,8 @@
     </section>
     <section id="rankings" class="rankings">
       <div class="tabs" role="tablist" aria-label="Ranking type">
-        <button id="speaker-tab" type="button" role="tab" aria-selected="true" aria-controls="speaker-panel" tabindex="0">Speaker Rankings <span id="speaker-tab-count"></span></button>
-        <button id="team-tab" type="button" role="tab" aria-selected="false" aria-controls="team-panel" tabindex="-1">Team Standings <span id="team-tab-count"></span></button>
+        <button id="speaker-tab" type="button" role="tab" aria-selected="true" aria-controls="speaker-panel" tabindex="0">Speaker Rankings</button>
+        <button id="team-tab" type="button" role="tab" aria-selected="false" aria-controls="team-panel" tabindex="-1">Team Standings</button>
       </div>
       <p id="showing" class="sr-only" role="status" aria-live="polite"></p>
       <div id="speaker-panel" role="tabpanel" aria-labelledby="speaker-tab">
@@ -218,8 +218,6 @@ function render() {
   $('speaker-rows').innerHTML = sortRows(speakers,'speaker').map(renderSpeaker).join('');
   $('team-rows').innerHTML = sortRows(teams,'team').map(renderTeam).join('');
   $('clear').hidden = !query;
-  $('speaker-tab-count').textContent = speakers.length;
-  $('team-tab-count').textContent = teams.length;
   const speakerActive = activeTab === 'speaker';
   $('speaker-panel').hidden = !speakerActive;
   $('team-panel').hidden = speakerActive;
