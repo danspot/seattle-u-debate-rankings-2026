@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-21T23:44:47.940Z",
-  "extractionStartedAt": "2026-11-21T23:38:35.886Z",
-  "sourceUpdatedLabel": "Last updated 11/21/26, 2:23 PM PST",
+  "extractedAt": "2026-11-21T23:54:52.724Z",
+  "extractionStartedAt": "2026-11-21T23:48:35.825Z",
+  "sourceUpdatedLabel": "Last updated 11/21/26, 3:51 PM PST",
   "rounds": [
     1,
     2,
@@ -4712,19 +4712,37 @@
                 "name": "Hamza N",
                 "score": 67,
                 "displayedScore": "67",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Hamza N",
+                  "sourceHeading": "Proposition Speaker 1 — Hamza N",
+                  "text": "Great work Hamza!\n\nI liked how you summarized your points to really try to bring home your side's case. It really helped show the points brought by your team. \n\nIn the future, I would like to see more impact (especially from a third speaker). HOW will this impact citizens/police and why did we succeed at proving the burden of proof. You also brought a new source in which you should avoid in the future. I would've also liked to see more POIs. You ended up yielding 180 seconds, which is not amazing at all. That was the biggest factor in your lowered score. Debaters (ESPECIALLY third speakers should be talking all 5 minutes if possible. If you have no more to talk about, repeat points!\n\nOverall great job though!"
+                }
               },
               {
                 "name": "John T",
                 "score": 67,
                 "displayedScore": "67",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "John T",
+                  "sourceHeading": "Proposition Speaker 2 — John T",
+                  "text": "Nice work John!\n\nI loved your use of evidence to build on your points and it really helped show the exact data on why ALPRs should be banned. I loved your point of how innocent citizens are taking the blame for no reason and the impact it would have on them.\n\nIn the future, I would try to enunciate more when speaking and speak more clearly. It would have been nice to also see some more analysis on WHY this matters, not just the facts themselves. You yielded 135 seconds, which is not great aswell. I would have loved to see you speaking during the entire time. I liked your POIs but generally try to avoid \"what's your source for that\" as it does not add much actual meaning/impact and just wastes time.\n\nOverall, nice job though!"
+                }
               },
               {
                 "name": "Ahrian S",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Ahrian S",
+                  "sourceHeading": "Proposition Speaker 3 — Ahrian S",
+                  "text": "Amazing work Ahrian!\n\nI really enjoyed your speeches. They were coherent, outlined your points effectively and really used impact and weighing. I loved your points and they were all extremely strong. You brought strong points and used analyzing. You gave a summary of what was happening and used emotions really well. YOU ALSO USED ALL YOUR TIME!!! Great job with that\n\nIn the future, I would have liked to see a bit better POI responses as sometimes they were not as great as I would have hoped. I personally would worry less about your response and waste time and rather answer it and continue with your speech.\n\nOverall amazing job though!"
+                }
               }
             ],
             "total": 217
@@ -4737,27 +4755,45 @@
                 "name": "Ethan Shraer",
                 "score": 66,
                 "displayedScore": "66",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ethan Shraer",
+                  "sourceHeading": "Opposition Speaker 1 — Ethan Shraer",
+                  "text": "Excellent work Ethan!\n\nYour speeches were pretty good. I liked your use of accepting the privacy risks and then offering a counter solution/compromise. It's something we rarely see in debate and finding a shared solution is also a great life skill. You spoke directly to the judge which was nice to see. Also used impact well\n\nIn the future, I have a couple notes. First, especially as third speaker it would be nice if you went over your summary more as you spent maybe 10 seconds max on that. That's very important as a third speaker to weigh your arguents. Next, you said a source was \"uncredible and illegal\", this is MS debate, so we don't do fact checking of sources and usually treat sources mostly the same as long as they are not like the Onion. The source they provided was fine. You yielded 70 seconds which is not optimal aswell. Lastly, you said they mess up rarely but said a 5% failure rate which is pretty high for crime.\n\nOverall excellent job though!"
+                }
               },
               {
                 "name": "Shay Parikh",
                 "score": 72,
                 "displayedScore": "72",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Shay Parikh",
+                  "sourceHeading": "Opposition Speaker 2 — Shay Parikh",
+                  "text": "Marvelous work Shay!\n\nYour first speech was good. You used sources really well to advance your points, Logos! I loved your burden of proof and it was good to include especially as a first time debater. Your overall contention points were nice. I loved the point on how increased security makes people less likely to commit a crime (security theater! https://en.wikipedia.org/wiki/Security_theater)\n\nIn the future, I would explain MORE into contentions! I did not see much of that more and it would be very helpful so I can see more of why this is true. You yielded 120 seconds, try to avoid that in the future! Even if it means repeating points, do not yield time! Like I said for Ethan, there sources are credible. Try to avoid calling another teams sources uncredible unless they are actually uncredible.\n\nOverall marvelous work though!"
+                }
               },
               {
                 "name": "ABC",
                 "score": 74,
                 "displayedScore": "74",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "Awesome work Shay!\n\nYour second speech was great. I loved your use of datapoints to bring statistics. Also again I loved the point of how people will be scared of ALPRs if kept. (security theater again). Overall, well written. I am providing less feedback as I put a lot in my last note and you are the same speaker!\n\nYou yielded 100 seconds. That;s not ideal. I would like to see you repeating points or talking more. You lacked lots of rebuttals and also used the POI \"what's your source\" which you should avoid.\n\nOverall awesome work though!"
+                }
               }
             ],
             "total": 212
           }
         },
         "judgeName": "Aram Shiva",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/889"
       }
     },
@@ -16064,19 +16100,37 @@
                 "name": "Rory",
                 "score": 78,
                 "displayedScore": "78",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Rory",
+                  "sourceHeading": "Proposition Speaker 1 — Rory",
+                  "text": "Good Prop#3 speaker. You summed up your team's contentions nicely. A area of improvement would be to weigh the debate."
+                }
               },
               {
                 "name": "Emma",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Emma",
+                  "sourceHeading": "Proposition Speaker 2 — Emma",
+                  "text": "You spoke clearly and presented evidence in favor of your team. I liked your evidence from the movie \"Legally Blonde\"."
+                }
               },
               {
                 "name": "Layla",
                 "score": 71,
                 "displayedScore": "71",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Layla",
+                  "sourceHeading": "Proposition Speaker 3 — Layla",
+                  "text": "Good Prop1 opening speaker. You presented your team's contentions in support of the topic. An area of improvement would be to speak with emphasis."
+                }
               }
             ],
             "total": 229
@@ -16089,27 +16143,45 @@
                 "name": "Anishka Mohapatra",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Anishka Mohapatra",
+                  "sourceHeading": "Opposition Speaker 1 — Anishka Mohapatra",
+                  "text": "Speaks clearly and with emphasis and presented strong rebuttal to the prop team's POI and contentions. Great job!"
+                }
               },
               {
                 "name": "Sanaa Jetly",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Sanaa Jetly",
+                  "sourceHeading": "Opposition Speaker 2 — Sanaa Jetly",
+                  "text": "You speak clearly with emphasis. As Opp1 speaker, you nicely presented the opp position on the topic with clearly stared contentions, and refuted the prop team's contention on mental health."
+                }
               },
               {
                 "name": "Aanya Talati",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Aanya Talati",
+                  "sourceHeading": "Opposition Speaker 3 — Aanya Talati",
+                  "text": "You presented the closing arguments and weighed the debate clearly in the opp's team favor and with emphasis. You POI was good. Great job!"
+                }
               }
             ],
             "total": 252
           }
         },
         "judgeName": "Sayanti Saha",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/991"
       }
     },
@@ -17212,19 +17284,37 @@
                 "name": "Conrad Gussin",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Conrad Gussin",
+                  "sourceHeading": "Proposition Speaker 1 — Conrad Gussin",
+                  "text": "This comment is for the first speech, not Conrad. This was a great first speech as it was clear the whole way through and I could easily tell what contentions you had. One thing to work on might be responding to POI's better because the response to how authority could come from fear wasn't clear to me. Other then that, great speech. You had 40 seconds at the end, so you could have used that if you wanted to."
+                }
               },
               {
                 "name": "Wilder Musgrove",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Wilder Musgrove",
+                  "sourceHeading": "Proposition Speaker 2 — Wilder Musgrove",
+                  "text": "This speech was good as you used your time well and both refuted contentions and added some of your own points. The point about how success for individual could be better for them even if they were disliked was good. One thing to consider could be adding extra material because at times it felt like this speech wasn't bringing in enough new information."
+                }
               },
               {
                 "name": "abc",
                 "score": 90,
                 "displayedScore": "90",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "abc",
+                  "sourceHeading": "Proposition Speaker 3 — abc",
+                  "text": "This was one of the best speeches in the debate. You did all the things that a 3rd speaker should like refuting, summarizing, and weighing the debate. One of your POI responses was a little unclear as you started talking about liberals, but you were able to quickly focus it back onto the topic."
+                }
               }
             ],
             "total": 260
@@ -17237,27 +17327,45 @@
                 "name": "Olivia Liu",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Olivia Liu",
+                  "sourceHeading": "Opposition Speaker 1 — Olivia Liu",
+                  "text": "This was a good first speech, and you set up contentions that were strong enough to stay with your team for the rest of the debate. You didn't provide a burden of proof which hurt your team during the debate, as the Pro didn't have anything concrete to prove; however, you potentially could have used this opportunity to clarify what the topic is related to, like if it is about individuals, institutions, or a combination. It was still good speech overall, especially with your point on the French revolution."
+                }
               },
               {
                 "name": "Yvonne Wang",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Yvonne Wang",
+                  "sourceHeading": "Opposition Speaker 2 — Yvonne Wang",
+                  "text": "This was a great speech, especially because you started using the propositions framework of impact by discussing how being well-liked is better in the long run. You should consider working on responding to POI's, as your response to the POI about how the loss of respect was the reason for the American Revolution wasn't exactly clear."
+                }
               },
               {
                 "name": "Tiffany Qin",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Tiffany Qin",
+                  "sourceHeading": "Opposition Speaker 3 — Tiffany Qin",
+                  "text": "This was a good third speech as you summarized, refuted, and weighed the debate. Reiterating how authority is maintained through likeability was a good choice. It wasn't made clear how Native Americans and US history relate to the topic. Additionally, you should consider spending more time weighing the debate and showing why your side should win. Overall, it was a great speech; using the propositions framework of impact was one of the best parts."
+                }
               }
             ],
             "total": 245
           }
         },
         "judgeName": "Sid Venkatesh",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1002"
       }
     },
