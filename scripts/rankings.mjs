@@ -106,3 +106,17 @@ export function deriveDivision(snapshot, division) {
 }
 
 export function deriveAll(snapshot) { return snapshot.divisions.map(division => deriveDivision(snapshot, division)); }
+
+export function mergeDivisions(divisions) {
+  const speakers = divisions.flatMap(d => d.speakers.map(s => ({ ...s, division: d.division, divisionRank: s.rank })));
+  const teams = divisions.flatMap(d => d.teams.map(t => ({ ...t, division: d.division, divisionRank: t.rank })));
+  for (const speaker of speakers) {
+    speaker.rank = speaker.average === null ? null : 1 + speakers.filter(s => s.average !== null && s.average > speaker.average).length;
+    speaker.completeRank = !speaker.complete ? null : 1 + speakers.filter(s => s.complete && s.average > speaker.average).length;
+  }
+  for (const team of teams) {
+    team.rank = !team.complete ? null : 1 + teams.filter(t => t.complete && (t.wins > team.wins || t.wins === team.wins && t.losses < team.losses)).length;
+    team.recordGroupSize = teams.filter(t => t.complete && t.record === team.record).length;
+  }
+  return { speakers, teams };
+}

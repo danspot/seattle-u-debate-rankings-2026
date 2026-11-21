@@ -59,7 +59,7 @@ Check that the public extraction timestamp and downloaded `data/results.json` ma
 
 Speaker rank uses the average of available numeric scores. Incomplete averages participate in this ranking and show the score count (for example, `2/3`). Each speaker's expanded details also shows rank among entries scored in all included rounds. Equal averages use competition ranks (1, 2, 2, 4). Search and table sorting preserve the original ranks.
 
-The division dropdown supports multiple selections and All divisions, with NoviceS selected by default. When several divisions are selected, both tables group entries by division and sort within each group. Ranks are never combined across divisions; search covers all selected groups.
+The division dropdown supports multiple selections and All divisions, with NoviceS selected by default. Selected divisions merge into one list in each table, ranked and sorted together. Compact Exp, NE, and NS tags beneath the rank identify each entry’s division; the full division name is available on hover and to screen readers. Search preserves ranks across the selected divisions. A single selected division shows its own rankings without tags.
 
 Click a speaker's name to open their feedback popup. It combines the original notes from Rounds 1–3, labeled by round and judge, with source ballot links. Missing feedback is explicit. Notes are preserved as written, not summarized or inferred; they are safely rendered as plain text. Feedback refreshes with `npm run scrape` and remains part of the committed static snapshot.
 

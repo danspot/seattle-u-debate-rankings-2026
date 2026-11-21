@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { deriveDivision } from '../scripts/rankings.mjs';
+import { deriveDivision, mergeDivisions } from '../scripts/rankings.mjs';
 const division='Fixture division';
 function debate(id,round,aff,neg,points,winnerSide='aff') {
   const team=(name,scores)=>({teamName:name,school:name,speakers:scores.map((score,i)=>({name:`${name} ${i+1}`,score,displayedScore:score===null?'B':String(score)})),total:null});
@@ -75,4 +75,19 @@ test('pending Round 3 keeps previous scores and records provisional without inve
   assert.equal(a.stars,2);assert.equal(a.starStatusKnown,false);assert.equal(a.teamStarStatusKnown,false);
   assert.ok(d.teams.every(t=>!t.complete && t.rank===null && t.rounds[3].result===null));
   assert.equal(d.teams.find(t=>t.name==='A').record,'2–0');
+});
+test('selected divisions merge with shared ranks and ties without changing division rankings',()=>{
+  const first=rank([debate('1',1,'A','B',[[90,85,80],[80,75,70]]),debate('2',2,'A','B',[[90,85,80],[80,75,70]])]);
+  const second=rank([debate('3',1,'C','D',[[95,85,75],[80,70,65]]),debate('4',2,'C','D',[[95,85,75],[80,70,65]])]);
+  second.division='Other division';
+  const selected=[first,second],before=structuredClone(selected);
+  const merged=mergeDivisions(selected),speaker=name=>merged.speakers.find(s=>s.name===name);
+  assert.equal(merged.speakers.length,12);assert.equal(merged.teams.length,4);
+  assert.equal(speaker('C 1').rank,1);assert.equal(speaker('A 1').rank,2);
+  assert.equal(speaker('A 2').rank,3);assert.equal(speaker('C 2').rank,3);assert.equal(speaker('A 3').rank,5);
+  assert.equal(speaker('A 1').divisionRank,1);assert.equal(speaker('C 1').division,second.division);
+  assert.ok(merged.teams.filter(t=>t.wins===2).every(t=>t.rank===1 && t.recordGroupSize===2));
+  assert.ok(merged.teams.filter(t=>t.wins===0).every(t=>t.rank===3));
+  assert.deepEqual(selected,before);
+  assert.deepEqual(mergeDivisions([]),{speakers:[],teams:[]});
 });

@@ -16,6 +16,24 @@ async function selectDivisions(page, names) {
 async function checkCounts(page, selected) {
   assert.equal(await page.locator('#speaker-rows tr[data-name]').count(),selected.reduce((n,d)=>n+d.speakers.length,0));
   assert.equal(await page.locator('#team-rows tr[data-name]').count(),selected.reduce((n,d)=>n+d.teams.length,0));
+  for(const kind of ['speaker','team']) {
+    assert.equal(await page.locator(`#${kind}-rows .division-heading`).count(),0);
+    const count=await page.locator(`#${kind}-rows tr[data-name]`).count();
+    assert.equal(await page.locator(`#${kind}-rows .division-tag`).count(),selected.length>1?count:0);
+  }
+}
+async function checkMergedRanks(page,selected) {
+  for(const kind of ['speaker','team']) {
+    const expected=selected.flatMap(d=>d[kind==='speaker'?'speakers':'teams'].map(row=>({...row,division:d.division})));
+    const rows=await page.locator(`#${kind}-rows tr[data-name]`).evaluateAll(rows=>rows.map(row=>({name:row.dataset.name,division:row.dataset.division,key:row.querySelector('[data-speaker]')?.dataset.speaker,rank:row.querySelector('.rank').firstChild.textContent.trim(),tag:row.querySelector('.division-tag')?.title})));
+    for(const row of rows) {
+      const entry=expected.find(e=>kind==='speaker'?encodeURIComponent(`${e.division}\u0000${e.id}`)===row.key:e.name===row.name&&e.division===row.division);
+      assert.ok(entry);
+      const rank=kind==='speaker' ? entry.average===null?null:1+expected.filter(e=>e.average!==null&&e.average>entry.average).length : !entry.complete?null:1+expected.filter(e=>e.complete&&(e.wins>entry.wins||e.wins===entry.wins&&e.losses<entry.losses)).length;
+      assert.equal(row.rank,String(rank??'—'));
+      assert.equal(row.tag,entry.division);
+    }
+  }
 }
 async function checkFeedback(page, speaker) {
   const key=encodeURIComponent(`${speaker.division}\u0000${speaker.id}`);
@@ -57,8 +75,9 @@ try {
   assert.equal(await page.locator('#division-options').isVisible(),true);
   await page.getByRole('checkbox',{name:'All divisions',exact:true}).check();
   await checkCounts(page,divisions);
-  assert.equal(await page.locator('#speaker-rows .division-heading').count(),divisions.filter(d=>d.speakers.length).length);
-  assert.equal(await page.locator('#team-rows .division-heading').count(),divisions.filter(d=>d.teams.length).length);
+  await checkMergedRanks(page,divisions);
+  const mergedAverages=(await page.locator('#speaker-rows .average').allTextContents()).filter(x=>x!=='—').map(Number);
+  assert.deepEqual(mergedAverages,[...mergedAverages].sort((a,b)=>b-a));
   assert.equal(await page.locator('#division-label').textContent(),'All divisions');
   await page.getByRole('checkbox',{name:'NoviceS MS 3-on-3',exact:true}).uncheck();
   await checkCounts(page,divisions.filter(d=>d.division!=='NoviceS MS 3-on-3'));
@@ -70,6 +89,11 @@ try {
   const pair=divisions.filter(d=>d.division.startsWith('Novice'));
   await selectDivisions(page,pair.map(d=>d.division));
   await checkCounts(page,pair);
+  await checkMergedRanks(page,pair);
+  await page.locator('#speaker-panel [data-sort="name"]').click();
+  const mergedNames=await page.locator('#speaker-rows .speaker-name').allTextContents();
+  assert.deepEqual(mergedNames,[...mergedNames].sort((a,b)=>a.localeCompare(b,'en',{sensitivity:'base'})));
+  await page.locator('#speaker-panel [data-sort="rank"]').click();
   assert.equal(await page.locator('#division-options').isVisible(),false);
   await page.locator('#division').click();
   await page.screenshot({path:'.local/desktop-divisions.png',fullPage:false});
@@ -78,6 +102,8 @@ try {
   await page.locator('#search').fill('Bellevue');
   assert.equal(await page.locator('#speaker-rows tr[data-name]').count(),pair.flatMap(d=>d.speakers).filter(s=>s.searchText.includes('bellevue')).length);
   assert.equal(await page.locator('#team-rows tr[data-name]').count(),pair.flatMap(d=>d.teams).filter(t=>t.searchText.includes('bellevue')).length);
+  await checkMergedRanks(page,pair);
+  await page.screenshot({path:'.local/desktop-merged.png',fullPage:false});
   await page.locator('#search').fill('');
   await selectDivisions(page,['NoviceS MS 3-on-3']);
   await page.screenshot({path:'.local/desktop.png',fullPage:false});
@@ -157,7 +183,12 @@ try {
   await mobile.screenshot({path:'.local/mobile-divisions.png',fullPage:false});
   await mobile.keyboard.press('Escape');
   await mobile.getByRole('tab',{name:/Speaker Rankings/}).click();
-  assert.equal(await mobile.locator('#speaker-rows .division-heading').count(),3);
+  await checkMergedRanks(mobile,divisions);
+  await mobile.locator('#speaker-panel [data-sort="rank"]').click();
+  await mobile.screenshot({path:'.local/mobile-merged-speakers.png',fullPage:false});
+  await mobile.getByRole('tab',{name:/Team Standings/}).click();
+  await mobile.screenshot({path:'.local/mobile-merged-teams.png',fullPage:false});
+  await mobile.getByRole('tab',{name:/Speaker Rankings/}).click();
   await mobile.locator('#search').fill(person.name);
   await checkFeedback(mobile,person);
   await mobile.screenshot({path:'.local/mobile-feedback.png',fullPage:false});
