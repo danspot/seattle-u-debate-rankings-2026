@@ -1,0 +1,150 @@
+import assert from 'node:assert/strict';
+import { spawn } from 'node:child_process';
+import { appendFile, readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { resolve } from 'node:path';
+import { verifySnapshot } from './verify.mjs';
+import { compareSnapshots, contentHash } from './watch-checks.mjs';
+
+// Reset/checkout operations below are confined to the disposable Actions runner.
+assert.equal(process.env.GITHUB_ACTIONS,'true','The watcher runs only in GitHub Actions.');
+assert.equal(resolve(process.cwd()),resolve(process.env.GITHUB_WORKSPACE));
+const repo='danspot/seattle-u-debate-rankings-2026';
+assert.equal(process.env.GITHUB_REPOSITORY,repo);
+const site='https://danspot.github.io/seattle-u-debate-rankings-2026/';
+const runUrl=`https://github.com/${repo}/actions/runs/${process.env.GITHUB_RUN_ID}`;
+const interval=10*60*1000;
+const start=Date.parse(process.env.WATCH_START),end=Date.parse(process.env.WATCH_END);
+assert.ok(Number.isFinite(start)&&Number.isFinite(end)&&end>start&&end-start<=4*60*60*1000,'Watch window must be at most four hours.');
+const state={start:new Date(start).toISOString(),end:new Date(end).toISOString(),checks:0,published:0,alerts:0,runUrl,history:[]};
+const notified=new Set();
+let issueNumber,checkId,needsDeployment=false;
+const pause=ms=>new Promise(r=>setTimeout(r,ms));
+
+async function api(path,method='GET',body) {
+  const response=await fetch(`https://api.github.com/repos/${repo}/${path}`,{method,signal:AbortSignal.timeout(30000),headers:{Authorization:`Bearer ${process.env.GH_TOKEN}`,Accept:'application/vnd.github+json','Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});
+  const text=await response.text();
+  if(!response.ok)throw Error(`GitHub ${method} ${path}: ${response.status} ${text.slice(0,500)}`);
+  return text?JSON.parse(text):null;
+}
+async function run(command,args,timeout=120000,env={}) {
+  console.log(`> ${command} ${args.join(' ')}`);
+  return new Promise((done,fail)=>{
+    const child=spawn(command,args,{env:{...process.env,...env},stdio:['ignore','pipe','pipe'],detached:true});
+    let output='';
+    const capture=chunk=>{process.stdout.write(chunk);output=(output+chunk).slice(-6000);};
+    child.stdout.on('data',capture);child.stderr.on('data',capture);
+    const timer=setTimeout(()=>{try{process.kill(-child.pid,'SIGTERM');}catch{}fail(Error(`${command} timed out after ${timeout/1000}s`));},timeout);
+    child.on('error',e=>{clearTimeout(timer);fail(e);});
+    child.on('exit',code=>{clearTimeout(timer);code===0?done(output.trim()):fail(Error(`${command} exited ${code}: ${output.slice(-1500)}`));});
+  });
+}
+async function status(message,nextCheck=null) {
+  const entry={at:new Date().toISOString(),message,nextCheck};
+  state.history.push(entry);state.lastStatus=entry;
+  console.log(JSON.stringify(entry));
+  await writeFile('.local/watch-status.json',JSON.stringify(state,null,2));
+  await appendFile('.local/watch.jsonl',JSON.stringify(entry)+'\n');
+  if(process.env.GITHUB_STEP_SUMMARY)await appendFile(process.env.GITHUB_STEP_SUMMARY,`- ${entry.at}: ${message}\n`);
+  if(checkId)await api(`check-runs/${checkId}`,'PATCH',{output:{title:message,summary:`Checks: ${state.checks}; publications: ${state.published}; alerts: ${state.alerts}.\n\nStops: ${state.end}. ${nextCheck?`Next check: ${nextCheck}.`:''}\n\n${state.history.slice(-24).map(h=>`- ${h.at}: ${h.message}`).join('\n')}`}});
+}
+async function alert(items) {
+  const fresh=items.filter(item=>{
+    const key=createHash('sha256').update(item.text).digest('hex');
+    if(notified.has(key))return false;notified.add(key);return true;
+  });
+  if(!fresh.length)return;
+  const safe=text=>text.replaceAll('@','＠').replaceAll('<','&lt;').replaceAll('>','&gt;');
+  const body=`@danspot — the tournament watch found items to review.\n\n${fresh.slice(0,40).map(a=>`- ${safe(a.text)}${a.url?` [Source](${a.url})`:''}`).join('\n')}\n\n[Watch run](${runUrl}) · [Public rankings](${site})\n\nMissing/contradictory data is held from publication. Consistent source corrections and statistical outliers are checked again against their ballots before publication. A debate decision differing from speaker-score totals is not treated as an error.`;
+  if(!issueNumber){const issue=await api('issues','POST',{title:`Tournament watch alerts — ${new Date(start).toISOString()}`,body,assignees:['danspot']});issueNumber=issue.number;state.alertUrl=issue.html_url;}
+  else await api(`issues/${issueNumber}/comments`,'POST',{body});
+  state.alerts+=fresh.length;
+}
+async function localQA() {
+  const server=spawn(process.execPath,['scripts/serve.mjs'],{stdio:'inherit'});
+  try {
+    let ready=false;
+    for(let i=0;i<30;i++){try{ready=(await fetch('http://127.0.0.1:4173/')).ok;}catch{}if(ready)break;await pause(200);}
+    assert.ok(ready,'Preview did not start');
+    await run(process.execPath,['scripts/qa.mjs']);
+  } finally {server.kill('SIGTERM');}
+}
+async function deploy() {
+  const sha=await run('git',['rev-parse','HEAD']);
+  await api('pages/builds','POST',{});
+  let built=false;
+  for(let i=0;i<48;i++) {
+    await pause(5000);
+    const build=await api('pages/builds/latest');
+    if(build.commit===sha && build.status==='errored')throw Error(`Pages failed: ${build.error?.message}`);
+    if(build.commit===sha && build.status==='built'){built=true;break;}
+  }
+  assert.ok(built,'Pages did not finish building the new commit');
+  // Allow the public CDN to converge before declaring a failed publication.
+  let lastError;
+  for(let i=0;i<4;i++){
+    try{await run(process.execPath,['scripts/qa.mjs',`${site}?v=${sha}`]);needsDeployment=false;return sha;}
+    catch(error){lastError=error;if(i<3)await pause(15000);}
+  }
+  throw lastError;
+}
+async function cycle() {
+  await run('git',['fetch','origin','main']);
+  await run('git',['reset','--hard','origin/main']);
+  const base=await run('git',['rev-parse','HEAD']);
+  if(needsDeployment){await deploy();await status('Retried deployment and verified public site.');}
+  const previous=JSON.parse(await readFile('data/results.json','utf8'));
+  await run(process.execPath,['scripts/scrape.mjs'],8*60*1000,{SCRAPE_OUTPUT:'.local/candidate.json'});
+  const candidate=JSON.parse(await readFile('.local/candidate.json','utf8'));
+  verifySnapshot(candidate);
+  const diff=compareSnapshots(previous,candidate);
+  await writeFile('.local/watch-diff.json',JSON.stringify(diff,null,2));
+  if(diff.blocked){await alert(diff.alerts);await status('Suspicious regression held for review; public snapshot preserved.');return;}
+  if(!diff.changed){
+    const published=await fetch(`${site}data/results.json?v=${Date.now()}`,{signal:AbortSignal.timeout(30000)});
+    if(!published.ok || contentHash(await published.json())!==contentHash(previous)){needsDeployment=true;await deploy();await status('Repaired a stale public deployment.');}
+    await status('No tournament data changes.');return;
+  }
+  await run(process.execPath,['scripts/verify-source.mjs'],3*60*1000,{SNAPSHOT_PATH:'.local/candidate.json',AUDIT_IDS:diff.auditIds.join(',')});
+  await copyFile('.local/candidate.json','data/results.json');
+  await run(process.execPath,['scripts/build.mjs']);
+  await run('npm',['test']);
+  await localQA();
+  await run('git',['fetch','origin','main']);
+  if(await run('git',['rev-parse','origin/main'])!==base){await status('Repository changed during extraction; will retry from the latest version.');return;}
+  await run('git',['add','data/results.json','data/verification.json','index.html']);
+  await run('git',['commit','-m',`Refresh posted Rounds 1–3 results (${new Date().toISOString()})`]);
+  await run('git',['push','origin','HEAD:main']);
+  needsDeployment=true;
+  const sha=await deploy();
+  state.published++;
+  await alert(diff.alerts);
+  await status(`Published ${sha.slice(0,7)}: ${diff.newDecisions} new decisions, ${diff.newBallots} newly available ballots; public desktop/iPhone checks passed.`);
+}
+
+await mkdir('.local',{recursive:true});
+try {
+  if(process.argv.includes('--failure')) {
+    await alert([{text:'The scheduled watch failed unexpectedly. Check the linked run; future checks may have stopped.'}]);
+  } else {
+    const head=await run('git',['rev-parse','HEAD']);
+    const check=await api('check-runs','POST',{name:'Tournament results monitor',head_sha:head,status:'in_progress',started_at:new Date().toISOString(),details_url:runUrl,output:{title:'Checking every 10 minutes',summary:`Automatic stop: ${state.end}.`}});
+    checkId=check.id;
+    await status('Watch started. Rounds 1–3 only.');
+    const cadenceStart=Date.now();
+    while(Date.now()<end) {
+      state.checks++;
+      try {await cycle();}
+      catch(error){console.error(error);await alert([{text:`Check ${state.checks} failed: ${error.message.slice(0,1400)}`}]);await status('Check failed; next scheduled check will retry.');}
+      const next=cadenceStart+(Math.floor((Date.now()-cadenceStart)/interval)+1)*interval;
+      await status('Waiting for next check.',next<end?new Date(next).toISOString():null);
+      while(Date.now()<Math.min(next,end))await pause(Math.min(30000,Math.min(next,end)-Date.now()));
+    }
+    await status('Four-hour watch finished. No further checks scheduled.');
+    await api(`check-runs/${checkId}`,'PATCH',{status:'completed',conclusion:state.alerts?'neutral':'success',completed_at:new Date().toISOString()});
+  }
+} catch(error) {
+  console.error(error);
+  if(checkId)await api(`check-runs/${checkId}`,'PATCH',{status:'completed',conclusion:'failure',completed_at:new Date().toISOString()}).catch(console.error);
+  throw error;
+}

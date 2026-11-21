@@ -2,11 +2,15 @@
 
 Public site: **https://danspot.github.io/seattle-u-debate-rankings-2026/**
 
-Independent rankings for Rounds **1–3**, sourced exclusively from [Plustab](https://plustab.org/t/seattle-u-sat-nov-21-2026/results). No login, backend, live API requests, scheduled scraping, or paid services. The generated `index.html` embeds its data, styles, and JavaScript and also works as a standalone local file.
+Independent rankings for Rounds **1–3**, sourced exclusively from [Plustab](https://plustab.org/t/seattle-u-sat-nov-21-2026/results). Visitors need no login or backend, and the site makes no live API requests. The generated `index.html` embeds its data, styles, and JavaScript and also works as a standalone local file.
 
 ## Refresh and republish
 
-Ask Codex: **“Update the debate rankings.”** Codex should rerun extraction, validation, generation, browser QA, commit and push the new snapshot, and verify the public GitHub Pages deployment. Include Round 3 when it appears in the source selector; leave later rounds out unless explicitly requested. Posted results are included even while other ballots are pending. Refreshes remain manual.
+Ask Codex: **“Update the debate rankings.”** Codex should rerun extraction, validation, generation, browser QA, commit and push the new snapshot, and verify the public GitHub Pages deployment. Include Round 3 when it appears in the source selector; leave later rounds out unless explicitly requested. Posted results are included even while other ballots are pending. Refreshes are manual unless the user requests a bounded watch.
+
+The **Watch tournament results** GitHub Actions workflow supports an explicitly requested watch of up to four hours. It checks every ten minutes, with no overlapping extractions, and stops at the supplied UTC cutoff. There is no permanent cron schedule. The Actions run and its **Tournament results monitor** check show progress. Cancel the Actions run to stop early.
+
+The watcher extracts a candidate with Chromium, ignores timestamp-only differences, checks consistency, independently reopens sample ballots and changed scores/decisions, runs tests and desktop/iPhone browser QA, commits changed snapshots, requests a Pages build, and verifies the public site. It preserves concurrent repository edits. Disappearing data and contradictions block publication; confirmed corrections and statistical outliers generate an issue assigned to and mentioning `danspot`. Alert messages are deduplicated during each run. Judge decisions are never inferred from speaker-score totals. Monitoring uses the repository's disposable GitHub runner and temporary token; it does not require a running local PC or a stored personal token.
 
 For a manual run, use Node.js 22 or newer, Git, and an authenticated GitHub CLI:
 

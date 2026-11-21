@@ -1,5 +1,6 @@
 import { mkdir, writeFile, rename } from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import { dirname } from 'node:path';
 import { launchBrowser } from './browser.mjs';
 import { readSpeakerFeedback, attachSpeakerFeedback } from './feedback.mjs';
 
@@ -125,9 +126,10 @@ try {
     }
   }
   const snapshot = { schemaVersion: 2, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds, divisions, debates };
-  await mkdir('data', { recursive: true });
-  await writeFile('data/results.next.json', JSON.stringify(snapshot, null, 2) + '\n');
-  await rename('data/results.next.json', 'data/results.json');
+  const output = process.env.SCRAPE_OUTPUT || 'data/results.json';
+  await mkdir(dirname(output), { recursive: true });
+  await writeFile(`${output}.next`, JSON.stringify(snapshot, null, 2) + '\n');
+  await rename(`${output}.next`, output);
   console.log(`Saved ${debates.length} debates and ${debates.reduce((n,d)=>n+(d.ballot?.feedbackNoteCount || 0),0)} individual feedback notes.`);
 } finally {
   await browser.close();

@@ -1,11 +1,13 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import { launchBrowser } from './browser.mjs';
-const data=JSON.parse(await readFile('data/results.json','utf8'));
+const data=JSON.parse(await readFile(process.env.SNAPSHOT_PATH || 'data/results.json','utf8'));
 const browser=await launchBrowser();const page=await browser.newPage();
 const audit=[];
 try {
   const selected=data.debates.filter(d=>d.ballot && [d.aff.name,d.neg.name].some(t=>t.includes('Jia-Hao Stevenson')));
+  const extraIds=new Set((process.env.AUDIT_IDS || '').split(',').filter(Boolean));
+  selected.push(...data.debates.filter(d=>d.ballot && extraIds.has(d.id)));
   for (const division of data.divisions) {
     for (const round of data.rounds) {
       const sample=data.debates.find(d=>d.division===division&&d.round===round&&d.ballot?.feedbackNoteCount>0);
