@@ -4,62 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#122b3b">
-  <meta name="description" content="Seattle U debate speaker rankings and team standings for November 21, 2026. Explore verified scores and decisions from Rounds 1 and 2 by division.">
+  <meta name="description" content="Seattle U debate speaker rankings and team standings for November 21, 2026. Rounds 1 and 2.">
   <title>Seattle U Debate Rankings — November 21, 2026</title>
   <style>/* SITE_CSS */</style>
 </head>
 <body>
   <a class="skip-link" href="#rankings">Skip to rankings</a>
-  <header class="masthead">
-    <div class="wrap masthead-inner">
-      <div class="wordmark"><span class="mark" aria-hidden="true">SU</span> DEBATE / SEATTLE</div>
-      <a class="source-top" href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">View source results</a>
-    </div>
-    <div class="wrap intro">
-      <p class="eyebrow">NOVEMBER 21, 2026 <span>•</span> ROUNDS 1 & 2</p>
-      <h1>Seattle U Debate Rankings</h1>
-      <p class="lede">Every speaker. Every team. The first two rounds, in one place.</p>
-      <p class="snapshot-line">Independent rankings · <span id="extracted">Loading snapshot…</span></p>
-    </div>
-  </header>
+  <header class="wrap page-header"><h1>Seattle U Debate Rankings</h1><span>Nov 21, 2026 · Rounds 1–2</span></header>
   <main class="wrap">
     <section class="controls" aria-label="Find rankings">
-      <div class="field division-field"><label for="division">Division</label><div class="select-wrap"><select id="division"></select></div></div>
-      <div class="field search-field"><label for="search">Find a speaker or team</label><div class="search-wrap"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Name, school, or team…" autocomplete="off"><button id="clear" type="button" aria-label="Clear search" hidden>×</button></div></div>
+      <label class="sr-only" for="division">Division</label><div class="select-wrap"><select id="division"></select></div>
+      <label class="sr-only" for="search">Find a speaker or team</label><div class="search-wrap"><input id="search" type="search" placeholder="Search speaker, school, or team" autocomplete="off"><button id="clear" type="button" aria-label="Clear search" hidden>×</button></div>
     </section>
-    <section class="overview" aria-label="Division totals"><div><strong id="team-count">—</strong><span>teams</span></div><div><strong id="speaker-count">—</strong><span>speaker entries</span></div><div><strong id="ballot-count">—</strong><span>scored ballots</span></div><div><strong id="complete-count">—</strong><span>two-round scores</span></div></section>
-    <div id="data-note" class="data-note"></div>
     <section id="rankings" class="rankings">
       <div class="tabs" role="tablist" aria-label="Ranking type">
         <button id="speaker-tab" type="button" role="tab" aria-selected="true" aria-controls="speaker-panel" tabindex="0">Speaker Rankings <span id="speaker-tab-count"></span></button>
         <button id="team-tab" type="button" role="tab" aria-selected="false" aria-controls="team-panel" tabindex="-1">Team Standings <span id="team-tab-count"></span></button>
       </div>
-      <div class="panel-heading"><div><h2 id="section-title">Speaker rankings</h2><p id="section-note"></p></div><p id="showing" role="status" aria-live="polite"></p></div>
+      <p id="showing" class="sr-only" role="status" aria-live="polite"></p>
       <div id="speaker-panel" role="tabpanel" aria-labelledby="speaker-tab">
-        <div class="legend"><span><b class="stars">★</b> Room-highest in one round</span><span><b class="stars">★★</b> Room-highest in both rounds</span><span>Tied room-highest scores count.</span></div>
-        <div class="mobile-sort"><label for="speaker-sort">Sort speakers</label><select id="speaker-sort"><option value="rank:asc">Rank</option><option value="name:asc">Name A–Z</option><option value="school:asc">School A–Z</option><option value="round1:desc">Round 1, highest first</option><option value="round2:desc">Round 2, highest first</option><option value="average:desc">Average, highest first</option><option value="stars:desc">Stars, most first</option></select></div>
-        <div class="table-wrap"><table class="speaker-table"><caption class="sr-only">Speaker rankings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank">Rank <span>↑</span></button></th><th data-key="name"><button data-sort="name">Speaker / school <span>↕</span></button></th><th data-key="round1"><button data-sort="round1">Round 1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2">Round 2 <span>↕</span></button></th><th data-key="average"><button data-sort="average">Average <span>↕</span></button></th><th data-key="stars"><button data-sort="stars">Room honors <span>↕</span></button></th></tr></thead><tbody id="speaker-rows"></tbody></table></div>
+        <p class="legend"><b class="stars">★ / ★★</b> Room-highest in 1 / 2 rounds, including ties.</p>
+        <div class="table-wrap"><table class="speaker-table"><caption class="sr-only">Speaker rankings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by rank"># <span>↑</span></button></th><th data-key="name"><button data-sort="name" aria-label="Sort by speaker name">Speaker <span>↕</span></button></th><th data-key="round1"><button data-sort="round1" aria-label="Sort by Round 1 score">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2" aria-label="Sort by Round 2 score">R2 <span>↕</span></button></th><th data-key="average"><button data-sort="average" aria-label="Sort by average">Avg <span>↕</span></button></th><th data-key="stars"><button data-sort="stars" aria-label="Sort by room honors">★ <span>↕</span></button></th></tr></thead><tbody id="speaker-rows"></tbody></table></div>
       </div>
       <div id="team-panel" role="tabpanel" aria-labelledby="team-tab" hidden>
-        <div class="legend"><span><b class="win-label">W</b> Win</span><span><b class="loss-label">L</b> Loss</span><span>Same record = same standing. Teams within a group are alphabetical.</span></div>
-        <div class="mobile-sort"><label for="team-sort">Sort teams</label><select id="team-sort"><option value="rank:asc">Standing</option><option value="name:asc">Team A–Z</option><option value="wins:desc">Wins, most first</option></select></div>
-        <div class="table-wrap"><table class="team-table"><caption class="sr-only">Team standings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank">Standing <span>↑</span></button></th><th data-key="name"><button data-sort="name">Team / members <span>↕</span></button></th><th data-key="wins"><button data-sort="wins">Record <span>↕</span></button></th><th data-key="round1"><button data-sort="round1">Round 1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2">Round 2 <span>↕</span></button></th></tr></thead><tbody id="team-rows"></tbody></table></div>
+        <div class="table-wrap"><table class="team-table"><caption class="sr-only">Team standings for the selected division, using Rounds 1 and 2</caption><thead><tr><th data-key="rank" aria-sort="ascending"><button data-sort="rank" aria-label="Sort by standing"># <span>↑</span></button></th><th data-key="name"><button data-sort="name">Team <span>↕</span></button></th><th data-key="wins"><button data-sort="wins">Record <span>↕</span></button></th><th data-key="round1"><button data-sort="round1">R1 <span>↕</span></button></th><th data-key="round2"><button data-sort="round2">R2 <span>↕</span></button></th></tr></thead><tbody id="team-rows"></tbody></table></div>
       </div>
-      <p id="empty" class="empty" hidden>No matching results. Try another name or clear the search.</p>
+      <p id="empty" class="empty" hidden>No matches.</p>
     </section>
-    <section class="methodology">
-      <details><summary>How rankings, stars, and missing scores work</summary><div class="details-copy">
-        <p><strong>Speaker rank:</strong> the mean of actual numeric scores in Rounds 1 and 2, highest first. A one-round average is marked <em>provisional</em> and participates in the available-score ranking. No score is assigned for a BYE or missing ballot. Speakers without numeric scores are unranked. Tied averages share competition ranks (1, 2, 2, 4); alphabetical order only arranges tied rows. Searching and sorting never change ranks.</p>
-        <p><strong>Room honors:</strong> ★ means the speaker had the highest individual score in their debate in exactly one round; ★★ means both rounds. Everyone tied for the highest score receives credit. All scores in a debate must be available to verify its highest score. If another round is missing, a single verified room high is described as pending rather than awarding a potentially incorrect star.</p>
-        <p><strong>Team standings:</strong> completed records are grouped 2–0, 1–1, then 0–2, with shared competition standings. Alphabetical order is not a tournament tiebreaker. A BYE counts as a win only when both the results styling and ballot explicitly identify the team as the winner; its “B” speaker marks remain unscored. Unknown results and missing pairings stay incomplete.</p>
-        <p><strong>Source fidelity:</strong> team names, speaker names, and scores come only from the linked Plustab results and rendered ballots. Source roster labels such as “ABC” are retained, marked, and kept distinct by team. Member names for abbreviated teams come from their ballots. If a ballot is unavailable, we do not guess its roster. Winners are read from computed underlining/font weight, then checked against ballot decisions. Judges’ written comments are not collected in the snapshot or published.</p>
-        <p>This is an independent two-round snapshot, not official tournament speaker awards or final standings. It makes no adjustments for judge scoring differences. Updates are manual; this page makes no live tournament requests.</p>
-      </div></details>
-      <details id="coverage"><summary>Data coverage & source notes <span id="issue-count"></span></summary><div class="details-copy"><div id="coverage-summary"></div><ul id="issues"></ul><p id="source-updated"></p></div></details>
-    </section>
+    <details class="notes"><summary>Scoring & data</summary>
+      <p>Averages use available numeric scores; one-round averages are marked provisional. Tied averages share ranks (1, 2, 2, 4). Teams with the same record share a standing and are listed alphabetically. These are independent two-round rankings.</p>
+      <p>BYE wins require a confirmed source decision; “B” is not a score. Missing scores leave room honors unverified. Source roster labels such as “ABC” are retained.</p>
+      <ul id="issues"></ul>
+    </details>
   </main>
-  <footer class="wrap"><p>Seattle U Debate · November 21, 2026 · Rounds 1–2</p><div><a href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Tournament source</a><a href="data/results.json" download>Download data</a><a href="https://github.com/danspot/seattle-u-debate-rankings-2026" target="_blank" rel="noopener">Project & updates</a></div></footer>
-  <noscript>This page needs JavaScript to display rankings. You can download the complete snapshot using the Download data link.</noscript>
+  <footer class="wrap"><span id="extracted"></span><nav aria-label="Source links"><a href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Source</a><a href="data/results.json" download>Data</a><a href="https://github.com/danspot/seattle-u-debate-rankings-2026" target="_blank" rel="noopener">GitHub</a></nav></footer>
+  <noscript>Enable JavaScript to display rankings, or download the data.</noscript>
   <script id="results-data" type="application/json">/* SNAPSHOT_JSON */</script>
   <script type="module">/* SITE_JS */</script>
 </body>

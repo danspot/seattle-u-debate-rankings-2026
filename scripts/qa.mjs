@@ -22,7 +22,7 @@ try {
     await page.locator('#division').selectOption(d.division);
     assert.equal(await page.locator('#speaker-rows tr').count(),d.speakers.length);
     assert.equal(await page.locator('#team-rows tr').count(),d.teams.length);
-    assert.equal(await page.locator('#team-count').textContent(),String(d.counts.teams));
+    assert.equal(await page.locator('#team-tab-count').textContent(),String(d.counts.teams));
   }
   await page.locator('#division').selectOption('NoviceS MS 3-on-3');
   await page.screenshot({path:'.local/desktop.png',fullPage:false});
@@ -51,9 +51,11 @@ try {
   assert.equal(await mobile.locator('#division').inputValue(),'NoviceS MS 3-on-3');
   assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Mobile horizontal overflow');
   await mobile.screenshot({path:'.local/mobile.png',fullPage:false});
+  const firstRow=await mobile.locator('#speaker-rows tr').first().boundingBox();
+  assert.ok(firstRow.y<320,'Rankings should begin near the top on mobile');
   await mobile.locator('#rankings').scrollIntoViewIfNeeded();
   await mobile.screenshot({path:'.local/mobile-speakers.png',fullPage:false});
-  await mobile.locator('#speaker-sort').selectOption('round1:desc');
+  await mobile.locator('#speaker-panel [data-sort="round1"]').click();
   await mobile.locator('#search').fill('Bellevue');
   await mobile.getByRole('tab',{name:/Team Standings/}).click();
   assert.ok(await mobile.locator('#team-rows tr').count()>0);
