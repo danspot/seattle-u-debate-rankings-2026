@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-22T02:07:06.957Z",
-  "extractionStartedAt": "2026-11-22T02:01:28.800Z",
-  "sourceUpdatedLabel": "Last updated 11/22/26, 12:39 AM PST",
+  "extractedAt": "2026-11-22T02:17:35.727Z",
+  "extractionStartedAt": "2026-11-22T02:10:50.424Z",
+  "sourceUpdatedLabel": "Last updated 11/21/26, 4:39 PM PST",
   "rounds": [
     1,
     2,
@@ -6128,19 +6128,37 @@
                 "name": "Christina Sun",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Christina Sun",
+                  "sourceHeading": "Proposition Speaker 1 — Christina Sun",
+                  "text": "Overall you presented your points very well, and you made very good use of the AREI structure. I liked how you fortified your points by with lots of evidence and some impact as well. I think you could try to be a bit more confident when speaking, because it makes your speech much more convincing."
+                }
               },
               {
                 "name": "Ben Grant",
                 "score": 77,
                 "displayedScore": "77",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Ben Grant",
+                  "sourceHeading": "Proposition Speaker 2 — Ben Grant",
+                  "text": "Good job adding on to your points and providing more statistics! The things you added on in this speech provided a good foundation for your third speaker in his speech. I think you did have room to refute the opponents points more clearly, since that is the main point of second speech. Signposting in your speech would help with this as well."
+                }
               },
               {
                 "name": "Jia-Hao Stevenson",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Jia-Hao Stevenson",
+                  "sourceHeading": "Proposition Speaker 3 — Jia-Hao Stevenson",
+                  "text": "Overall I though your speech was really good! You did a really excellent job defending your points, and you also had great responses to the opposition case. You also had a good weighing of the debate where you stated you had bigger impacts. One thing was that you used a lot of evidence in your speech, and you aren't really supposed to focus on evidence as a third speaker. Try to focus more in impact."
+                }
               }
             ],
             "total": 241
@@ -6153,27 +6171,45 @@
                 "name": "Gloria Li",
                 "score": 81,
                 "displayedScore": "81",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Gloria Li",
+                  "sourceHeading": "Opposition Speaker 1 — Gloria Li",
+                  "text": "In both your speeches you had a great speaking style that was confident, and you made lots of great points. I especially liked your point about how it is inefficient to have to have police everywhere. In your second speech, you did a good job adding impact to your points. I feel like you could have switched some of the things you did in your second and third speeches; a lot of the impact you added in your second speech probably would have fit better with your third one."
+                }
               },
               {
                 "name": "Emmeline Chin",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Emmeline Chin",
+                  "sourceHeading": "Opposition Speaker 2 — Emmeline Chin",
+                  "text": "Your speech was very clear and easy to understand, and you had a good speaking style as well. I think you could've added more impact to your points when presenting them, especially because adding impact would help you fill more time in your speech and make your arguments better."
+                }
               },
               {
                 "name": "ABC",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Opposition Speaker 3 — ABC",
+                  "text": "In your third speech you had a lot of great refutations which helped your side out a lot. Like I said above, I think some of these refutations could have been used in your second speech and replaced by more impact. But overall I liked this speech and I think you did a good job adding impact at the end! One thing I would say is to make sure you say very clearly when you are weighing because it wasn't super clear to me."
+                }
               }
             ],
             "total": 240
           }
         },
         "judgeName": "Zara Chobot",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/901"
       }
     },
