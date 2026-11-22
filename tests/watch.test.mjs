@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { compareSnapshots, contentHash } from '../scripts/watch-checks.mjs';
+import { compareSnapshots, contentHash, notificationKey } from '../scripts/watch-checks.mjs';
 const snapshot=JSON.parse(await readFile(new URL('../data/results.json',import.meta.url),'utf8'));
 const clone=()=>structuredClone(snapshot);
 test('extraction timestamps do not cause publications',()=>{
@@ -31,4 +31,8 @@ test('new feedback triggers publication without declaring a score anomaly',()=>{
   const next=clone(),d=next.debates.find(d=>d.ballot?.sides.aff.speakers[0].feedback);
   d.ballot.sides.aff.speakers[0].feedback.text+=' Additional feedback.';
   const diff=compareSnapshots(snapshot,next);assert.equal(diff.changed,true);assert.deepEqual(diff.alerts,[]);
+});
+test('repeated operational failures share one alert even across numbered checks',()=>{
+  assert.equal(notificationKey({key:'timeout:source-audit',text:'Check 9 failed'}),notificationKey({key:'timeout:source-audit',text:'Check 10 failed'}));
+  assert.notEqual(notificationKey({text:'Score changed for A'}),notificationKey({text:'Score changed for B'}));
 });

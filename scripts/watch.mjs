@@ -1,10 +1,9 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { appendFile, readFile, writeFile, mkdir, copyFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { verifySnapshot } from './verify.mjs';
-import { compareSnapshots, contentHash } from './watch-checks.mjs';
+import { compareSnapshots, contentHash, notificationKey } from './watch-checks.mjs';
 
 // Reset/checkout operations below are confined to the disposable Actions runner.
 assert.equal(process.env.GITHUB_ACTIONS,'true','The watcher runs only in GitHub Actions.');
@@ -18,7 +17,7 @@ const start=Date.parse(process.env.WATCH_START),end=Date.parse(process.env.WATCH
 assert.ok(Number.isFinite(start)&&Number.isFinite(end)&&end>start&&end-start<=4*60*60*1000,'Watch window must be at most four hours.');
 const state={start:new Date(start).toISOString(),end:new Date(end).toISOString(),checks:0,published:0,alerts:0,runUrl,history:[]};
 const notified=new Set();
-let issueNumber,checkId,needsDeployment=false;
+let issueNumber,checkId,needsDeployment=false,phase='startup';
 const pause=ms=>new Promise(r=>setTimeout(r,ms));
 
 async function api(path,method='GET',body) {
@@ -33,14 +32,15 @@ async function api(path,method='GET',body) {
 }
 async function run(command,args,timeout=120000,env={}) {
   console.log(`> ${command} ${args.join(' ')}`);
+  const label=args[0]?.startsWith('scripts/') ? args[0] : command;
   return new Promise((done,fail)=>{
     const child=spawn(command,args,{env:{...process.env,...env},stdio:['ignore','pipe','pipe'],detached:true});
     let output='';
     const capture=chunk=>{process.stdout.write(chunk);output=(output+chunk).slice(-6000);};
     child.stdout.on('data',capture);child.stderr.on('data',capture);
-    const timer=setTimeout(()=>{try{process.kill(-child.pid,'SIGTERM');}catch{}fail(Error(`${command} timed out after ${timeout/1000}s`));},timeout);
+    const timer=setTimeout(()=>{try{process.kill(-child.pid,'SIGTERM');}catch{}fail(Object.assign(Error(`${label} timed out after ${timeout/1000}s`),{watchKey:`timeout:${label}`}));},timeout);
     child.on('error',e=>{clearTimeout(timer);fail(e);});
-    child.on('exit',code=>{clearTimeout(timer);code===0?done(output.trim()):fail(Error(`${command} exited ${code}: ${output.slice(-1500)}`));});
+    child.on('exit',code=>{clearTimeout(timer);const detail=output.match(/(?:AUDIT FAILED:|AssertionError[^:]*:|Error:) ([^\n]+)/)?.[1] || 'See the run log for details.';code===0?done(output.trim()):fail(Object.assign(Error(`${label} exited ${code}: ${detail.slice(0,500)}`),{watchKey:`exit:${label}:${code}:${detail.slice(0,200)}`}));});
   });
 }
 async function status(message,nextCheck=null) {
@@ -54,12 +54,12 @@ async function status(message,nextCheck=null) {
 }
 async function alert(items) {
   const fresh=items.filter(item=>{
-    const key=createHash('sha256').update(item.text).digest('hex');
+    const key=notificationKey(item);
     if(notified.has(key))return false;notified.add(key);return true;
   });
   if(!fresh.length)return;
   const safe=text=>text.replaceAll('@','＠').replaceAll('<','&lt;').replaceAll('>','&gt;');
-  const body=`@danspot — the tournament watch found items to review.\n\n${fresh.slice(0,40).map(a=>`- ${safe(a.text)}${a.url?` [Source](${a.url})`:''}`).join('\n')}\n\n[Watch run](${runUrl}) · [Public rankings](${site})\n\nMissing/contradictory data is held from publication. Consistent source corrections and statistical outliers are checked again against their ballots before publication. A debate decision differing from speaker-score totals is not treated as an error.`;
+  const body=`@danspot — the tournament watch found items to review.\n\n${fresh.slice(0,100).map(a=>`- ${safe(a.text)}${a.url?` [Source](${a.url})`:''}`).join('\n')}${fresh.length>100?`\n\n${fresh.length-100} more items are recorded in the watch log.`:''}\n\n[Watch run](${runUrl}) · [Public rankings](${site})\n\nCandidate score/decision changes still require a separate live ballot check before publication. Missing/contradictory data is held from publication. A debate decision differing from speaker-score totals is not treated as an error.`;
   if(!issueNumber){const issue=await api('issues','POST',{title:`Tournament watch alerts — ${new Date(start).toISOString()}`,body,assignees:['danspot']});issueNumber=issue.number;state.alertUrl=issue.html_url;}
   else await api(`issues/${issueNumber}/comments`,'POST',{body});
   state.alerts+=fresh.length;
@@ -98,6 +98,7 @@ async function cycle() {
   const base=await run('git',['rev-parse','HEAD']);
   if(needsDeployment){await deploy();await status('Retried deployment and verified public site.');}
   const previous=JSON.parse(await readFile('data/results.json','utf8'));
+  phase='extraction';await status(`Check ${state.checks}: reading all source ballots.`);
   await run(process.execPath,['scripts/scrape.mjs'],8*60*1000,{SCRAPE_OUTPUT:'.local/candidate.json'});
   const candidate=JSON.parse(await readFile('.local/candidate.json','utf8'));
   verifySnapshot(candidate);
@@ -109,7 +110,10 @@ async function cycle() {
     if(!published.ok || contentHash(await published.json())!==contentHash(previous)){needsDeployment=true;await deploy();await status('Repaired a stale public deployment.');}
     await status('No tournament data changes.');return;
   }
-  await run(process.execPath,['scripts/verify-source.mjs'],3*60*1000,{SNAPSHOT_PATH:'.local/candidate.json',AUDIT_IDS:diff.auditIds.join(',')});
+  await alert(diff.alerts);
+  phase='source audit';await status(`Check ${state.checks}: auditing source samples and ${diff.auditIds.length} changed ballots.`);
+  await run(process.execPath,['scripts/verify-source.mjs'],3*60*1000,{SNAPSHOT_PATH:'.local/candidate.json',AUDIT_IDS:diff.auditIds.join(','),REFRESH_FEEDBACK:'1'});
+  phase='build and browser checks';await status(`Check ${state.checks}: source audit passed; testing the new site.`);
   await copyFile('.local/candidate.json','data/results.json');
   await run(process.execPath,['scripts/build.mjs']);
   await run('npm',['test']);
@@ -120,9 +124,10 @@ async function cycle() {
   await run('git',['commit','-m',`Refresh posted Rounds 1–3 results (${new Date().toISOString()})`]);
   await run('git',['push','origin','HEAD:main']);
   needsDeployment=true;
+  phase='publication';await status(`Check ${state.checks}: deploying and checking the public site.`);
   const sha=await deploy();
   state.published++;
-  await alert(diff.alerts);
+  if(diff.alerts.length && issueNumber)await api(`issues/${issueNumber}/comments`,'POST',{body:`All ${diff.alerts.length} candidate changes passed the live ballot audit and were published in [${sha.slice(0,7)}](https://github.com/${repo}/commit/${sha}). Public desktop/iPhone checks passed. [Rankings](${site})`});
   await status(`Published ${sha.slice(0,7)}: ${diff.newDecisions} new decisions, ${diff.newBallots} newly available ballots; public desktop/iPhone checks passed.`);
 }
 
@@ -131,6 +136,9 @@ try {
   if(process.argv.includes('--failure')) {
     await alert([{text:'The scheduled watch failed unexpectedly. Check the linked run; future checks may have stopped.'}]);
   } else {
+    const existing=(await api('issues?state=open&per_page=100')).find(i=>i.title===`Tournament watch alerts — ${new Date(start).toISOString()}`);
+    if(existing){issueNumber=existing.number;state.alertUrl=existing.html_url;}
+    if(process.env.WATCH_REPLACES_CHECK)await api(`check-runs/${process.env.WATCH_REPLACES_CHECK}`,'PATCH',{status:'completed',conclusion:'cancelled',completed_at:new Date().toISOString()}).catch(error=>console.warn(`Previous progress display could not be closed: ${error.message}`));
     const head=await run('git',['rev-parse','HEAD']);
     const check=await api('check-runs','POST',{name:'Tournament results monitor',head_sha:head,status:'in_progress',started_at:new Date().toISOString(),details_url:runUrl,output:{title:'Checking every 10 minutes',summary:`Automatic stop: ${state.end}.`}});
     checkId=check.id;
@@ -139,7 +147,7 @@ try {
     while(Date.now()<end) {
       state.checks++;
       try {await cycle();}
-      catch(error){console.error(error);await alert([{text:`Check ${state.checks} failed: ${error.message.slice(0,1400)}`}]);await status('Check failed; next scheduled check will retry.');}
+      catch(error){console.error(error);await alert([{key:error.watchKey || `${phase}:${error.message}`,text:`Monitoring failed during ${phase}: ${error.message.slice(0,700)}`}]);await status(`Check ${state.checks} failed during ${phase}; next scheduled check will retry.`);}
       const next=cadenceStart+(Math.floor((Date.now()-cadenceStart)/interval)+1)*interval;
       await status('Waiting for next check.',next<end?new Date(next).toISOString():null);
       while(Date.now()<Math.min(next,end))await pause(Math.min(30000,Math.min(next,end)-Date.now()));

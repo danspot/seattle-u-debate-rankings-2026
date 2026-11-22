@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 const pairingKey = d => JSON.stringify([d.division,d.round,d.aff.name,d.neg.name]);
 const label = d => `${d.division}, Round ${d.round}: ${d.aff.name} vs. ${d.neg.name}`;
 export const contentHash = snapshot => createHash('sha256').update(JSON.stringify({rounds:snapshot.rounds,divisions:snapshot.divisions,debates:snapshot.debates})).digest('hex');
+export const notificationKey = item => createHash('sha256').update(item.key || item.text).digest('hex');
 
 export function compareSnapshots(before, after) {
   const previous=new Map(before.debates.map(d=>[pairingKey(d),d]));

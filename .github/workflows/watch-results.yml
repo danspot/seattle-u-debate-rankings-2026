@@ -11,6 +11,10 @@ on:
         description: Stop checking at this UTC time (maximum four hours)
         required: true
         type: string
+      replaces_check:
+        description: Optional progress check ID of a cancelled run
+        required: false
+        type: string
 permissions:
   contents: write
   pages: write
@@ -27,6 +31,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       WATCH_START: ${{ inputs.start_at }}
       WATCH_END: ${{ inputs.end_at }}
+      WATCH_REPLACES_CHECK: ${{ inputs.replaces_check }}
     steps:
       - uses: actions/checkout@v4
         with:
