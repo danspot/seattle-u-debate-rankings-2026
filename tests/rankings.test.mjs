@@ -66,6 +66,22 @@ test('Round 3 updates averages, records, ranks, and both star sets',()=>{
   assert.deepEqual(d.teams.map(t=>t.rank),[1,2]);
   assert.ok(d.teams.every(t=>t.complete));
 });
+test('Round 4 can change speaker order, split star honors, and tie team records',()=>{
+  const d=rank([
+    debate('1',1,'A','B',[[90,80,70],[85,80,75]]),
+    debate('2',2,'A','B',[[91,80,70],[85,80,75]]),
+    debate('3',3,'A','B',[[92,80,70],[85,80,75]],'neg'),
+    debate('4',4,'A','B',[[70,80,70],[100,80,75]],'neg')
+  ],[1,2,3,4]);
+  const a=d.speakers.find(s=>s.name==='A 1'),b=d.speakers.find(s=>s.name==='B 1');
+  assert.equal(a.average,85.75);assert.equal(b.average,88.75);
+  assert.equal(a.rank,2);assert.equal(b.rank,1);
+  assert.equal(a.awardedTeamStars,3);assert.equal(a.awardedStars,3);
+  assert.equal(b.awardedTeamStars,4);assert.equal(b.awardedStars,1);
+  assert.ok(d.speakers.every(s=>s.complete && s.scoreCount===4));
+  assert.deepEqual(d.teams.map(t=>t.record),['2–2','2–2']);
+  assert.deepEqual(d.teams.map(t=>t.rank),[1,1]);
+});
 test('pending Round 3 keeps previous scores and records provisional without inventing a decision',()=>{
   const pending=debate('3',3,'A','B',[[null,null,null],[null,null,null]],null);
   pending.ballot=null;pending.ballotStatus='unavailable';

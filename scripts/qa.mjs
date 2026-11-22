@@ -137,16 +137,16 @@ try {
   const numeric=visible.filter(x=>x!=='—').map(Number);assert.deepEqual(numeric,[...numeric].sort((a,b)=>b-a));
   await page.locator('#speaker-panel [data-sort="average"]').click();
   const asc=(await page.locator('#speaker-rows .average').allTextContents()).filter(x=>x!=='—').map(Number);assert.deepEqual(asc,[...asc].sort((a,b)=>a-b));
-  if(snapshot.rounds.includes(3)) {
-    await page.locator('#speaker-panel [data-sort="round3"]').click();
-    const values=(await page.locator('#speaker-rows tr[data-name] td:nth-child(5) .score').allTextContents()).filter(t=>t!=='—').map(Number);
+  for(const [index,round] of snapshot.rounds.entries()) {
+    await page.locator(`#speaker-panel [data-sort="round${round}"]`).click();
+    const values=(await page.locator(`#speaker-rows tr[data-name] td:nth-child(${index+3}) .score`).allTextContents()).filter(t=>t!=='—').map(Number);
     assert.deepEqual(values,[...values].sort((a,b)=>b-a));
-    const provisional=divisions.find(d=>d.division==='NoviceS MS 3-on-3').speakers.find(s=>s.scoreCount>0&&!s.complete);
-    if(provisional) {
-      const key=encodeURIComponent(`${provisional.division}\u0000${provisional.id}`);
-      const partial=page.locator(`[data-speaker="${key}"]`).locator('xpath=ancestor::tr');
-      assert.equal(await partial.locator('.provisional').textContent(),`${provisional.scoreCount}/${snapshot.rounds.length}`);
-    }
+  }
+  const provisional=divisions.find(d=>d.division==='NoviceS MS 3-on-3').speakers.find(s=>s.scoreCount>0&&!s.complete);
+  if(provisional) {
+    const key=encodeURIComponent(`${provisional.division}\u0000${provisional.id}`);
+    const partial=page.locator(`[data-speaker="${key}"]`).locator('xpath=ancestor::tr');
+    assert.equal(await partial.locator('.provisional').textContent(),`${provisional.scoreCount}/${snapshot.rounds.length}`);
   }
   for(const [key,scope] of [['teamStars','team'],['stars','room']]) {
     for(const direction of ['desc','asc']) {
@@ -163,6 +163,10 @@ try {
   mobile.on('pageerror',e=>errors.push(e.message));await mobile.goto(url,{waitUntil:'networkidle'});
   assert.equal(await mobile.locator('#division-label').textContent(),'NoviceS MS 3-on-3');
   assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'Mobile horizontal overflow');
+  assert.equal(await mobile.locator('.honors .stars').evaluateAll(stars=>stars.every(star=>{
+    const text=star.getBoundingClientRect(),cell=star.closest('td').getBoundingClientRect();
+    return text.left>=cell.left && text.right<=cell.right-2;
+  })),true,'Mobile honors overflow into the next column');
   await mobile.screenshot({path:'.local/mobile.png',fullPage:false});
   const firstRow=await mobile.locator('#speaker-rows tr').first().boundingBox();
   assert.ok(firstRow.y<320,'Rankings should begin near the top on mobile');

@@ -2,11 +2,11 @@
 
 Public site: **https://danspot.github.io/seattle-u-debate-rankings-2026/**
 
-Independent rankings for Rounds **1–3**, sourced exclusively from [Plustab](https://plustab.org/t/seattle-u-sat-nov-21-2026/results). Visitors need no login or backend, and the site makes no live API requests. The generated `index.html` embeds its data, styles, and JavaScript and also works as a standalone local file.
+Independent rankings for Rounds **1–4**, sourced exclusively from [Plustab](https://plustab.org/t/seattle-u-sat-nov-21-2026/results). Visitors need no login or backend, and the site makes no live API requests. The generated `index.html` embeds its data, styles, and JavaScript and also works as a standalone local file.
 
 ## Refresh and republish
 
-Ask Codex: **“Update the debate rankings.”** Codex should rerun extraction, validation, generation, browser QA, commit and push the new snapshot, and verify the public GitHub Pages deployment. Include Round 3 when it appears in the source selector; leave later rounds out unless explicitly requested. Posted results are included even while other ballots are pending. Refreshes are manual unless the user requests a bounded watch.
+Ask Codex: **“Update the debate rankings.”** Codex should rerun extraction, validation, generation, browser QA, commit and push the new snapshot, and verify the public GitHub Pages deployment. Include Round 4 when it appears in the source selector; leave later rounds out unless explicitly requested. Posted results are included even while other ballots are pending. Refreshes are manual unless the user requests a bounded watch.
 
 The **Watch tournament results** GitHub Actions workflow supports an explicitly requested watch of up to four hours. It checks every ten minutes, with no overlapping extractions, and stops at the supplied UTC cutoff. There is no permanent cron schedule. The Actions run and its **Tournament results monitor** check show progress. Cancel the Actions run to stop early.
 
@@ -31,7 +31,7 @@ Review the changed data and coverage notes, then publish:
 
 ```sh
 git add index.html data/results.json data/verification.json
-git commit -m "Refresh Rounds 1–3 tournament snapshot"
+git commit -m "Refresh Rounds 1–4 tournament snapshot"
 git push origin main
 gh run list --limit 5
 ```
@@ -49,7 +49,7 @@ Check that the public extraction timestamp and downloaded `data/results.json` ma
 - `index.html`: generated, self-contained public site. Edit the files under `site/`, then build.
 - `data/results.json`: actual result rows, computed winner styles, speaker scores and individual feedback, URLs, and extraction timestamps. Context nests each score and feedback note under its team, division, round, and room; opponents are the other side of the same debate.
 - `data/verification.json`: consistency report and the requested test case; not featured in the page.
-- `scripts/scrape.mjs`: Playwright browser extraction. Explicitly selects each division and Rounds 1–3, clicks every available ballot, verifies context, and restores filters after navigation.
+- `scripts/scrape.mjs`: Playwright browser extraction. Explicitly selects each division and Rounds 1–4, clicks every available ballot, verifies context, and restores filters after navigation.
 - `scripts/feedback.mjs`: extracts original individual speaker feedback and matches each note by side, speaking position, and speaker name. General decision explanations are not attributed to individual speakers.
 - `scripts/rankings.mjs`: shared ranking and standings calculation.
 - `scripts/verify.mjs`: checks duplicate debates/rooms/teams/speakers, roster consistency across rounds, ballot context, numeric scores and team totals, source-style/ballot decisions, paired win/loss results, and rank arithmetic.
@@ -61,15 +61,15 @@ Check that the public extraction timestamp and downloaded `data/results.json` ma
 
 ## Interpretation
 
-Speaker rank uses the average of available numeric scores. Incomplete averages participate in this ranking and show the score count (for example, `2/3`). Each speaker's expanded details also shows rank among entries scored in all included rounds. Equal averages use competition ranks (1, 2, 2, 4). Search and table sorting preserve the original ranks.
+Speaker rank uses the average of available numeric scores. Incomplete averages participate in this ranking and show the score count (for example, `3/4`). Each speaker's expanded details also shows rank among entries scored in all included rounds. Equal averages use competition ranks (1, 2, 2, 4). Search and table sorting preserve the original ranks.
 
 The division dropdown supports multiple selections and All divisions, with NoviceS selected by default. Selected divisions merge into one list in each table, ranked and sorted together. Compact Exp, NE, and NS tags beneath the rank identify each entry’s division; the full division name is available on hover and to screen readers. Search preserves ranks across the selected divisions. A single selected division shows its own rankings without tags.
 
-Click a speaker's name to open their feedback popup. It combines the original notes from Rounds 1–3, labeled by round and judge, with source ballot links. Missing feedback is explicit. Notes are preserved as written, not summarized or inferred; they are safely rendered as plain text. Feedback refreshes with `npm run scrape` and remains part of the committed static snapshot.
+Click a speaker's name to open their feedback popup. It combines the original notes from Rounds 1–4, labeled by round and judge, with source ballot links. Missing feedback is explicit. Notes are preserved as written, not summarized or inferred; they are safely rendered as plain text. Feedback refreshes with `npm run scrape` and remains part of the committed static snapshot.
 
 Blue stars count rounds with the highest score on the speaker's own team; gold stars count rounds with the highest score across both teams in the room. Each set awards one star per qualifying round, including ties, and is sortable separately. BYEs earn no stars. Missing scores leave that comparison unverified (`?`); a team high can still be verified when only an opponent's score is missing. The speaker popup shows which honors were earned in each round.
 
-Team standings group complete records (3–0, 2–1, 1–2, and 0–3 after Round 3), with a shared standing and alphabetical order within each group. A BYE is a win only when the rendered result styling and ballot both confirm it. `B` is never converted to a numeric score. Incomplete team records remain separate and unranked.
+Team standings group complete records (4–0, 3–1, 2–2, 1–3, and 0–4 after Round 4), with a shared standing and alphabetical order within each group. A BYE is a win only when the rendered result styling and ballot both confirm it. `B` is never converted to a numeric score. Incomplete team records remain separate and unranked.
 
 The source's `ABC`, `abc`, and `aa` roster labels are retained and flagged; they are scored source entries, not inferred identities. Counts include these labels, with separate named/label counts in the verification report. The `Test mars-almond-hershey` entry is likewise retained as displayed, without treating it as an ordinary BYE or inventing a missing Round 2 result. All source dropdown divisions, including empty `DONTUSETHIS MS 3-on-3`, are preserved. Individual speaker comments are published at the user's request.
 

@@ -1,10 +1,10 @@
 {
-  "verifiedAt": "2026-11-22T03:27:55.621Z",
-  "extractedAt": "2026-11-22T03:27:33.057Z",
+  "verifiedAt": "2026-11-22T18:46:53.668Z",
+  "extractedAt": "2026-11-22T18:43:16.441Z",
   "checksPassed": true,
-  "debateCount": 180,
-  "numericScores": 1026,
-  "feedbackNotes": 876,
+  "debateCount": 240,
+  "numericScores": 1368,
+  "feedbackNotes": 1212,
   "speakersWithFeedback": 354,
   "divisions": [
     {
@@ -14,11 +14,11 @@
       "namedSpeakers": 69,
       "rosterLabels": 6,
       "scoredSpeakers": 75,
-      "completeSpeakers": 66,
-      "debates": 39,
-      "scoredBallots": 36,
+      "completeSpeakers": 63,
+      "debates": 52,
+      "scoredBallots": 48,
       "unavailableBallots": 0,
-      "byes": 3,
+      "byes": 4,
       "completeTeams": 25,
       "issues": [
         {
@@ -34,11 +34,11 @@
       "namedSpeakers": 147,
       "rosterLabels": 6,
       "scoredSpeakers": 153,
-      "completeSpeakers": 144,
-      "debates": 78,
-      "scoredBallots": 75,
+      "completeSpeakers": 141,
+      "debates": 104,
+      "scoredBallots": 100,
       "unavailableBallots": 0,
-      "byes": 3,
+      "byes": 4,
       "completeTeams": 51,
       "issues": [
         {
@@ -54,11 +54,11 @@
       "namedSpeakers": 120,
       "rosterLabels": 6,
       "scoredSpeakers": 123,
-      "completeSpeakers": 114,
-      "debates": 63,
-      "scoredBallots": 60,
+      "completeSpeakers": 111,
+      "debates": 84,
+      "scoredBallots": 80,
       "unavailableBallots": 0,
-      "byes": 2,
+      "byes": 3,
       "completeTeams": 41,
       "issues": [
         {
@@ -78,6 +78,12 @@
           "round": 3,
           "team": "Test mars-almond-hershey",
           "text": "Test mars-almond-hershey: not listed in Round 3."
+        },
+        {
+          "type": "missing-pairing",
+          "round": 4,
+          "team": "Test mars-almond-hershey",
+          "text": "Test mars-almond-hershey: not listed in Round 4."
         },
         {
           "type": "roster-labels",
@@ -157,15 +163,33 @@
         "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1017",
         "feedback": "-You are a very strong and confident speaker and your voice was projected very well which I think is fantastic.\n- good job saying what the other team did that was against the rules. \n- you asked 2 POI which is really good. \nGood responses and rebuttals\n- You didn’t weigh the debate or answer the BOP. you had a minute remaining which you could’ve used to weigh.",
         "judgeName": "Xiya Xu"
+      },
+      "4": {
+        "score": 84,
+        "displayedScore": "84",
+        "room": "PIGOTT 108",
+        "opponent": "EPS10",
+        "team": "Bellevue Youth Debate Christina Sun-Ben Grant-Jia-Hao Stevenson",
+        "division": "NoviceS MS 3-on-3",
+        "round": 4,
+        "debateId": "1080",
+        "isBye": false,
+        "teamHighest": false,
+        "teamMaximum": 89,
+        "roomHighest": false,
+        "roomMaximum": 89,
+        "ballotUrl": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1080",
+        "feedback": null,
+        "judgeName": "Brianna Dang"
       }
     },
-    "average": 86.33333333333333,
-    "rank": 6,
-    "rankAmongComplete": 6,
+    "average": 85.75,
+    "rank": 5,
+    "rankAmongComplete": 5,
     "stars": 2,
     "teamStars": 3,
-    "teamRecord": "1–2",
-    "teamStanding": 22,
-    "teamsSharingRecord": 16
+    "teamRecord": "1–3",
+    "teamStanding": 28,
+    "teamsSharingRecord": 13
   }
 }

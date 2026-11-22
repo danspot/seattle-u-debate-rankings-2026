@@ -4,8 +4,8 @@ import { pathToFileURL } from 'node:url';
 import { deriveAll, normalize } from './rankings.mjs';
 
 export function verifySnapshot(snapshot) {
-  assert.ok(snapshot.rounds.length>=2 && snapshot.rounds.length<=3);
-  assert.deepEqual(snapshot.rounds, [1,2,3].slice(0,snapshot.rounds.length));
+  assert.ok(snapshot.rounds.length>=2 && snapshot.rounds.length<=4);
+  assert.deepEqual(snapshot.rounds, [1,2,3,4].slice(0,snapshot.rounds.length));
   assert.equal(snapshot.source, 'https://plustab.org/t/seattle-u-sat-nov-21-2026/results');
   assert.ok(Number.isFinite(Date.parse(snapshot.extractedAt)));
   assert.equal(new Set(snapshot.divisions).size, snapshot.divisions.length);

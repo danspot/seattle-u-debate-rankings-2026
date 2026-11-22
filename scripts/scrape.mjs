@@ -27,7 +27,7 @@ try {
   await page.locator('#round-select').click();
   const availableRounds = await page.getByRole('option').allTextContents();
   await page.keyboard.press('Escape');
-  const rounds = [1, 2, 3].filter(round => availableRounds.some(label => label.trim() === `Round ${round}`));
+  const rounds = [1, 2, 3, 4].filter(round => availableRounds.some(label => label.trim() === `Round ${round}`));
   assert.ok(rounds.includes(1) && rounds.includes(2), 'Required rounds unavailable');
   let sourceUpdatedLabel = null;
   for (const round of rounds) {

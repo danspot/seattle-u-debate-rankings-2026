@@ -121,7 +121,7 @@ async function cycle() {
   await run('git',['fetch','origin','main']);
   if(await run('git',['rev-parse','origin/main'])!==base){await status('Repository changed during extraction; will retry from the latest version.');return;}
   await run('git',['add','data/results.json','data/verification.json','index.html']);
-  await run('git',['commit','-m',`Refresh posted Rounds 1–3 results (${new Date().toISOString()})`]);
+  await run('git',['commit','-m',`Refresh posted Rounds 1–${candidate.rounds.at(-1)} results (${new Date().toISOString()})`]);
   await run('git',['push','origin','HEAD:main']);
   needsDeployment=true;
   phase='publication';await status(`Check ${state.checks}: deploying and checking the public site.`);
@@ -142,7 +142,7 @@ try {
     const head=await run('git',['rev-parse','HEAD']);
     const check=await api('check-runs','POST',{name:'Tournament results monitor',head_sha:head,status:'in_progress',started_at:new Date().toISOString(),details_url:runUrl,output:{title:'Checking every 10 minutes',summary:`Automatic stop: ${state.end}.`}});
     checkId=check.id;
-    await status('Watch started. Rounds 1–3 only.');
+    await status('Watch started. Rounds 1–4 only.');
     const cadenceStart=Date.now();
     while(Date.now()<end) {
       state.checks++;
