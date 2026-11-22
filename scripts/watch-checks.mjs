@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 
 const pairingKey = d => JSON.stringify([d.division,d.round,d.aff.name,d.neg.name]);
 const label = d => `${d.division}, Round ${d.round}: ${d.aff.name} vs. ${d.neg.name}`;
-export const contentHash = snapshot => createHash('sha256').update(JSON.stringify({rounds:snapshot.rounds,divisions:snapshot.divisions,debates:snapshot.debates})).digest('hex');
+export const contentHash = snapshot => createHash('sha256').update(JSON.stringify({rounds:snapshot.rounds,divisions:snapshot.divisions,debates:snapshot.debates,archive:snapshot.archive},(key,value)=>key==='capturedAt'?undefined:value)).digest('hex');
 export const notificationKey = item => createHash('sha256').update(item.key || item.text).digest('hex');
 
 export function compareSnapshots(before, after) {
@@ -19,6 +19,7 @@ export function compareSnapshots(before, after) {
   for(const old of before.debates)if(!current.has(pairingKey(old)))warn('missing-pairing',old,`${label(old)}: pairing disappeared or changed.`,true);
   for(const d of after.debates) {
     const old=previous.get(pairingKey(d));
+    if(before.schemaVersion>=3 && old?.ballot && d.ballot && old.ballot.archive?.text!==d.ballot.archive?.text)auditIds.add(d.id);
     if(d.ballot && !old?.ballot)newBallots++;
     if(d.winnerSide && !old?.winnerSide)newDecisions++;
     if(old?.ballot && !d.ballot)warn('withdrawn-ballot',d,`${label(d)}: a previously available ballot disappeared.`,true);

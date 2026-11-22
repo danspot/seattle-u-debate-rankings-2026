@@ -1,3 +1,4 @@
+const offlineHtml='<!doctype html>\n'+document.documentElement.outerHTML;
 const snapshot = JSON.parse(document.querySelector('#results-data').textContent);
 const divisions = deriveAll(snapshot);
 const rounds = snapshot.rounds;
@@ -53,7 +54,7 @@ function openSpeakerFeedback(speaker) {
     const score = r?.score == null ? r?.isBye ? 'BYE' : 'No score' : `${scoreText(r.score)} points`;
     const text = r?.feedback ? `<blockquote class="feedback-text">${esc(r.feedback)}</blockquote>` : `<p class="feedback-missing">${!r ? 'No ballot entry available.' : r.isBye ? 'BYE — no speaker feedback.' : 'No speaker feedback posted.'}</p>`;
     const honors = [r?.teamHighest ? '<span class="stars team-stars" title="Highest score on own team, including ties">★ Team</span>' : '', r?.roomHighest ? '<span class="stars room-stars" title="Highest score across both teams, including ties">★ Room</span>' : ''].filter(Boolean).join(' · ');
-    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="${esc(r.ballotUrl)}" target="_blank" rel="noopener">Ballot</a>` : ''}</div>${honors ? `<p class="feedback-honors">${honors}</p>` : ''}${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
+    return `<section class="feedback-round" data-round="${round}"><div class="feedback-round-heading"><h3>Round ${round} <span>${score}</span></h3>${r?.ballotUrl ? `<a href="#ballot/${encodeURIComponent(r.debateId)}">Ballot</a>` : ''}</div>${honors ? `<p class="feedback-honors">${honors}</p>` : ''}${r ? `<p class="feedback-opponent">vs. ${esc(r.opponent)}</p>` : ''}${r?.feedback && r.judgeName ? `<p class="feedback-judge">${esc(r.judgeName)}</p>` : ''}${text}</section>`;
   }).join('') + (speaker.completeRank ? `<p class="feedback-rank">${rounds.length}-score rank in division: ${speaker.completeRank}</p>` : '');
   $('speaker-dialog').showModal();
 }
@@ -87,7 +88,7 @@ function teamRound(team, round) {
   const r = team.rounds[round];
   if (!r) return `<td class="round-result"><span class="mobile-label">R${round}</span><span class="missing">Not listed</span></td>`;
   const result = r.result || 'Unknown';
-  const outcome = r.ballotUrl ? `<a class="outcome${r.result === 'L' ? ' loss' : ''}" href="${esc(r.ballotUrl)}" target="_blank" rel="noopener" aria-label="Round ${round} ballot: ${r.result === 'W' ? 'win' : r.result === 'L' ? 'loss' : 'unknown result'}">${result}</a>` : `<span class="outcome${r.result === 'L' ? ' loss' : ''}" title="Ballot unavailable">${result}</span>`;
+  const outcome = r.ballotUrl ? `<a class="outcome${r.result === 'L' ? ' loss' : ''}" href="#ballot/${encodeURIComponent(r.debateId)}" aria-label="Round ${round} ballot: ${r.result === 'W' ? 'win' : r.result === 'L' ? 'loss' : 'unknown result'}">${result}</a>` : `<span class="outcome${r.result === 'L' ? ' loss' : ''}" title="Ballot unavailable">${result}</span>`;
   return `<td class="round-result"><span class="mobile-label">R${round}</span>${outcome}<span class="opponent">${r.isBye ? 'BYE' : esc(r.opponent)}</span></td>`;
 }
 function renderTeam(team) {

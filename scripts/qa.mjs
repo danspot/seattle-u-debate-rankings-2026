@@ -46,7 +46,7 @@ async function checkFeedback(page, speaker) {
     const expected=speaker.rounds[round];
     if(expected?.feedback)assert.equal(await section.locator('.feedback-text').textContent(),expected.feedback);
     else assert.equal(await section.locator('.feedback-missing').isVisible(),true);
-    if(expected)assert.equal(await section.getByRole('link',{name:'Ballot',exact:true}).getAttribute('href'),expected.ballotUrl);
+    if(expected)assert.equal(await section.getByRole('link',{name:'Ballot',exact:true}).getAttribute('href'),`#ballot/${encodeURIComponent(expected.debateId)}`);
     assert.equal(await section.locator('.team-stars').count(),Number(expected?.teamHighest===true));
     assert.equal(await section.locator('.room-stars').count(),Number(expected?.roomHighest===true));
   }

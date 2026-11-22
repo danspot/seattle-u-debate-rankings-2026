@@ -36,3 +36,10 @@ test('repeated operational failures share one alert even across numbered checks'
   assert.equal(notificationKey({key:'timeout:source-audit',text:'Check 9 failed'}),notificationKey({key:'timeout:source-audit',text:'Check 10 failed'}));
   assert.notEqual(notificationKey({text:'Score changed for A'}),notificationKey({text:'Score changed for B'}));
 });
+test('archive content changes trigger updates while capture timestamps do not',()=>{
+  const before=clone();before.archive={pages:[{id:'schedule',text:'Round 1',capturedAt:'2026-11-21T00:00:00Z'}]};
+  const after=structuredClone(before);after.archive.pages[0].capturedAt='2026-11-22T00:00:00Z';
+  assert.equal(contentHash(before),contentHash(after));
+  after.archive.pages[0].text='Round 1 revised';
+  assert.notEqual(contentHash(before),contentHash(after));
+});

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { dirname } from 'node:path';
 import { launchBrowser } from './browser.mjs';
 import { readSpeakerFeedback, attachSpeakerFeedback } from './feedback.mjs';
+import { readBallotDetails, readPageArchive, publicPages } from './archive.mjs';
 
 const source = 'https://plustab.org/t/seattle-u-sat-nov-21-2026/results';
 const startedAt = new Date().toISOString();
@@ -10,6 +11,7 @@ const browser = await launchBrowser();
 const page = await browser.newPage({ viewport: { width: 1500, height: 1000 } });
 page.setDefaultTimeout(20000);
 const debates = [];
+const archivedPages=[];
 
 async function select(id, label) {
   await page.locator(id).click();
@@ -32,6 +34,8 @@ try {
   let sourceUpdatedLabel = null;
   for (const round of rounds) {
     await select('#round-select', `Round ${round}`);
+    await select('#division-select','All Divisions');
+    archivedPages.push({id:`results-${round}`,label:`Round ${round} results`,round,...await page.evaluate(readPageArchive)});
     for (const division of divisions) {
       await select('#division-select', division);
       const selected = await page.locator('#round-select').innerText();
@@ -45,7 +49,7 @@ try {
           const css = getComputedStyle(el);
           return { name: el.textContent.trim(), style: { fontWeight: css.fontWeight, textDecorationLine: css.textDecorationLine } };
         };
-        return { division: cells[0].textContent.trim(), aff: team(1), neg: team(2), room: cells[4].textContent.trim(), buttonId: cells[5].querySelector('button')?.id || null };
+        return { division: cells[0].textContent.trim(), aff: team(1), neg: team(2), judges:cells[3].innerText.trim(), room: cells[4].textContent.trim(), buttonId: cells[5].querySelector('button')?.id || null };
       }).filter(Boolean));
       console.log(`Round ${round} / ${division}: ${rows.length} debates`);
       const updated = page.getByText(/^Last updated /);
@@ -57,7 +61,7 @@ try {
         const winnerSide = marked.length === 1 ? marked[0] : marked.length === 0 && bold.length === 1 ? bold[0] : null;
         const debate = {
           id: row.buttonId?.replace('view-ballot-', '') || `${division}-r${round}-${i + 1}`,
-          division, round, room: row.room, aff: row.aff, neg: row.neg, winnerSide,
+          division, round, room: row.room, judges:row.judges, aff: row.aff, neg: row.neg, winnerSide,
           winnerEvidence: marked.length === 1 ? 'computed underline' : winnerSide ? 'computed relative font weight' : 'not determined',
           isBye: [row.aff.name, row.neg.name].includes('BYE'),
           ballotStatus: row.buttonId ? 'pending' : 'unavailable', ballot: null
@@ -101,6 +105,7 @@ try {
             };
           });
           attachSpeakerFeedback(debate.ballot, await page.evaluate(readSpeakerFeedback));
+          Object.assign(debate.ballot,await page.evaluate(readBallotDetails));
           debate.ballot.url = page.url();
           assert.equal(debate.ballot.roundLabel, `Round ${round}`, `Wrong round on ballot ${debate.id}`);
           assert.equal(debate.ballot.division, division);
@@ -125,7 +130,27 @@ try {
       }
     }
   }
-  const snapshot = { schemaVersion: 2, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds, divisions, debates };
+  const tournamentRoot=source.replace(/\/results$/,'');
+  for(const [id,label,heading] of publicPages) {
+    await page.goto(`${tournamentRoot}/${id}`,{waitUntil:'networkidle'});
+    await page.locator('main').getByText(heading,{exact:true}).first().waitFor();
+    await page.waitForFunction(()=>!document.querySelector('main')?.innerText.includes('Loading'));
+    await page.waitForTimeout(300);
+    const archived=await page.evaluate(readPageArchive);
+    assert.ok(archived.text.length>heading.length,`Incomplete archive page ${id}`);
+    assert.equal(archived.assets.length,0,`New assets on ${id} need to be saved locally before publication`);
+    if(id==='attachments')assert.ok(archived.text.includes('No attachments available'),'New tournament attachments must be downloaded before publication');
+    archivedPages.push({id,label,...archived});
+    console.log(`Archived ${label}: ${archived.tableRows} table rows.`);
+  }
+  await page.goto(`${tournamentRoot}/pairings`,{waitUntil:'networkidle'});
+  await page.locator('#round-select').waitFor();
+  await select('#division-select','All Divisions');
+  for(const round of rounds) {
+    await select('#round-select',`Round ${round}`);
+    archivedPages.push({id:`pairings-${round}`,label:`Round ${round} pairings`,round,...await page.evaluate(readPageArchive)});
+  }
+  const snapshot = { schemaVersion: 3, title: 'Seattle U Debate Rankings — November 21, 2026', source, extractedAt: new Date().toISOString(), extractionStartedAt: startedAt, sourceUpdatedLabel, rounds, divisions, debates, archive:{scope:'Public tournament pages and all available ballots; no signed-in content.',pages:archivedPages} };
   const output = process.env.SCRAPE_OUTPUT || 'data/results.json';
   await mkdir(dirname(output), { recursive: true });
   await writeFile(`${output}.next`, JSON.stringify(snapshot, null, 2) + '\n');

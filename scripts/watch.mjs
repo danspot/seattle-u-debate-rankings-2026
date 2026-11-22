@@ -71,6 +71,7 @@ async function localQA() {
     for(let i=0;i<30;i++){try{ready=(await fetch('http://127.0.0.1:4173/')).ok;}catch{}if(ready)break;await pause(200);}
     assert.ok(ready,'Preview did not start');
     await run(process.execPath,['scripts/qa.mjs']);
+    await run(process.execPath,['scripts/qa-archive.mjs']);
   } finally {server.kill('SIGTERM');}
 }
 async function deploy() {
@@ -87,7 +88,7 @@ async function deploy() {
   // Allow the public CDN to converge before declaring a failed publication.
   let lastError;
   for(let i=0;i<4;i++){
-    try{await run(process.execPath,['scripts/qa.mjs',`${site}?v=${sha}`]);needsDeployment=false;return sha;}
+    try{await run(process.execPath,['scripts/qa.mjs',`${site}?v=${sha}`]);await run(process.execPath,['scripts/qa-archive.mjs',`${site}?v=${sha}`]);needsDeployment=false;return sha;}
     catch(error){lastError=error;if(i<3)await pause(15000);}
   }
   throw lastError;
@@ -99,7 +100,7 @@ async function cycle() {
   if(needsDeployment){await deploy();await status('Retried deployment and verified public site.');}
   const previous=JSON.parse(await readFile('data/results.json','utf8'));
   phase='extraction';await status(`Check ${state.checks}: reading all source ballots.`);
-  await run(process.execPath,['scripts/scrape.mjs'],8*60*1000,{SCRAPE_OUTPUT:'.local/candidate.json'});
+  await run(process.execPath,['scripts/scrape.mjs'],12*60*1000,{SCRAPE_OUTPUT:'.local/candidate.json'});
   const candidate=JSON.parse(await readFile('.local/candidate.json','utf8'));
   verifySnapshot(candidate);
   const diff=compareSnapshots(previous,candidate);

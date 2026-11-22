@@ -1,7 +1,13 @@
 {
-  "verifiedAt": "2026-11-22T18:46:53.668Z",
-  "extractedAt": "2026-11-22T18:43:16.441Z",
+  "verifiedAt": "2026-11-22T19:03:02.982Z",
+  "extractedAt": "2026-11-22T18:59:25.925Z",
   "checksPassed": true,
+  "archive": {
+    "publicPages": 21,
+    "fullBallots": 240,
+    "ballotsWithTopics": 240,
+    "writtenDecisions": 202
+  },
   "debateCount": 240,
   "numericScores": 1368,
   "feedbackNotes": 1212,

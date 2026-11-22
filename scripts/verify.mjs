@@ -9,6 +9,22 @@ export function verifySnapshot(snapshot) {
   assert.equal(snapshot.source, 'https://plustab.org/t/seattle-u-sat-nov-21-2026/results');
   assert.ok(Number.isFinite(Date.parse(snapshot.extractedAt)));
   assert.equal(new Set(snapshot.divisions).size, snapshot.divisions.length);
+  if(snapshot.schemaVersion>=3) {
+    const pages=snapshot.archive?.pages;
+    assert.ok(Array.isArray(pages));
+    assert.equal(new Set(pages.map(p=>p.id)).size,pages.length,'Duplicate archived page');
+    for(const id of ['about','fees','divisions','schools','coaches','helpers','teams','judges','speakers','schedule','announcements','attachments','contact',...snapshot.rounds.flatMap(r=>[`results-${r}`,`pairings-${r}`])])assert.ok(pages.some(p=>p.id===id),`Missing archived page ${id}`);
+    for(const p of pages) {
+      assert.ok(p.text.trim()&&p.html.trim()&&Number.isFinite(Date.parse(p.capturedAt)));
+      assert.ok(p.url.startsWith(snapshot.source.replace(/\/results$/,'')));
+      assert.ok(!/<(?:script|style|iframe|object|embed|img|input|form|button)\b/i.test(p.html),`Unsafe archived markup on ${p.id}`);
+      assert.ok(!/\s(?:on\w+|style|src|srcset)\s*=/i.test(p.html),`Active archived markup on ${p.id}`);
+      assert.deepEqual(p.assets,[],'Archive assets must be saved before publishing');
+      const entryCount=p.text.match(/All Schools \((\d+)\)/);
+      if(entryCount)assert.equal(p.tableRows,Number(entryCount[1]),`Incomplete entry list ${p.id}`);
+      if(p.id.startsWith('results-')||p.id.startsWith('pairings-'))assert.equal(p.tableRows,snapshot.debates.filter(d=>d.round===p.round).length,`Archived round row count mismatch ${p.id}`);
+    }
+  }
   const ids = new Set(), rooms = new Set(), appearances = new Set(), rosters = new Map();
   let numericScores = 0, feedbackNotes = 0;
   for (const d of snapshot.debates) {
@@ -24,6 +40,20 @@ export function verifySnapshot(snapshot) {
       assert.ok(Number(d[d.winnerSide].style.fontWeight) > Number(d[d.winnerSide === 'aff' ? 'neg' : 'aff'].style.fontWeight));
     }
     if (d.ballot) {
+      if(snapshot.schemaVersion>=3) {
+        assert.equal(typeof d.judges,'string');
+        const b=d.ballot;
+        assert.ok(b.archive?.text.trim()&&Number.isFinite(Date.parse(b.archive.capturedAt)));
+        assert.ok(b.archive.text.includes(b.code),`Archived ballot identity mismatch ${d.id}`);
+        for(const field of ['topic','judgeSchool','decisionText']) {
+          assert.ok(b[field]===null||typeof b[field]==='string');
+          if(b[field])assert.ok(b.archive.text.includes(b[field]),`Archived ${field} missing from captured text ${d.id}`);
+        }
+        for(const t of Object.values(b.sides))for(const p of t.speakers){
+          assert.ok(b.archive.text.includes(p.name),`Archived speaker missing ${d.id}`);
+          if(p.feedback)assert.ok(b.archive.text.includes(p.feedback.text),`Archived feedback missing ${d.id}`);
+        }
+      }
       assert.equal(d.ballot.roundLabel, `Round ${d.round}`);
       assert.equal(d.ballot.room,d.room); assert.equal(d.ballot.division,d.division);
       assert.equal(d.ballot.url, `${snapshot.source}/ballot/${d.id}`);
@@ -123,7 +153,8 @@ export function verifySnapshot(snapshot) {
   const novice=divisions.find(d=>d.division==='NoviceS MS 3-on-3');
   const person=novice?.speakers.find(s=>s.name==='Jia-Hao Stevenson' && s.school==='Bellevue Youth Debate');
   const team=novice?.teams.find(t=>t.id===person?.teamId);
-  return { verifiedAt:new Date().toISOString(), extractedAt:snapshot.extractedAt, checksPassed:true, debateCount:ids.size, numericScores, feedbackNotes, speakersWithFeedback:divisions.reduce((n,d)=>n+d.speakers.filter(s=>Object.values(s.rounds).some(r=>r.feedback)).length,0), divisions:divisions.map(d=>({division:d.division,...d.counts,issues:d.issues})), testCase:person?{name:person.name,rounds:person.rounds,average:person.average,rank:person.rank,rankAmongComplete:person.completeRank,stars:person.awardedStars,teamStars:person.awardedTeamStars,teamRecord:team.record,teamStanding:team.rank,teamsSharingRecord:team.recordGroupSize}:null };
+  const archive=snapshot.archive?{publicPages:snapshot.archive.pages.length,fullBallots:snapshot.debates.filter(d=>d.ballot?.archive).length,ballotsWithTopics:snapshot.debates.filter(d=>d.ballot?.topic).length,writtenDecisions:snapshot.debates.filter(d=>d.ballot?.decisionText).length}:null;
+  return { verifiedAt:new Date().toISOString(), extractedAt:snapshot.extractedAt, checksPassed:true, archive, debateCount:ids.size, numericScores, feedbackNotes, speakersWithFeedback:divisions.reduce((n,d)=>n+d.speakers.filter(s=>Object.values(s.rounds).some(r=>r.feedback)).length,0), divisions:divisions.map(d=>({division:d.division,...d.counts,issues:d.issues})), testCase:person?{name:person.name,rounds:person.rounds,average:person.average,rank:person.rank,rankAmongComplete:person.completeRank,stars:person.awardedStars,teamStars:person.awardedTeamStars,teamRecord:team.record,teamStanding:team.rank,teamsSharingRecord:team.recordGroupSize}:null };
 }
 
 if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {

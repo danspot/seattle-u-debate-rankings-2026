@@ -4,6 +4,10 @@ Public site: **https://danspot.github.io/seattle-u-debate-rankings-2026/**
 
 Independent rankings for Rounds **1–4**, sourced exclusively from [Plustab](https://plustab.org/t/seattle-u-sat-nov-21-2026/results). Visitors need no login or backend, and the site makes no live API requests. The generated `index.html` embeds its data, styles, and JavaScript and also works as a standalone local file.
 
+The public tournament archive is embedded in the same file: all available ballots (both teams, scores/totals, judge affiliations, topics, full written decisions, individual feedback, and complete captured text); every round's results and pairings; about, fees, divisions, school/coach/helper/team/judge/speech entry lists, schedule/topics, announcements, attachment status, and the public contact page. Only public content is captured; account-only information and contact form delivery are not archived. No attachments were posted at the latest capture. New file/image assets stop extraction until they can be preserved locally.
+
+Click **Round results**, any **Ballot** or team result, or **Tournament archive** to browse the saved material inside the app. **Save offline** downloads a complete standalone HTML copy; **Data** downloads the full JSON snapshot. Original Plustab links are optional references. Source text is retained verbatim; general decisions remain separate from individual speaker feedback. Source tables are sanitized before display. The archive does not execute source scripts or submit forms.
+
 ## Refresh and republish
 
 Ask Codex: **“Update the debate rankings.”** Codex should rerun extraction, validation, generation, browser QA, commit and push the new snapshot, and verify the public GitHub Pages deployment. Include Round 4 when it appears in the source selector; leave later rounds out unless explicitly requested. Posted results are included even while other ballots are pending. Refreshes are manual unless the user requests a bounded watch.
@@ -25,7 +29,7 @@ npm run build
 npm run preview
 ```
 
-In another terminal, run `npm run qa`. The preview uses http://127.0.0.1:4173. Stop it after checking. If using an existing Chromium executable instead of Playwright's download, set `CHROMIUM_PATH` to its absolute path (PowerShell: `$env:CHROMIUM_PATH='C:\path\to\chrome.exe'`). The browser runs headlessly.
+In another terminal, run `npm run qa` and `npm run qa:archive`. Archive QA checks every stored ballot and page, blocks Plustab, then opens the downloaded HTML with networking disabled. The preview uses http://127.0.0.1:4173. Stop it after checking. If using an existing Chromium executable instead of Playwright's download, set `CHROMIUM_PATH` to its absolute path (PowerShell: `$env:CHROMIUM_PATH='C:\path\to\chrome.exe'`). The browser runs headlessly.
 
 Review the changed data and coverage notes, then publish:
 
@@ -40,6 +44,7 @@ GitHub Pages publishes from the `main` branch, repository root. `.nojekyll` keep
 
 ```sh
 node scripts/qa.mjs https://danspot.github.io/seattle-u-debate-rankings-2026/
+node scripts/qa-archive.mjs https://danspot.github.io/seattle-u-debate-rankings-2026/
 ```
 
 Check that the public extraction timestamp and downloaded `data/results.json` match the committed snapshot. Never publish a failed or partial extraction. The scraper writes the public JSON only after finishing every selected division and round; diagnostic progress stays in ignored `.local/`.
@@ -51,11 +56,13 @@ Check that the public extraction timestamp and downloaded `data/results.json` ma
 - `data/verification.json`: consistency report and the requested test case; not featured in the page.
 - `scripts/scrape.mjs`: Playwright browser extraction. Explicitly selects each division and Rounds 1–4, clicks every available ballot, verifies context, and restores filters after navigation.
 - `scripts/feedback.mjs`: extracts original individual speaker feedback and matches each note by side, speaking position, and speaker name. General decision explanations are not attributed to individual speakers.
+- `scripts/archive.mjs`: captures complete public ballot text and decision/topic/judge details, plus passive HTML and text for tournament pages.
 - `scripts/rankings.mjs`: shared ranking and standings calculation.
 - `scripts/verify.mjs`: checks duplicate debates/rooms/teams/speakers, roster consistency across rounds, ballot context, numeric scores and team totals, source-style/ballot decisions, paired win/loss results, and rank arithmetic.
 - `scripts/verify-source.mjs`: independently revisits the requested team's posted ballots plus feedback samples from every included round of each populated division in Chromium.
 - `scripts/build.mjs`: validates and generates the public HTML plus verification report.
 - `scripts/qa.mjs`: Chromium checks at desktop and iPhone sizes; screenshots remain local and ignored.
+- `scripts/qa-archive.mjs`: checks all archived ballots/pages and their local links, sanitization, and an actual downloaded copy with networking disabled.
 - `tests/rankings.test.mjs`: edge cases for ties, missing scores, BYEs, duplicate identities, and unknown decisions.
 - `tests/feedback.test.mjs`: same-name speakers on opposite teams, speaker-position mismatches, duplicate notes, and absent or multiline feedback.
 

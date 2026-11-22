@@ -4,6 +4,8 @@ When asked to update the debate rankings, complete the refresh and public deploy
 
 Preserve the NoviceS MS 3-on-3 default, equal treatment of all participants, source evidence, missing-score indicators, and tie rules. The named verification participant belongs only in checks/reports, never a featured page element.
 
+The user requested a complete public tournament archive. Preserve full ballot text, topics, judge affiliations, and written decisions separately from individual feedback, plus every public tournament information/entry page and all round results/pairings. Ballot and round-result links must open locally inside the app. Keep the downloaded HTML usable with networking disabled. Run `npm run qa:archive` as well as ranking QA. Do not silently discard archived fields on refresh; newly posted attachments must be saved locally before publication.
+
 Use the existing repository https://github.com/danspot/seattle-u-debate-rankings-2026 and GitHub Pages deployment. Run verification, tests, build, and browser QA; commit the snapshot and generated HTML, push, wait for deployment, and verify the actual public URL. Do not create duplicate repositories or use other hosting services.
 
 The user authorized a four-hour watch on November 21, 2026: check every ten minutes and republish changed results, reporting suspicious data. Use the bounded Watch tournament results workflow; do not extend or restart its window without a new request. During an active watch, fetch/pull current main before editing so automatic snapshot commits are preserved. No permanent schedule is authorized.

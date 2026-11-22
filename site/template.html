@@ -10,7 +10,7 @@
 </head>
 <body>
   <a class="skip-link" href="#rankings">Skip to rankings</a>
-  <header class="wrap page-header"><h1>Seattle U Debate Rankings</h1><span>Nov 21, 2026 · ROUNDS_LABEL</span><a class="results-link" href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Round results</a></header>
+  <header class="wrap page-header"><h1>Seattle U Debate Rankings</h1><span>Nov 21, 2026 · ROUNDS_LABEL</span><a class="results-link" href="#archive/results-4">Round results</a></header>
   <main class="wrap">
     <section class="controls" aria-label="Find rankings">
       <div id="division-picker" class="division-picker">
@@ -43,10 +43,16 @@
       <ul id="issues"></ul>
     </details>
   </main>
-  <footer class="wrap"><span id="extracted"></span><nav aria-label="Source links"><a href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Source</a><a href="data/results.json" download>Data</a><a href="https://github.com/danspot/seattle-u-debate-rankings-2026" target="_blank" rel="noopener">GitHub</a></nav></footer>
+  <footer class="wrap"><span id="extracted"></span><nav aria-label="Source links"><a href="#archive/about">Tournament archive</a><a id="offline-download" href="index.html" download="seattle-u-debate-2026.html">Save offline</a><a href="https://plustab.org/t/seattle-u-sat-nov-21-2026/results" target="_blank" rel="noopener">Source</a><a id="data-download" href="data/results.json" download>Data</a><a href="https://github.com/danspot/seattle-u-debate-rankings-2026" target="_blank" rel="noopener">GitHub</a></nav></footer>
   <dialog id="speaker-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-team">
     <div class="feedback-header"><div><h2 id="feedback-title"></h2><p id="feedback-team"></p></div><button id="feedback-close" type="button" aria-label="Close speaker feedback" autofocus>×</button></div>
     <div id="feedback-rounds"></div>
+  </dialog>
+  <dialog id="archive-dialog" aria-labelledby="archive-title">
+    <div class="feedback-header"><h2 id="archive-title">Tournament archive</h2><div class="archive-actions"><button id="archive-back" type="button">Back</button><button id="archive-close" type="button" aria-label="Close archive" autofocus>×</button></div></div>
+    <div class="archive-controls"><label class="sr-only" for="archive-page">Archived page</label><select id="archive-page"></select><label class="sr-only" for="archive-search">Filter archived table rows</label><input id="archive-search" type="search" placeholder="Filter rows" autocomplete="off"></div>
+    <div id="archive-content"></div>
+    <div class="archive-provenance"><span id="archive-captured"></span><a id="archive-original" target="_blank" rel="noopener">Original on Plustab</a></div>
   </dialog>
   <noscript>Enable JavaScript to display rankings, or download the data.</noscript>
   <script id="results-data" type="application/json">/* SNAPSHOT_JSON */</script>
