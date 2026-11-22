@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-22T02:37:36.879Z",
-  "extractionStartedAt": "2026-11-22T02:30:50.475Z",
+  "extractedAt": "2026-11-22T02:57:37.632Z",
+  "extractionStartedAt": "2026-11-22T02:50:50.547Z",
   "sourceUpdatedLabel": "Last updated 11/21/26, 4:39 PM PST",
   "rounds": [
     1,
@@ -14640,19 +14640,37 @@
                 "name": "Eugene Hwang",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Eugene Hwang",
+                  "sourceHeading": "Proposition Speaker 1 — Eugene Hwang",
+                  "text": "Good contentions and definitions. Don't be absolute in some of your statements. Rest of Feedback given verbally"
+                }
               },
               {
                 "name": "Sabir Thapar",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Sabir Thapar",
+                  "sourceHeading": "Proposition Speaker 2 — Sabir Thapar",
+                  "text": "Good job correcting some of your first speaker's contentions. Good job with the refutations, specifically the cherry-picking one. Rest of Feedback given verbally."
+                }
               },
               {
                 "name": "Martin Zhang",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Martin Zhang",
+                  "sourceHeading": "Proposition Speaker 3 — Martin Zhang",
+                  "text": "Loved your lasting statement; it was the best one in the competition. Try to be a little clearer in the refutation part I got lost a little bit. Rest of the Feedback given verbally."
+                }
               }
             ],
             "total": 253
@@ -14665,27 +14683,45 @@
                 "name": "Tazmin Sohal",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Tazmin Sohal",
+                  "sourceHeading": "Opposition Speaker 1 — Tazmin Sohal",
+                  "text": "Great contentions and solid Burden of Proof. Use the remaining time to flesh out your very last contentions otherwise, solid speech. Rest of the Feedback given verbally."
+                }
               },
               {
                 "name": "An Jei Wang",
                 "score": 87,
                 "displayedScore": "87",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "An Jei Wang",
+                  "sourceHeading": "Opposition Speaker 2 — An Jei Wang",
+                  "text": "I really liked your refutations and how you used the connection point to relate with kindness. This had a significant impact. Make sure to use all of your time to refute a few more if possible."
+                }
               },
               {
                 "name": "Rishab Mitra",
                 "score": 89,
                 "displayedScore": "89",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Rishab Mitra",
+                  "sourceHeading": "Opposition Speaker 3 — Rishab Mitra",
+                  "text": "Great refutations really swayed the debate to your side. I liked how you used magnitude and the point about mental degradation. Good job showing how you proved BOP but, they didn't."
+                }
               }
             ],
             "total": 263
           }
         },
         "judgeName": "Tayshu Konde",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/974"
       }
     },
