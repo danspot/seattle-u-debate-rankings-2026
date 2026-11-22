@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-22T03:17:33.396Z",
-  "extractionStartedAt": "2026-11-22T03:10:50.547Z",
+  "extractedAt": "2026-11-22T03:27:33.057Z",
+  "extractionStartedAt": "2026-11-22T03:20:50.506Z",
   "sourceUpdatedLabel": "Last updated 11/21/26, 4:39 PM PST",
   "rounds": [
     1,
@@ -18868,19 +18868,37 @@
                 "name": "Alexis A",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Alexis A",
+                  "sourceHeading": "Proposition Speaker 1 — Alexis A",
+                  "text": "You did a good job signposting; this made it very easy to follow your case. Next time, I would work on filling your time so you can develop your claims more thoroughly. The definitions you cited were the primary reason I voted for you, so great job including them."
+                }
               },
               {
                 "name": "Sanvi B",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Sanvi B",
+                  "sourceHeading": "Proposition Speaker 2 — Sanvi B",
+                  "text": "I really liked your points and your personal ancedote you provided about your sister. I thought your speed and explanation around your arguments were well. I would focus on using your entire time and more rebuttals against your opponents."
+                }
               },
               {
                 "name": "Shreya B",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Shreya B",
+                  "sourceHeading": "Proposition Speaker 3 — Shreya B",
+                  "text": "I thought your rebuttals were strong and you had good extensions. One thing you could work on is weighing a little more."
+                }
               }
             ],
             "total": 251
@@ -18893,27 +18911,45 @@
                 "name": "Audrey Xu",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Audrey Xu",
+                  "sourceHeading": "Opposition Speaker 1 — Audrey Xu",
+                  "text": "I really liked the way you articulated your points by laying a basis and explaining why it was true. Next time, I would work to fill your time fully, as you only spoke for around 2:30 minutes."
+                }
               },
               {
                 "name": "Sarah Shang",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Sarah Shang",
+                  "sourceHeading": "Opposition Speaker 2 — Sarah Shang",
+                  "text": "I really liked your extension on success at the beginning of your speech, and I thought your point about respect being based on fear was a very strong point. Next time, I would work on projecting your voice a little louder because you had great points, but I couldn't always hear you."
+                }
               },
               {
                 "name": "Aavi Fulay",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Aavi Fulay",
+                  "sourceHeading": "Opposition Speaker 3 — Aavi Fulay",
+                  "text": "I thought you did a very good job weighing and connecting the topic to real-world examples like Hitler and suicide, even if they were extreme examples. I would work on making more eye contact during the round to strengthen your points even more."
+                }
               }
             ],
             "total": 248
           }
         },
         "judgeName": "Emma Knobbs",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1011"
       }
     },
@@ -20532,19 +20568,37 @@
                 "name": "Elena Guo",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Elena Guo",
+                  "sourceHeading": "Proposition Speaker 1 — Elena Guo",
+                  "text": "Your third contention that respect is more long-term than being well-liked was very well structured, and using Martin Luther King Jr. as an example was a great way to prove that respect can last for decades even after someone passes away.\n\nAdd stronger impacts to your first and second contentions by explaining why being respected and known by many people actually improves your daily life more than having a close friend group. Use a \"claim, explanation, impact\" structure so the judge sees why widespread respect is better than close friendships."
+                }
               },
               {
                 "name": "Katelyn Lee",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Katelyn Lee",
+                  "sourceHeading": "Proposition Speaker 2 — Katelyn Lee",
+                  "text": "You gave a great response to the Opposition's argument that respect is always forced by using the example of your sister, explaining that even when you don't like her, you still respect her and help each other out, which showed how respect creates reliable relationships. \n\nAvoid relying mainly on negative personal experiences to prove a general rule, such as saying trusting friends is hard because you had a bad experience with friends. Instead, give broader reasons why friendships can be unstable for anyone, such as friends giving into peer pressure when bullying happens."
+                }
               },
               {
                 "name": "Sua Chang",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Sua Chang",
+                  "sourceHeading": "Proposition Speaker 3 — Sua Chang",
+                  "text": "You gave a fantastic answer to the Opposition's Point of Information about why someone would be mean to a person they like; pointing out that people might \"like\" someone just because they are easy to push around was a great way to show that liking someone without respecting them creates an unhealthy relationship.\n\nBe careful not to contradict your teammates' earlier arguments in the final speech. When you argued that you \"respect every person in this room because there is no reason not to,\" it went against your first and second speakers' main contention that respect means you have \"proven yourself to be trustworthy.\" Make sure your rebuttals match the definitions your first speaker set up."
+                }
               }
             ],
             "total": 228
@@ -20557,27 +20611,45 @@
                 "name": "Sophia Shah",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Sophia Shah",
+                  "sourceHeading": "Opposition Speaker 1 — Sophia Shah",
+                  "text": "Your rebuttal to Proposition's third contention was very clever; pointing out the difference between what you like (like a favorite thing that changes) and who you like (which can be long-term) effectively protected your team's argument about the value of friendship.\n\nOrganize your speech more clearly by separating your refutations of the opponents' case from your own constructive contentions. Tell the judge, \"First, I will present our two contentions, and second, I will refute Proposition's points,\" so it is easier to follow on the flow."
+                }
               },
               {
                 "name": "Shreya Segu",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Shreya Segu",
+                  "sourceHeading": "Opposition Speaker 2 — Shreya Segu",
+                  "text": "Your refutation of Proposition's first contention on trust was the turning point of the debate; using the example that you would trust a well-liked friend with a personal problem rather than a respected teacher clearly proved that being well-liked builds deeper emotional trust than respect.\n\nBe careful not to undercut your own teammate's points when making a rebuttal. When you compared respect to a short-term phase like respecting a celebrity, it slightly clashed with your first speaker's point that respect is hard to keep and takes a long time to build; focus instead on your stronger point that respect only stays at the \"surface level.\""
+                }
               },
               {
                 "name": "Henry Liu",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Henry Liu",
+                  "sourceHeading": "Opposition Speaker 3 — Henry Liu",
+                  "text": "Your second contention summarizing how respect is often forced through culture, tradition, and manners, even when people don't actually like the person, was well explained and strongly reinforced your team's core theme that being well-liked is a genuine choice.\n\nAvoid introducing confusing new examples in the final rebuttal speech, such as the argument that celebrities dislike fame and therefore don't want long-term respect. Because Proposition easily pointed out that fame does not equal respect, use that time instead to weigh why having lifelong friends who help you is more important than having distant respect."
+                }
               }
             ],
             "total": 232
           }
         },
         "judgeName": "Nethul Kankanamge",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/1025"
       }
     },
