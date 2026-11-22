@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-22T02:17:35.727Z",
-  "extractionStartedAt": "2026-11-22T02:10:50.424Z",
+  "extractedAt": "2026-11-22T02:28:03.199Z",
+  "extractionStartedAt": "2026-11-22T02:21:19.291Z",
   "sourceUpdatedLabel": "Last updated 11/21/26, 4:39 PM PST",
   "rounds": [
     1,
@@ -7456,19 +7456,37 @@
                 "name": "Willa Cox-Hultquist",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Willa Cox-Hultquist",
+                  "sourceHeading": "Proposition Speaker 1 — Willa Cox-Hultquist",
+                  "text": "Compliment: I liked your responses to POIs and you spoke really clearly while explaining your arguments making them easy to understand. You also used personal connections to make your argument effective. \nImprovement: One improvement is that you never stated your burden of proof which is a necessary part of the argument."
+                }
               },
               {
                 "name": "Cevia Luk",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Cevia Luk",
+                  "sourceHeading": "Proposition Speaker 2 — Cevia Luk",
+                  "text": "Compliment: I liked your argument about connected these devices to wealth gaps, which was really interesting, and you explained it very well too. \nImprovement: One improvement is that you could have expanded more on your rebuttals, as you didn't elaborate too much, which could've made them stronger."
+                }
               },
               {
                 "name": "ABC",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Proposition Speaker 3 — ABC",
+                  "text": "n/a"
+                }
               }
             ],
             "total": 251
@@ -7481,27 +7499,45 @@
                 "name": "Ryan Wang",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Ryan Wang",
+                  "sourceHeading": "Opposition Speaker 1 — Ryan Wang",
+                  "text": "Compliment: I liked your argument about how AOPRs can help prevent crime and provide life-saving interventions, especially your example of using them to help locate abducted children through Amber Alerts.\nImprovement: You spoke a little fast, so try slowing down to make your arguments easier to follow!"
+                }
               },
               {
                 "name": "Kate Wong",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Kate Wong",
+                  "sourceHeading": "Opposition Speaker 2 — Kate Wong",
+                  "text": "Compliment: I really liked your counterplan about regulating AOPRs instead of completely banning them. Your suggestions about checking warrants and keeping audit logs made your argument more convincing because you provided specific ways to address privacy concerns.\nImprovement: You could have explained your response to the other team's privacy contention more thoroughly. For example, why AOPRs being mounted on street affects privacy differently."
+                }
               },
               {
                 "name": "Nathan Xu",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Nathan Xu",
+                  "sourceHeading": "Opposition Speaker 3 — Nathan Xu",
+                  "text": "Compliment: Your rebuttals were strong, especially when you explained that privacy concerns are not necessarily unique to AOPRs and that the issue is how people misuse the technology rather than the technology itself. You also did a good job defending your teammates' arguments.\nImprovement: You spoke quite fast, so try slowing down, especially when presenting statistics and evidence. This would make it easier for the audience to follow your reasoning and understand the significance of your evidence."
+                }
               }
             ],
             "total": 249
           }
         },
         "judgeName": "Sanskriti Shukla",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/912"
       }
     },
@@ -10516,19 +10552,37 @@
                 "name": "Uday Iyer",
                 "score": 84,
                 "displayedScore": "84",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Uday Iyer",
+                  "sourceHeading": "Proposition Speaker 1 — Uday Iyer",
+                  "text": "Your structure was clear: you set the burden of proof (best long-term solution). Saying the cameras are placed based on stereotypes with evidence to back it up gave your racism point a strong starting claim. You should try to connect the monopolization point to a specific impact."
+                }
               },
               {
                 "name": "Nick Zhang",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Nick Zhang",
+                  "sourceHeading": "Proposition Speaker 2 — Nick Zhang",
+                  "text": "Your NBC point showed the data going to private businesses even when contracts ban it, which answered Opp's \"strict government control.\" You should try to add more changes in tone, volume, and speed to emphasize certain points."
+                }
               },
               {
                 "name": "Blake Zhang",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Blake Zhang",
+                  "sourceHeading": "Proposition Speaker 3 — Blake Zhang",
+                  "text": "You answered the POI regarding morality very well with a blunt answer. You should try to add more changes in tone, volume, and speed to emphasize certain points."
+                }
               }
             ],
             "total": 250
@@ -10541,27 +10595,45 @@
                 "name": "Amanda H",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Amanda H",
+                  "sourceHeading": "Opposition Speaker 1 — Amanda H",
+                  "text": "Your \"less than 1% do wrong\" statistic was specific and helped with your argument and all your evidence also had a source associated. You should try to answer POIs more directly."
+                }
               },
               {
                 "name": "Audrey S",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Audrey S",
+                  "sourceHeading": "Opposition Speaker 2 — Audrey S",
+                  "text": "Your burden of proof (Prop must show banning is better in every circumstance) set a high standard for Prop. Your second contention (AI constantly updating) should try having an impact to provide reasoning."
+                }
               },
               {
                 "name": "Emily L",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Emily L",
+                  "sourceHeading": "Opposition Speaker 3 — Emily L",
+                  "text": "Raising missing children gave Opp an alternative, human impact, and it's was a good argument to have in the round. You should try to add more changes in tone, volume, and speed to emphasize certain points."
+                }
               }
             ],
             "total": 242
           }
         },
         "judgeName": "Ananya Gupta",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/939"
       }
     },
