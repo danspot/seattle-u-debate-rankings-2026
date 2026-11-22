@@ -2,9 +2,9 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-21T23:54:52.724Z",
-  "extractionStartedAt": "2026-11-21T23:48:35.825Z",
-  "sourceUpdatedLabel": "Last updated 11/21/26, 3:51 PM PST",
+  "extractedAt": "2026-11-22T00:06:55.613Z",
+  "extractionStartedAt": "2026-11-21T23:59:05.902Z",
+  "sourceUpdatedLabel": "Last updated 11/21/26, 4:02 PM PST",
   "rounds": [
     1,
     2,
@@ -2216,19 +2216,37 @@
                 "name": "Patrick Cosma",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Patrick Cosma",
+                  "sourceHeading": "Proposition Speaker 1 — Patrick Cosma",
+                  "text": "You utilized specific information and evidence really effectively in order to make it more clear. One thing that you could improve is how you structure your speech so as to make it a bit more clear on what is leading up to what."
+                }
               },
               {
                 "name": "Eleanor Williams",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Eleanor Williams",
+                  "sourceHeading": "Proposition Speaker 2 — Eleanor Williams",
+                  "text": "You did a good job at trying to appeal to the emotional aspect with the example of the 2 year old being held at gunpoint. One thing you could potentially improve was that when you answered a POI, you lost your train of thought and forgot what you were saying. Granted, once you figured out where you were, you continued."
+                }
               },
               {
                 "name": "Sarah Shabar",
                 "score": 72,
                 "displayedScore": "72",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Sarah Shabar",
+                  "sourceHeading": "Proposition Speaker 3 — Sarah Shabar",
+                  "text": "I especially like how you pretty much squeezed out all the time you had, stopping at 4:57. However, you did have alot of new information, which as speaker 3, it wasn’t in your role to say."
+                }
               }
             ],
             "total": 227
@@ -2241,27 +2259,45 @@
                 "name": "Sophia Zhao",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Sophia Zhao",
+                  "sourceHeading": "Opposition Speaker 1 — Sophia Zhao",
+                  "text": "There was alot of direct evidence used, which helped alot. One thing that you could improve is that you were a bit too fast at times, which made it hard for me to follow along"
+                }
               },
               {
                 "name": "Miranda Meng",
                 "score": 76,
                 "displayedScore": "76",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Miranda Meng",
+                  "sourceHeading": "Opposition Speaker 2 — Miranda Meng",
+                  "text": "I liked how you utilized Washington law, since we’re in Washington and that does apply directly to us. However, sometimes, I do feel like I got a bit lost listening, since it feels like some areas of the speech were added unnecessarily."
+                }
               },
               {
                 "name": "abc-ay1",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "abc-ay1",
+                  "sourceHeading": "Opposition Speaker 3 — abc-ay1",
+                  "text": "Absent."
+                }
               }
             ],
             "total": 237
           }
         },
         "judgeName": "Parsa Kazemini",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/868"
       }
     },
@@ -6047,7 +6083,7 @@
             "total": 276
           }
         },
-        "judgeName": "Tanya Glozman",
+        "judgeName": "Agrim Sharma",
         "feedbackSectionPresent": true,
         "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/900"
@@ -14140,19 +14176,37 @@
                 "name": "Willa Cox-Hultquist",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Willa Cox-Hultquist",
+                  "sourceHeading": "Proposition Speaker 1 — Willa Cox-Hultquist",
+                  "text": "Stated and laid out argument well. Could respond better to Poi’s"
+                }
               },
               {
                 "name": "Cevia Luk",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Cevia Luk",
+                  "sourceHeading": "Proposition Speaker 2 — Cevia Luk",
+                  "text": "Refuted opp claims well and clearly defined claims. Could respond better to Poi’s"
+                }
               },
               {
                 "name": "ABC",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "ABC",
+                  "sourceHeading": "Proposition Speaker 3 — ABC",
+                  "text": "Stated and laid out argument well. Could respond better to Poi’s"
+                }
               }
             ],
             "total": 243
@@ -14165,27 +14219,45 @@
                 "name": "Darsh Srinivas",
                 "score": 71,
                 "displayedScore": "71",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Darsh Srinivas",
+                  "sourceHeading": "Opposition Speaker 1 — Darsh Srinivas",
+                  "text": "Started off stating claims well. could take less logical leaps"
+                }
               },
               {
                 "name": "Aditya Haritsa",
                 "score": 75,
                 "displayedScore": "75",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Aditya Haritsa",
+                  "sourceHeading": "Opposition Speaker 2 — Aditya Haritsa",
+                  "text": "Stated claims well and offered a good rebuttal to the prop. could organize argument better"
+                }
               },
               {
                 "name": "Layla Krishnan",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Layla Krishnan",
+                  "sourceHeading": "Opposition Speaker 3 — Layla Krishnan",
+                  "text": "Great poi’s and argument structure.\ncould have definitions between being respected and liked defined better"
+                }
               }
             ],
             "total": 225
           }
         },
         "judgeName": "Basiru Lowe",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/972"
       }
     },
@@ -14228,19 +14300,37 @@
                 "name": "Alia Motwani",
                 "score": 75,
                 "displayedScore": "75",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Alia Motwani",
+                  "sourceHeading": "Proposition Speaker 1 — Alia Motwani",
+                  "text": "Great job on your contentions! They were very well thought out and your evidence was extremely original and unique! \nOne thing I would love to see is a more descriptive and elaborative answer to your POIs I understand that it can be difficult to respond to a question in a short amount of time without preparation, however, just a more descriptive answer would be something I like to see moving on."
+                }
               },
               {
                 "name": "Arohi Bindlish",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Arohi Bindlish",
+                  "sourceHeading": "Proposition Speaker 2 — Arohi Bindlish",
+                  "text": "Amazing presentation! I really liked your eye contact and refutations as they were well thought out and expanded on. Your burden of proof was extremely detailed and helped organize the argument for me. \nOne thing I would love to see is more elaborative evidence on your contentions and a new analysis presented instead of restating the same things over again."
+                }
               },
               {
                 "name": "Nuha Siddiqui",
                 "score": 80,
                 "displayedScore": "80",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Nuha Siddiqui",
+                  "sourceHeading": "Proposition Speaker 3 — Nuha Siddiqui",
+                  "text": "Great job on your refutations! I think it was pretty fleshed out and detailed enough to answer other POIs.\nOne thing I would love to see is more variety in analysis when expanding on your contentions in the conclusions."
+                }
               }
             ],
             "total": 238
@@ -14253,27 +14343,45 @@
                 "name": "Deniz Aslan",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Deniz Aslan",
+                  "sourceHeading": "Opposition Speaker 1 — Deniz Aslan",
+                  "text": "Really great job out outlining your speech! Your roadmap was extremely important for me to properly organize the debate. Your contentions were well thought out and I really liked your personal story example for your argument.\nOne thing I would love to see is more variability in your third contention as it was quite similar to the other two."
+                }
               },
               {
                 "name": "Abraham Alasas",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Abraham Alasas",
+                  "sourceHeading": "Opposition Speaker 2 — Abraham Alasas",
+                  "text": "You had a really strong hook! Some of your contentions were incredibly fleshed out and included strong analysis. \nHowever, one thing that I would love to see is is a better analysis on the expansion of your contentions especially your mental health contention as it felt repetitive and some of it was not properly backing up your argument."
+                }
               },
               {
                 "name": "Leyla Demirkan",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Leyla Demirkan",
+                  "sourceHeading": "Opposition Speaker 3 — Leyla Demirkan",
+                  "text": "Amazing job on eye contact, and creating a good hook! I enjoyed your refutations as they were well thought out. \nOne thing I would love to see you improve on is being a little more descriptive when weighing the debate, maybe elaborating more on your points."
+                }
               }
             ],
             "total": 247
           }
         },
         "judgeName": "Nandini Komma",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/973"
       }
     },
