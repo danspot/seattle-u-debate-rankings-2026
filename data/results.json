@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-22T02:28:03.199Z",
-  "extractionStartedAt": "2026-11-22T02:21:19.291Z",
+  "extractedAt": "2026-11-22T02:37:36.879Z",
+  "extractionStartedAt": "2026-11-22T02:30:50.475Z",
   "sourceUpdatedLabel": "Last updated 11/21/26, 4:39 PM PST",
   "rounds": [
     1,
@@ -4412,19 +4412,37 @@
                 "name": "Isabel Paik",
                 "score": 83,
                 "displayedScore": "83",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Isabel Paik",
+                  "sourceHeading": "Proposition Speaker 1 — Isabel Paik",
+                  "text": "You were a smooth and clear speaker. You should try to expand on your reasoning for your contentions."
+                }
               },
               {
                 "name": "Brayden Reis",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Brayden Reis",
+                  "sourceHeading": "Proposition Speaker 2 — Brayden Reis",
+                  "text": "You had great reasoning for your evidence. You should try to change tone, speed, and volume when you want to emphasize points."
+                }
               },
               {
                 "name": "Adelina Khudyev",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Adelina Khudyev",
+                  "sourceHeading": "Proposition Speaker 3 — Adelina Khudyev",
+                  "text": "You are a smooth, clear speaker. You should try to bring in some evidence when answering POIs."
+                }
               }
             ],
             "total": 250
@@ -4437,27 +4455,45 @@
                 "name": "Anna Deng",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Anna Deng",
+                  "sourceHeading": "Opposition Speaker 1 — Anna Deng",
+                  "text": "Your story about your brother was a impactful piece of evidence hat helped support your claim. You should try to make more eye contact."
+                }
               },
               {
                 "name": "Beckett Locher",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Beckett Locher",
+                  "sourceHeading": "Opposition Speaker 2 — Beckett Locher",
+                  "text": "You refuted the Prop's contentions well. You should try to make more eye contact."
+                }
               },
               {
                 "name": "Amy Chang",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Amy Chang",
+                  "sourceHeading": "Opposition Speaker 3 — Amy Chang",
+                  "text": "You had good evidence and reasoning when discussing solving crime. You should try to make more eye contact."
+                }
               }
             ],
             "total": 249
           }
         },
         "judgeName": "Ananya Gupta",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/886"
       }
     },
