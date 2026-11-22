@@ -2,8 +2,8 @@
   "schemaVersion": 2,
   "title": "Seattle U Debate Rankings — November 21, 2026",
   "source": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results",
-  "extractedAt": "2026-11-22T02:57:37.632Z",
-  "extractionStartedAt": "2026-11-22T02:50:50.547Z",
+  "extractedAt": "2026-11-22T03:17:33.396Z",
+  "extractionStartedAt": "2026-11-22T03:10:50.547Z",
   "sourceUpdatedLabel": "Last updated 11/21/26, 4:39 PM PST",
   "rounds": [
     1,
@@ -8996,19 +8996,37 @@
                 "name": "Julia Moon",
                 "score": 78,
                 "displayedScore": "78",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 1,
+                  "speakerName": "Julia Moon",
+                  "sourceHeading": "Proposition Speaker 1 — Julia Moon",
+                  "text": "Great job highlighting the serious risks of data misuse and how tracking systems can be tracked or abused. One thing to improve on is not rushing through all of your contentions and spending more time emphasizing your contentions and using specific evidence that supports your argument."
+                }
               },
               {
                 "name": "Aarya Atwal",
                 "score": 82,
                 "displayedScore": "82",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 2,
+                  "speakerName": "Aarya Atwal",
+                  "sourceHeading": "Proposition Speaker 2 — Aarya Atwal",
+                  "text": "I liked your strong evidence about how In California a police officer was sentenced to 6 years in prison for misusing the flock cameras to stalk someone as this evidence helps strengthen your argument on how the cameras are being misused. One thing to work on is having a stronger refutation on how 14 days deletion is to much time for footage to not be deleted."
+                }
               },
               {
                 "name": "Rohin Devatha",
                 "score": 85,
                 "displayedScore": "85",
-                "feedback": null
+                "feedback": {
+                  "side": "aff",
+                  "speakerPosition": 3,
+                  "speakerName": "Rohin Devatha",
+                  "sourceHeading": "Proposition Speaker 3 — Rohin Devatha",
+                  "text": "I loved how you proposed an alternative solution to the ban of automated license plates by talking about manual cameras and were very confident on defining how they work when asked about it. One thing to improve on is instead of dismissing the claim about the 4th Amendment explain how it is not relevant to the debate."
+                }
               }
             ],
             "total": 245
@@ -9021,27 +9039,45 @@
                 "name": "Isoo Han",
                 "score": 78,
                 "displayedScore": "78",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 1,
+                  "speakerName": "Isoo Han",
+                  "sourceHeading": "Opposition Speaker 1 — Isoo Han",
+                  "text": "Great job adding specific concrete statistics to your argument such as mentioning how ALPR reduce crime rate by over 25 percent. One thing to improve on is challenging the definitions of the Prop and asserting how your definitions are more relevant to the debate."
+                }
               },
               {
                 "name": "Alyza Tandon",
                 "score": 79,
                 "displayedScore": "79",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 2,
+                  "speakerName": "Alyza Tandon",
+                  "sourceHeading": "Opposition Speaker 2 — Alyza Tandon",
+                  "text": "I liked your strong argument about defining how ALPR capture high speed images accurately and are very efficient. One thing to improve on is answering POI's more direct so that you can get right back in to your contentions and flow of arguments."
+                }
               },
               {
                 "name": "Angela He",
                 "score": 92,
                 "displayedScore": "92",
-                "feedback": null
+                "feedback": {
+                  "side": "neg",
+                  "speakerPosition": 3,
+                  "speakerName": "Angela He",
+                  "sourceHeading": "Opposition Speaker 3 — Angela He",
+                  "text": "Great job weighing the debate and emphasizing how children safety and reducing crimes are urgent priorities that cameras are needed for. One thing to improve on is addressing specific stricter rules that you plan to implement to make the cameras better."
+                }
               }
             ],
             "total": 249
           }
         },
         "judgeName": "Aaryan Gupta",
-        "feedbackSectionPresent": false,
-        "feedbackNoteCount": 0,
+        "feedbackSectionPresent": true,
+        "feedbackNoteCount": 6,
         "url": "https://plustab.org/t/seattle-u-sat-nov-21-2026/results/ballot/925"
       }
     },
